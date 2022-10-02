@@ -1,13 +1,14 @@
-import CharactersList from './components/pages/CharactersList/CharactersList'
-import { mockCharacters } from './components/pages/CharactersList/mocks'
-import './App.css'
+import useCharacters from './services/useCharacters';
+import CharactersList from './components/pages/CharactersList/CharactersList';
 
 function App() {
+	const {characters, isLoading} = useCharacters();
   return (
     <div className='App'>
-      <CharactersList characters={mockCharacters} />
+      {isLoading && <h1>Loading...</h1>}
+      {characters && <CharactersList characters={characters} />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
