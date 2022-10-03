@@ -1,12 +1,18 @@
-import useCharacters from './services/useCharacters';
-import CharactersList from './components/pages/CharactersList/CharactersList';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+
+import Characters from './components/pages/Characters/Characters';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Characters />,
+  },
+]);
 
 function App() {
-	const {characters, isLoading} = useCharacters();
   return (
     <div className='App'>
-      {isLoading && <h1>Loading...</h1>}
-      {characters && <CharactersList characters={characters} />}
+      <RouterProvider router={router} />
     </div>
   );
 }
