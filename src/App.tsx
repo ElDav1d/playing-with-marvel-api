@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Characters from './components/pages/Characters/Characters';
 
