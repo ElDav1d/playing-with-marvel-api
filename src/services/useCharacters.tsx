@@ -18,22 +18,29 @@ const useCharacters = ({ calls, stackOrder }: useCharactersProps) => {
     const offset = MAX_CHARACTERS * calls;
     const url = `${BASE}?orderBy=${order}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
 
-    (async function () {
-      try {
+    (function () {
+      const request = new XMLHttpRequest();
+      request.open('GET', url, true);
+      request.onloadstart = () => {
         setIsLoading(true);
-
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`HTTP STATUS: ${response.status}`);
+      };
+      request.onload = () => {
+        if (request.status === 200) {
+					const characters = JSON.parse(request.response).data.results;
+          setCharacters(characters);
+        } else {
+          console.log(`error ${request.status} ${request.statusText}`);
         }
-
-        const res = await response.json();
-        setCharacters(res.data.results);
-      } catch (error) {
-        console.log(error);
-      } finally {
         setIsLoading(false);
-      }
+      };
+      request.onerror = () => {
+        setIsLoading(false);
+        console.log(`Error:
+				Check your network
+				Check the provided URL: ${url}
+				`);
+      };
+      request.send();
     })();
   }, [calls, stackOrder]);
 
