@@ -7,7 +7,7 @@ import { OrderSelector } from '../../atoms/OrderSelector/OrderSelector';
 const Characters = () => {
   const [calls, setCalls] = useState(1);
   const [stackOrder, setOrder] = useState('name');
-  const { characters, isLoading } = useCharacters({ calls, stackOrder });
+  const { characters, isLoading, error } = useCharacters({ calls, stackOrder });
   const [stack, setStack] = useState<Character[]>([]);
 
   useEffect(() => {
@@ -30,7 +30,8 @@ const Characters = () => {
         onChange={(event: { target: { value: SetStateAction<string> } }) => changeHandler(event)}
       />
       <CharactersList characters={stack} />
-      {isLoading ? <h2>Loading...</h2> : <ShowMoreButton onClick={() => clicKHandler()} />}
+      {isLoading && <h2>Loading...</h2>}
+      {error ? <h2>Oooooooooops!</h2> : <ShowMoreButton onClick={() => clicKHandler()} />}
     </>
   );
 };
