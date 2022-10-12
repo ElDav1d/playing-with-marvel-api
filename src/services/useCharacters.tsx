@@ -1,16 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Character } from '../components/molecules/CharactersList/CharactersList';
 
-const useCharacters = (calls: number) => {
+export interface useCharactersProps {
+  calls: number;
+  stackOrder: string;
+}
+
+const useCharacters = ({ calls, stackOrder }: useCharactersProps) => {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    (async function () {
-      const MAX_CHARACTERS = 5;
-      const offset = MAX_CHARACTERS * calls;
-      const url = `https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=d6f5c6bef1ef684786df6962910eb6ce`;
+    const BASE = 'https://gateway.marvel.com:443/v1/public/characters';
+    const KEY = 'd6f5c6bef1ef684786df6962910eb6ce';
+    const MAX_CHARACTERS = 5;
+    const order = stackOrder;
+    const offset = MAX_CHARACTERS * calls;
+    const url = `${BASE}?orderBy=${order}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
 
+    (async function () {
       try {
         setIsLoading(true);
 
@@ -27,7 +35,7 @@ const useCharacters = (calls: number) => {
         setIsLoading(false);
       }
     })();
-  }, [calls]);
+  }, [calls, stackOrder]);
 
   return { characters, isLoading };
 };
