@@ -30,8 +30,8 @@ const Characters = () => {
         onChange={(event: { target: { value: SetStateAction<string> } }) => changeHandler(event)}
       />
       <CharactersList characters={stack} />
-      {isLoading && <h2>Loading...</h2>}
-      {error ? <h2>Oooooooooops!</h2> : <ShowMoreButton onClick={() => clicKHandler()} />}
+      {isLoading ? <h2>Loading...</h2> : <ShowMoreButton disabled={error} onClick={() => clicKHandler()} />}
+      {error && <h2>Oooops...try reloading again!</h2>}
     </>
   );
 };

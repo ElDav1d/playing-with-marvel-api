@@ -24,23 +24,23 @@ const useCharacters = ({ calls, stackOrder }: useCharactersProps): useCharacters
     const offset = MAX_CHARACTERS * calls;
     const url = `${BASE}?orderBy=${order}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
 
-    setIsLoading(true);
-
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP STATUS ${response.status}`);
-        return response.json();
-      })
-      .then((response) => {
-        setCharacters(response.data.results);
-      })
-      .catch((error) => {
+    const fetchCharacters = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP STATUS: ${response.status}`);
+        }
+        const res = await response.json();
+        setCharacters(res.data.results);
+      } catch (error) {
         setError(error);
         console.error(error);
-      })
-      .finally(() => {
+      } finally {
         setIsLoading(false);
-      });
+      }
+    };
+    fetchCharacters();
   }, [calls, stackOrder]);
 
   return { characters, isLoading, error };
