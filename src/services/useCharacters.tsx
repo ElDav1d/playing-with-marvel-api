@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Character } from '../components/molecules/CharactersList/CharactersList';
+import { CharacterItem } from '../interfaces/globals';
 
 export interface useCharactersProps {
   calls: number;
   stackOrder: string;
 }
 export interface useCharactersResponse {
-  characters: Character[];
+  characters: CharacterItem[];
   isLoading: boolean;
   error: unknown;
 }
 
 const useCharacters = ({ calls, stackOrder }: useCharactersProps): useCharactersResponse => {
-  const [characters, setCharacters] = useState<Character[]>([]);
+  const [characters, setCharacters] = useState<CharacterItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<unknown>();
 

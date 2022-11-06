@@ -1,18 +1,7 @@
-export interface Thumbnail {
-  path: string;
-  extension: string;
-}
-
-export interface Character {
-  description: string;
-  id: number;
-  name: string;
-  modified: string;
-  thumbnail: Thumbnail;
-}
-
+import { Link } from 'react-router-dom';
+import { CharacterItem } from '../../../interfaces/globals';
 export interface CharactersListProps {
-  characters: Character[];
+  characters: CharacterItem[];
 }
 
 const CharactersList = ({ characters }: CharactersListProps) => {
@@ -20,7 +9,9 @@ const CharactersList = ({ characters }: CharactersListProps) => {
     <ul>
       {characters.map((character) => (
         <li key={character.id}>
-          <h2>{character.name}</h2>
+          <Link to={`character/${character.id}/${character.name}`}>
+            <h2>{character.name}</h2>
+          </Link>
           <p>
             <small>
               <strong>thumbnail: </strong>

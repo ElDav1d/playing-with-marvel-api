@@ -1,6 +1,7 @@
 import { useState, useEffect, SetStateAction } from 'react';
 import useCharacters from '../../../services/useCharacters';
-import CharactersList, { Character } from '../../molecules/CharactersList/CharactersList';
+import { CharacterItem } from '../../../interfaces/globals';
+import CharactersList  from '../../molecules/CharactersList/CharactersList';
 import { ShowMoreButton } from '../../atoms/ShowMoreButton/ShowMoreButton';
 import { OrderSelector } from '../../atoms/OrderSelector/OrderSelector';
 
@@ -8,7 +9,7 @@ const Characters = () => {
   const [calls, setCalls] = useState(1);
   const [stackOrder, setOrder] = useState('name');
   const { characters, isLoading, error } = useCharacters({ calls, stackOrder });
-  const [stack, setStack] = useState<Character[]>([]);
+  const [stack, setStack] = useState<CharacterItem[]>([]);
 
   useEffect(() => {
     setStack((stack) => [...stack, ...characters]);
