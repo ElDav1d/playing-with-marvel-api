@@ -5,11 +5,12 @@ export interface CharactersListProps {
 }
 
 const CharactersList = ({ characters }: CharactersListProps) => {
+	const formatUrlName = (name:string):string => name.replace(/([()])/g, '').toLowerCase().split(' ').join('-');
   return (
     <ul>
       {characters.map((character) => (
         <li key={character.id}>
-          <Link to={`character/${character.id}/${character.name}`}>
+          <Link to={`character/${character.id}/${formatUrlName(character.name)}`}>
             <h2>{character.name}</h2>
           </Link>
           <p>

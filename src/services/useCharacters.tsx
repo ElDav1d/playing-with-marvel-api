@@ -19,7 +19,7 @@ const useCharacters = ({ calls, stackOrder }: useCharactersProps): useCharacters
   useEffect(() => {
     const BASE = 'https://gateway.marvel.com:443/v1/public/characters';
     const KEY = 'd6f5c6bef1ef684786df6962910eb6ce';
-    const MAX_CHARACTERS = 5;
+    const MAX_CHARACTERS = 100;
     const order = stackOrder;
     const offset = MAX_CHARACTERS * calls;
     const url = `${BASE}?orderBy=${order}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
