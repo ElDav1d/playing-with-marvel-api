@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Characters from './components/pages/Characters/Characters';
-import Character from './components/pages/Character/Character';
+import Character from './components/pages/CharacterDetail/CharacterDetail';
 
 function App() {
   return (

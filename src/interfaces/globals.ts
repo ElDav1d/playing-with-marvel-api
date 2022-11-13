@@ -13,3 +13,12 @@ export interface CharacterItem extends CharacterBase {
   id: number;
   modified: string;
 }
+
+export interface ComicItem {
+  resourceUri: string;
+  name: string;
+}
+
+export interface CharacterDetail extends CharacterBase {
+  comics: ComicItem[];
+}
