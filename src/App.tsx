@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Characters from './components/pages/Characters/Characters';
-import Character from './components/pages/CharacterDetail/CharacterDetail';
+import CharacterDetail from './components/pages/CharacterDetail/CharacterDetail';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Characters />} />
-          <Route path='character/:id/:name' element={<Character />} />
+          <Route path='character/:id/:name' element={<CharacterDetail />} />
         </Routes>
       </BrowserRouter>
     </div>

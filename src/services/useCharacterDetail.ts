@@ -6,13 +6,13 @@ export interface ComicItem {
   resourceUri: string;
   name: string;
 }
-export interface UseCharacterResponse {
-  character: CharacterDetail;
+export interface UseCharacterDetailResponse {
+  characterData: CharacterDetail;
   isLoading: boolean;
   error: unknown;
 }
 
-const useCharacter = (id: string | undefined): UseCharacterResponse => {
+const useCharacterDetail = (id: string | undefined): UseCharacterDetailResponse => {
   const initCharacter = {
     name: '',
     description: '',
@@ -20,7 +20,7 @@ const useCharacter = (id: string | undefined): UseCharacterResponse => {
     comics: [],
   };
 
-  const [character, setCharacter] = useState<CharacterDetail>(initCharacter);
+  const [characterData, setCharacter] = useState<CharacterDetail>(initCharacter);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -37,12 +37,12 @@ const useCharacter = (id: string | undefined): UseCharacterResponse => {
         return response.json();
       })
       .then((data) => {
-        const characterData = data.data.results[0];
+        const characterDetail = data.data.results[0];
         setCharacter({
-          name: characterData.name,
-          description: characterData.description,
-          thumbnail: characterData.thumbnail,
-          comics: characterData.comics.items,
+          name: characterDetail.name,
+          description: characterDetail.description,
+          thumbnail: characterDetail.thumbnail,
+          comics: characterDetail.comics.items,
         });
       })
       .catch((error) => {
@@ -53,7 +53,7 @@ const useCharacter = (id: string | undefined): UseCharacterResponse => {
         setIsLoading(false);
       });
   }, []);
-  return { character, isLoading, error };
+  return { characterData, isLoading, error };
 };
 
-export default useCharacter;
+export default useCharacterDetail;

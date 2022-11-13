@@ -15,7 +15,7 @@ export interface CharacterItem extends CharacterBase {
 }
 
 export interface ComicItem {
-  resourceUri: string;
+  resourceURI: string;
   name: string;
 }
 
