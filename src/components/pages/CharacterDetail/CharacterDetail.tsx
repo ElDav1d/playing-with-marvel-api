@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import Character from '../../molecules/Character/Character';
+import Character from '../../organisms/Character/Character';
 import useCharacterDetail from '../../../services/useCharacterDetail';
 
 const CharacterDetail = () => {

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { CharacterItem } from '../../../interfaces/globals';
+import Image from '../../atoms/Image/Image';
 
 const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItem) => {
   const formatUrlName = (name: string): string =>
@@ -12,14 +13,9 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
   return (
     <li key={id}>
       <Link to={`character/${id}/${formatUrlName(name)}`}>
+        <Image path={thumbnail.path} extension={thumbnail.extension} />
         <h2>{name}</h2>
       </Link>
-      <p>
-        <small>
-          <strong>thumbnail: </strong>
-          {thumbnail.path}
-        </small>
-      </p>
       <p>
         <small>
           <strong>modified: </strong>

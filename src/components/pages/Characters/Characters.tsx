@@ -1,7 +1,7 @@
 import { useState, useEffect, SetStateAction } from 'react';
 import useCharacters from '../../../services/useCharacters';
 import { CharacterItem } from '../../../interfaces/globals';
-import CharactersList  from '../../molecules/CharactersList/CharactersList';
+import CharactersList  from '../../organisms/CharactersList/CharactersList';
 import { ShowMoreButton } from '../../atoms/ShowMoreButton/ShowMoreButton';
 import { OrderSelector } from '../../atoms/OrderSelector/OrderSelector';
 
