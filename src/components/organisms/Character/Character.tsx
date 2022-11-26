@@ -1,5 +1,5 @@
-import { CharacterDetail } from '../../../interfaces/globals';
-import Image from '../../atoms/Image/Image';
+import { CharacterDetail } from '@/interfaces/globals';
+import Image from '@/components/atoms/Image/Image';
 
 const Character = ({ name, description, thumbnail, comics }: CharacterDetail) => {
   return (

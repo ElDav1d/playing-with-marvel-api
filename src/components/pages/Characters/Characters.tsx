@@ -1,9 +1,9 @@
 import { useState, useEffect, SetStateAction } from 'react';
-import useCharacters from '../../../services/useCharacters';
-import { CharacterItem } from '../../../interfaces/globals';
-import CharactersList  from '../../organisms/CharactersList/CharactersList';
-import { ShowMoreButton } from '../../atoms/ShowMoreButton/ShowMoreButton';
-import { OrderSelector } from '../../atoms/OrderSelector/OrderSelector';
+import useCharacters from '@/services/useCharacters';
+import { CharacterItem } from '@/interfaces/globals';
+import CharactersList from '@/components/organisms/CharactersList/CharactersList';
+import { ShowMoreButton } from '@/components/atoms/ShowMoreButton/ShowMoreButton';
+import { OrderSelector } from '@/components/atoms/OrderSelector/OrderSelector';
 
 const Characters = () => {
   const [calls, setCalls] = useState(1);

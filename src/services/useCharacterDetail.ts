@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { CharacterDetail} from '../interfaces/globals';
-import { FETCHING } from '../utils/constants';
+import { CharacterDetail} from '@/interfaces/globals';
+import { FETCHING } from '@/utils/constants';
 
 export interface ComicItem {
   resourceUri: string;

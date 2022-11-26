@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { CharacterItem } from '../../../interfaces/globals';
-import Image from '../../atoms/Image/Image';
+import { CharacterItem } from '@/interfaces/globals';
+import Image from '@/components/atoms/Image/Image';
 
 const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItem) => {
   const formatUrlName = (name: string): string =>

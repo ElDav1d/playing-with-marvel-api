@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
-import Character from '../../organisms/Character/Character';
-import useCharacterDetail from '../../../services/useCharacterDetail';
+import Character from '@/components/organisms/Character/Character';
+import useCharacterDetail from '@/services/useCharacterDetail';
 
 const CharacterDetail = () => {
   const { id } = useParams();

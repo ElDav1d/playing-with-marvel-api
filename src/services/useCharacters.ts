@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { CharacterItem } from '../interfaces/globals';
-import { FETCHING } from '../utils/constants';
+import { CharacterItem } from '@/interfaces/globals';
+import { FETCHING } from '@/utils/constants';
 
 export interface useCharactersProps {
   calls: number;

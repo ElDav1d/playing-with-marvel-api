@@ -1,5 +1,5 @@
-import { CharacterItem } from '../../../interfaces/globals';
-import CharacterListItem from '../../molecules/CharacterListItem/CharacterListItem';
+import { CharacterItem } from '@/interfaces/globals';
+import CharacterListItem from '@/components/molecules/CharacterListItem/CharacterListItem';
 export interface CharactersListProps {
   characters: CharacterItem[];
 }

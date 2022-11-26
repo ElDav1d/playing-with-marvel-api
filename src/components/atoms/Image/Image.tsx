@@ -1,5 +1,5 @@
 import { StyledImage } from './Image.style';
-import { Thumbnail } from '../../../interfaces/globals';
+import { Thumbnail } from '@/interfaces/globals';
 
 export interface ImageProps extends Thumbnail {
   variant: 'standard_small' | 'landscape_incredible';
