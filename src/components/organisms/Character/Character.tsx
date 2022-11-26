@@ -1,4 +1,5 @@
 import { CharacterDetail } from '../../../interfaces/globals';
+import Image from '../../atoms/Image/Image';
 
 const Character = ({ name, description, thumbnail, comics }: CharacterDetail) => {
   return (
@@ -10,6 +11,7 @@ const Character = ({ name, description, thumbnail, comics }: CharacterDetail) =>
           {thumbnail.path}
         </small>
       </p>
+      <Image path={thumbnail.path} extension={thumbnail.extension} variant='landscape_incredible' />
       {description ? (
         <p>
           <strong>DESCRIPTION: </strong>
