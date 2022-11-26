@@ -27,11 +27,7 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
           <strong>DESCRIPTION: </strong>
           {description}
         </p>
-      ) : (
-        <p>
-          <strong>DESCRIPTION NOT AVAILABLE</strong>
-        </p>
-      )}
+      ) : null}
     </li>
   );
 };

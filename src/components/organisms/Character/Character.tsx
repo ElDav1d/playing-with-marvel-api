@@ -11,11 +11,7 @@ const Character = ({ name, description, thumbnail, comics }: CharacterDetail) =>
           <strong>DESCRIPTION: </strong>
           {description}
         </p>
-      ) : (
-        <p>
-          <strong>DESCRIPTION NOT AVAILABLE</strong>
-        </p>
-      )}
+      ) : null}
       <ul>
         {comics.map((comic) => (
           <li key={comic.name}>{comic.name}</li>

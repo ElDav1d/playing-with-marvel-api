@@ -1,6 +1,6 @@
 export const OrderSelector = ({ ...rest }) => {
   return (
-    <>
+    <fieldset>
       <label htmlFor='order'>Order</label>
       <select {...rest} name='order'>
         <option value='name'>name A/Z</option>
@@ -8,6 +8,6 @@ export const OrderSelector = ({ ...rest }) => {
         <option value='modified'>modified +</option>
         <option value='-modified'>modified -</option>
       </select>
-    </>
+    </fieldset>
   );
 };
