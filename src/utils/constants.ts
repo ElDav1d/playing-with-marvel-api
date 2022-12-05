@@ -1,6 +1,9 @@
-type FetchingValue = string;
 type FetchingConstants = {
-  [key: string]: FetchingValue;
+  [key: string]: string;
+};
+
+type CriteriaConstants = {
+  [key: string]: string[];
 };
 
 const FETCHING: FetchingConstants = {
@@ -8,4 +11,9 @@ const FETCHING: FetchingConstants = {
   KEY: 'd6f5c6bef1ef684786df6962910eb6ce',
 };
 
-export { FETCHING };
+const CRITERIA: CriteriaConstants = {
+  order: ['name', '-name', 'modified', '-modified'],
+  filters: ['withDescription', 'withImage'],
+};
+
+export { FETCHING, CRITERIA };

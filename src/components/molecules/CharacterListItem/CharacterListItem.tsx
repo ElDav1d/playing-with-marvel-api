@@ -11,7 +11,7 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
       .join('-');
 
   return (
-    <li key={id}>
+    <li>
       <Link to={`character/${id}/${formatUrlName(name)}`}>
         <Image path={thumbnail.path} extension={thumbnail.extension} variant='standard_small' />
         <h2>{name}</h2>
