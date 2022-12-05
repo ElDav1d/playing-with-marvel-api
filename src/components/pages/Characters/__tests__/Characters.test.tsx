@@ -1,13 +1,19 @@
 import { render, screen } from '@testing-library/react';
 import Characters from '../Characters';
-import { mockCharacters } from '../mockCharacters';
+import { mockCharactersAZ } from '../mockCharacters';
 
 describe(Characters, () => {
   jest.mock('../../../../services/useCharacters', () => ({
-    useCharacters: () => mockCharacters,
+    useCharacters: () => mockCharactersAZ,
   }));
+
   it('renders a list of characters', () => {
+    // ACT
     render(<Characters />);
-    expect(screen.getByRole('heading', { name: /this is the characters page/i })).toBeInTheDocument();
+
+    // ASSERT
+    expect(
+      screen.getByRole('heading', { name: /this is the characters page/i }),
+    ).toBeInTheDocument();
   });
 });

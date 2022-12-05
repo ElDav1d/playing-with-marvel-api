@@ -9,9 +9,8 @@ export interface CharactersListProps {
 
 const CharactersList = ({ filters, characters }: CharactersListProps) => {
   const [stack, setStack] = useState<CharacterItem[]>([]);
-  const [filterState, setFilterState] = useState<string[]>([]);
-  const isDescriptionFiltered = filterState.includes(CRITERIA.filters[0]);
-  const isImageFiltered = filterState.includes(CRITERIA.filters[1]);
+  const isDescriptionFiltered = filters.includes(CRITERIA.filters[0]);
+  const isImageFiltered = filters.includes(CRITERIA.filters[1]);
 
   const filterByDescription = (data: CharacterItem[]): CharacterItem[] =>
     [...data].filter((item) => item.description !== '');
@@ -21,20 +20,19 @@ const CharactersList = ({ filters, characters }: CharactersListProps) => {
 
   useEffect(() => {
     setStack(characters);
-    setFilterState(filters);
-  }, [filters, characters]);
+  }, [filters]);
 
   useEffect(() => {
     if (isDescriptionFiltered && isImageFiltered) {
-      setStack(filterByDescription(filterByImage(stack)));
+      setStack(filterByDescription(filterByImage(characters)));
     } else if (isDescriptionFiltered) {
-      setStack(filterByDescription(stack));
+      setStack(filterByDescription(characters));
     } else if (isImageFiltered) {
-      setStack(filterByImage(stack));
+      setStack(filterByImage(characters));
     } else {
       setStack(characters);
     }
-  }, [filterState]);
+  }, [filters, characters]);
 
   return (
     <ul>
