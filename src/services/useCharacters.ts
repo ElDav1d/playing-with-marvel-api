@@ -31,7 +31,12 @@ const useCharacters = ({ calls, stackOrder }: useCharactersProps): useCharacters
           throw new Error(`HTTP STATUS: ${response.status}`);
         }
         const res = await response.json();
-        setCharacters(res.data.results);
+        const characters = [...res.data.results].map(
+          ({ name, description, thumbnail, id, modified }) => {
+            return { name, description, thumbnail, id, modified };
+          },
+        );
+        setCharacters(characters);
       } catch (error) {
         setError(error);
         console.error(error);
