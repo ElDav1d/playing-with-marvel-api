@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import CharactersContext from '@/components/pages/Characters/context';
 import CharactersList from '../CharactersList';
 import { mockCharactersAZ, mockCharactersZA } from '@/components/pages/Characters/mockCharacters';
 
@@ -7,11 +9,19 @@ describe(CharactersList, () => {
   it('renders a list of characters', () => {
     // ARRANGE
     const filters = [''];
+    const isLoading = false;
+    const value = {
+      refProp: () => {},
+      counter: null,
+      setCounter: jest.fn(),
+    };
 
     // ACT
     render(
       <Router>
-        <CharactersList filters={filters} characters={mockCharactersAZ} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList isLoading={isLoading} filters={filters} characters={mockCharactersAZ} />
+        </CharactersContext.Provider>
       </Router>,
     );
 
@@ -22,11 +32,19 @@ describe(CharactersList, () => {
   it('renders a filtered list of characters with description', () => {
     // ARRANGE
     const filters = ['withDescription'];
+    const isLoading = false;
+    const value = {
+      refProp: () => {},
+      counter: null,
+      setCounter: jest.fn(),
+    };
 
     // ACT
     render(
       <Router>
-        <CharactersList filters={filters} characters={mockCharactersAZ} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList isLoading={isLoading} filters={filters} characters={mockCharactersAZ} />
+        </CharactersContext.Provider>
       </Router>,
     );
 
@@ -38,11 +56,19 @@ describe(CharactersList, () => {
   it('renders filtered list of characters with image', () => {
     // ARRANGE
     const filters = ['withImage'];
+    const isLoading = false;
+    const value = {
+      refProp: () => {},
+      counter: null,
+      setCounter: jest.fn(),
+    };
 
     // ACT
     render(
       <Router>
-        <CharactersList filters={filters} characters={mockCharactersAZ} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList isLoading={isLoading} filters={filters} characters={mockCharactersAZ} />
+        </CharactersContext.Provider>
       </Router>,
     );
 
@@ -54,11 +80,19 @@ describe(CharactersList, () => {
   it('renders a filtered list of characters with description and image', () => {
     // ARRANGE
     const filters = ['withDescription', 'withImage'];
+    const isLoading = false;
+    const value = {
+      refProp: () => {},
+      counter: null,
+      setCounter: jest.fn(),
+    };
 
     // ACT
     render(
       <Router>
-        <CharactersList filters={filters} characters={mockCharactersAZ} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList isLoading={isLoading} filters={filters} characters={mockCharactersAZ} />
+        </CharactersContext.Provider>
       </Router>,
     );
 
@@ -70,18 +104,33 @@ describe(CharactersList, () => {
   it('renders the full list of characters after removing the filters', () => {
     // ARRANGE
     const initFilters = ['withDescription', 'withImage'];
+    const isLoading = false;
+    const value = {
+      refProp: () => {},
+      counter: null,
+      setCounter: jest.fn(),
+    };
 
     const { rerender } = render(
       <Router>
-        <CharactersList filters={initFilters} characters={mockCharactersAZ} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList
+            isLoading={isLoading}
+            filters={initFilters}
+            characters={mockCharactersAZ}
+          />
+        </CharactersContext.Provider>
       </Router>,
     );
 
     // ACT
     const noFilters = [''];
+
     rerender(
       <Router>
-        <CharactersList filters={noFilters} characters={mockCharactersAZ} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList isLoading={isLoading} filters={noFilters} characters={mockCharactersAZ} />
+        </CharactersContext.Provider>
       </Router>,
     );
 
@@ -93,17 +142,36 @@ describe(CharactersList, () => {
   it('renders a filtered list of characters with description after reordering', () => {
     // ARRANGE
     const initFilters = ['withDescription'];
+    const isLoading = false;
+		const value = {
+      refProp: () => {},
+      counter: null,
+      setCounter: jest.fn(),
+    };
+
 
     const { rerender } = render(
       <Router>
-        <CharactersList filters={initFilters} characters={mockCharactersAZ} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList
+            isLoading={isLoading}
+            filters={initFilters}
+            characters={mockCharactersAZ}
+          />
+        </CharactersContext.Provider>
       </Router>,
     );
 
     // ACT
     rerender(
       <Router>
-        <CharactersList filters={initFilters} characters={mockCharactersZA} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList
+            isLoading={isLoading}
+            filters={initFilters}
+            characters={mockCharactersZA}
+          />
+        </CharactersContext.Provider>
       </Router>,
     );
 
@@ -116,10 +184,19 @@ describe(CharactersList, () => {
     // ARRANGE
     const initFilters = ['withDescription'];
     const initStack = mockCharactersAZ;
+    const isLoading = false;
+		const value = {
+      refProp: () => {},
+      counter: null,
+      setCounter: jest.fn(),
+    };
+
 
     const { rerender } = render(
       <Router>
-        <CharactersList filters={initFilters} characters={initStack} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList isLoading={isLoading} filters={initFilters} characters={initStack} />
+        </CharactersContext.Provider>
       </Router>,
     );
 
@@ -128,7 +205,9 @@ describe(CharactersList, () => {
 
     rerender(
       <Router>
-        <CharactersList filters={initFilters} characters={biggerStack} />
+        <CharactersContext.Provider value={value}>
+          <CharactersList isLoading={isLoading} filters={initFilters} characters={biggerStack} />
+        </CharactersContext.Provider>
       </Router>,
     );
 

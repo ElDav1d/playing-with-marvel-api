@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { CharacterItem } from '@/interfaces/globals';
+import { useCharactersContext } from '@/components/pages/Characters/context';
 import Image from '@/components/atoms/Image/Image';
 
 const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItem) => {
+  const { refProp } = useCharactersContext();
+
   const formatUrlName = (name: string): string =>
     name
       .replace(/([()])/g, '')
@@ -11,7 +14,7 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
       .join('-');
 
   return (
-    <li>
+    <li ref={refProp}>
       <Link to={`character/${id}/${formatUrlName(name)}`}>
         <Image path={thumbnail.path} extension={thumbnail.extension} variant='standard_small' />
         <h2>{name}</h2>

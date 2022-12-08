@@ -21,9 +21,8 @@ const useCharacters = ({ calls, stackOrder }: useCharactersProps): useCharacters
     const { BASE, KEY } = FETCHING;
     const MAX_CHARACTERS = 20;
     const order = stackOrder;
-    const offset = MAX_CHARACTERS * calls;
+    const offset = calls > 1 ? MAX_CHARACTERS * calls : 0;
     const url = `${BASE}?orderBy=${order}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
-
     const fetchCharacters = async () => {
       setIsLoading(true);
       try {
