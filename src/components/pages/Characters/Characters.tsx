@@ -10,7 +10,7 @@ import OrderSelector from '@/components/organisms/OrderSelector/OrderSelector';
 
 const Characters = () => {
   const [intersectionRef, entry] = useIntersectionObserver({
-    threshold: 0.05,
+    threshold: 1,
   });
 
   const [calls, setCalls] = useState(1);
