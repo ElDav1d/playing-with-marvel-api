@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CharacterDetail} from '@/interfaces/globals';
+import { CharacterDetail } from '@/interfaces/globals';
 import { FETCHING } from '@/utils/constants';
 
 export interface ComicItem {
@@ -37,12 +37,18 @@ const useCharacterDetail = (id: string | undefined): UseCharacterDetailResponse 
         return response.json();
       })
       .then((data) => {
-        const characterDetail = data.data.results[0];
+        const {
+          name,
+          description,
+          thumbnail,
+          comics: { items: comics }
+        } = data.data.results[0];
+
         setCharacter({
-          name: characterDetail.name,
-          description: characterDetail.description,
-          thumbnail: characterDetail.thumbnail,
-          comics: characterDetail.comics.items,
+          name,
+          description,
+          thumbnail,
+          comics,
         });
       })
       .catch((error) => {
