@@ -15,6 +15,10 @@ const CharactersContext = createContext<Context>({
 const useCharactersContext = () => {
   const context = useContext(CharactersContext);
 
+  if (context === undefined) {
+    throw new Error('useCharactersContext was used outside of its Provider!');
+  }
+
   return context;
 };
 
