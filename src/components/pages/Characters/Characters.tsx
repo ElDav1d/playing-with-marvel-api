@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CharacterItem } from '@/interfaces/globals';
 import { useCharacters } from '@/services';
 import { useIntersectionObserver } from '@/components/hooks';
 import CharactersContext from './context';
 import { CRITERIA } from '@/utils/constants';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
-import FilterSelector from '@/components/organisms/FilterSelector/FilterSelector';
-import OrderSelector from '@/components/organisms/OrderSelector/OrderSelector';
+import FilterSelector from '@/components/molecules/FilterSelector/FilterSelector';
+import OrderSelector from '@/components/molecules/OrderSelector/OrderSelector';
+import SearchCharacters from '@/components/molecules/SearchCharacters/SearchCharacters';
 
 const Characters = () => {
   const [intersectionRef, entry] = useIntersectionObserver({
@@ -30,6 +31,8 @@ const Characters = () => {
     setCounter: setRenderedItems,
   };
 
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     setStack((stack) => [...stack, ...characters]);
   }, [characters]);
@@ -41,6 +44,10 @@ const Characters = () => {
   useEffect(() => {
     if (renderedItems < 5) setCalls(calls + 1);
   }, [renderedItems]);
+
+  useEffect(() => {
+    searchInputRef?.current?.focus();
+  }, []);
 
   const orderChangeHandler = (event: { target: { value: string } }) => {
     setStack([]);
@@ -58,10 +65,23 @@ const Characters = () => {
     }
   };
 
+  const searchChangeHandler = () => {
+    console.log('onChange');
+  };
+
+  const searchKeyDownHandler = () => {
+    console.log('onKeyDown');
+  };
+
   return (
     <CharactersContext.Provider value={contextValue}>
       <>
         <h1>This is the Characters Page</h1>
+        <SearchCharacters
+          ref={searchInputRef}
+          onChange={searchChangeHandler}
+          onKeyDown={searchKeyDownHandler}
+        />
         <OrderSelector onChange={(event) => orderChangeHandler(event)} order={CRITERIA.order} />
         <FilterSelector
           filters={CRITERIA.filters}
