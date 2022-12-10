@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CharacterDetail } from '@/interfaces/globals';
-import { FETCHING } from '@/utils/constants';
+import { FETCHING_STRINGS } from '@/utils/constants';
 
 export interface ComicItem {
   resourceUri: string;
@@ -25,7 +25,7 @@ const useCharacterDetail = (id: string | undefined): UseCharacterDetailResponse 
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const { BASE, KEY } = FETCHING;
+    const { BASE, KEY } = FETCHING_STRINGS;
     const url = `${BASE}/${id}?apikey=${KEY}`;
 
     setIsLoading(true);
