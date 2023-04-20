@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CharacterItem } from '@/interfaces/globals';
-import { FETCHING_STRINGS, MAX_CHARACTERS } from '@/utils/constants';
+import { BASE_URL, MAX_CHARACTERS } from '@/utils/constants';
 
 export interface useCharactersProps {
   calls: number;
@@ -25,11 +25,11 @@ const useCharacters = ({
   const [hasMore, setHasmore] = useState(true);
 
   useEffect(() => {
-    const { BASE, KEY } = FETCHING_STRINGS;
+    const KEY = process.env.REACT_APP_MARVEL_API_KEY;
     const searchQuery = searchString ? `?nameStartsWith=${searchString}&` : '?';
     const order = stackOrder;
     const offset = calls > 0 ? MAX_CHARACTERS * calls : 0;
-    const url = `${BASE}${searchQuery}orderBy=${order}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
+    const url = `${BASE_URL}${searchQuery}orderBy=${order}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
 
     const fetchCharacters = async () => {
       setIsLoading(true);
@@ -42,11 +42,9 @@ const useCharacters = ({
         const results = res.data.results;
         if (results.length) {
           setHasmore(true);
-          const characters = [...results].map(
-            ({ name, description, thumbnail, id, modified }) => {
-              return { name, description, thumbnail, id, modified };
-            },
-          );
+          const characters = [...results].map(({ name, description, thumbnail, id, modified }) => {
+            return { name, description, thumbnail, id, modified };
+          });
           setCharacters(characters);
         } else {
           setHasmore(false);

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CharacterDetail } from '@/interfaces/globals';
-import { FETCHING_STRINGS } from '@/utils/constants';
+import { BASE_URL } from '@/utils/constants';
 
 export interface ComicItem {
   resourceUri: string;
@@ -25,8 +25,8 @@ const useCharacterDetail = (id: string | undefined): UseCharacterDetailResponse 
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const { BASE, KEY } = FETCHING_STRINGS;
-    const url = `${BASE}/${id}?apikey=${KEY}`;
+    const KEY = process.env.REACT_APP_MARVEL_API_KEY;
+    const url = `${BASE_URL}/${id}?apikey=${KEY}`;
 
     setIsLoading(true);
     fetch(url)
@@ -41,7 +41,7 @@ const useCharacterDetail = (id: string | undefined): UseCharacterDetailResponse 
           name,
           description,
           thumbnail,
-          comics: { items: comics }
+          comics: { items: comics },
         } = data.data.results[0];
 
         setCharacter({
