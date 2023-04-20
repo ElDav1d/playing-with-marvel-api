@@ -2,23 +2,23 @@ import { useState, useEffect } from 'react';
 import { CharacterItem } from '@/interfaces/globals';
 import { BASE_URL, MAX_CHARACTERS } from '@/utils/constants';
 
-export interface useCharactersProps {
+export interface useCharactersEffectProps {
   calls: number;
   stackOrder: string;
   searchString: string;
 }
-export interface useCharactersResponse {
+export interface useCharactersEffectResponse {
   characters: CharacterItem[];
   isLoading: boolean;
   hasMore: boolean;
   error: unknown;
 }
 
-const useCharacters = ({
+const useCharactersEffect = ({
   calls,
   stackOrder,
   searchString,
-}: useCharactersProps): useCharactersResponse => {
+}: useCharactersEffectProps): useCharactersEffectResponse => {
   const [characters, setCharacters] = useState<CharacterItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<unknown>();
@@ -62,4 +62,4 @@ const useCharacters = ({
   return { characters, isLoading, hasMore, error };
 };
 
-export default useCharacters;
+export default useCharactersEffect;

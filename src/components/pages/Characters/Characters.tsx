@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { CharacterItem } from '@/interfaces/globals';
-import { useCharacters } from '@/services';
+import { useCharactersEffect } from '@/services';
 import { useIntersectionObserver, useDebounce } from '@/hooks';
 import CharactersContext from './context';
 import { CRITERIA, MAX_CHARACTERS } from '@/utils/constants';
@@ -15,7 +15,7 @@ const Characters = () => {
   const [searchString, setSearchString] = useState('');
   const [searchInput, setSearchInput] = useState('');
 
-  const { characters, isLoading, hasMore, error } = useCharacters({
+  const { characters, isLoading, hasMore, error } = useCharactersEffect({
     calls,
     stackOrder,
     searchString,
@@ -80,11 +80,11 @@ const Characters = () => {
   };
 
   const searchInputHandler = (event: { target: { value: string } }): void => {
-		setSearchInput(event.target.value);
+    setSearchInput(event.target.value);
   };
-	
+
   const searchQueryHandler = () => {
-		clearOut();
+    clearOut();
     setSearchString(searchInput);
   };
 

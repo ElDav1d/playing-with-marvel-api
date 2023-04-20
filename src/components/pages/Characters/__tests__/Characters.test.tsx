@@ -16,7 +16,7 @@ describe(Characters, () => {
     window.IntersectionObserver = mockIntersectionObserver;
   });
 
-  jest.mock('../../../../services/useCharacters', () => ({
+  jest.mock('../../../../services/useCharactersEffect', () => ({
     useCharacters: () => mockCharactersAZ,
   }));
 

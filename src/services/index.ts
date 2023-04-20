@@ -1,4 +1,5 @@
-import useCharacters from './useCharacters';
+import getCharactersService from './characters';
+import useCharactersEffect from './useCharactersEffect';
 import useCharacterDetail from './useCharacterDetail';
 
-export { useCharacters, useCharacterDetail };
+export { getCharactersService, useCharactersEffect, useCharacterDetail };
