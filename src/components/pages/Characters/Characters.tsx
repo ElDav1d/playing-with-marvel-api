@@ -1,5 +1,3 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import { useCharacters } from './hooks/useCharacters';
 
