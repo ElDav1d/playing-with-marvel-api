@@ -1,9 +1,12 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import CharactersContext from '@/components/pages/Characters/context';
+import CharactersContext from '@/components/pages/Characters/context/context';
 import CharactersList from '../CharactersList';
-import { mockCharactersAZ, mockCharactersZA } from '@/components/pages/Characters/mockCharacters';
+import {
+  mockCharactersAZ,
+  mockCharactersZA,
+} from '@/components/pages/Characters/mocks/mockCharacters';
 
 describe(CharactersList, () => {
   it('renders a list of characters', () => {
@@ -143,12 +146,11 @@ describe(CharactersList, () => {
     // ARRANGE
     const initFilters = ['withDescription'];
     const isLoading = false;
-		const value = {
+    const value = {
       refProp: () => {},
       counter: null,
       setCounter: jest.fn(),
     };
-
 
     const { rerender } = render(
       <Router>
@@ -185,12 +187,11 @@ describe(CharactersList, () => {
     const initFilters = ['withDescription'];
     const initStack = mockCharactersAZ;
     const isLoading = false;
-		const value = {
+    const value = {
       refProp: () => {},
       counter: null,
       setCounter: jest.fn(),
     };
-
 
     const { rerender } = render(
       <Router>

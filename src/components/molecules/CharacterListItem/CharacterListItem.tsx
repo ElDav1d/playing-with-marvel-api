@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { CharacterItem } from '@/interfaces/globals';
-import { useCharactersContext } from '@/components/pages/Characters/context';
+import { useCharactersContext } from '@/components/pages/Characters/context/context';
 import Image from '@/components/atoms/Image/Image';
 
 const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItem) => {

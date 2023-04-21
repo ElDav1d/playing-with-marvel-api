@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { render, screen } from '@testing-library/react';
-import CharactersContext from '@/components/pages/Characters/context';
+import CharactersContext from '@/components/pages/Characters/context/context';
 import Characters from '../Characters';
-import { mockCharactersAZ } from '../mockCharacters';
+import { mockCharactersAZ } from '../mocks/mockCharacters';
 
 describe(Characters, () => {
   // ARRANGE

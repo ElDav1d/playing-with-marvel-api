@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { CharacterItem } from '@/interfaces/globals';
 import { useCharactersEffect } from '@/services';
-import { useIntersectionObserver, useDebounce } from '@/hooks';
-import CharactersContext from './context';
+import { useIntersectionObserver, useDebounce } from '@/components/pages/Characters/hooks';
+import CharactersContext from './context/context';
 import { CRITERIA, MAX_CHARACTERS } from '@/utils/constants';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import FilterSelector from '@/components/molecules/FilterSelector/FilterSelector';

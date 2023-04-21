@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CharacterItem } from '@/interfaces/globals';
 import { CRITERIA } from '@/utils/constants';
-import { useCharactersContext } from '@/components/pages/Characters/context';
+import { useCharactersContext } from '@/components/pages/Characters/context/context';
 import CharacterListItem from '@/components/molecules/CharacterListItem/CharacterListItem';
 export interface CharactersListProps {
   isLoading: boolean;
