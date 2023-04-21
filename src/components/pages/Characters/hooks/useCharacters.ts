@@ -8,3 +8,5 @@ export const useCharacters = () => {
 
   return { isLoading, isError, characters: data, refetch };
 };
+
+export default useCharacters;

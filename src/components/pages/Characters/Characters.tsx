@@ -1,5 +1,5 @@
+import { useCharacters } from './hooks';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
-import { useCharacters } from './hooks/useCharacters';
 
 const Characters = () => {
   const { characters, isLoading, isError } = useCharacters();
