@@ -1,28 +1,25 @@
 import { Link, useParams } from 'react-router-dom';
+import { useCharacterDetails } from './hooks/useCharacterDetails';
 import Character from '@/components/organisms/Character/Character';
-import { useCharacterDetailEffect } from '@/services';
 
 const CharacterDetail = () => {
   const { id } = useParams();
-  const { characterData, isLoading, error } = useCharacterDetailEffect(id);
 
-  console.log(characterData);
-
-  const { name, description, thumbnail, comics } = characterData;
+  const { isLoading, isError, character } = useCharacterDetails(id);
 
   return (
     <>
-      {characterData && (
+      {character && (
         <Character
-          name={name}
-          description={description}
-          thumbnailPath={thumbnail.path}
-          thumbnailExtension={thumbnail.extension}
-          comics={comics.items}
+          name={character.name}
+          description={character.description}
+          thumbnailPath={character.thumbnail.path}
+          thumbnailExtension={character.thumbnail.extension}
+          comics={character.comics.items}
         />
       )}
       {isLoading && <h2>Loading...</h2>}
-      {error && <h2>Ooops, try reloading again</h2>}
+      {isError && <h2>Ooops, try reloading again</h2>}
       <Link to='/'>Home</Link>
     </>
   );
