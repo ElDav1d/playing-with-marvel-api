@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, screen } from '@testing-library/react';
-import CharactersContext from '@/components/pages/Characters/context/context';
 import Characters from '../Characters';
 import mockCharactersAZ from '../mocks/mockCharactersAZ.json';
 
@@ -16,7 +16,9 @@ describe(Characters, () => {
     window.IntersectionObserver = mockIntersectionObserver;
   });
 
-  jest.mock('../../../../services/useCharactersEffect', () => ({
+  const queryClient = new QueryClient();
+
+  jest.mock('../hooks/useCharacters.ts', () => ({
     useCharacters: () => mockCharactersAZ,
   }));
 
@@ -29,9 +31,9 @@ describe(Characters, () => {
   it('renders a list of characters', () => {
     // ACT
     render(
-      <CharactersContext.Provider value={value}>
+      <QueryClientProvider client={queryClient}>
         <Characters />
-      </CharactersContext.Provider>,
+      </QueryClientProvider>,
     );
 
     // ASSERT

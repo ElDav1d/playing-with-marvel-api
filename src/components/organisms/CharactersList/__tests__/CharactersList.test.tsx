@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import CharactersContext from '@/components/pages/Characters/context/context';
 import CharactersList from '../CharactersList';
 import mockCharactersAZ from '@/components/pages/Characters/mocks/mockCharactersAZ.json';
 import mockCharactersZA from '@/components/pages/Characters/mocks/mockCharactersZA.json';
@@ -9,43 +8,29 @@ import mockCharactersZA from '@/components/pages/Characters/mocks/mockCharacters
 describe(CharactersList, () => {
   it('renders a list of characters', () => {
     // ARRANGE
-    const filters = [''];
-    const isLoading = false;
-    const value = {
-      refProp: () => {},
-      counter: null,
-      setCounter: jest.fn(),
-    };
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
     // ACT
     render(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList isLoading={isLoading} filters={filters} characters={mockCharactersAZ} />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersAZ} />
       </Router>,
     );
 
+    // ASSERT
     const headings = screen.getAllByRole('heading');
     expect(headings.length).toBe(4);
   });
 
   it('renders a filtered list of characters with description', () => {
     // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
     const filters = ['withDescription'];
-    const isLoading = false;
-    const value = {
-      refProp: () => {},
-      counter: null,
-      setCounter: jest.fn(),
-    };
 
     // ACT
     render(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList isLoading={isLoading} filters={filters} characters={mockCharactersAZ} />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersAZ} />
       </Router>,
     );
 
@@ -56,20 +41,13 @@ describe(CharactersList, () => {
 
   it('renders filtered list of characters with image', () => {
     // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
     const filters = ['withImage'];
-    const isLoading = false;
-    const value = {
-      refProp: () => {},
-      counter: null,
-      setCounter: jest.fn(),
-    };
 
     // ACT
     render(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList isLoading={isLoading} filters={filters} characters={mockCharactersAZ} />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersAZ} />
       </Router>,
     );
 
@@ -80,20 +58,13 @@ describe(CharactersList, () => {
 
   it('renders a filtered list of characters with description and image', () => {
     // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
     const filters = ['withDescription', 'withImage'];
-    const isLoading = false;
-    const value = {
-      refProp: () => {},
-      counter: null,
-      setCounter: jest.fn(),
-    };
 
     // ACT
     render(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList isLoading={isLoading} filters={filters} characters={mockCharactersAZ} />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersAZ} />
       </Router>,
     );
 
@@ -104,23 +75,12 @@ describe(CharactersList, () => {
 
   it('renders the full list of characters after removing the filters', () => {
     // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
     const initFilters = ['withDescription', 'withImage'];
-    const isLoading = false;
-    const value = {
-      refProp: () => {},
-      counter: null,
-      setCounter: jest.fn(),
-    };
 
     const { rerender } = render(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList
-            isLoading={isLoading}
-            filters={initFilters}
-            characters={mockCharactersAZ}
-          />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersAZ} />
       </Router>,
     );
 
@@ -129,9 +89,7 @@ describe(CharactersList, () => {
 
     rerender(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList isLoading={isLoading} filters={noFilters} characters={mockCharactersAZ} />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersAZ} />
       </Router>,
     );
 
@@ -142,36 +100,20 @@ describe(CharactersList, () => {
 
   it('renders a filtered list of characters with description after reordering', () => {
     // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+    const charactersZA = JSON.parse(JSON.stringify(mockCharactersZA));
     const initFilters = ['withDescription'];
-    const isLoading = false;
-    const value = {
-      refProp: () => {},
-      counter: null,
-      setCounter: jest.fn(),
-    };
 
     const { rerender } = render(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList
-            isLoading={isLoading}
-            filters={initFilters}
-            characters={mockCharactersAZ}
-          />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersAZ} />
       </Router>,
     );
 
     // ACT
     rerender(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList
-            isLoading={isLoading}
-            filters={initFilters}
-            characters={mockCharactersZA}
-          />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersZA} />
       </Router>,
     );
 
@@ -182,31 +124,22 @@ describe(CharactersList, () => {
 
   it('renders a filtered list of characters with description after adding more', () => {
     // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+    const charactersZA = JSON.parse(JSON.stringify(mockCharactersZA));
     const initFilters = ['withDescription'];
-    const initStack = mockCharactersAZ;
-    const isLoading = false;
-    const value = {
-      refProp: () => {},
-      counter: null,
-      setCounter: jest.fn(),
-    };
 
     const { rerender } = render(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList isLoading={isLoading} filters={initFilters} characters={initStack} />
-        </CharactersContext.Provider>
+        <CharactersList characters={charactersAZ} />
       </Router>,
     );
 
     // ACT
-    const biggerStack = [...initStack, ...mockCharactersZA];
+    const biggerStack = [...charactersAZ, ...charactersZA];
 
     rerender(
       <Router>
-        <CharactersContext.Provider value={value}>
-          <CharactersList isLoading={isLoading} filters={initFilters} characters={biggerStack} />
-        </CharactersContext.Provider>
+        <CharactersList characters={biggerStack} />
       </Router>,
     );
 
