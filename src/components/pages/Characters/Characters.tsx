@@ -29,7 +29,7 @@ const Characters = () => {
     <>
       <h1>This is the Characters Page</h1>
       {isError && <h2>Oooops...try reloading again!</h2>}
-      <CharactersList characters={characters} />
+      {characters.length > 0 && <CharactersList characters={characters} />}
       {isLoading && <h2>Loading...</h2>}
       {inMoreData && <h2 ref={ref}>Ref</h2>}
     </>

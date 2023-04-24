@@ -1,11 +1,25 @@
-import { CharacterDetail } from '@/interfaces/globals';
 import Image from '@/components/atoms/Image/Image';
+import { ComicsItem } from '@/components/pages/Characters/interfaces/characters';
 
-const Character = ({ name, description, thumbnail, comics }: CharacterDetail) => {
+export interface CharaterProps {
+  name: string;
+  description: string;
+  thumbnailPath: string;
+  thumbnailExtension: string;
+  comics: ComicsItem[];
+}
+
+const Character = ({
+  name,
+  description,
+  thumbnailPath,
+  thumbnailExtension,
+  comics,
+}: CharaterProps) => {
   return (
     <>
       <h1>This is {name}</h1>
-      <Image path={thumbnail.path} extension={thumbnail.extension} variant='landscape_incredible' />
+      <Image path={thumbnailPath} extension={thumbnailExtension} variant='landscape_incredible' />
       {description ? (
         <p>
           <strong>DESCRIPTION: </strong>

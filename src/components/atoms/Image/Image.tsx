@@ -1,5 +1,5 @@
 import { StyledImage } from './Image.style';
-import { Thumbnail } from '@/interfaces/globals';
+import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 
 export interface ImageProps extends Thumbnail {
   variant: 'standard_small' | 'landscape_incredible';

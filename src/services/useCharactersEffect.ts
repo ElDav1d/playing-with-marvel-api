@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CharacterItem } from '@/interfaces/globals';
+import { CharacterItem } from '@/components/pages/Characters/interfaces/characters';
 import { BASE_URL, MAX_CHARACTERS } from '@/utils/constants';
 
 export interface useCharactersEffectProps {
@@ -40,11 +40,9 @@ const useCharactersEffect = ({
         }
         const res = await response.json();
         const results = res.data.results;
-        if (results.length) {
+        if (res.data.results) {
           setHasmore(true);
-          const characters = [...results].map(({ name, description, thumbnail, id, modified }) => {
-            return { name, description, thumbnail, id, modified };
-          });
+          const characters = res.data.results;
           setCharacters(characters);
         } else {
           setHasmore(false);

@@ -3,10 +3,8 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import CharactersContext from '@/components/pages/Characters/context/context';
 import CharactersList from '../CharactersList';
-import {
-  mockCharactersAZ,
-  mockCharactersZA,
-} from '@/components/pages/Characters/mocks/mockCharacters';
+import mockCharactersAZ from '@/components/pages/Characters/mocks/mockCharactersAZ.json';
+import mockCharactersZA from '@/components/pages/Characters/mocks/mockCharactersZA.json';
 
 describe(CharactersList, () => {
   it('renders a list of characters', () => {

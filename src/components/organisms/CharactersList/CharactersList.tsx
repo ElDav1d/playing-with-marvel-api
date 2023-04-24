@@ -1,27 +1,23 @@
-import { CharacterItem } from '@/interfaces/globals';
+import { CharacterItem } from '@/components/pages/Characters/interfaces/characters';
 import CharacterListItem from '@/components/molecules/CharacterListItem/CharacterListItem';
 export interface CharactersListProps {
-  characters: CharacterItem[] | undefined;
+  characters: CharacterItem[];
 }
 
 const CharactersList = ({ characters }: CharactersListProps) => {
   return (
-    <>
-      {characters && (
-        <ul>
-          {characters.map(({ id, name, thumbnail, modified, description }, index) => (
-            <CharacterListItem
-              key={index}
-              id={id}
-              name={name}
-              thumbnail={thumbnail}
-              modified={modified}
-              description={description}
-            />
-          ))}
-        </ul>
-      )}
-    </>
+    <ul>
+      {characters.map(({ id, name, thumbnail, modified, description }) => (
+        <CharacterListItem
+          key={id}
+          id={id}
+          name={name}
+          thumbnail={thumbnail}
+          modified={modified}
+          description={description}
+        />
+      ))}
+    </ul>
   );
 };
 

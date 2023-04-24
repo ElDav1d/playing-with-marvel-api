@@ -1,4 +1,4 @@
 import useCharactersEffect from './useCharactersEffect';
-import useCharacterDetail from './useCharacterDetail';
+import useCharacterDetailEffect from './useCharacterDetailEffect';
 
-export { useCharactersEffect, useCharacterDetail };
+export { useCharactersEffect, useCharacterDetailEffect };

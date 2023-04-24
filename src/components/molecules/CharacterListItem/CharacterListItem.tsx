@@ -1,9 +1,17 @@
 import { Link } from 'react-router-dom';
-import { CharacterItem } from '@/interfaces/globals';
+import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import { useCharactersContext } from '@/components/pages/Characters/context/context';
 import Image from '@/components/atoms/Image/Image';
 
-const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItem) => {
+export interface CharacterItemProps {
+  id: number;
+  name: string;
+  description: string;
+  modified: string;
+  thumbnail: Thumbnail;
+}
+
+const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItemProps) => {
   const { refProp } = useCharactersContext();
 
   const formatUrlName = (name: string): string =>
