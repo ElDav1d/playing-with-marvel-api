@@ -1,10 +1,13 @@
-import { useCharacters } from './hooks';
-import { useInView } from 'react-intersection-observer';
-import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useCharacters } from './hooks';
+import { FetchingOrder } from './interfaces/characters';
+import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 
 const Characters = () => {
-  const { isLoading, isError, characters, fetchNextPage, hasNextPage } = useCharacters();
+  const { isLoading, isError, characters, fetchNextPage, hasNextPage } = useCharacters(
+    FetchingOrder.NAME_AZ,
+  );
 
   const { ref, inView } = useInView({
     threshold: 0.1,

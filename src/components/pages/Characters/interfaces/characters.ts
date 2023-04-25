@@ -69,3 +69,10 @@ export interface URL {
   type: string;
   url: string;
 }
+
+export enum FetchingOrder {
+  NAME_AZ = 'name',
+  NAME_ZA = '-name',
+  MODIFIED_FIRST = 'modified',
+  MODIFIED_LAST = '-modified',
+}

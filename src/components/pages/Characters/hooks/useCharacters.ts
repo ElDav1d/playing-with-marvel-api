@@ -1,10 +1,11 @@
 import getCharactersService from '../services/getCharactersService';
 import { useInfiniteQuery } from '@tanstack/react-query';
+import { FetchingOrder } from '../interfaces/characters';
 
-export const useCharacters = () => {
+export const useCharacters = (order: FetchingOrder) => {
   const { isLoading, isError, data, fetchNextPage, hasNextPage } = useInfiniteQuery(
     ['characters'],
-    getCharactersService,
+    ({ pageParam }) => getCharactersService({ pageParam, order }),
     {
       getNextPageParam: (lastPage) => lastPage?.nextCursor,
       refetchOnWindowFocus: false,
