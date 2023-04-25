@@ -1,8 +1,8 @@
 import { BASE_URL, MAX_CHARACTERS } from '@/utils/constants';
 import { CharacterItem } from '../interfaces/characters';
 
-const getCharactersService = async ({ pageParam = 1 }: { pageParam?: number }) => {
-  const offset = pageParam * MAX_CHARACTERS;
+const getCharactersService = async ({ pageParam = 0 }: { pageParam?: number }) => {
+  const offset = MAX_CHARACTERS * pageParam;
   const order = 'name';
   const KEY = process.env.REACT_APP_MARVEL_API_KEY;
   const url = `${BASE_URL}?orderBy=${order}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
@@ -15,11 +15,18 @@ const getCharactersService = async ({ pageParam = 1 }: { pageParam?: number }) =
     }
 
     const res = await response.json();
-    const results = res.data.results;
 
-    const characters = results.filter((character: CharacterItem) => character !== undefined);
+    const characters = res.data.results.filter(
+      (character: CharacterItem) => character !== undefined,
+    );
 
-    return characters;
+    const getNextCursor = () => {
+      const hasMoreResults = MAX_CHARACTERS * (pageParam + 1) < res.data.total;
+
+      return hasMoreResults ? pageParam + 1 : null;
+    };
+
+    return { characters, nextCursor: getNextCursor() };
   } catch (error) {
     console.log(error);
   }
