@@ -1,12 +1,14 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useCharacters } from './hooks';
-import { FetchingOrder } from './interfaces/characters';
+import { FetchingOrder, FilterCriteria } from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
+import CheckboxesList from '@/components/molecules/CheckboxesList/CheckboxesList';
 
 const Characters = () => {
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
+  const [filters, setFilters] = useState<FilterCriteria[]>([]);
   const { isLoading, isError, characters, fetchNextPage, hasNextPage, refetch } =
     useCharacters(order);
 
@@ -23,6 +25,14 @@ const Characters = () => {
   useEffect(() => {
     refetch();
   }, [order]);
+
+  const filterLiterals = ['With Image', 'With Description'];
+
+  const filteredCharacters = (() => {
+    return characters.filter((character) => {
+      return character;
+    });
+  })();
 
   const orderHandler = (event: ChangeEvent<HTMLSelectElement>): void => {
     const value = event.target.value as FetchingOrder;
@@ -46,7 +56,13 @@ const Characters = () => {
         options={Object.values(FetchingOrder)}
         optionLiterals={orderLiterals}
       />
-      {characters.length > 0 && <CharactersList characters={characters} />}
+      <CheckboxesList
+        title='Filter results:'
+        options={Object.values(FilterCriteria)}
+        optionLiterals={filterLiterals}
+        setOptions={setFilters}
+      />
+      {filteredCharacters.length > 0 && <CharactersList characters={filteredCharacters} />}
       {isLoading && <h2>Loading...</h2>}
       {hasNextPage && <h2 ref={ref}>Loading more...</h2>}
     </>

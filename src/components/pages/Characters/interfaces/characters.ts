@@ -76,3 +76,8 @@ export enum FetchingOrder {
   MODIFIED_FIRST = 'modified',
   MODIFIED_LAST = '-modified',
 }
+
+export enum FilterCriteria {
+  IMAGE = 'hasImage',
+  DESCRIPTION = 'hasDescription',
+}
