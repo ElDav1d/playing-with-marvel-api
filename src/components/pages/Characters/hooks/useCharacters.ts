@@ -3,7 +3,7 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 import { FetchingOrder } from '../interfaces/characters';
 
 export const useCharacters = (order: FetchingOrder) => {
-  const { isLoading, isError, data, fetchNextPage, hasNextPage } = useInfiniteQuery(
+  const { isLoading, isError, data, fetchNextPage, hasNextPage, refetch } = useInfiniteQuery(
     ['characters'],
     ({ pageParam }) => getCharactersService({ pageParam, order }),
     {
@@ -19,6 +19,7 @@ export const useCharacters = (order: FetchingOrder) => {
     characters: data?.pages.flatMap((page) => page?.characters) ?? [],
     fetchNextPage,
     hasNextPage,
+    refetch,
   };
 };
 
