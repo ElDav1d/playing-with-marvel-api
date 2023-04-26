@@ -29,6 +29,13 @@ const Characters = () => {
     setOrder(value);
   };
 
+  const orderLiterals = [
+    'By name A/Z',
+    'By name Z/A',
+    'By modification First/Last',
+    'By modification Last/First',
+  ];
+
   return (
     <>
       <h1>This is the Characters Page</h1>
@@ -37,6 +44,7 @@ const Characters = () => {
         title='Order results:'
         onChange={(event) => orderHandler(event)}
         options={Object.values(FetchingOrder)}
+        optionLiterals={orderLiterals}
       />
       {characters.length > 0 && <CharactersList characters={characters} />}
       {isLoading && <h2>Loading...</h2>}

@@ -4,16 +4,17 @@ export interface SelectorProps {
   title: string;
   onChange: ChangeEventHandler<HTMLSelectElement>;
   options: string[];
+  optionLiterals: string[];
 }
 
-const SelectorGroup = ({ title, onChange, options }: SelectorProps) => {
+const SelectorGroup = ({ title, onChange, options, optionLiterals }: SelectorProps) => {
   return (
     <fieldset>
       <legend>{title}</legend>
       <select onChange={onChange} name='order'>
-        {options.map((option) => (
+        {options.map((option, index) => (
           <option key={option} value={option}>
-            {option}
+            {optionLiterals[index]}
           </option>
         ))}
       </select>
