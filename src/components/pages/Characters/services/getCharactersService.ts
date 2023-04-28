@@ -1,17 +1,19 @@
-import { BASE_URL, MAX_CHARACTERS } from '@/utils/constants';
+import { BASE_URL } from '@/utils/constants';
 import { CharacterItem, FetchingOrder } from '../interfaces/characters';
 
 const getCharactersService = async ({
   pageParam = 0,
+  maxCharacters,
   order,
 }: {
   pageParam?: number;
+  maxCharacters: number;
   order: FetchingOrder;
 }) => {
-  const offset = MAX_CHARACTERS * pageParam;
+  const offset = maxCharacters * pageParam;
   const fetchingOrder = order;
   const KEY = process.env.REACT_APP_MARVEL_API_KEY;
-  const url = `${BASE_URL}?orderBy=${fetchingOrder}&limit=${MAX_CHARACTERS}&offset=${offset}&apikey=${KEY}`;
+  const url = `${BASE_URL}?orderBy=${fetchingOrder}&limit=${maxCharacters}&offset=${offset}&apikey=${KEY}`;
 
   try {
     const response = await fetch(url);
@@ -27,7 +29,7 @@ const getCharactersService = async ({
     );
 
     const getNextCursor = () => {
-      const hasMoreResults = MAX_CHARACTERS * (pageParam + 1) < res.data.total;
+      const hasMoreResults = maxCharacters * (pageParam + 1) < res.data.total;
 
       return hasMoreResults ? pageParam + 1 : null;
     };
