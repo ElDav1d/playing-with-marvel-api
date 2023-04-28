@@ -14,14 +14,19 @@ import {
 
 const Characters = () => {
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
-
+  const [onClearData, setOnClearData] = useState<boolean>(false);
   const [filters, setFilters] = useState<FilterCriteria[]>([]);
   const maxCharactersRef = useRef(MAX_CHARACTERS_DEFAULT);
 
-  const { isLoading, isError, characters, fetchNextPage, hasNextPage, refetch } = useCharacters(
-    order,
-    maxCharactersRef.current,
-  );
+  const {
+    isError,
+    characters,
+    fetchNextPage,
+    hasNextPage,
+    refetch,
+    isFetching,
+    isFetchingNextPage,
+  } = useCharacters(order, maxCharactersRef.current, onClearData);
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -36,6 +41,13 @@ const Characters = () => {
   useEffect(() => {
     refetch();
   }, [order]);
+
+  useEffect(() => {
+    if (onClearData) {
+      refetch();
+      setOnClearData(false);
+    }
+  }, [onClearData]);
 
   const filterLiterals = ['With Image', 'With Description'];
 
@@ -73,9 +85,10 @@ const Characters = () => {
 
   const orderHandler = (event: ChangeEvent<HTMLSelectElement>): void => {
     const value = event.target.value as FetchingOrder;
+
+    setOnClearData(true);
     setOrder(value);
   };
-
   const orderLiterals = [
     'By name A/Z',
     'By name Z/A',
@@ -86,7 +99,6 @@ const Characters = () => {
   return (
     <>
       <h1>This is the Characters Page</h1>
-      {isError && <h2>Oooops...try reloading again!</h2>}
       <SelectorGroup
         title='Order results:'
         onChange={(event) => orderHandler(event)}
@@ -99,10 +111,12 @@ const Characters = () => {
         optionLiterals={filterLiterals}
         setOptions={setFilters}
       />
-      {filteredCharacters && filteredCharacters.length > 0 && (
-        <CharactersList characters={filteredCharacters} />
-      )}
-      {isLoading && <h2>Loading...</h2>}
+
+      {isError && <h2>Oooops...try reloading again!</h2>}
+
+      {isFetching && !isFetchingNextPage && <h2>Loading...</h2>}
+
+      {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
       {hasNextPage && <h2 ref={ref}>Loading more...</h2>}
     </>
   );
