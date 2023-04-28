@@ -23,7 +23,6 @@ export const useCharacters = (
       getNextPageParam: (lastPage) => lastPage?.nextCursor,
       refetchOnWindowFocus: false,
       staleTime: 1000 * 3,
-      enabled: onClearData,
     },
   );
 

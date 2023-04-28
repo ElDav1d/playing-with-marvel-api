@@ -39,19 +39,17 @@ const Characters = () => {
   }, [inView]);
 
   useEffect(() => {
-    refetch();
-  }, [order]);
-
-  useEffect(() => {
     if (onClearData) {
       refetch();
       setOnClearData(false);
     }
-  }, [onClearData]);
+  }, [order]);
 
   const filterLiterals = ['With Image', 'With Description'];
 
   const filteredCharacters = (() => {
+    console.log('it filters again');
+
     if (filters.includes(FilterCriteria.IMAGE) && filters.includes(FilterCriteria.DESCRIPTION)) {
       const regex = /image_not_available/g;
 
@@ -80,6 +78,7 @@ const Characters = () => {
     }
 
     maxCharactersRef.current = MAX_CHARACTERS_DEFAULT;
+
     return characters;
   })();
 
@@ -89,6 +88,7 @@ const Characters = () => {
     setOnClearData(true);
     setOrder(value);
   };
+
   const orderLiterals = [
     'By name A/Z',
     'By name Z/A',
