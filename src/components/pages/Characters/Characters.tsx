@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, useEffect, useRef, useState, useMemo } from 'react';
 
 import { useInView } from 'react-intersection-observer';
 import { useCharacters } from './hooks';
@@ -47,9 +47,7 @@ const Characters = () => {
 
   const filterLiterals = ['With Image', 'With Description'];
 
-  const filteredCharacters = (() => {
-    console.log('it filters again');
-
+  const filteredCharacters = useMemo(() => {
     if (filters.includes(FilterCriteria.IMAGE) && filters.includes(FilterCriteria.DESCRIPTION)) {
       const regex = /image_not_available/g;
 
@@ -80,7 +78,7 @@ const Characters = () => {
     maxCharactersRef.current = MAX_CHARACTERS_DEFAULT;
 
     return characters;
-  })();
+  }, [characters, filters]);
 
   const orderHandler = (event: ChangeEvent<HTMLSelectElement>): void => {
     const value = event.target.value as FetchingOrder;
