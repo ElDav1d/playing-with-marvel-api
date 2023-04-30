@@ -1,21 +1,13 @@
 import Image from '@/components/atoms/Image/Image';
-import { ComicsItem } from '@/components/pages/Characters/interfaces/characters';
 
 export interface CharaterProps {
   name: string;
   description: string;
   thumbnailPath: string;
   thumbnailExtension: string;
-  comics: ComicsItem[];
 }
 
-const Character = ({
-  name,
-  description,
-  thumbnailPath,
-  thumbnailExtension,
-  comics,
-}: CharaterProps) => {
+const Character = ({ name, description, thumbnailPath, thumbnailExtension }: CharaterProps) => {
   return (
     <>
       <h1>This is {name}</h1>
@@ -26,11 +18,6 @@ const Character = ({
           {description}
         </p>
       ) : null}
-      <ul>
-        {comics.map((comic) => (
-          <li key={comic.name}>{comic.name}</li>
-        ))}
-      </ul>
     </>
   );
 };
