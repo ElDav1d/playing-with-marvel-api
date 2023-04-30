@@ -45,11 +45,7 @@ const Characters = () => {
       refetch();
       setOnClearData(false);
     }
-  }, [order]);
-
-  useEffect(() => {
-    refetch();
-  }, [searchInput]);
+  }, [order, searchInput]);
 
   const filterLiterals = ['With Image', 'With Description'];
 
@@ -108,6 +104,7 @@ const Characters = () => {
         title={'Search by name'}
         placeholderLiteral={'Type your character name'}
         setSearchInput={setSearchInput}
+        setOnClearData={setOnClearData}
       />
 
       <SelectorGroup
