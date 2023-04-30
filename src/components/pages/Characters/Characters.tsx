@@ -1,7 +1,7 @@
 import { ChangeEvent, useEffect, useRef, useState, useMemo } from 'react';
 
 import { useInView } from 'react-intersection-observer';
-import { useCharacters } from './hooks';
+import { useCharacters, useDebounce } from './hooks';
 import { FetchingOrder, FilterCriteria } from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
@@ -15,6 +15,7 @@ import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
+  const [searchString, setSearchString] = useState<string>('');
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
   const [onClearData, setOnClearData] = useState<boolean>(false);
   const [filters, setFilters] = useState<FilterCriteria[]>([]);
@@ -28,7 +29,7 @@ const Characters = () => {
     refetch,
     isFetching,
     isFetchingNextPage,
-  } = useCharacters(maxCharactersRef.current, searchInput, order, onClearData);
+  } = useCharacters(maxCharactersRef.current, searchString, order, onClearData);
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -45,7 +46,9 @@ const Characters = () => {
       refetch();
       setOnClearData(false);
     }
-  }, [order, searchInput]);
+  }, [order, searchString]);
+
+  useDebounce(searchInput, 500, () => setSearchString(searchInput));
 
   const filterLiterals = ['With Image', 'With Description'];
 
