@@ -28,7 +28,7 @@ const Characters = () => {
     refetch,
     isFetching,
     isFetchingNextPage,
-  } = useCharacters(order, maxCharactersRef.current, onClearData);
+  } = useCharacters(maxCharactersRef.current, searchInput, order, onClearData);
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -46,6 +46,10 @@ const Characters = () => {
       setOnClearData(false);
     }
   }, [order]);
+
+  useEffect(() => {
+    refetch();
+  }, [searchInput]);
 
   const filterLiterals = ['With Image', 'With Description'];
 

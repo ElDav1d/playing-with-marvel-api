@@ -3,8 +3,9 @@ import { useInfiniteQuery, useQueryClient } from '@tanstack/react-query';
 import { FetchingOrder } from '../interfaces/characters';
 
 export const useCharacters = (
-  order: FetchingOrder,
   maxCharacters: number,
+  searchString: string,
+  order: FetchingOrder,
   onClearData: boolean,
 ) => {
   const {
@@ -18,7 +19,7 @@ export const useCharacters = (
     isFetchingNextPage,
   } = useInfiniteQuery(
     ['characters'],
-    ({ pageParam }) => getCharactersService({ pageParam, maxCharacters, order }),
+    ({ pageParam }) => getCharactersService({ pageParam, maxCharacters, searchString, order }),
     {
       getNextPageParam: (lastPage) => lastPage?.nextCursor,
       refetchOnWindowFocus: false,
