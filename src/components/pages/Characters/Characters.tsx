@@ -11,8 +11,10 @@ import {
   MAX_CHARACTERS_OPTIM,
   MAX_CHARACTERS_TOP,
 } from '@/utils/constants';
+import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 
 const Characters = () => {
+  const [searchInput, setSearchInput] = useState<string>('');
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
   const [onClearData, setOnClearData] = useState<boolean>(false);
   const [filters, setFilters] = useState<FilterCriteria[]>([]);
@@ -97,12 +99,20 @@ const Characters = () => {
   return (
     <>
       <h1>This is the Characters Page</h1>
+
+      <SearchGroup
+        title={'Search by name'}
+        placeholderLiteral={'Type your character name'}
+        setSearchInput={setSearchInput}
+      />
+
       <SelectorGroup
         title='Order results:'
         onChange={(event) => orderHandler(event)}
         options={Object.values(FetchingOrder)}
         optionLiterals={orderLiterals}
       />
+
       <CheckboxesList
         title='Filter results:'
         options={Object.values(FilterCriteria)}
