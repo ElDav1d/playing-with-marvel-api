@@ -102,9 +102,14 @@ const Characters = () => {
 
       <SearchGroup
         title={'Search by name'}
-        placeholderLiteral={'Type your character name'}
+        placeholderLiteral={'Type a character name'}
         setSearchInput={setSearchInput}
         setOnClearData={setOnClearData}
+        isEmptyData={!isFetching && filteredCharacters?.length === 0}
+        emptyDataLiteral={
+          // eslint-disable-next-line quotes
+          "Sorry, none of our characters' name matches your search! Try typing again"
+        }
       />
 
       <SelectorGroup
