@@ -77,7 +77,7 @@ const Characters = () => {
       maxCharactersRef.current = MAX_CHARACTERS_OPTIM;
 
       return characters.filter((character) => {
-        return character.description;
+        return character.description && character.description !== ' ';
       });
     }
 

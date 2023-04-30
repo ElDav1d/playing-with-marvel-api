@@ -18,6 +18,8 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
       .split(' ')
       .join('-');
 
+  const hasDescription = description && description !== ' ';
+
   return (
     <li>
       <Link to={`character/${id}/${formatUrlName(name)}`}>
@@ -30,7 +32,7 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
           {modified}
         </small>
       </p>
-      {description ? (
+      {hasDescription ? (
         <p>
           <strong>DESCRIPTION: </strong>
           {description}
