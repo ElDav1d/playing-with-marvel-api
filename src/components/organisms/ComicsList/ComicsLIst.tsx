@@ -1,14 +1,14 @@
-import { ComicsItem } from '@/components/pages/Characters/interfaces/characters';
+import { CharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 
 export interface ComicsListProps {
-  comics: ComicsItem[];
+  comics: CharacterComicDetails[];
 }
 
-export const ComicsLIst = ({ comics }: ComicsListProps) => {
+export const ComicsList = ({ comics }: ComicsListProps) => {
   return (
     <ul>
       {comics.map((comic) => (
-        <li key={comic.name}>{comic.name}</li>
+        <li key={comic.title}>{comic.title}</li>
       ))}
     </ul>
   );

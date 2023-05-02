@@ -1,13 +1,16 @@
 import { Link, useParams } from 'react-router-dom';
-import { useCharacterDetails } from './hooks/useCharacterDetails';
+import { useCharacterDetails, useCharacterComics } from './hooks';
 import Character from '@/components/organisms/Character/Character';
-import { ComicsLIst } from '@/components/organisms/ComicsList/ComicsLIst';
+import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
 
 const CharacterDetail = () => {
   const { id } = useParams();
 
   const { isLoading, isError, character } = useCharacterDetails(id);
 
+  const { isLoadingComics, isErrorOnComics, comics } = useCharacterComics(id);
+
+  console.log(comics);
   return (
     <>
       {character && (
@@ -18,9 +21,9 @@ const CharacterDetail = () => {
           thumbnailExtension={character.thumbnail.extension}
         />
       )}
-      {character?.comics?.items && <ComicsLIst comics={character.comics.items} />}
-      {isLoading && <h2>Loading...</h2>}
-      {isError && <h2>Ooops, try reloading again</h2>}
+      {character && comics && <ComicsList comics={comics} />}
+      {isLoading || (isLoadingComics && <h2>Loading...</h2>)}
+      {isError || (isErrorOnComics && <h2>Ooops, try reloading again</h2>)}
       <Link to='/'>Home</Link>
     </>
   );
