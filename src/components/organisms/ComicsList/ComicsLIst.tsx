@@ -8,7 +8,9 @@ export const ComicsList = ({ comics }: ComicsListProps) => {
   return (
     <ul>
       {comics.map((comic) => (
-        <li key={comic.title}>{comic.title}</li>
+        <li key={comic.id}>
+          <h3>{comic.title}</h3>
+        </li>
       ))}
     </ul>
   );

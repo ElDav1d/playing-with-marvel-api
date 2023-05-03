@@ -1,8 +1,20 @@
 import { BASE_URL } from '@/utils/constants';
 
-const getCharaterComicsService = async (characterId: string | undefined) => {
+export interface getCharacterComicsServiceProps {
+  page: number;
+  characterId: string | undefined;
+  maxComics: number;
+}
+
+const getCharaterComicsService = async ({
+  page,
+  characterId,
+  maxComics,
+}: getCharacterComicsServiceProps) => {
+  const offset = maxComics * page;
   const KEY = process.env.REACT_APP_MARVEL_API_KEY;
-  const url = `${BASE_URL}/${characterId}/comics?apikey=${KEY}`;
+  const url = `${BASE_URL}/${characterId}/comics?limit=${maxComics}&offset=${offset}&apikey=${KEY}`;
+
   try {
     const response = await fetch(url);
 
@@ -12,7 +24,9 @@ const getCharaterComicsService = async (characterId: string | undefined) => {
 
     const res = await response.json();
 
-    return res.data.results;
+    const comics = res.data.results;
+
+    return comics;
   } catch (error) {
     console.log(error);
   }

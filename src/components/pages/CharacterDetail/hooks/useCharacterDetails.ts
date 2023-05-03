@@ -11,8 +11,8 @@ const useCharacterDetails = (characterId: string | undefined) => {
   );
 
   return {
-    isLoading,
-    isError,
+    isLoadingCharacter: isLoading,
+    isErrorOnCharacter: isError,
     character: data,
   };
 };
