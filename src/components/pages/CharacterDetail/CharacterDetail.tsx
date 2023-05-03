@@ -11,8 +11,18 @@ const CharacterDetail = () => {
 
   const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails(id);
 
-  const { comics, totalComics, rangeInit, rangeEnd, isErrorOnComics, isFetchingComics, refetch } =
-    useCharacterComics(id, MAX_CHARACTER_COMICS, page);
+  const {
+    comics,
+    totalComics,
+    rangeInit,
+    rangeEnd,
+    isErrorOnComics,
+    isFetchingComics,
+    isFirstPage,
+    isLastPage,
+    isPreviousData,
+    refetch,
+  } = useCharacterComics(id, MAX_CHARACTER_COMICS, page);
 
   useEffect(() => {
     refetch();
@@ -30,26 +40,50 @@ const CharacterDetail = () => {
 
   return (
     <>
-      {isLoadingCharacter && <h2>Loading Character Details...</h2>}
-      {character && (
-        <Character
-          name={character.name}
-          description={character.description}
-          thumbnailPath={character.thumbnail.path}
-          thumbnailExtension={character.thumbnail.extension}
-        />
-      )}
+      <header>
+        <nav>
+          <Link to='/'>Home</Link>
+        </nav>
 
-      <h3>
-        Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
-      </h3>
+        {isError && <h2>Ooops, try refreshing your browser</h2>}
 
-      {isFetchingComics && <h2>Loading Character Comics</h2>}
-      {comics && <ComicsList comics={comics} />}
-      {isError && <h2>Ooops, try reloading again</h2>}
-      <button onClick={handlePrevPage}>Previous Comics</button>
-      <button onClick={handleNextPage}>Next Comics</button>
-      <Link to='/'>Home</Link>
+        {isLoadingCharacter && <h2>Loading Character Details...</h2>}
+      </header>
+
+      <main>
+        <article>
+          <section>
+            {character && (
+              <Character
+                name={character.name}
+                description={character.description}
+                thumbnailPath={character.thumbnail.path}
+                thumbnailExtension={character.thumbnail.extension}
+              />
+            )}
+          </section>
+
+          <section>
+            {isFetchingComics && <h2>Loading Character Comics</h2>}
+
+            {comics?.length > 0 ? (
+              <>
+                <h3>
+                  Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
+                </h3>
+                <ComicsList comics={comics} />
+              </>
+            ) : null}
+          </section>
+        </article>
+      </main>
+
+      <footer>
+        {!isPreviousData && !isFirstPage && (
+          <button onClick={handlePrevPage}>Previous Comics</button>
+        )}
+        {!isPreviousData && !isLastPage && <button onClick={handleNextPage}>Next Comics</button>}
+      </footer>
     </>
   );
 };
