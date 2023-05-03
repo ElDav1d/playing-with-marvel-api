@@ -24,9 +24,7 @@ const getCharacterComicsService = async ({
 
     const res = await response.json();
 
-    const comics = res.data.results;
-
-    return comics;
+    return { response: res.data, offset };
   } catch (error) {
     console.log(error);
   }

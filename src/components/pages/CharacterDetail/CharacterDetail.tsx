@@ -3,7 +3,7 @@ import { useCharacterDetails, useCharacterComics } from './hooks';
 import Character from '@/components/organisms/Character/Character';
 import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
 import { MAX_CHARACTER_COMICS } from '@/utils/constants';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -11,20 +11,19 @@ const CharacterDetail = () => {
 
   const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails(id);
 
-  const { isErrorOnComics, comics, isFetchingComics, refetch } = useCharacterComics(
-    id,
-    MAX_CHARACTER_COMICS,
-    page,
-  );
+  const { comics, totalComics, rangeInit, rangeEnd, isErrorOnComics, isFetchingComics, refetch } =
+    useCharacterComics(id, MAX_CHARACTER_COMICS, page);
+
+  useEffect(() => {
+    refetch();
+  }, [page]);
 
   const handlePrevPage = () => {
     setPage(page - 1);
-    refetch();
   };
 
   const handleNextPage = () => {
     setPage(page + 1);
-    refetch();
   };
 
   const isError = isErrorOnCharacter || isErrorOnComics;
@@ -40,6 +39,11 @@ const CharacterDetail = () => {
           thumbnailExtension={character.thumbnail.extension}
         />
       )}
+
+      <h3>
+        Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
+      </h3>
+
       {isFetchingComics && <h2>Loading Character Comics</h2>}
       {comics && <ComicsList comics={comics} />}
       {isError && <h2>Ooops, try reloading again</h2>}
