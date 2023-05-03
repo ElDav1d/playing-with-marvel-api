@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getCharacterComicsService } from '../services';
 
 const useCharacterComics = (characterId: string | undefined, maxComics: number, page: number) => {
-  const { isLoading, isError, data, refetch } = useQuery(
+  const { isError, data, isFetching, refetch } = useQuery(
     ['characterComics', characterId],
     () => getCharacterComicsService({ characterId, maxComics, page }),
     {
@@ -12,9 +12,9 @@ const useCharacterComics = (characterId: string | undefined, maxComics: number, 
   );
 
   return {
-    isLoadingComics: isLoading,
     isErrorOnComics: isError,
     comics: data,
+    isFetchingComics: isFetching,
     refetch,
   };
 };

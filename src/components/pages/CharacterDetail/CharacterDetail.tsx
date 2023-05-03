@@ -11,7 +11,7 @@ const CharacterDetail = () => {
 
   const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails(id);
 
-  const { isLoadingComics, isErrorOnComics, comics, refetch } = useCharacterComics(
+  const { isErrorOnComics, comics, isFetchingComics, refetch } = useCharacterComics(
     id,
     MAX_CHARACTER_COMICS,
     page,
@@ -27,11 +27,11 @@ const CharacterDetail = () => {
     refetch();
   };
 
-  const isLoading = isLoadingCharacter || isLoadingComics;
   const isError = isErrorOnCharacter || isErrorOnComics;
 
   return (
     <>
+      {isLoadingCharacter && <h2>Loading Character Details...</h2>}
       {character && (
         <Character
           name={character.name}
@@ -40,8 +40,8 @@ const CharacterDetail = () => {
           thumbnailExtension={character.thumbnail.extension}
         />
       )}
+      {isFetchingComics && <h2>Loading Character Comics</h2>}
       {comics && <ComicsList comics={comics} />}
-      {isLoading && <h2>Loading...</h2>}
       {isError && <h2>Ooops, try reloading again</h2>}
       <button onClick={handlePrevPage}>Previous Comics</button>
       <button onClick={handleNextPage}>Next Comics</button>
