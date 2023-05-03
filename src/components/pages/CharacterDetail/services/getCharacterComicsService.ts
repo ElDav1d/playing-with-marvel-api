@@ -6,7 +6,7 @@ export interface getCharacterComicsServiceProps {
   maxComics: number;
 }
 
-const getCharaterComicsService = async ({
+const getCharacterComicsService = async ({
   page,
   characterId,
   maxComics,
@@ -32,4 +32,4 @@ const getCharaterComicsService = async ({
   }
 };
 
-export default getCharaterComicsService;
+export default getCharacterComicsService;

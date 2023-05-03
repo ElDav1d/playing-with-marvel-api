@@ -1,4 +1,4 @@
 import getCharacterDetailsService from './getCharacterDetailsService';
-import getCharaterComicsService from './getCharaterComicsService';
+import getCharacterComicsService from './getCharacterComicsService';
 
-export { getCharacterDetailsService, getCharaterComicsService };
+export { getCharacterDetailsService, getCharacterComicsService };
