@@ -101,40 +101,44 @@ const Characters = () => {
 
   return (
     <>
-      <h1>This is the Characters Page</h1>
+      <header>
+        <h1>This is the Characters Page</h1>
 
-      <SearchGroup
-        title={'Search by name'}
-        placeholderLiteral={'Type a character name'}
-        setSearchInput={setSearchInput}
-        setOnClearData={setOnClearData}
-        isEmptyData={!isFetching && filteredCharacters?.length === 0}
-        emptyDataLiteral={
-          // eslint-disable-next-line quotes
-          "Sorry, none of our characters' name matches your search! Try typing again"
-        }
-      />
+        <SearchGroup
+          title={'Search by name'}
+          placeholderLiteral={'Type a character name'}
+          setSearchInput={setSearchInput}
+          setOnClearData={setOnClearData}
+          isEmptyData={!isFetching && filteredCharacters?.length === 0}
+          emptyDataLiteral={
+            // eslint-disable-next-line quotes
+            "Sorry, none of our characters' name matches your search! Try typing again"
+          }
+        />
 
-      <SelectorGroup
-        title='Order results:'
-        onChange={(event) => orderHandler(event)}
-        options={Object.values(FetchingOrder)}
-        optionLiterals={orderLiterals}
-      />
+        <SelectorGroup
+          title='Order results:'
+          onChange={(event) => orderHandler(event)}
+          options={Object.values(FetchingOrder)}
+          optionLiterals={orderLiterals}
+        />
 
-      <CheckboxesList
-        title='Filter results:'
-        options={Object.values(FilterCriteria)}
-        optionLiterals={filterLiterals}
-        setOptions={setFilters}
-      />
+        <CheckboxesList
+          title='Filter results:'
+          options={Object.values(FilterCriteria)}
+          optionLiterals={filterLiterals}
+          setOptions={setFilters}
+        />
+      </header>
 
-      {isError && <h2>Oooops...try reloading again!</h2>}
+      <main>
+        {isError && <h2>Oooops...try reloading again!</h2>}
 
-      {isFetching && !isFetchingNextPage && <h2>Loading...</h2>}
+        {isFetching && !isFetchingNextPage && <h2>Loading...</h2>}
 
-      {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
-      {hasNextPage && <h2 ref={ref}>Loading more...</h2>}
+        {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
+        {hasNextPage && <h2 ref={ref}>Loading more...</h2>}
+      </main>
     </>
   );
 };
