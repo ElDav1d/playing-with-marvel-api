@@ -44,38 +44,40 @@ const CharacterDetail = () => {
         <nav>
           <Link to='/'>Home</Link>
         </nav>
-
-        {isError && <h2>Ooops, try refreshing your browser</h2>}
-
-        {isLoadingCharacter && <h2>Loading Character Details...</h2>}
       </header>
 
       <main>
-        <article>
-          <section>
-            {character && (
+        {isError && <h2>Ooops, try refreshing your browser</h2>}
+
+        {isLoadingCharacter && <h2>Loading Character Details...</h2>}
+
+        {character && (
+          <article>
+            <section>
               <Character
                 name={character.name}
                 description={character.description}
                 thumbnailPath={character.thumbnail.path}
                 thumbnailExtension={character.thumbnail.extension}
               />
-            )}
-          </section>
+            </section>
 
-          <section>
-            {isFetchingComics && <h2>Loading Character Comics</h2>}
+            <section>
+              {isFetchingComics && <h2>Loading Character Comics</h2>}
 
-            {comics?.length > 0 ? (
-              <>
-                <h3>
-                  Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
-                </h3>
-                <ComicsList comics={comics} />
-              </>
-            ) : null}
-          </section>
-        </article>
+              {comics?.length > 0 ? (
+                <>
+                  <h3>
+                    Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
+                  </h3>
+                  <ComicsList comics={comics} />
+                </>
+              ) : (
+                <h3>{character.name} has not comics</h3>
+              )}
+            </section>
+          </article>
+        )}
       </main>
 
       <footer>
