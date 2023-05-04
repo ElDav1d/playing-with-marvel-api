@@ -1,13 +1,17 @@
 import { Link, useParams } from 'react-router-dom';
 import { useCharacterDetails, useCharacterComics } from './hooks';
+import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
 import Character from '@/components/organisms/Character/Character';
 import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
 import { MAX_CHARACTER_COMICS } from '@/utils/constants';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
+import { FetchingOrder } from './interfaces/characterComics';
 
 const CharacterDetail = () => {
   const { id } = useParams();
   const [page, setPage] = useState<number>(0);
+  const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.FOC_DATE_FIRST);
+  const [onClearData, setOnClearData] = useState<boolean>(false);
 
   const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails(id);
 
@@ -22,11 +26,17 @@ const CharacterDetail = () => {
     isLastPage,
     isPreviousData,
     refetch,
-  } = useCharacterComics(id, MAX_CHARACTER_COMICS, page);
+  } = useCharacterComics(id, MAX_CHARACTER_COMICS, page, onClearData);
 
   useEffect(() => {
     refetch();
   }, [page]);
+
+  useEffect(() => {
+    if (onClearData) {
+      setOnClearData(false);
+    }
+  }, [order]);
 
   const handlePrevPage = () => {
     setPage(page - 1);
@@ -37,6 +47,16 @@ const CharacterDetail = () => {
   };
 
   const isError = isErrorOnCharacter || isErrorOnComics;
+
+  const orderHandler = (event: ChangeEvent<HTMLSelectElement>): void => {
+    const value = event.target.value as FetchingOrder;
+
+    setOnClearData(true);
+    setOrder(value);
+    setPage(0);
+  };
+
+  const orderLiterals = Object.values(FetchingOrder);
 
   return (
     <>
@@ -63,6 +83,13 @@ const CharacterDetail = () => {
             </section>
 
             <section>
+              <SelectorGroup
+                title='Order results:'
+                onChange={(event) => orderHandler(event)}
+                options={Object.values(FetchingOrder)}
+                optionLiterals={orderLiterals}
+              />
+
               {isFetchingComics && <h2>Loading Character Comics</h2>}
 
               {comics?.length > 0 ? (

@@ -20,7 +20,7 @@ export interface CharacterComicDetails {
   id: number;
   digitalId: number;
   title: string;
-  issueNumber: number;
+  ISSUE_NUMBER: number;
   variantDescription: VariantDescription;
   description: null | string;
   modified: string;
@@ -155,4 +155,17 @@ export enum URLType {
 export enum VariantDescription {
   Empty = '',
   TurnerVariant = 'Turner Variant',
+}
+
+export enum FetchingOrder {
+  FOC_DATE_FIRST = 'focDate',
+  FOC_DATE_LAST = '-focDate',
+  ONSALE_DATE_FIRST = 'onsaleDate',
+  ONSALE_DATE_LAST = '-onsaleDate',
+  TITLE_AZ = 'title',
+  TITLE_ZA = '-title',
+  ISSUE_NUMBER_FIRST = 'issueNumber',
+  ISSUE_NUMBER_LAST = '-issueNumber',
+  MODIFIED_FIRST = 'modified',
+  MODIFIED_LAST = '-modified',
 }
