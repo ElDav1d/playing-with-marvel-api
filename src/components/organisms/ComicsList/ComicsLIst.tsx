@@ -1,3 +1,4 @@
+import { ComicsListItem } from '@/components/molecules/ComicsListItem/ComicsListItem';
 import { CharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 
 export interface ComicsListProps {
@@ -8,9 +9,7 @@ export const ComicsList = ({ comics }: ComicsListProps) => {
   return (
     <ul>
       {comics.map((comic) => (
-        <li key={comic.id}>
-          <h3>{comic.title}</h3>
-        </li>
+        <ComicsListItem comic={comic} key={comic.id} />
       ))}
     </ul>
   );
