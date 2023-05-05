@@ -29,7 +29,7 @@ const Characters = () => {
     refetch,
     isFetching,
     isFetchingNextPage,
-  } = useCharacters(maxCharactersRef.current, searchString, order, onClearData);
+  } = useCharacters({ maxCharacters: maxCharactersRef.current, searchString, order, onClearData });
 
   const { ref, inView } = useInView({
     threshold: 0.1,

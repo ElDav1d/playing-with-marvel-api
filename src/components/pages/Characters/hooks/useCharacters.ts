@@ -1,13 +1,37 @@
 import getCharactersService from '../services/getCharactersService';
-import { useInfiniteQuery, useQueryClient } from '@tanstack/react-query';
-import { FetchingOrder } from '../interfaces/characters';
+import {
+  FetchNextPageOptions,
+  useInfiniteQuery,
+  UseInfiniteQueryResult,
+  useQueryClient,
+  UseQueryResult,
+} from '@tanstack/react-query';
+import { CharacterItem, FetchingOrder } from '../interfaces/characters';
 
-export const useCharacters = (
-  maxCharacters: number,
-  searchString: string,
-  order: FetchingOrder,
-  onClearData: boolean,
-) => {
+export interface UseCharactersProps {
+  maxCharacters: number;
+  searchString: string;
+  order: FetchingOrder;
+  onClearData: boolean;
+}
+
+export interface UseCharactersReturn {
+  isError: boolean;
+  isLoading: boolean;
+  characters: CharacterItem[];
+  fetchNextPage: (options?: FetchNextPageOptions) => Promise<UseInfiniteQueryResult>;
+  hasNextPage: boolean | undefined;
+  refetch: (options?: { throwOnError: boolean; cancelRefetch: boolean }) => Promise<UseQueryResult>;
+  isFetching: boolean;
+  isFetchingNextPage: boolean;
+}
+
+export const useCharacters = ({
+  maxCharacters,
+  searchString,
+  order,
+  onClearData,
+}: UseCharactersProps): UseCharactersReturn => {
   const {
     isLoading,
     isError,
