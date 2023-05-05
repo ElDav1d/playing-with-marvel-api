@@ -12,6 +12,10 @@ export const ComicsListItem = ({ comic }: ComicsListItemProps) => {
     return comic?.dates?.filter((date) => dateTypes.includes(date.type));
   }, [comic]);
 
+  const formatDate = (date: string) => {
+    return new Date(date).toLocaleDateString();
+  };
+
   return (
     <li>
       <Image
@@ -30,14 +34,14 @@ export const ComicsListItem = ({ comic }: ComicsListItemProps) => {
       <p>
         <small>
           <strong>Modified: </strong>
-          {comic.modified}
+          {formatDate(comic.modified)}
         </small>
       </p>
       {filteredDates.map((date) => (
         <p key={date.date}>
           <small>
             <strong>{date.type}: </strong>
-            {date.date}
+            {formatDate(date.date)}
           </small>
         </p>
       ))}
