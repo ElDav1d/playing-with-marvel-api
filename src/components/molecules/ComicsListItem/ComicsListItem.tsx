@@ -1,6 +1,7 @@
 import { CharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 import Image from '@/components/atoms/Image/Image';
 import { useMemo } from 'react';
+import { formatDate } from '@/utils/helpers';
 export interface ComicsListItemProps {
   comic: CharacterComicDetails;
 }
@@ -11,10 +12,6 @@ export const ComicsListItem = ({ comic }: ComicsListItemProps) => {
   const filteredDates = useMemo(() => {
     return comic?.dates?.filter((date) => dateTypes.includes(date.type));
   }, [comic]);
-
-  const formatDate = (date: string) => {
-    return new Date(date).toLocaleDateString();
-  };
 
   return (
     <li>

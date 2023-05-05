@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import Image from '@/components/atoms/Image/Image';
-
+import { formatDate } from '@/utils/helpers';
 export interface CharacterItemProps {
   id: number;
   name: string;
@@ -29,7 +29,7 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
       <p>
         <small>
           <strong>modified: </strong>
-          {modified}
+          {formatDate(modified)}
         </small>
       </p>
       {hasDescription ? (
