@@ -1,13 +1,13 @@
 import Image from '@/components/atoms/Image/Image';
 
-export interface CharaterProps {
+export interface CharacterProps {
   name: string;
   description: string;
   thumbnailPath: string;
   thumbnailExtension: string;
 }
 
-const Character = ({ name, description, thumbnailPath, thumbnailExtension }: CharaterProps) => {
+const Character = ({ name, description, thumbnailPath, thumbnailExtension }: CharacterProps) => {
   return (
     <>
       <h1>This is {name}</h1>
