@@ -20,7 +20,7 @@ export interface CharacterComicDetails {
   id: number;
   digitalId: number;
   title: string;
-  ISSUE_NUMBER: number;
+  issueNumber: number;
   variantDescription: VariantDescription;
   description: null | string;
   modified: string;
