@@ -164,4 +164,72 @@ describe(Characters, () => {
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
+
+  it('renders an order select input group with its required options', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    const selectInputGroup = screen.getByRole('group', { name: /order/i });
+    const selecOptionNameAZ = screen.getByRole('option', { name: /(a\/z)+/i }) as HTMLOptionElement;
+    const selecOptionNameZA = screen.getByRole('option', { name: /(z\/a)+/i }) as HTMLOptionElement;
+    const selecOptionModifiedFirstLast = screen.getByRole('option', {
+      name: /(first\/last)+/i,
+    }) as HTMLOptionElement;
+    const selecOptionModifiedLastFirst = screen.getByRole('option', {
+      name: /(last\/first)+/i,
+    }) as HTMLOptionElement;
+
+    // ASSERT
+    expect(selectInputGroup).toBeInTheDocument();
+    expect(selecOptionNameAZ.value).toBe('name');
+    expect(selecOptionNameZA.value).toBe('-name');
+    expect(selecOptionModifiedFirstLast.value).toBe('modified');
+    expect(selecOptionModifiedLastFirst.value).toBe('-modified');
+  });
+
+  it('fetches a new list of characters after selecting an order option', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    const DEFAULT_FETCH_CALLS = 2;
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    act(() => {
+      userEvent.selectOptions(screen.getByRole('combobox'), '-name');
+    });
+
+    // ASSERT
+    expect(mockUseCharacters).toBeCalledTimes(DEFAULT_FETCH_CALLS * 2);
+    expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
+  });
 });
