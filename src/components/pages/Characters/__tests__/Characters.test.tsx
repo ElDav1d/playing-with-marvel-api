@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { act, render, screen } from '@testing-library/react';
+import { act, getByRole, render, screen } from '@testing-library/react';
 import mockCharactersAZ from '../mocks/mockCharactersAZ.json';
 import { useCharacters } from '../hooks';
 import Characters from '../Characters';
@@ -231,5 +231,160 @@ describe(Characters, () => {
     expect(mockUseCharacters).toBeCalledTimes(DEFAULT_FETCH_CALLS * 2);
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
+  });
+
+  it('renders an filter input group with its required checkboxes', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    // screen.getByRole('');
+    const checkInputGroup = screen.getByRole('group', { name: /filter/i });
+    const checkWithImage = screen.getByRole('checkbox', { name: /(image)+/i });
+    const checkWithDescription = screen.getByRole('checkbox', { name: /(description)+/i });
+
+    // ASSERT
+    expect(checkInputGroup).toBeInTheDocument();
+    expect(checkWithImage).toBeInTheDocument();
+    expect(checkWithDescription).toBeInTheDocument();
+  });
+
+  it('renders a characters with image list when the image filter is checked', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    const checkWithImage = screen.getByRole('checkbox', { name: /(image)+/i });
+
+    act(() => {
+      userEvent.click(checkWithImage);
+    });
+
+    // ASSERT
+    expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
+  });
+
+  it('renders a characters with description list when the description filter is checked', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    const checkWithDescription = screen.getByRole('checkbox', { name: /(description)+/i });
+
+    act(() => {
+      userEvent.click(checkWithDescription);
+    });
+
+    // ASSERT
+    expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
+  });
+
+  it('keeps rendering a filtered characters list after selecting an order option', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    const checkWithImage = screen.getByRole('checkbox', { name: /(image)+/i });
+
+    act(() => {
+      userEvent.click(checkWithImage);
+
+      userEvent.selectOptions(screen.getByRole('combobox'), '-name');
+    });
+
+    // ASSERT
+    expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
+  });
+
+  it('renders the complete characters list after unchecking a filter', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    const checkWithImage = screen.getByRole('checkbox', { name: /(image)+/i });
+
+    act(() => {
+      userEvent.click(checkWithImage);
+      userEvent.click(checkWithImage);
+    });
+
+    // ASSERT
+    expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /destructor/i })).toBeInTheDocument();
   });
 });
