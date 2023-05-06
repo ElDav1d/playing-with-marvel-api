@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import mockCharactersAZ from '../mocks/mockCharactersAZ.json';
 import { useCharacters } from '../hooks';
 import Characters from '../Characters';
+import userEvent from '@testing-library/user-event';
 
 jest.mock('../hooks');
 
@@ -102,5 +103,65 @@ describe(Characters, () => {
     // ASSERT
     expect(listItemTargetOne).toBeInTheDocument();
     expect(listItemTargetTwo).toBeInTheDocument();
+  });
+
+  it('renders a search by name input group', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    const searchInputGroup = screen.getByRole('group', { name: /search/i });
+    const searchInputElement = screen.getByPlaceholderText(/name/i);
+
+    // ASSERT
+    expect(searchInputGroup).toBeInTheDocument();
+    expect(searchInputElement).toBeInTheDocument();
+  });
+
+  it('fetches a new list of characters after typing on search by name input', () => {
+    // ARRANGE
+    const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
+
+    const DEFAULT_FETCH_CALLS = 2;
+
+    mockUseCharacters.mockReturnValue({
+      isLoading: false,
+      isError: false,
+      characters: charactersAZ,
+    });
+
+    // ACT
+    render(
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Characters />
+        </Router>
+      </QueryClientProvider>,
+    );
+
+    const searchInputElement = screen.getByPlaceholderText(/name/i);
+
+    act(() => {
+      userEvent.type(searchInputElement, 'X');
+    });
+
+    // ASSERT
+    expect(mockUseCharacters).toBeCalledTimes(DEFAULT_FETCH_CALLS + 1);
+    expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
 });
