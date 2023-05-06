@@ -21,15 +21,8 @@ const Characters = () => {
   const [filters, setFilters] = useState<FilterCriteria[]>([]);
   const maxCharactersRef = useRef(MAX_CHARACTERS_DEFAULT);
 
-  const {
-    isError,
-    characters,
-    fetchNextPage,
-    hasNextPage,
-    refetch,
-    isFetching,
-    isFetchingNextPage,
-  } = useCharacters({ maxCharacters: maxCharactersRef.current, searchString, order, onClearData });
+  const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
+    useCharacters({ maxCharacters: maxCharactersRef.current, searchString, order, onClearData });
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -43,7 +36,6 @@ const Characters = () => {
 
   useEffect(() => {
     if (onClearData) {
-      refetch();
       setOnClearData(false);
     }
   }, [order, searchString]);

@@ -21,7 +21,6 @@ export interface UseCharactersReturn {
   characters: CharacterItem[];
   fetchNextPage: (options?: FetchNextPageOptions) => Promise<UseInfiniteQueryResult>;
   hasNextPage: boolean | undefined;
-  refetch: (options?: { throwOnError: boolean; cancelRefetch: boolean }) => Promise<UseQueryResult>;
   isFetching: boolean;
   isFetchingNextPage: boolean;
 }
@@ -32,24 +31,16 @@ export const useCharacters = ({
   order,
   onClearData,
 }: UseCharactersProps): UseCharactersReturn => {
-  const {
-    isLoading,
-    isError,
-    data,
-    fetchNextPage,
-    hasNextPage,
-    refetch,
-    isFetching,
-    isFetchingNextPage,
-  } = useInfiniteQuery(
-    ['characters'],
-    ({ pageParam }) => getCharactersService({ pageParam, maxCharacters, searchString, order }),
-    {
-      getNextPageParam: (lastPage) => lastPage?.nextCursor,
-      refetchOnWindowFocus: false,
-      staleTime: 1000 * 3,
-    },
-  );
+  const { isLoading, isError, data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
+    useInfiniteQuery(
+      ['characters'],
+      ({ pageParam }) => getCharactersService({ pageParam, maxCharacters, searchString, order }),
+      {
+        getNextPageParam: (lastPage) => lastPage?.nextCursor,
+        refetchOnWindowFocus: false,
+        staleTime: 1000 * 3,
+      },
+    );
 
   const queryClient = useQueryClient();
 
@@ -63,7 +54,6 @@ export const useCharacters = ({
     characters: data?.pages.flatMap((page) => page?.characters) ?? [],
     fetchNextPage,
     hasNextPage,
-    refetch,
     isFetching,
     isFetchingNextPage,
   };
