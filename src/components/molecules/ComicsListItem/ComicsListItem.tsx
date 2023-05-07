@@ -15,11 +15,13 @@ export const ComicsListItem = ({ comic }: ComicsListItemProps) => {
 
   return (
     <li>
-      <Image
-        path={comic.images[0].path}
-        extension={comic.images[0].extension}
-        variant='standard_small'
-      />
+      {comic.images.length > 0 && (
+        <Image
+          path={comic.images[0].path}
+          extension={comic.images[0].extension}
+          variant='standard_small'
+        />
+      )}
       <h3>{comic.title}</h3>
       <p>{comic.description}</p>
       <p>
