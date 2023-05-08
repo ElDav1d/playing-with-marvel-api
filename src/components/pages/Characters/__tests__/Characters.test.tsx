@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { act, getByRole, render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import mockCharactersAZ from '../mocks/mockCharactersAZ.json';
 import { useCharacters } from '../hooks';
 import Characters from '../Characters';
