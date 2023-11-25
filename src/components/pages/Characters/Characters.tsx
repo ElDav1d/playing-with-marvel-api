@@ -1,110 +1,137 @@
-import { useState, useEffect, useRef } from 'react';
-import { CharacterItem } from '@/interfaces/globals';
-import { useCharacters } from '@/services';
-import { useIntersectionObserver, useDebounce } from '@/hooks';
-import CharactersContext from './context';
-import { CRITERIA, MAX_CHARACTERS } from '@/utils/constants';
+import { ChangeEvent, useEffect, useRef, useState, useMemo } from 'react';
+
+import { useInView } from 'react-intersection-observer';
+import { useCharacters, useDebounce } from './hooks';
+import { FetchingOrder, FilterCriteria } from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
-import FilterSelector from '@/components/molecules/FilterSelector/FilterSelector';
-import OrderSelector from '@/components/molecules/OrderSelector/OrderSelector';
-import SearchCharacters from '@/components/molecules/SearchCharacters/SearchCharacters';
+import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
+import CheckboxesList from '@/components/molecules/CheckboxesList/CheckboxesList';
+import {
+  MAX_CHARACTERS_DEFAULT,
+  MAX_CHARACTERS_OPTIM,
+  MAX_CHARACTERS_TOP,
+} from '@/utils/constants';
+import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 
 const Characters = () => {
-  const [calls, setCalls] = useState(0);
-  const [stackOrder, setOrder] = useState('name');
-  const [searchString, setSearchString] = useState('');
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState<string>('');
+  const [searchString, setSearchString] = useState<string>('');
+  const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
+  const [onClearData, setOnClearData] = useState<boolean>(false);
+  const [filters, setFilters] = useState<FilterCriteria[]>([]);
+  const maxCharactersRef = useRef(MAX_CHARACTERS_DEFAULT);
 
-  const { characters, isLoading, hasMore, error } = useCharacters({
-    calls,
-    stackOrder,
-    searchString,
-  });
+  const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
+    useCharacters({ maxCharacters: maxCharactersRef.current, searchString, order, onClearData });
 
-  const [intersectionRef, entry] = useIntersectionObserver({
+  const { ref, inView } = useInView({
     threshold: 0.1,
   });
 
-  const isVisible = !!entry?.isIntersecting;
-
-  const [filters, setFilters] = useState<string[]>([]);
-  const [stack, setStack] = useState<CharacterItem[]>([]);
-  const [renderedItems, setRenderedItems] = useState<number>(MAX_CHARACTERS);
-
-  const contextValue = {
-    refProp: intersectionRef,
-    counter: renderedItems,
-    setCounter: setRenderedItems,
-  };
-
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
-  const clearOut = () => {
-    setStack([]);
-    setCalls(0);
-  };
-
   useEffect(() => {
-    setStack([...stack, ...characters]);
-  }, [characters]);
-
-  useEffect(() => {
-    if (isVisible) setCalls(calls + 1);
-  }, [isVisible]);
-
-  useEffect(() => {
-    if (filters.length > 0) setCalls(calls + 1);
-  }, [filters]);
-
-  useEffect(() => {
-    if (renderedItems <= 5) setCalls(calls + 1);
-  }, [renderedItems]);
-
-  useEffect(() => {
-    searchInputRef?.current?.focus();
-  }, []);
-
-  const orderChangeHandler = (event: { target: { value: string } }): void => {
-    clearOut();
-    setOrder(event.target.value);
-  };
-
-  const filterChangeHandler = (event: { target: { value: string } }): void => {
-    const value = event.target.value;
-
-    if (filters.includes(value)) {
-      setFilters(() => [...filters].filter((item) => item !== value));
-    } else {
-      setFilters(() => [...filters].concat(value));
+    if (inView) {
+      fetchNextPage();
     }
+  }, [inView]);
+
+  useEffect(() => {
+    if (onClearData) {
+      setOnClearData(false);
+    }
+  }, [order, searchString]);
+
+  useDebounce(searchInput, 500, () => setSearchString(searchInput));
+
+  const filterLiterals = ['With Image', 'With Description'];
+
+  const filteredCharacters = useMemo(() => {
+    if (filters.includes(FilterCriteria.IMAGE) && filters.includes(FilterCriteria.DESCRIPTION)) {
+      const regex = /image_not_available/g;
+
+      maxCharactersRef.current = MAX_CHARACTERS_TOP;
+
+      return characters.filter((character) => {
+        return !regex.test(character.thumbnail.path) && character.description;
+      });
+    }
+
+    if (filters.includes(FilterCriteria.IMAGE)) {
+      maxCharactersRef.current = MAX_CHARACTERS_OPTIM;
+
+      return characters.filter((character) => {
+        const regex = /image_not_available/g;
+        return !regex.test(character.thumbnail.path);
+      });
+    }
+
+    if (filters.includes(FilterCriteria.DESCRIPTION)) {
+      maxCharactersRef.current = MAX_CHARACTERS_OPTIM;
+
+      return characters.filter((character) => {
+        return character.description && character.description !== ' ';
+      });
+    }
+
+    maxCharactersRef.current = MAX_CHARACTERS_DEFAULT;
+
+    return characters;
+  }, [characters, filters]);
+
+  const orderHandler = (event: ChangeEvent<HTMLSelectElement>): void => {
+    const value = event.target.value as FetchingOrder;
+
+    setOnClearData(true);
+    setOrder(value);
   };
 
-  const searchInputHandler = (event: { target: { value: string } }): void => {
-		setSearchInput(event.target.value);
-  };
-	
-  const searchQueryHandler = () => {
-		clearOut();
-    setSearchString(searchInput);
-  };
-
-  useDebounce(searchInput, 500, () => searchQueryHandler());
+  const orderLiterals = [
+    'By name A/Z',
+    'By name Z/A',
+    'By modification First/Last',
+    'By modification Last/First',
+  ];
 
   return (
-    <CharactersContext.Provider value={contextValue}>
-      <>
+    <>
+      <header>
         <h1>This is the Characters Page</h1>
-        <SearchCharacters ref={searchInputRef} onChange={(event) => searchInputHandler(event)} />
-        <OrderSelector onChange={(event) => orderChangeHandler(event)} order={CRITERIA.order} />
-        <FilterSelector
-          filters={CRITERIA.filters}
-          onChange={(event) => filterChangeHandler(event)}
+
+        <SearchGroup
+          title={'Search by name'}
+          placeholderLiteral={'Type a character name'}
+          setSearchInput={setSearchInput}
+          setOnClearData={setOnClearData}
+          isEmptyData={!isFetching && filteredCharacters?.length === 0}
+          emptyDataLiteral={
+            // eslint-disable-next-line quotes
+            "Sorry, none of our characters' name matches your search! Try typing again"
+          }
         />
-        {error && <h2>Oooops...try reloading again!</h2>}
-        <CharactersList isLoading={isLoading} filters={filters} characters={stack} />
-        {!hasMore && !isLoading && <h2>No more results mate!</h2>}
-      </>
-    </CharactersContext.Provider>
+
+        <SelectorGroup
+          title='Order results:'
+          onChange={(event) => orderHandler(event)}
+          options={Object.values(FetchingOrder)}
+          optionLiterals={orderLiterals}
+        />
+
+        <CheckboxesList
+          title='Filter results:'
+          options={Object.values(FilterCriteria)}
+          optionLiterals={filterLiterals}
+          setOptions={setFilters}
+        />
+      </header>
+
+      <main>
+        {isError && <h2>Oooops...try reloading again!</h2>}
+
+        {isFetching && !isFetchingNextPage && <h2>Loading...</h2>}
+
+        {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
+        {hasNextPage && <h2 ref={ref}>Loading more...</h2>}
+      </main>
+    </>
   );
 };
 

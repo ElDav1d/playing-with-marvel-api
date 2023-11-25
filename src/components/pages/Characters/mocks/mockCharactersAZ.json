@@ -1,0 +1,532 @@
+[
+  {
+    "id": 1011176,
+    "name": "Animal",
+    "description":
+      "Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.",
+    "modified": "1969-12-31T19:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+    "comics": {
+      "available": 12,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
+          "name": "Avengers: The Initiative (2007) #14"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
+          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
+          "name": "Avengers: The Initiative (2007) #15"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
+          "name": "Avengers: The Initiative (2007) #16"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
+          "name": "Avengers: The Initiative (2007) #17"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
+          "name": "Avengers: The Initiative (2007) #18"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
+          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
+          "name": "Avengers: The Initiative (2007) #19"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
+          "name": "Deadpool (1997) #44"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
+          "name": "Marvel Premiere (1972) #35"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
+          "name": "Marvel Premiere (1972) #36"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
+          "name": "Marvel Premiere (1972) #37"
+        }
+      ],
+      "returned": 12
+    },
+    "series": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
+          "name": "Avengers: The Initiative (2007 - 2010)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
+          "name": "Deadpool (1997 - 2002)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
+          "name": "Marvel Premiere (1972 - 1981)"
+        }
+      ],
+      "returned": 3
+    },
+    "stories": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1016823/stories",
+      "items": [
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/31883",
+              "name": "Free Preview of THE INCREDIBLE HULK #50",
+              "type": "interiorStory"
+          },
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92098",
+              "name": "Hulk (2008) #50",
+              "type": "cover"
+          },
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92099",
+              "name": "Interior #92099",
+              "type": "interiorStory"
+          }
+      ],
+      "returned": 3
+  },
+    "events": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/events",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
+          "name": "Secret Invasion"
+        }
+      ],
+      "returned": 1
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "comiclink",
+        "url": "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ]
+  },
+  {
+    "id": 1011177,
+    "name": "Braineater",
+    "description":
+      "Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.",
+    "modified": "1969-12-31T19:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+    "comics": {
+      "available": 12,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
+          "name": "Avengers: The Initiative (2007) #14"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
+          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
+          "name": "Avengers: The Initiative (2007) #15"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
+          "name": "Avengers: The Initiative (2007) #16"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
+          "name": "Avengers: The Initiative (2007) #17"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
+          "name": "Avengers: The Initiative (2007) #18"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
+          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
+          "name": "Avengers: The Initiative (2007) #19"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
+          "name": "Deadpool (1997) #44"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
+          "name": "Marvel Premiere (1972) #35"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
+          "name": "Marvel Premiere (1972) #36"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
+          "name": "Marvel Premiere (1972) #37"
+        }
+      ],
+      "returned": 12
+    },
+    "series": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
+          "name": "Avengers: The Initiative (2007 - 2010)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
+          "name": "Deadpool (1997 - 2002)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
+          "name": "Marvel Premiere (1972 - 1981)"
+        }
+      ],
+      "returned": 3
+    },
+    "stories": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1016823/stories",
+      "items": [
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/31883",
+              "name": "Free Preview of THE INCREDIBLE HULK #50",
+              "type": "interiorStory"
+          },
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92098",
+              "name": "Hulk (2008) #50",
+              "type": "cover"
+          },
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92099",
+              "name": "Interior #92099",
+              "type": "interiorStory"
+          }
+      ],
+      "returned": 3
+  },
+    "events": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/events",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
+          "name": "Secret Invasion"
+        }
+      ],
+      "returned": 1
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "comiclink",
+        "url": "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ]
+  },
+  {
+    "id": 1011178,
+    "name": "Crusher",
+    "description": "",
+    "modified": "1969-12-31T19:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+    "comics": {
+      "available": 12,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
+          "name": "Avengers: The Initiative (2007) #14"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
+          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
+          "name": "Avengers: The Initiative (2007) #15"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
+          "name": "Avengers: The Initiative (2007) #16"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
+          "name": "Avengers: The Initiative (2007) #17"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
+          "name": "Avengers: The Initiative (2007) #18"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
+          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
+          "name": "Avengers: The Initiative (2007) #19"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
+          "name": "Deadpool (1997) #44"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
+          "name": "Marvel Premiere (1972) #35"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
+          "name": "Marvel Premiere (1972) #36"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
+          "name": "Marvel Premiere (1972) #37"
+        }
+      ],
+      "returned": 12
+    },
+    "series": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
+          "name": "Avengers: The Initiative (2007 - 2010)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
+          "name": "Deadpool (1997 - 2002)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
+          "name": "Marvel Premiere (1972 - 1981)"
+        }
+      ],
+      "returned": 3
+    },
+    "stories": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1016823/stories",
+      "items": [
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/31883",
+              "name": "Free Preview of THE INCREDIBLE HULK #50",
+              "type": "interiorStory"
+          },
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92098",
+              "name": "Hulk (2008) #50",
+              "type": "cover"
+          },
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92099",
+              "name": "Interior #92099",
+              "type": "interiorStory"
+          }
+      ],
+      "returned": 3
+  },
+    "events": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/events",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
+          "name": "Secret Invasion"
+        }
+      ],
+      "returned": 1
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "comiclink",
+        "url": "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ]
+  },
+  {
+    "id": 1011179,
+    "name": "Destructor",
+    "description": "",
+    "modified": "1969-12-31T19:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+    "comics": {
+      "available": 12,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
+          "name": "Avengers: The Initiative (2007) #14"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
+          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
+          "name": "Avengers: The Initiative (2007) #15"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
+          "name": "Avengers: The Initiative (2007) #16"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
+          "name": "Avengers: The Initiative (2007) #17"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
+          "name": "Avengers: The Initiative (2007) #18"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
+          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
+          "name": "Avengers: The Initiative (2007) #19"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
+          "name": "Deadpool (1997) #44"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
+          "name": "Marvel Premiere (1972) #35"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
+          "name": "Marvel Premiere (1972) #36"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
+          "name": "Marvel Premiere (1972) #37"
+        }
+      ],
+      "returned": 12
+    },
+    "series": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
+          "name": "Avengers: The Initiative (2007 - 2010)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
+          "name": "Deadpool (1997 - 2002)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
+          "name": "Marvel Premiere (1972 - 1981)"
+        }
+      ],
+      "returned": 3
+    },
+    "stories": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1016823/stories",
+      "items": [
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/31883",
+              "name": "Free Preview of THE INCREDIBLE HULK #50",
+              "type": "interiorStory"
+          },
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92098",
+              "name": "Hulk (2008) #50",
+              "type": "cover"
+          },
+          {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92099",
+              "name": "Interior #92099",
+              "type": "interiorStory"
+          }
+      ],
+      "returned": 3
+  },
+    "events": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/events",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
+          "name": "Secret Invasion"
+        }
+      ],
+      "returned": 1
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "comiclink",
+        "url": "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ]
+  }
+]

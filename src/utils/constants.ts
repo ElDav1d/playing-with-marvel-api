@@ -1,14 +1,15 @@
-type CriteriaConstants = {
-  [key: string]: string[];
-};
-
 const BASE_URL = 'https://gateway.marvel.com:443/v1/public/characters';
 
-const MAX_CHARACTERS = 5;
+const MAX_CHARACTERS_DEFAULT = 10;
+const MAX_CHARACTERS_OPTIM = 50;
+const MAX_CHARACTERS_TOP = 100;
 
-const CRITERIA: CriteriaConstants = {
-  order: ['name', '-name', 'modified', '-modified'],
-  filters: ['withDescription', 'withImage'],
+const MAX_CHARACTER_COMICS = 10;
+
+export {
+  BASE_URL,
+  MAX_CHARACTERS_DEFAULT,
+  MAX_CHARACTERS_OPTIM,
+  MAX_CHARACTERS_TOP,
+  MAX_CHARACTER_COMICS,
 };
-
-export { BASE_URL, CRITERIA, MAX_CHARACTERS };

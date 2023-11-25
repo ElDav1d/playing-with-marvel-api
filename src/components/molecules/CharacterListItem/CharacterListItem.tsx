@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom';
-import { CharacterItem } from '@/interfaces/globals';
-import { useCharactersContext } from '@/components/pages/Characters/context';
+import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import Image from '@/components/atoms/Image/Image';
+import { formatDate } from '@/utils/helpers';
+export interface CharacterItemProps {
+  id: number;
+  name: string;
+  description: string;
+  modified: string;
+  thumbnail: Thumbnail;
+}
 
-const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItem) => {
-  const { refProp } = useCharactersContext();
-
+const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItemProps) => {
   const formatUrlName = (name: string): string =>
     name
       .replace(/([()])/g, '')
@@ -13,8 +18,10 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
       .split(' ')
       .join('-');
 
+  const hasDescription = description && description !== ' ';
+
   return (
-    <li ref={refProp}>
+    <li>
       <Link to={`character/${id}/${formatUrlName(name)}`}>
         <Image path={thumbnail.path} extension={thumbnail.extension} variant='standard_small' />
         <h2>{name}</h2>
@@ -22,10 +29,10 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
       <p>
         <small>
           <strong>modified: </strong>
-          {modified}
+          {formatDate(modified)}
         </small>
       </p>
-      {description ? (
+      {hasDescription ? (
         <p>
           <strong>DESCRIPTION: </strong>
           {description}
