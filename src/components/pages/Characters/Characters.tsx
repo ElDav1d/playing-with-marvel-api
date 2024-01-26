@@ -12,6 +12,7 @@ import {
 } from '@/utils/constants';
 import Header from '@/components/organisms/Header/Header';
 import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
+import Footer from '@/components/organisms/Footer/Footer';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');

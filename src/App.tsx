@@ -8,7 +8,7 @@ const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className='App'>
+    <div className='relative'>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Routes>

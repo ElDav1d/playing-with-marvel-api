@@ -1,5 +1,4 @@
-import Navigation from '@/components/molecules/Navigation/Navigation';
-import React from 'react';
+import Navigation from '@/components/molecules/NavigationMain/NavigationMain';
 
 export interface IHeaderProps {
   children?: React.ReactNode;

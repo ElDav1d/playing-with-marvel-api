@@ -7,6 +7,7 @@ import { MAX_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { FetchingOrder } from './interfaces/characterComics';
 import Header from '@/components/organisms/Header/Header';
+import Footer from '@/components/organisms/Footer/Footer';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -98,17 +99,19 @@ const CharacterDetail = () => {
               ) : (
                 <h3>{character.name} has not comics</h3>
               )}
+
+              {!isPreviousData && !isFirstPage && (
+                <button onClick={handlePrevPage}>Previous Comics</button>
+              )}
+              {!isPreviousData && !isLastPage && (
+                <button onClick={handleNextPage}>Next Comics</button>
+              )}
             </section>
           </article>
         )}
       </main>
 
-      <footer>
-        {!isPreviousData && !isFirstPage && (
-          <button onClick={handlePrevPage}>Previous Comics</button>
-        )}
-        {!isPreviousData && !isLastPage && <button onClick={handleNextPage}>Next Comics</button>}
-      </footer>
+      <Footer />
     </>
   );
 };
