@@ -1,5 +1,4 @@
 import { ChangeEvent, useEffect, useRef, useState, useMemo } from 'react';
-
 import { useInView } from 'react-intersection-observer';
 import { useCharacters, useDebounce } from './hooks';
 import { FetchingOrder, FilterCriteria } from './interfaces/characters';
@@ -93,8 +92,8 @@ const Characters = () => {
 
   return (
     <>
-      <header>
-        <h1>This is the Characters Page</h1>
+      <header className='bg-red-800'>
+        <h1 className='text-3xl font-bold underline'>This is the Characters Page</h1>
 
         <SearchGroup
           title={'Search by name'}
