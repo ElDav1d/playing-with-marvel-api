@@ -10,9 +10,10 @@ import {
   MAX_CHARACTERS_OPTIM,
   MAX_CHARACTERS_TOP,
 } from '@/utils/constants';
-import Header from '@/components/organisms/Header/Header';
+import Header from '@/components/organisms/Header';
 import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
-import Footer from '@/components/organisms/Footer/Footer';
+import Footer from '@/components/organisms/Footer';
+import Container from '@/components/organisms/Container';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
@@ -95,42 +96,46 @@ const Characters = () => {
   return (
     <>
       <Header>
-        <h1 className='text-3xl font-bold underline'>This is the Characters Page</h1>
-        <SearchGroup
-          title={'Search by name'}
-          placeholderLiteral={'Type a character name'}
-          setSearchInput={setSearchInput}
-          setOnClearData={setOnClearData}
-          isEmptyData={!isFetching && filteredCharacters?.length === 0}
-          emptyDataLiteral={
-            // eslint-disable-next-line quotes
-            "Sorry, none of our characters' name matches your search! Try typing again"
-          }
-        />
+        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
+          <h1 className='text-3xl font-bold underline'>This is the Characters Page</h1>
+          <SearchGroup
+            title={'Search by name'}
+            placeholderLiteral={'Type a character name'}
+            setSearchInput={setSearchInput}
+            setOnClearData={setOnClearData}
+            isEmptyData={!isFetching && filteredCharacters?.length === 0}
+            emptyDataLiteral={
+              // eslint-disable-next-line quotes
+              "Sorry, none of our characters' name matches your search! Try typing again"
+            }
+          />
 
-        <SelectorGroup
-          title='Order results:'
-          onChange={(event) => orderHandler(event)}
-          options={Object.values(FetchingOrder)}
-          optionLiterals={orderLiterals}
-        />
-
-        <CheckboxesList
-          title='Filter results:'
-          options={Object.values(FilterCriteria)}
-          optionLiterals={filterLiterals}
-          setOptions={setFilters}
-        />
+          <SelectorGroup
+            title='Order results:'
+            onChange={(event) => orderHandler(event)}
+            options={Object.values(FetchingOrder)}
+            optionLiterals={orderLiterals}
+          />
+        </section>
+        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
+          <CheckboxesList
+            title='Filter results:'
+            options={Object.values(FilterCriteria)}
+            optionLiterals={filterLiterals}
+            setOptions={setFilters}
+          />
+        </section>
       </Header>
 
-      <main>
+      <Container tag={'main'}>
         {isError && <h2>Oooops...try reloading again!</h2>}
 
         {isFetching && !isFetchingNextPage && <h2>Loading...</h2>}
 
         {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
         {hasNextPage && <h2 ref={ref}>Loading more...</h2>}
-      </main>
+      </Container>
+      <Footer />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import Navigation from '@/components/molecules/NavigationMain/NavigationMain';
+import Navigation from '@/components/molecules/NavigationMain';
 
 export interface IHeaderProps {
   children?: React.ReactNode;
@@ -6,7 +6,7 @@ export interface IHeaderProps {
 
 const Header = ({ children }: IHeaderProps) => {
   return (
-    <header className='bg-red-800'>
+    <header className='mb-6 bg-black text-white'>
       <Navigation />
       {children}
     </header>

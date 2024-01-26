@@ -6,8 +6,9 @@ import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
 import { MAX_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { FetchingOrder } from './interfaces/characterComics';
-import Header from '@/components/organisms/Header/Header';
-import Footer from '@/components/organisms/Footer/Footer';
+import Header from '@/components/organisms/Header';
+import Footer from '@/components/organisms/Footer';
+import Container from '@/components/organisms/Container';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -63,7 +64,7 @@ const CharacterDetail = () => {
   return (
     <>
       <Header />
-      <main>
+      <Container tag={'main'}>
         {isError && <h2>Ooops, try refreshing your browser</h2>}
 
         {isLoadingCharacter && <h2>Loading Character Details...</h2>}
@@ -109,7 +110,7 @@ const CharacterDetail = () => {
             </section>
           </article>
         )}
-      </main>
+      </Container>
 
       <Footer />
     </>
