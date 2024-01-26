@@ -1,3 +1,4 @@
+import Logo from '@/components/atoms/Logo/Logo';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +10,9 @@ const Header = ({ children }: IHeaderProps) => {
   return (
     <header className='bg-red-800'>
       <nav>
-        <Link to='/'>Home</Link>
+        <Link to='/'>
+          <Logo />
+        </Link>
       </nav>
       {children}
     </header>
