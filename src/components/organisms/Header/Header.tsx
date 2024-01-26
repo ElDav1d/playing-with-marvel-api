@@ -1,6 +1,5 @@
-import Logo from '@/components/atoms/Logo/Logo';
+import Navigation from '@/components/molecules/Navigation/Navigation';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export interface IHeaderProps {
   children?: React.ReactNode;
@@ -9,11 +8,7 @@ export interface IHeaderProps {
 const Header = ({ children }: IHeaderProps) => {
   return (
     <header className='bg-red-800'>
-      <nav>
-        <Link to='/'>
-          <Logo />
-        </Link>
-      </nav>
+      <Navigation />
       {children}
     </header>
   );
