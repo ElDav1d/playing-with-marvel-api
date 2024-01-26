@@ -6,6 +6,7 @@ import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
 import { MAX_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { FetchingOrder } from './interfaces/characterComics';
+import Header from '@/components/organisms/Header/Header';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -60,12 +61,7 @@ const CharacterDetail = () => {
 
   return (
     <>
-      <header>
-        <nav>
-          <Link to='/'>Home</Link>
-        </nav>
-      </header>
-
+      <Header />
       <main>
         {isError && <h2>Ooops, try refreshing your browser</h2>}
 

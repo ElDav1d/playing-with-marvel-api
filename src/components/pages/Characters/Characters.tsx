@@ -10,6 +10,7 @@ import {
   MAX_CHARACTERS_OPTIM,
   MAX_CHARACTERS_TOP,
 } from '@/utils/constants';
+import Header from '@/components/organisms/Header/Header';
 import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 
 const Characters = () => {
@@ -92,9 +93,8 @@ const Characters = () => {
 
   return (
     <>
-      <header className='bg-red-800'>
+      <Header>
         <h1 className='text-3xl font-bold underline'>This is the Characters Page</h1>
-
         <SearchGroup
           title={'Search by name'}
           placeholderLiteral={'Type a character name'}
@@ -120,7 +120,7 @@ const Characters = () => {
           optionLiterals={filterLiterals}
           setOptions={setFilters}
         />
-      </header>
+      </Header>
 
       <main>
         {isError && <h2>Oooops...try reloading again!</h2>}
