@@ -6,6 +6,8 @@ import CharactersList from '@/components/organisms/CharactersList/CharactersList
 import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
 import CheckboxesList from '@/components/molecules/CheckboxesList/CheckboxesList';
 import {
+  LOADER_SIZE,
+  MARVEL_RED,
   MAX_CHARACTERS_DEFAULT,
   MAX_CHARACTERS_OPTIM,
   MAX_CHARACTERS_TOP,
@@ -14,6 +16,7 @@ import Header from '@/components/organisms/Header';
 import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
+import { RingLoader } from 'react-spinners';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
@@ -130,10 +133,16 @@ const Characters = () => {
       <Container tag={'main'}>
         {isError && <h2>Oooops...try reloading again!</h2>}
 
-        {isFetching && !isFetchingNextPage && <h2>Loading...</h2>}
+        {isFetching && !isFetchingNextPage && (
+          <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
+        )}
 
         {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
-        {hasNextPage && <h2 ref={ref}>Loading more...</h2>}
+        {hasNextPage && (
+          <div ref={ref}>
+            <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
+          </div>
+        )}
       </Container>
       <Footer />
     </>
