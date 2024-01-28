@@ -6,6 +6,9 @@ import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
 import { MAX_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { FetchingOrder } from './interfaces/characterComics';
+import Header from '@/components/organisms/Header';
+import Footer from '@/components/organisms/Footer';
+import Container from '@/components/organisms/Container';
 
 const CharacterDetail = () => {
   const { id } = useParams();
@@ -60,13 +63,8 @@ const CharacterDetail = () => {
 
   return (
     <>
-      <header>
-        <nav>
-          <Link to='/'>Home</Link>
-        </nav>
-      </header>
-
-      <main>
+      <Header />
+      <Container tag={'main'}>
         {isError && <h2>Ooops, try refreshing your browser</h2>}
 
         {isLoadingCharacter && <h2>Loading Character Details...</h2>}
@@ -102,17 +100,19 @@ const CharacterDetail = () => {
               ) : (
                 <h3>{character.name} has not comics</h3>
               )}
+
+              {!isPreviousData && !isFirstPage && (
+                <button onClick={handlePrevPage}>Previous Comics</button>
+              )}
+              {!isPreviousData && !isLastPage && (
+                <button onClick={handleNextPage}>Next Comics</button>
+              )}
             </section>
           </article>
         )}
-      </main>
+      </Container>
 
-      <footer>
-        {!isPreviousData && !isFirstPage && (
-          <button onClick={handlePrevPage}>Previous Comics</button>
-        )}
-        {!isPreviousData && !isLastPage && <button onClick={handleNextPage}>Next Comics</button>}
-      </footer>
+      <Footer />
     </>
   );
 };

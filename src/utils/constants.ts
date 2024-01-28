@@ -1,6 +1,6 @@
 const BASE_URL = 'https://gateway.marvel.com:443/v1/public/characters';
 
-const MAX_CHARACTERS_DEFAULT = 10;
+const MAX_CHARACTERS_DEFAULT = 30;
 const MAX_CHARACTERS_OPTIM = 50;
 const MAX_CHARACTERS_TOP = 100;
 

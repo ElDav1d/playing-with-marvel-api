@@ -1,16 +1,14 @@
 import { Link } from 'react-router-dom';
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import Image from '@/components/atoms/Image/Image';
-import { formatDate } from '@/utils/helpers';
 export interface CharacterItemProps {
   id: number;
   name: string;
   description: string;
-  modified: string;
   thumbnail: Thumbnail;
 }
 
-const CharacterListItem = ({ id, name, thumbnail, modified, description }: CharacterItemProps) => {
+const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemProps) => {
   const formatUrlName = (name: string): string =>
     name
       .replace(/([()])/g, '')
@@ -21,23 +19,16 @@ const CharacterListItem = ({ id, name, thumbnail, modified, description }: Chara
   const hasDescription = description && description !== ' ';
 
   return (
-    <li>
+    <li className='bg-black text-white'>
       <Link to={`character/${id}/${formatUrlName(name)}`}>
-        <Image path={thumbnail.path} extension={thumbnail.extension} variant='standard_small' />
-        <h2>{name}</h2>
+        <Image path={thumbnail.path} extension={thumbnail.extension} variant='standard_fantastic' />
+        <div className='p-3 h-40'>
+          <h2 className='mb-2 font-medium uppercase text-sm leading-5'>{name}</h2>
+          {hasDescription && (
+            <p className='text-xs leading-5 font-light line-clamp-4'>{description}</p>
+          )}
+        </div>
       </Link>
-      <p>
-        <small>
-          <strong>modified: </strong>
-          {formatDate(modified)}
-        </small>
-      </p>
-      {hasDescription ? (
-        <p>
-          <strong>DESCRIPTION: </strong>
-          {description}
-        </p>
-      ) : null}
     </li>
   );
 };
