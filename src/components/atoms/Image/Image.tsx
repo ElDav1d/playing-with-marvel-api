@@ -1,7 +1,7 @@
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 
 export interface ImageProps extends Thumbnail {
-  variant: 'standard_small' | 'landscape_incredible';
+  variant: 'standard_small' | 'standard_fantastic' | 'landscape_incredible';
 }
 
 const Image = ({ path, extension, variant }: ImageProps) => {

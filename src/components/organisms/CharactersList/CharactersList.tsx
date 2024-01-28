@@ -6,14 +6,13 @@ export interface CharactersListProps {
 
 const CharactersList = ({ characters }: CharactersListProps) => {
   return (
-    <ul>
-      {characters.map(({ id, name, thumbnail, modified, description }) => (
+    <ul className='grid gap-3 grid-cols-2 sm:grid-cols-4'>
+      {characters.map(({ id, name, thumbnail, description }) => (
         <CharacterListItem
           key={id}
           id={id}
           name={name}
           thumbnail={thumbnail}
-          modified={modified}
           description={description}
         />
       ))}
