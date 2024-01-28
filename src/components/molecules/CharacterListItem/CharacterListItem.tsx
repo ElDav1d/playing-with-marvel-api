@@ -23,8 +23,10 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
       <Link to={`character/${id}/${formatUrlName(name)}`}>
         <Image path={thumbnail.path} extension={thumbnail.extension} variant='standard_fantastic' />
         <div className='p-3 h-40'>
-          <h2 className='font-bold uppercase mb-2 text-2xl'>{name}</h2>
-          {hasDescription && <p className='text-2xl line-clamp-4'>{description}</p>}
+          <h2 className='mb-2 font-medium uppercase text-sm leading-5'>{name}</h2>
+          {hasDescription && (
+            <p className='text-xs leading-5 font-light line-clamp-4'>{description}</p>
+          )}
         </div>
       </Link>
     </li>
