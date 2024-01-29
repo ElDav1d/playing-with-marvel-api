@@ -19,9 +19,16 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
   const hasDescription = description && description !== ' ';
 
   return (
-    <li className='bg-black text-white'>
+    <li className='group bg-black text-white'>
       <Link to={`character/${id}/${formatUrlName(name)}`}>
-        <Image path={thumbnail.path} extension={thumbnail.extension} variant='standard_fantastic' />
+        <div className='overflow-hidden'>
+          <Image
+            className='transition ease-in-out delay-150 group-hover:scale-105'
+            path={thumbnail.path}
+            extension={thumbnail.extension}
+            variant='standard_fantastic'
+          />
+        </div>
         <div className='p-3 h-40'>
           <h2 className='mb-2 font-medium uppercase text-sm leading-5'>{name}</h2>
           {hasDescription && (
