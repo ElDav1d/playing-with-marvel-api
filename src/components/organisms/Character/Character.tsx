@@ -11,7 +11,13 @@ const Character = ({ name, description, thumbnailPath, thumbnailExtension }: Cha
   return (
     <>
       <h1>This is {name}</h1>
-      <Image path={thumbnailPath} extension={thumbnailExtension} variant='landscape_incredible' />
+      <Image
+        title={name}
+        alt={`A big pic of ${name}`}
+        path={thumbnailPath}
+        extension={thumbnailExtension}
+        variant='landscape_incredible'
+      />
       {description ? (
         <p>
           <strong>DESCRIPTION: </strong>
