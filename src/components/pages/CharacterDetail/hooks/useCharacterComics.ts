@@ -1,4 +1,4 @@
-import { MAX_CHARACTER_COMICS } from '@/utils/constants';
+import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getCharacterComicsService } from '../services';
 
@@ -35,7 +35,7 @@ const useCharacterComics = (
     rangeEnd: safeOffset + comics?.length,
     isErrorOnComics: isError,
     isFetchingComics: isFetching,
-    isLastPage: safeOffset + MAX_CHARACTER_COMICS >= totalComics,
+    isLastPage: safeOffset + MAX_FETCH_CHARACTER_COMICS >= totalComics,
     isFirstPage: safeOffset === 0,
     isPreviousData,
     refetch,

@@ -1,9 +1,9 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useCharacterDetails, useCharacterComics } from './hooks';
 import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
 import Character from '@/components/organisms/Character/Character';
 import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
-import { MAX_CHARACTER_COMICS } from '@/utils/constants';
+import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { FetchingOrder } from './interfaces/characterComics';
 import Header from '@/components/organisms/Header';
@@ -29,7 +29,7 @@ const CharacterDetail = () => {
     isLastPage,
     isPreviousData,
     refetch,
-  } = useCharacterComics(id, MAX_CHARACTER_COMICS, page, onClearData);
+  } = useCharacterComics(id, MAX_FETCH_CHARACTER_COMICS, page, onClearData);
 
   useEffect(() => {
     refetch();
