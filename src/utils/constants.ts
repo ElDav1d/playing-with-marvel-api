@@ -10,6 +10,8 @@ const MARVEL_RED = '#EC1D24';
 
 const LOADER_SIZE = 40;
 
+const REGEX_IMAGE_PATH = /image_not_available/g;
+
 export {
   BASE_URL,
   MAX_CHARACTERS_DEFAULT,
@@ -18,4 +20,5 @@ export {
   MAX_CHARACTER_COMICS,
   MARVEL_RED,
   LOADER_SIZE,
+  REGEX_IMAGE_PATH,
 };

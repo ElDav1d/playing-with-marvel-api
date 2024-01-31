@@ -11,6 +11,7 @@ import {
   MAX_CHARACTERS_DEFAULT,
   MAX_CHARACTERS_OPTIM,
   MAX_CHARACTERS_TOP,
+  REGEX_IMAGE_PATH,
 } from '@/utils/constants';
 import Header from '@/components/organisms/Header';
 import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
@@ -51,12 +52,10 @@ const Characters = () => {
 
   const filteredCharacters = useMemo(() => {
     if (filters.includes(FilterCriteria.IMAGE) && filters.includes(FilterCriteria.DESCRIPTION)) {
-      const regex = /image_not_available/g;
-
       maxCharactersRef.current = MAX_CHARACTERS_TOP;
 
       return characters.filter((character) => {
-        return !regex.test(character.thumbnail.path) && character.description;
+        return !REGEX_IMAGE_PATH.test(character.thumbnail.path) && character.description;
       });
     }
 

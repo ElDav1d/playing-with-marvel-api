@@ -32,7 +32,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
           <Image
             className='box-border bg-red transition ease-in-out delay-gridItem duration-gridItem group-hover:scale-105 '
             title={name}
-            alt={`A pic of ${name}`}
+            alt={`The pic of ${name}`}
             path={thumbnail.path}
             extension={thumbnail.extension}
             variant='standard_fantastic'

@@ -18,7 +18,7 @@ export const ComicsListItem = ({ comic }: ComicsListItemProps) => {
       {comic.images.length > 0 && (
         <Image
           title={comic.title}
-          alt={`Pic of ${comic.title}'s cover`}
+          alt={`The pic of ${comic.title}'s cover`}
           path={comic.images[0].path}
           extension={comic.images[0].extension}
           variant='standard_small'
