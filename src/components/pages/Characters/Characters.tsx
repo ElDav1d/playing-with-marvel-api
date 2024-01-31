@@ -101,7 +101,7 @@ const Characters = () => {
     <>
       <Header>
         <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
-          <h1 className='text-3xl font-bold underline'>This is the Characters Page</h1>
+          <h1 className='text-3xl font-bold underline text-white'>This is the Characters Page</h1>
           <SearchGroup
             title={'Search by name'}
             placeholderLiteral={'Type a character name'}
@@ -121,7 +121,7 @@ const Characters = () => {
             optionLiterals={orderLiterals}
           />
         </section>
-        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
+        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px] text-white'>
           <CheckboxesList
             title='Filter results:'
             options={Object.values(FilterCriteria)}
