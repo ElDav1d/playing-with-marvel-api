@@ -101,7 +101,7 @@ const Characters = () => {
     <>
       <Header>
         <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
-          <h1 className='text-3xl font-bold underline text-white'>This is the Characters Page</h1>
+          <h2 className='text-3xl font-bold underline text-white'>This is the Characters Page</h2>
           <SearchGroup
             title={'Search by name'}
             placeholderLiteral={'Type a character name'}
