@@ -1,6 +1,6 @@
 import { VariantDescription } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 import { render, screen } from '@testing-library/react';
-import Image, { picVariant } from '../Image';
+import Image, { PicVariant } from '../Image';
 
 describe.only('ImageComponent', () => {
   it('renders being accessible', () => {
@@ -39,7 +39,7 @@ describe.only('ImageComponent', () => {
     const ALT = 'The pic of Spiderman';
     const PATH = 'http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b';
     const EXTENSION = 'jpg';
-    const VARIANTS: picVariant[] = ['standard_fantastic', 'standard_fantastic'];
+    const VARIANTS: PicVariant[] = ['standard_fantastic', 'standard_fantastic'];
 
     // ACT
     render(<Image title={TITLE} alt={ALT} path={PATH} extension={EXTENSION} sizing={VARIANTS} />);
