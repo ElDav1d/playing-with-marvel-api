@@ -6,7 +6,7 @@ export interface IHeaderProps {
 
 const Header = ({ children }: IHeaderProps) => {
   return (
-    <header className='mb-6 bg-black text-white'>
+    <header className='mb-6 bg-black'>
       <Navigation />
       {children}
     </header>

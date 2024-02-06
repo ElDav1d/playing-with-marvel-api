@@ -13,7 +13,7 @@ const Container = ({ children, tag }: IContainerProps) => {
       break;
     case 'main':
       Element = 'main';
-      styles = styles.concat(' pb-48');
+      styles = styles.concat(' pb-48 min-h-[100vh]');
       break;
     default:
       break;

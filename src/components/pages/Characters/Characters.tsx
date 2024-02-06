@@ -1,19 +1,23 @@
 import { ChangeEvent, useEffect, useRef, useState, useMemo } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useCharacters, useDebounce } from './hooks';
-import { FetchingOrder, FilterCriteria } from './interfaces/characters';
+import { CharacterItem, FetchingOrder, FilterCriteria } from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
 import CheckboxesList from '@/components/molecules/CheckboxesList/CheckboxesList';
 import {
-  MAX_CHARACTERS_DEFAULT,
-  MAX_CHARACTERS_OPTIM,
-  MAX_CHARACTERS_TOP,
+  LOADER_SIZE,
+  MARVEL_RED,
+  MAX_FETCH_CHARACTERS_DEFAULT,
+  MAX_FETCH_CHARACTERS_OPTIM,
+  MAX_FETCH_CHARACTERS_TOP,
+  REGEX_IMAGE_PATH,
 } from '@/utils/constants';
 import Header from '@/components/organisms/Header';
 import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
+import { RingLoader } from 'react-spinners';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
@@ -21,7 +25,7 @@ const Characters = () => {
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
   const [onClearData, setOnClearData] = useState<boolean>(false);
   const [filters, setFilters] = useState<FilterCriteria[]>([]);
-  const maxCharactersRef = useRef(MAX_CHARACTERS_DEFAULT);
+  const maxCharactersRef = useRef(MAX_FETCH_CHARACTERS_DEFAULT);
 
   const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
     useCharacters({ maxCharacters: maxCharactersRef.current, searchString, order, onClearData });
@@ -47,36 +51,36 @@ const Characters = () => {
   const filterLiterals = ['With Image', 'With Description'];
 
   const filteredCharacters = useMemo(() => {
-    if (filters.includes(FilterCriteria.IMAGE) && filters.includes(FilterCriteria.DESCRIPTION)) {
-      const regex = /image_not_available/g;
+    const hasImage = (path: string) => !REGEX_IMAGE_PATH.test(path);
+    const hasDescription = (description: string) => description && description !== ' ';
 
-      maxCharactersRef.current = MAX_CHARACTERS_TOP;
+    let maxCharacters;
+    let filterCallback;
 
-      return characters.filter((character) => {
-        return !regex.test(character.thumbnail.path) && character.description;
-      });
+    switch (true) {
+      case filters.includes(FilterCriteria.IMAGE) && filters.includes(FilterCriteria.DESCRIPTION):
+        maxCharacters = MAX_FETCH_CHARACTERS_TOP;
+        filterCallback = (character: CharacterItem) =>
+          hasImage(character.thumbnail.path) && hasDescription(character.description);
+        break;
+
+      case filters.includes(FilterCriteria.IMAGE):
+        maxCharacters = MAX_FETCH_CHARACTERS_OPTIM;
+        filterCallback = (character: CharacterItem) => hasImage(character.thumbnail.path);
+        break;
+
+      case filters.includes(FilterCriteria.DESCRIPTION):
+        maxCharacters = MAX_FETCH_CHARACTERS_OPTIM;
+        filterCallback = (character: CharacterItem) => hasDescription(character.description);
+        break;
+
+      default:
+        maxCharactersRef.current = MAX_FETCH_CHARACTERS_DEFAULT;
+        return characters;
     }
 
-    if (filters.includes(FilterCriteria.IMAGE)) {
-      maxCharactersRef.current = MAX_CHARACTERS_OPTIM;
-
-      return characters.filter((character) => {
-        const regex = /image_not_available/g;
-        return !regex.test(character.thumbnail.path);
-      });
-    }
-
-    if (filters.includes(FilterCriteria.DESCRIPTION)) {
-      maxCharactersRef.current = MAX_CHARACTERS_OPTIM;
-
-      return characters.filter((character) => {
-        return character.description && character.description !== ' ';
-      });
-    }
-
-    maxCharactersRef.current = MAX_CHARACTERS_DEFAULT;
-
-    return characters;
+    maxCharactersRef.current = maxCharacters;
+    return characters.filter(filterCallback);
   }, [characters, filters]);
 
   const orderHandler = (event: ChangeEvent<HTMLSelectElement>): void => {
@@ -97,7 +101,7 @@ const Characters = () => {
     <>
       <Header>
         <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
-          <h1 className='text-3xl font-bold underline'>This is the Characters Page</h1>
+          <h2 className='text-3xl font-bold underline text-white'>This is the Characters Page</h2>
           <SearchGroup
             title={'Search by name'}
             placeholderLiteral={'Type a character name'}
@@ -117,7 +121,7 @@ const Characters = () => {
             optionLiterals={orderLiterals}
           />
         </section>
-        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
+        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px] text-white'>
           <CheckboxesList
             title='Filter results:'
             options={Object.values(FilterCriteria)}
@@ -130,10 +134,16 @@ const Characters = () => {
       <Container tag={'main'}>
         {isError && <h2>Oooops...try reloading again!</h2>}
 
-        {isFetching && !isFetchingNextPage && <h2>Loading...</h2>}
+        {isFetching && !isFetchingNextPage && (
+          <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
+        )}
 
         {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
-        {hasNextPage && <h2 ref={ref}>Loading more...</h2>}
+        {hasNextPage && (
+          <div ref={ref}>
+            <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
+          </div>
+        )}
       </Container>
       <Footer />
     </>

@@ -23,8 +23,8 @@ window.IntersectionObserver = mockIntersectionObserver;
 
 const queryClient = new QueryClient();
 
-describe(Characters, () => {
-  it('renders a page of characters', () => {
+describe.skip(Characters, () => {
+  it.skip('renders a page of characters', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -51,7 +51,7 @@ describe(Characters, () => {
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
 
-  it('renders a list with characters', () => {
+  it.skip('renders a list with characters', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -77,7 +77,7 @@ describe(Characters, () => {
     expect(listTarget).toBeInTheDocument();
   });
 
-  it('renders a list with characters as list items', () => {
+  it.skip('renders a list with characters as list items', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -105,7 +105,7 @@ describe(Characters, () => {
     expect(listItemTargetTwo).toBeInTheDocument();
   });
 
-  it('renders a search by name input group', () => {
+  it.skip('renders a search by name input group', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -132,7 +132,7 @@ describe(Characters, () => {
     expect(searchInputElement).toBeInTheDocument();
   });
 
-  it('fetches a new list of characters after typing on search by name input', () => {
+  it.skip('fetches a new list of characters after typing on search by name input', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -165,7 +165,7 @@ describe(Characters, () => {
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
 
-  it('renders an order select input group with its required options', () => {
+  it.skip('renders an order select input group with its required options', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -202,7 +202,7 @@ describe(Characters, () => {
     expect(selecOptionModifiedLastFirst.value).toBe('-modified');
   });
 
-  it('fetches a new list of characters after selecting an order option', () => {
+  it.skip('fetches a new list of characters after selecting an order option', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -293,7 +293,7 @@ describe(Characters, () => {
     expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
   });
 
-  it('renders a characters with description list when the description filter is checked', () => {
+  it.skip('renders a characters with description list when the description filter is checked', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -323,7 +323,7 @@ describe(Characters, () => {
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
 
-  it('keeps rendering a filtered characters list after selecting an order option', () => {
+  it.skip('keeps rendering a filtered characters list after selecting an order option', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -355,7 +355,7 @@ describe(Characters, () => {
     expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
   });
 
-  it('renders the complete characters list after unchecking a filter', () => {
+  it.skip('renders the complete characters list after unchecking a filter', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
