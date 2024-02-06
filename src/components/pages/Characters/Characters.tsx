@@ -139,6 +139,7 @@ const Characters = () => {
         )}
 
         {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
+
         {hasNextPage && (
           <div ref={ref}>
             <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />

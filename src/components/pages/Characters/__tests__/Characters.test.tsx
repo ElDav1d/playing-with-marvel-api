@@ -8,6 +8,9 @@ import Characters from '../Characters';
 import userEvent from '@testing-library/user-event';
 
 jest.mock('../hooks');
+jest.mock('react-lazy-load-image-component', () => ({
+  LazyLoadImage: () => <div>empty</div>,
+}));
 
 const mockUseCharacters = useCharacters as jest.Mock;
 
@@ -23,8 +26,8 @@ window.IntersectionObserver = mockIntersectionObserver;
 
 const queryClient = new QueryClient();
 
-describe.skip(Characters, () => {
-  it.skip('renders a page of characters', () => {
+describe(Characters, () => {
+  it('renders a page of characters', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -51,7 +54,7 @@ describe.skip(Characters, () => {
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
 
-  it.skip('renders a list with characters', () => {
+  it('renders a list with characters', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -77,7 +80,7 @@ describe.skip(Characters, () => {
     expect(listTarget).toBeInTheDocument();
   });
 
-  it.skip('renders a list with characters as list items', () => {
+  it('renders a list with characters as list items', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -105,7 +108,7 @@ describe.skip(Characters, () => {
     expect(listItemTargetTwo).toBeInTheDocument();
   });
 
-  it.skip('renders a search by name input group', () => {
+  it('renders a search by name input group', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -132,7 +135,7 @@ describe.skip(Characters, () => {
     expect(searchInputElement).toBeInTheDocument();
   });
 
-  it.skip('fetches a new list of characters after typing on search by name input', () => {
+  it('fetches a new list of characters after typing on search by name input', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -165,7 +168,7 @@ describe.skip(Characters, () => {
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
 
-  it.skip('renders an order select input group with its required options', () => {
+  it('renders an order select input group with its required options', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -202,7 +205,7 @@ describe.skip(Characters, () => {
     expect(selecOptionModifiedLastFirst.value).toBe('-modified');
   });
 
-  it.skip('fetches a new list of characters after selecting an order option', () => {
+  it('fetches a new list of characters after selecting an order option', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -293,7 +296,7 @@ describe.skip(Characters, () => {
     expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
   });
 
-  it.skip('renders a characters with description list when the description filter is checked', () => {
+  it('renders a characters with description list when the description filter is checked', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -323,7 +326,7 @@ describe.skip(Characters, () => {
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
 
-  it.skip('keeps rendering a filtered characters list after selecting an order option', () => {
+  it('keeps rendering a filtered characters list after selecting an order option', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
@@ -355,7 +358,7 @@ describe.skip(Characters, () => {
     expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
   });
 
-  it.skip('renders the complete characters list after unchecking a filter', () => {
+  it('renders the complete characters list after unchecking a filter', () => {
     // ARRANGE
     const charactersAZ = JSON.parse(JSON.stringify(mockCharactersAZ));
 
