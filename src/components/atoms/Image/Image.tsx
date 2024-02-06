@@ -72,6 +72,7 @@ const Image = ({
   ariaId,
 }: ImageProps) => {
   const LAZYLOAD_SIZING_DEFAULT = 'standard_small';
+  const LAZYLOAD_THRESHOLD = 50;
 
   const getSrc = (sizing: PicVariant | PicVariant[]) => {
     if (typeof sizing === 'string') {
@@ -101,7 +102,12 @@ const Image = ({
     return sizes;
   };
 
-  const isNotAvailable = REGEX_IMAGE_PATH.test(path);
+  const getAltText = () => {
+    if (REGEX_IMAGE_PATH.test(path)) {
+      return `${alt}' is not available`;
+    }
+    return alt;
+  };
 
   return (
     <picture className={classNameContainer}>
@@ -111,10 +117,10 @@ const Image = ({
         srcSet={getSrcSet()}
         src={getSrc(sizing)}
         title={title}
-        alt={`${alt}${isNotAvailable ? ' is not available' : ''}`}
+        alt={getAltText()}
         id={ariaId}
         placeholderSrc={getSrc(LAZYLOAD_SIZING_DEFAULT)}
-        threshold={50}
+        threshold={LAZYLOAD_THRESHOLD}
         effect='blur'
       />
     </picture>
