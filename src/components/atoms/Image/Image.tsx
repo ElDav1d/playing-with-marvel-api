@@ -3,6 +3,7 @@ import { BreakpointStepName } from '@/interfaces/globals';
 import { MEDIA_BREAKPOINTS, REGEX_IMAGE_PATH } from '@/utils/constants';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import './Image.css';
 
 /**
  * @typedef
