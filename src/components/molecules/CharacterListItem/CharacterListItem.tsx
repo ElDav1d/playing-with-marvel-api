@@ -28,7 +28,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
         <Image
           classNameContainer='relative
           after:absolute after:content[""] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5'
-          classNameContent='box-border bg-red transition ease-in-out delay-gridItem duration-gridItem group-hover:scale-105 '
+          classNameContent='box-border transition ease-in-out delay-gridItem duration-gridItem group-hover:scale-105'
           title={name}
           alt={`The pic of ${name}`}
           ariaId={id.toString()}
