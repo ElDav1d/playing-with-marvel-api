@@ -27,7 +27,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
       <Link to={`character/${id}/${formatUrlName(name)}`} aria-labelledby={id.toString()}>
         <Image
           classNameContainer='relative
-          after:absolute after:content[""] after:bg-red after:h-1 after:w-full after:left-0 after:bottom-0'
+          after:absolute after:content[""] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5'
           classNameContent='box-border bg-red transition ease-in-out delay-gridItem duration-gridItem group-hover:scale-105 '
           title={name}
           alt={`The pic of ${name}`}
@@ -38,7 +38,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
         />
         <div
           className='p-3 h-40 relative z-0
-          before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[""] before:h-full before:max-h-[0px] before:bg-red before:w-full before:left-0 before:top-0 before:z-[-1]
+          before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[""] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1]
           group-hover:before:max-h-[300px]'
         >
           <h2 className='mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2'>{name}</h2>
