@@ -21,7 +21,7 @@ export const ComicsListItem = ({ comic }: ComicsListItemProps) => {
           alt={`The pic of ${comic.title}'s cover`}
           path={comic.images[0].path}
           extension={comic.images[0].extension}
-          variant='standard_small'
+          sizing='standard_small'
         />
       )}
       <h3>{comic.title}</h3>

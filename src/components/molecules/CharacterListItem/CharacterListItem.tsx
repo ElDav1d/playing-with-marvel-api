@@ -34,7 +34,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
           ariaId={id.toString()}
           path={thumbnail.path}
           extension={thumbnail.extension}
-          variant='standard_fantastic'
+          sizing={['standard_xlarge', 'standard_fantastic']}
         />
         <div
           className='p-3 h-40 relative z-0

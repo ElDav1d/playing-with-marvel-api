@@ -16,7 +16,7 @@ const Character = ({ name, description, thumbnailPath, thumbnailExtension }: Cha
         alt={`The big pic of ${name}`}
         path={thumbnailPath}
         extension={thumbnailExtension}
-        variant='landscape_incredible'
+        sizing='landscape_incredible'
       />
       {description ? (
         <p>
