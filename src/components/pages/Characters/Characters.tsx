@@ -99,46 +99,49 @@ const Characters = () => {
 
   return (
     <>
-      <Header>
-        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
-          <h2 className='text-3xl font-bold underline text-white'>This is the Characters Page</h2>
-          <SearchGroup
-            title={'Search by name'}
-            placeholderLiteral={'Type a character name'}
-            setSearchInput={setSearchInput}
-            setOnClearData={setOnClearData}
-            isEmptyData={!isFetching && filteredCharacters?.length === 0}
-            emptyDataLiteral={
-              // eslint-disable-next-line quotes
-              "Sorry, none of our characters' name matches your search! Try typing again"
-            }
-          />
-
-          <SelectorGroup
-            title='Order results:'
-            onChange={(event) => orderHandler(event)}
-            options={Object.values(FetchingOrder)}
-            optionLiterals={orderLiterals}
-          />
+      <Header />
+      <Container element={'main'}>
+        <section className='bg-black mb-4'>
+          <Container element={'div'}>
+            <h2 className='text-3xl font-bold underline text-white'>This is the Characters Page</h2>
+            <SearchGroup
+              title={'Search by name'}
+              placeholderLiteral={'Type a character name'}
+              setSearchInput={setSearchInput}
+              setOnClearData={setOnClearData}
+              isEmptyData={!isFetching && filteredCharacters?.length === 0}
+              emptyDataLiteral={
+                // eslint-disable-next-line quotes
+                "Sorry, none of our characters' name matches your search! Try typing again"
+              }
+            />
+            <SelectorGroup
+              title='Order results:'
+              onChange={(event) => orderHandler(event)}
+              options={Object.values(FetchingOrder)}
+              optionLiterals={orderLiterals}
+            />
+          </Container>
+          <Container element={'div'} className='text-white'>
+            <CheckboxesList
+              title='Filter results:'
+              options={Object.values(FilterCriteria)}
+              optionLiterals={filterLiterals}
+              setOptions={setFilters}
+            />
+          </Container>
         </section>
-        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px] text-white'>
-          <CheckboxesList
-            title='Filter results:'
-            options={Object.values(FilterCriteria)}
-            optionLiterals={filterLiterals}
-            setOptions={setFilters}
-          />
-        </section>
-      </Header>
-
-      <Container tag={'main'}>
         {isError && <h2>Oooops...try reloading again!</h2>}
 
         {isFetching && !isFetchingNextPage && (
           <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
         )}
 
-        {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
+        {filteredCharacters?.length > 0 && (
+          <Container>
+            <CharactersList characters={filteredCharacters} />
+          </Container>
+        )}
 
         {hasNextPage && (
           <div ref={ref}>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const NavigationMain = () => {
   return (
-    <Container tag={'nav'}>
+    <Container element={'nav'}>
       <Link to='/'>
         <h1 className='text-none'>
           Playing with Marvel API

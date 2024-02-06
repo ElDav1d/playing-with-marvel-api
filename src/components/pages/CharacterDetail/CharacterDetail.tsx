@@ -64,7 +64,7 @@ const CharacterDetail = () => {
   return (
     <>
       <Header />
-      <Container tag={'main'}>
+      <Container element={'main'}>
         {isError && <h2>Ooops, try refreshing your browser</h2>}
 
         {isLoadingCharacter && <h2>Loading Character Details...</h2>}
