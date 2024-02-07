@@ -6,6 +6,7 @@ export interface SearchGroupProps {
   isEmptyData: boolean;
   setOnClearData?: (arg: boolean) => void;
   setSearchInput: (arg: string) => void;
+  className?: string;
 }
 
 const SearchGroup = ({
@@ -15,6 +16,7 @@ const SearchGroup = ({
   setSearchInput,
   emptyDataLiteral,
   isEmptyData,
+  className,
 }: SearchGroupProps) => {
   const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
     if (setOnClearData) setOnClearData(true);
@@ -22,7 +24,7 @@ const SearchGroup = ({
   };
 
   return (
-    <fieldset>
+    <fieldset className={className}>
       <legend>{title}</legend>
       <div>
         <input type='text' onChange={handleSearch} placeholder={placeholderLiteral} />

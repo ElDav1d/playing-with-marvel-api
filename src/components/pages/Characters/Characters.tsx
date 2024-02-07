@@ -117,6 +117,7 @@ const Characters = () => {
             </div>
 
             <SearchGroup
+              className='text-white'
               title={'Search by name'}
               placeholderLiteral={'Type a character name'}
               setSearchInput={setSearchInput}
@@ -128,7 +129,8 @@ const Characters = () => {
               }
             />
             <SelectorGroup
-              title='Order results:'
+              className='text-white'
+              title='Order results'
               onChange={(event) => orderHandler(event)}
               options={Object.values(FetchingOrder)}
               optionLiterals={orderLiterals}
