@@ -101,7 +101,10 @@ const Characters = () => {
     <>
       <Header />
       <Container element={'main'}>
-        <section className='bg-black mb-4'>
+        <section
+          className='relative z-0  bg-black py-5 mb-4 bg-hero-image bg-center bg-cover
+        before:absolute  before:content[""] before:h-full before:w-full  before:bg-gradient-to-b before:from-trans-0.75-black before:from-50% before:left-0 before:top-0 before:z-[-1]'
+        >
           <Container element={'div'}>
             <h2 className='text-3xl font-bold underline text-white'>This is the Characters Page</h2>
             <SearchGroup

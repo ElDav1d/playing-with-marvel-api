@@ -37,7 +37,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
           sizing={['standard_xlarge', 'standard_fantastic']}
         />
         <div
-          className='p-3 h-40 relative z-0
+          className='relative z-0 h-40 p-3
           before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[""] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1]
           group-hover:before:max-h-[300px]'
         >

@@ -18,6 +18,8 @@ const MEDIA_BREAKPOINTS: MediaBreakpoints = {
   MD: 768,
 };
 
+const HERO_BACKGROUND_URL = 'https://cdn.marvel.com/content/1x/characters_art_mas_mob_01.jpg';
+
 export {
   BASE_URL,
   MAX_FETCH_CHARACTERS_DEFAULT,
@@ -28,4 +30,5 @@ export {
   LOADER_SIZE,
   REGEX_IMAGE_PATH,
   MEDIA_BREAKPOINTS,
+  HERO_BACKGROUND_URL,
 };
