@@ -106,7 +106,16 @@ const Characters = () => {
         before:absolute  before:content[""] before:h-full before:w-full  before:bg-gradient-to-b before:from-trans-0.75-black before:from-50% before:left-0 before:top-0 before:z-[-1]'
         >
           <Container element={'div'}>
-            <h2 className='text-3xl font-bold underline text-white'>This is the Characters Page</h2>
+            <div className='text-white text-center mb-2'>
+              <h2 className='text-2xl font-semibold text-white text-center uppercase mb-1'>
+                Marvel Characters
+              </h2>
+              <p className='text-sm text-center'>
+                Get hooked on a hearty helping of heroes and villains from the humble House of
+                Ideas!
+              </p>
+            </div>
+
             <SearchGroup
               title={'Search by name'}
               placeholderLiteral={'Type a character name'}
