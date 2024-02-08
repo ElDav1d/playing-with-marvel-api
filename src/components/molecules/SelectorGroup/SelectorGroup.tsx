@@ -1,3 +1,4 @@
+import Input from '@/components/atoms/Input';
 import { ChangeEventHandler } from 'react';
 
 export interface SelectorProps {
@@ -12,13 +13,13 @@ const SelectorGroup = ({ title, onChange, options, optionLiterals, className }: 
   return (
     <fieldset className={className}>
       <legend>{title}</legend>
-      <select onChange={onChange} name='order'>
+      <Input isSelect onChange={onChange} name='order'>
         {options.map((option, index) => (
           <option key={option} value={option}>
             {optionLiterals[index]}
           </option>
         ))}
-      </select>
+      </Input>
     </fieldset>
   );
 };
