@@ -17,7 +17,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         'auto-min-max-120-auto': 'repeat(auto-fill, minmax(120px, auto))',
-        'auto-min-max-190-auto': 'repeat(auto-fill, minmax(190px, auto))',
+        'auto-min-max-195-auto': 'repeat(auto-fill, minmax(195px, auto))',
       },
       transitionDelay: {
         gridItem: '50ms',
