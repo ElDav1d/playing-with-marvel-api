@@ -1,11 +1,30 @@
 import { ChangeEventHandler } from 'react';
-export interface CheckBoxGroupProps {
+
+/**
+ * Single checkbox within a group of checkboxes
+ * @interface
+ */
+export interface ICheckBoxGroupProps {
+  /**
+   * @property {string}
+   * Label or value bound to option.
+   */
   option: string;
+  /**
+   * @property {string}
+   * Literal  corresponding to option.
+   */
   literal: string;
-  toggleOption: ChangeEventHandler<HTMLInputElement>;
+  /**
+   * Handles changes in the checkbox state.
+   * @callback ChangeEventHandler
+   * @param {Event} event - The change event object.
+   * @property {ChangeEventHandler<HTMLInputElement>}
+   */
+  toggleOption: ChangeEventHandler;
 }
 
-const CheckBoxGroup = ({ option, literal, toggleOption }: CheckBoxGroupProps) => {
+const CheckBoxGroup = ({ option, literal, toggleOption }: ICheckBoxGroupProps) => {
   return (
     <>
       <input type='checkbox' id={option} name={option} value={option} onChange={toggleOption} />
