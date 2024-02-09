@@ -47,9 +47,7 @@ describe(Characters, () => {
     );
 
     // ASSERT
-    expect(
-      screen.getByRole('heading', { name: /this is the characters page/i }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /marvel characters/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });

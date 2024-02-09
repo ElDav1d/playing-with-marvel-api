@@ -18,6 +18,7 @@ import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
+import SideDrawer from '@/components/organisms/SideDrawer';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
@@ -90,6 +91,9 @@ const Characters = () => {
     setOrder(value);
   };
 
+  const hasListDefaults =
+    searchInput === '' && order === FetchingOrder.NAME_AZ && filters.length === 0;
+
   const orderLiterals = [
     'By name A/Z',
     'By name Z/A',
@@ -99,10 +103,41 @@ const Characters = () => {
 
   return (
     <>
-      <Header />
+      <Header classNameHeader='flex'>
+        <SideDrawer classNameContainer='bg-black md:hidden'>
+          <SearchGroup
+            className='text-white'
+            title={'Search by name'}
+            placeholderLiteral={'Type a character name'}
+            searchInput={searchInput}
+            setSearchInput={setSearchInput}
+            setOnClearData={setOnClearData}
+            isEmptyData={!isFetching && filteredCharacters?.length === 0}
+            emptyDataLiteral={
+              // eslint-disable-next-line quotes
+              "Sorry, none of our characters' name matches your search! Try typing again"
+            }
+          />
+          <SelectorGroup
+            className='text-white'
+            title='Order results'
+            onChange={(event) => orderHandler(event)}
+            options={Object.values(FetchingOrder)}
+            optionLiterals={orderLiterals}
+          />
+
+          <CheckboxesList
+            classNameFieldset='text-white'
+            title='Filter results:'
+            options={Object.values(FilterCriteria)}
+            optionLiterals={filterLiterals}
+            setOptions={setFilters}
+          />
+        </SideDrawer>
+      </Header>
       <Container element={'main'}>
         <section
-          className='relative z-0  bg-black py-5 mb-4 bg-hero-image bg-center bg-cover
+          className='relative z-0 bg-black py-5 mb-4 bg-hero-image bg-center bg-cover
         before:absolute  before:content[""] before:h-full before:w-full  before:bg-gradient-to-b before:from-trans-0.75-black before:from-50% before:left-0 before:top-0 before:z-[-1]'
         >
           <Container element={'div'}>
@@ -114,12 +149,22 @@ const Characters = () => {
                 Get hooked on a hearty helping of heroes and villains from the humble House of
                 Ideas!
               </p>
+
+              {!hasListDefaults && (
+                <p className='text-sm'>
+                  Results for
+                  {searchInput && <strong> {searchInput}</strong>}
+                  {filters && <strong> {filters}</strong>}
+                  {order && <strong> {order}</strong>}
+                </p>
+              )}
             </div>
 
             <SearchGroup
-              className='text-white'
+              className='text-white hidden md:block'
               title={'Search by name'}
               placeholderLiteral={'Type a character name'}
+              searchInput={searchInput}
               setSearchInput={setSearchInput}
               setOnClearData={setOnClearData}
               isEmptyData={!isFetching && filteredCharacters?.length === 0}
@@ -129,14 +174,15 @@ const Characters = () => {
               }
             />
             <SelectorGroup
-              className='text-white'
+              className='text-white hidden md:block'
               title='Order results'
               onChange={(event) => orderHandler(event)}
               options={Object.values(FetchingOrder)}
               optionLiterals={orderLiterals}
             />
           </Container>
-          <Container element={'div'} className='text-white'>
+
+          <Container element={'div'} className='text-white hidden md:block'>
             <CheckboxesList
               title='Filter results:'
               options={Object.values(FilterCriteria)}
