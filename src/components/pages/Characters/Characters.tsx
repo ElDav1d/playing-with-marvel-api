@@ -3,8 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import { useCharacters, useDebounce } from './hooks';
 import { CharacterItem, FetchingOrder, FilterCriteria } from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
-import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
-import CheckboxesList from '@/components/molecules/CheckboxesList/CheckboxesList';
 import {
   LOADER_SIZE,
   MARVEL_RED,
@@ -14,11 +12,11 @@ import {
   REGEX_IMAGE_PATH,
 } from '@/utils/constants';
 import Header from '@/components/organisms/Header';
-import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
 import SideDrawer from '@/components/organisms/SideDrawer';
+import CharactersControlPanel from '@/components/organisms/CharactersControlPanel';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
@@ -105,33 +103,25 @@ const Characters = () => {
     <>
       <Header classNameHeader='flex'>
         <SideDrawer classNameContainer='bg-black md:hidden'>
-          <SearchGroup
-            className='text-white'
-            title={'Search by name'}
-            placeholderLiteral={'Type a character name'}
+          <CharactersControlPanel
             searchInput={searchInput}
             setSearchInput={setSearchInput}
+            searchTitle={'Search by name'}
+            searchPlaceholder={'Type a character name'}
             setOnClearData={setOnClearData}
             isEmptyData={!isFetching && filteredCharacters?.length === 0}
             emptyDataLiteral={
               // eslint-disable-next-line quotes
               "Sorry, none of our characters' name matches your search! Try typing again"
             }
-          />
-          <SelectorGroup
-            className='text-white'
-            title='Order results'
-            onChange={(event) => orderHandler(event)}
-            options={Object.values(FetchingOrder)}
-            optionLiterals={orderLiterals}
-          />
-
-          <CheckboxesList
-            classNameFieldset='text-white'
-            title='Filter results:'
-            options={Object.values(FilterCriteria)}
-            optionLiterals={filterLiterals}
-            setOptions={setFilters}
+            orderTitle='Order results'
+            onOrderChange={(event) => orderHandler(event)}
+            orderOptions={Object.values(FetchingOrder)}
+            orderLiterals={orderLiterals}
+            filtersTitle='Filter results:'
+            filtersOptions={Object.values(FilterCriteria)}
+            filtersLiterals={filterLiterals}
+            setFilters={setFilters}
           />
         </SideDrawer>
       </Header>
@@ -160,34 +150,25 @@ const Characters = () => {
               )}
             </div>
 
-            <SearchGroup
-              className='text-white hidden md:block'
-              title={'Search by name'}
-              placeholderLiteral={'Type a character name'}
+            <CharactersControlPanel
               searchInput={searchInput}
               setSearchInput={setSearchInput}
+              searchTitle={'Search by name'}
+              searchPlaceholder={'Type a character name'}
               setOnClearData={setOnClearData}
               isEmptyData={!isFetching && filteredCharacters?.length === 0}
               emptyDataLiteral={
                 // eslint-disable-next-line quotes
                 "Sorry, none of our characters' name matches your search! Try typing again"
               }
-            />
-            <SelectorGroup
-              className='text-white hidden md:block'
-              title='Order results'
-              onChange={(event) => orderHandler(event)}
-              options={Object.values(FetchingOrder)}
-              optionLiterals={orderLiterals}
-            />
-          </Container>
-
-          <Container element={'div'} className='text-white hidden md:block'>
-            <CheckboxesList
-              title='Filter results:'
-              options={Object.values(FilterCriteria)}
-              optionLiterals={filterLiterals}
-              setOptions={setFilters}
+              orderTitle='Order results'
+              onOrderChange={(event) => orderHandler(event)}
+              orderOptions={Object.values(FetchingOrder)}
+              orderLiterals={orderLiterals}
+              filtersTitle='Filter results:'
+              filtersOptions={Object.values(FilterCriteria)}
+              filtersLiterals={filterLiterals}
+              setFilters={setFilters}
             />
           </Container>
         </section>
