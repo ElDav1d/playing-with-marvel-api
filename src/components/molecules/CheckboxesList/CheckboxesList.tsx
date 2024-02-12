@@ -67,9 +67,9 @@ const CheckboxesList = <T extends unknown>({
 
   return (
     <FormGroupContainer classNameFieldset={classNameFieldset} title={title}>
-      <ul className={classNameUL}>
+      <ul className={`md:h-full flex flex-col md:flex-row gap-2 md:items-center ${classNameUL}`}>
         {options.map((option, index) => (
-          <li key={option}>
+          <li className='flex items-center' key={option}>
             <CheckboxGroup
               option={option}
               literal={optionLiterals[index]}

@@ -1,4 +1,5 @@
 import { ChangeEventHandler } from 'react';
+import Input from '../Input';
 
 /**
  * Single checkbox within a group of checkboxes
@@ -27,8 +28,7 @@ export interface ICheckboxGroupProps {
 const CheckboxGroup = ({ option, literal, toggleOption }: ICheckboxGroupProps) => {
   return (
     <>
-      <input
-        className='accent-red mr-2'
+      <Input
         type='checkbox'
         id={option}
         name={option}

@@ -1,23 +1,32 @@
+import React from 'react';
+
 export interface IInputProps extends React.ComponentPropsWithoutRef<'input'> {
-  isSelect?: false;
+  type?: 'text' | 'checkbox';
   className?: string;
 }
 
 export interface ISelectProps extends React.ComponentPropsWithoutRef<'select'> {
-  isSelect?: true;
-  children?: React.ReactNode;
+  type?: 'select';
+  children: React.ReactNode;
   className?: string;
 }
 
-const Input = ({ className, isSelect, ...rest }: IInputProps | ISelectProps) => {
-  const style = `bg-black border-white shadow appearance-none border py-2 px-3 focus:border-red focus:outline-double focus:outline-red ${className}`;
+const Input: React.FC<IInputProps | ISelectProps> = ({ className, type, children, ...rest }) => {
+  const sharedStyle = `bg-black border-white shadow appearance-none border focus:border-red focus:outline-double focus:outline-red ${className}`;
 
-  if (isSelect) {
-    const selectProps = rest as ISelectProps;
-    return <select className={style} {...selectProps} />;
-  } else {
-    const inputProps = rest as IInputProps;
-    return <input className={style} {...inputProps} />;
+  const textBoxStyles = 'py-2 px-3'
+
+  switch (type) {
+    case 'select':
+      return <select className={`${textBoxStyles} ${sharedStyle}`} {...rest as ISelectProps}>
+        {children}
+      </select>;
+    case 'text':
+      return <input type={type} className={`${textBoxStyles} ${sharedStyle}`}  {...rest as IInputProps} />;
+    case 'checkbox':
+      return <input type={type} className={`mr-2 h-4 w-4 checked:bg-red ${sharedStyle}`} {...rest as IInputProps} />;
+    default:
+      return <input type='text' className={`${textBoxStyles} ${sharedStyle}`} {...rest as IInputProps} />;
   }
 };
 

@@ -40,7 +40,7 @@ const SelectGroup = ({
 }: ISelectProps) => {
   return (
     <FormGroupContainer classNameFieldset={classNameFieldset} title={title}>
-      <Input className={classNameInput} isSelect onChange={onChange} name='order'>
+      <Input className={classNameInput} type='select' onChange={onChange} name='order'>
         {options.map((option, index) => (
           <option key={option} value={option}>
             {optionLiterals[index]}

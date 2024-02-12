@@ -113,7 +113,6 @@ const CharactersControlPanel = ({
 
       <CheckboxesList
         classNameFieldset='text-white'
-        classNameUL='md:h-full flex flex-col md:flex-row gap-2 md:items-center'
         title={filtersTitle}
         options={filtersOptions}
         optionLiterals={filtersLiterals}
