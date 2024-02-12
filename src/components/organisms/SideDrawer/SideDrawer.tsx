@@ -22,7 +22,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
   };
 
   return (
-    <>
+    <form className='md:hidden'>
       {!isOpen && (
         <span onClick={handleOpen} className='p-4'>
           <svg
@@ -61,7 +61,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
           </span>
         </div>
       )}
-    </>
+    </form>
   );
 };
 

@@ -102,7 +102,7 @@ const Characters = () => {
   return (
     <>
       <Header classNameHeader='flex'>
-        <SideDrawer classNameContainer='bg-black md:hidden'>
+        <SideDrawer classNameContainer='bg-black'>
           <CharactersControlPanel
             searchInput={searchInput}
             setSearchInput={setSearchInput}
@@ -149,7 +149,7 @@ const Characters = () => {
                 </p>
               )}
             </div>
-            <div className='hidden md:flex gap-8 justify-center'>
+            <form className='hidden md:flex gap-8 justify-center'>
               <CharactersControlPanel
                 searchInput={searchInput}
                 setSearchInput={setSearchInput}
@@ -170,7 +170,7 @@ const Characters = () => {
                 filtersLiterals={filterLiterals}
                 setFilters={setFilters}
               />
-            </div>
+            </form>
           </Container>
         </section>
         {isError && <h2>Oooops...try reloading again!</h2>}
