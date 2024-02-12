@@ -44,7 +44,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
         <div
           className={`absolute top-0 left-0 h-lvh w-[80vw] z-10 px-8 py-8 ${classNameContainer}`}
         >
-          <div>{children}</div>
+          <div className='flex flex-col gap-5'>{children}</div>
           <span onClick={handleClose} className='absolute top-0 right-0'>
             <svg
               className='h-8 w-8 text-gray-600'

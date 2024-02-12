@@ -1,5 +1,6 @@
-import CheckBoxGroup from '@/components/atoms/CheckBoxGroup/CheckBoxGroup';
+import CheckboxGroup from '@/components/atoms/CheckboxGroup';
 import { ChangeEvent, useEffect, useState } from 'react';
+import FormGroupContainer from '../FormGroupContainer';
 
 /**
  * Interface for CheckboxesList component props
@@ -31,6 +32,11 @@ export interface ICheckboxesListProps<T> {
    * Additional class name for <fieldset>
    */
   classNameFieldset?: string;
+  /**
+   * @property {string}
+   * Additional class name for <ul>
+   */
+  classNameUL?: string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-constraint
@@ -40,6 +46,7 @@ const CheckboxesList = <T extends unknown>({
   optionLiterals,
   setOptions,
   classNameFieldset,
+  classNameUL,
 }: ICheckboxesListProps<T>) => {
   const [checkedOptions, setCheckedOptions] = useState<string[]>([]);
 
@@ -59,12 +66,11 @@ const CheckboxesList = <T extends unknown>({
   };
 
   return (
-    <fieldset className={classNameFieldset}>
-      <legend>{title}</legend>
-      <ul>
+    <FormGroupContainer classNameFieldset={classNameFieldset} title={title}>
+      <ul className={classNameUL}>
         {options.map((option, index) => (
           <li key={option}>
-            <CheckBoxGroup
+            <CheckboxGroup
               option={option}
               literal={optionLiterals[index]}
               toggleOption={toggleOption}
@@ -72,7 +78,7 @@ const CheckboxesList = <T extends unknown>({
           </li>
         ))}
       </ul>
-    </fieldset>
+    </FormGroupContainer>
   );
 };
 

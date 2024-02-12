@@ -127,11 +127,11 @@ const Characters = () => {
       </Header>
       <Container element={'main'}>
         <section
-          className='relative z-0 bg-black py-5 mb-4 bg-hero-image bg-center bg-cover
+          className='relative z-0 bg-black py-10 mb-4 bg-hero-image bg-center bg-cover
         before:absolute  before:content[""] before:h-full before:w-full  before:bg-gradient-to-b before:from-trans-0.75-black before:from-50% before:left-0 before:top-0 before:z-[-1]'
         >
           <Container element={'div'}>
-            <div className='text-white text-center mb-2'>
+            <div className='w-full text-white text-center mb-4'>
               <h2 className='text-2xl font-semibold text-white text-center uppercase mb-1'>
                 Marvel Characters
               </h2>
@@ -149,27 +149,28 @@ const Characters = () => {
                 </p>
               )}
             </div>
-
-            <CharactersControlPanel
-              searchInput={searchInput}
-              setSearchInput={setSearchInput}
-              searchTitle={'Search by name'}
-              searchPlaceholder={'Type a character name'}
-              setOnClearData={setOnClearData}
-              isEmptyData={!isFetching && filteredCharacters?.length === 0}
-              emptyDataLiteral={
-                // eslint-disable-next-line quotes
-                "Sorry, none of our characters' name matches your search! Try typing again"
-              }
-              orderTitle='Order results'
-              onOrderChange={(event) => orderHandler(event)}
-              orderOptions={Object.values(FetchingOrder)}
-              orderLiterals={orderLiterals}
-              filtersTitle='Filter results:'
-              filtersOptions={Object.values(FilterCriteria)}
-              filtersLiterals={filterLiterals}
-              setFilters={setFilters}
-            />
+            <div className='hidden md:flex gap-8 justify-center'>
+              <CharactersControlPanel
+                searchInput={searchInput}
+                setSearchInput={setSearchInput}
+                searchTitle={'Search by name'}
+                searchPlaceholder={'Type a character name'}
+                setOnClearData={setOnClearData}
+                isEmptyData={!isFetching && filteredCharacters?.length === 0}
+                emptyDataLiteral={
+                  // eslint-disable-next-line quotes
+                  "Sorry, none of our characters' name matches your search! Try typing again"
+                }
+                orderTitle='Order results'
+                onOrderChange={(event) => orderHandler(event)}
+                orderOptions={Object.values(FetchingOrder)}
+                orderLiterals={orderLiterals}
+                filtersTitle='Filter results:'
+                filtersOptions={Object.values(FilterCriteria)}
+                filtersLiterals={filterLiterals}
+                setFilters={setFilters}
+              />
+            </div>
           </Container>
         </section>
         {isError && <h2>Oooops...try reloading again!</h2>}

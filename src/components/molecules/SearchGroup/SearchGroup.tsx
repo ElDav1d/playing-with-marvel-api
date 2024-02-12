@@ -1,5 +1,6 @@
 import Input from '@/components/atoms/Input';
 import { ChangeEvent } from 'react';
+import FormGroupContainer from '../FormGroupContainer';
 export interface SearchGroupProps {
   title: string;
   placeholderLiteral: string;
@@ -8,7 +9,8 @@ export interface SearchGroupProps {
   searchInput: string;
   setOnClearData?: (arg: boolean) => void;
   setSearchInput: (arg: string) => void;
-  className?: string;
+  classNameInput?: string;
+  classNameFieldset?: string;
 }
 
 const SearchGroup = ({
@@ -19,7 +21,8 @@ const SearchGroup = ({
   emptyDataLiteral,
   isEmptyData,
   searchInput,
-  className,
+  classNameInput,
+  classNameFieldset,
 }: SearchGroupProps) => {
   const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
     if (setOnClearData) setOnClearData(true);
@@ -27,10 +30,10 @@ const SearchGroup = ({
   };
 
   return (
-    <fieldset className={className}>
-      <legend>{title}</legend>
+    <FormGroupContainer title={title} classNameFieldset={classNameFieldset}>
       <div>
         <Input
+          className={classNameInput}
           type='text'
           onChange={handleSearch}
           placeholder={placeholderLiteral}
@@ -38,7 +41,7 @@ const SearchGroup = ({
         />
       </div>
       {isEmptyData && <h3>{emptyDataLiteral}</h3>}
-    </fieldset>
+    </FormGroupContainer>
   );
 };
 

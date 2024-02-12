@@ -4,7 +4,7 @@ import { ChangeEventHandler } from 'react';
  * Single checkbox within a group of checkboxes
  * @interface
  */
-export interface ICheckBoxGroupProps {
+export interface ICheckboxGroupProps {
   /**
    * @property {string}
    * Label or value bound to option.
@@ -24,13 +24,20 @@ export interface ICheckBoxGroupProps {
   toggleOption: ChangeEventHandler;
 }
 
-const CheckBoxGroup = ({ option, literal, toggleOption }: ICheckBoxGroupProps) => {
+const CheckboxGroup = ({ option, literal, toggleOption }: ICheckboxGroupProps) => {
   return (
     <>
-      <input type='checkbox' id={option} name={option} value={option} onChange={toggleOption} />
+      <input
+        className='accent-red mr-2'
+        type='checkbox'
+        id={option}
+        name={option}
+        value={option}
+        onChange={toggleOption}
+      />
       <label htmlFor={option}>{literal}</label>
     </>
   );
 };
 
-export default CheckBoxGroup;
+export default CheckboxGroup;
