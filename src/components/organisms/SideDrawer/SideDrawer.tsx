@@ -23,8 +23,8 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
 
   return (
     <form className='md:hidden'>
-      {!isOpen && (
-        <span onClick={handleOpen} className='p-4'>
+      {!isOpen && (        
+        <button onClick={handleOpen} className='p-4'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='19'
@@ -37,7 +37,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
             <circle cx='6.5' cy='6.5' r='5.5'></circle>
             <path d='M14 14l3.536 3.536'></path>
           </svg>
-        </span>
+        </button>      
       )}
 
       {isOpen && (
@@ -45,7 +45,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
           className={`absolute top-0 left-0 h-lvh w-[80vw] z-10 px-8 py-8 ${classNameContainer}`}
         >
           <div className='flex flex-col gap-5'>{children}</div>
-          <span onClick={handleClose} className='absolute top-0 right-0'>
+          <button onClick={handleClose} className='absolute top-0 right-0'>
             <svg
               className='h-8 w-8 text-gray-600'
               viewBox='0 0 24 24'
@@ -58,7 +58,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
               <line x1='18' y1='6' x2='6' y2='18' />
               <line x1='6' y1='6' x2='18' y2='18' />
             </svg>
-          </span>
+          </button>
         </div>
       )}
     </form>
