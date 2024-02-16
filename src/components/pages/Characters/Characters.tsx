@@ -149,8 +149,8 @@ const Characters = () => {
                 </p>
               )}
             </div>
-            <form className='hidden md:flex gap-8 justify-center'>
               <CharactersControlPanel
+                isDesktop
                 searchInput={searchInput}
                 setSearchInput={setSearchInput}
                 searchTitle={'Search by name'}
@@ -170,13 +170,12 @@ const Characters = () => {
                 filtersLiterals={filterLiterals}
                 setFilters={setFilters}
               />
-            </form>
           </Container>
         </section>
-        {isError && <h2>Oooops...try reloading again!</h2>}
+        {isError && <h2>Oooops, there&apos;s an unexpected error...try reloading again!</h2>}
 
         {isFetching && !isFetchingNextPage && (
-          <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
+          <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6'  role="alert" aria-label='Characters List is loading' aria-busy="true" aria-live="polite"/>
         )}
 
         {filteredCharacters?.length > 0 && (
@@ -187,7 +186,7 @@ const Characters = () => {
 
         {hasNextPage && (
           <div ref={ref}>
-            <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
+            <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6'  role="alert" aria-label='Characters List is loading' aria-busy="true" aria-live="polite"/>
           </div>
         )}
       </Container>

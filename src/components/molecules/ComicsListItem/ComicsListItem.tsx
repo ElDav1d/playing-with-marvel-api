@@ -2,6 +2,7 @@ import { CharacterComicDetails } from '@/components/pages/CharacterDetail/interf
 import Image from '@/components/atoms/Image/Image';
 import { useMemo } from 'react';
 import { formatDate } from '@/utils/helpers';
+
 export interface ComicsListItemProps {
   comic: CharacterComicDetails;
 }

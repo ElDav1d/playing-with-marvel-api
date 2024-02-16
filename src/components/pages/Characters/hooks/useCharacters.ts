@@ -4,7 +4,6 @@ import {
   useInfiniteQuery,
   UseInfiniteQueryResult,
   useQueryClient,
-  UseQueryResult,
 } from '@tanstack/react-query';
 import { CharacterItem, FetchingOrder } from '../interfaces/characters';
 

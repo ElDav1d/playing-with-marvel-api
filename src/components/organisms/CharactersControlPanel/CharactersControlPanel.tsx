@@ -5,7 +5,13 @@ import { FilterCriteria } from '@/components/pages/Characters/interfaces/charact
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
 export interface ICharactersControlPanel {
+    /**
+   * @property {boolean}
+   * Indicates viewport.
+   */
+    isDesktop?: boolean;
   /**
+   * @property {string}
    * Current search input value.
    */
   searchInput: string;
@@ -15,10 +21,12 @@ export interface ICharactersControlPanel {
    */
   setSearchInput: (arg: string) => void;
   /**
+   * @property {string}
    * Title for search form group.
    */
   searchTitle: string;
   /**
+   * @property {string}
    * Placeholder text for search input.
    */
   searchPlaceholder: string;
@@ -28,14 +36,17 @@ export interface ICharactersControlPanel {
    */
   setOnClearData: (arg: boolean) => void;
   /**
+   * @property {boolean}
    * Indicates data is empty.
    */
   isEmptyData: boolean;
   /**
+   * @property {string}
    * Literal for user message
    */
   emptyDataLiteral: string;
   /**
+   * @property {string}
    * Title for ordering form group.
    */
   orderTitle: string;
@@ -45,22 +56,27 @@ export interface ICharactersControlPanel {
    */
   onOrderChange: (arg: ChangeEvent<HTMLSelectElement>) => void;
   /**
+   * @property {string[]}
    * Available options for ordering.
    */
   orderOptions: string[];
   /**
+   * @property {string[]}
    * Literals matching ordering options.
    */
   orderLiterals: string[];
   /**
+   * @property {string}
    * Title for filters form group.
    */
   filtersTitle: string;
   /**
+   * @property {string[]}
    * Available options for filters.
    */
   filtersOptions: string[];
   /**
+   * @property {string[]}
    * Literals matching filter options.
    */
   filtersLiterals: string[];
@@ -72,6 +88,7 @@ export interface ICharactersControlPanel {
 }
 
 const CharactersControlPanel = ({
+  isDesktop,
   searchInput,
   setSearchInput,
   searchTitle,
@@ -88,8 +105,11 @@ const CharactersControlPanel = ({
   filtersLiterals,
   setFilters,
 }: ICharactersControlPanel) => {
+  const getStyles = () => `${isDesktop ? 'hidden md:flex gap-8 justify-center' : ''}`
+  const getLabels = () => isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel'
+
   return (
-    <>
+    <form className={getStyles()} aria-label={getLabels()}>
       <SearchGroup
         classNameFieldset='text-white'
         classNameInput='w-full md:w-auto'
@@ -101,7 +121,6 @@ const CharactersControlPanel = ({
         isEmptyData={isEmptyData}
         emptyDataLiteral={emptyDataLiteral}
       />
-
       <SelectGroup
         classNameFieldset='text-white'
         classNameInput='w-full md:w-auto'
@@ -110,7 +129,6 @@ const CharactersControlPanel = ({
         options={selectOptions}
         optionLiterals={selectLiterals}
       />
-
       <CheckboxesList
         classNameFieldset='text-white'
         title={filtersTitle}
@@ -118,7 +136,8 @@ const CharactersControlPanel = ({
         optionLiterals={filtersLiterals}
         setOptions={setFilters}
       />
-    </>
+      boo
+    </form>
   );
 };
 

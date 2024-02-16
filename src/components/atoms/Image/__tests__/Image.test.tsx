@@ -1,4 +1,3 @@
-import { VariantDescription } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 import { render, screen } from '@testing-library/react';
 import Image, { PicVariant } from '../Image';
 
