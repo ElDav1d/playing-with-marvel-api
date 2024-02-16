@@ -48,32 +48,38 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
       )}
 
       <div
+        aria-hidden={`${isOpen ? 'false' : 'true'}`}
+        role='dialog'
         className={`absolute top-0 h-full w-[80vw] z-1 px-8 py-8 transition-[left] delay-gridItem duration-gridItem ${
           isOpen ? 'left-0' : 'left-[-100%]'
         } ${classNameContainer}`}
       >
-        <div className='flex flex-col gap-5'>{children}</div>
-        <button
-          aria-label='Close Characters List Control Panel'
-          onClick={handleClose}
-          className='absolute top-0 right-0'
-        >
-          <svg
-            aria-hidden='true'
-            className='h-8 w-8 text-gray-600'
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='currentColor'
-            strokeWidth='2'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          >
-            <title>Close icon</title>
-            <desc>Two crossed strokes</desc>
-            <line x1='18' y1='6' x2='6' y2='18' />
-            <line x1='6' y1='6' x2='18' y2='18' />
-          </svg>
-        </button>
+        {isOpen && (
+          <>
+            <div className='flex flex-col gap-5'>{children}</div>
+            <button
+              aria-label='Close Characters List Control Panel'
+              onClick={handleClose}
+              className='absolute top-0 right-0'
+            >
+              <svg
+                aria-hidden='true'
+                className='h-8 w-8 text-gray-600'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              >
+                <title>Close icon</title>
+                <desc>Two crossed strokes</desc>
+                <line x1='18' y1='6' x2='6' y2='18' />
+                <line x1='6' y1='6' x2='18' y2='18' />
+              </svg>
+            </button>
+          </>
+        )}
       </div>
     </div>
   );
