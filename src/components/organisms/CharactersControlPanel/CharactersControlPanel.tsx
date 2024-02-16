@@ -4,54 +4,58 @@ import SelectGroup from '@/components/molecules/SelectGroup';
 import { FilterCriteria } from '@/components/pages/Characters/interfaces/characters';
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
+/**
+ * Represents a control panel for managing characters.
+ * @interface
+ */
 export interface ICharactersControlPanel {
   /**
    * @property {boolean}
-   * Indicates viewport.
+   * Indicates viewport type (desktop or not).
    */
   isDesktop?: boolean;
   /**
    * @property {string}
-   * Current search input value.
+   * The current value of the search input.
    */
   searchInput: string;
   /**
-   * Sets search input value.
-   * @param arg - The new search input value.
+   * Sets the search input value.
+   * @param arg - The new value of the search input.
    */
   setSearchInput: (arg: string) => void;
   /**
    * @property {string}
-   * Title for search form group.
+   * Title for the search form group.
    */
   searchTitle: string;
   /**
    * @property {string}
-   * Placeholder text for search input.
+   * Placeholder text for the search input.
    */
   searchPlaceholder: string;
   /**
-   * Sets clear data state.
-   * @param arg - Indicates data should be cleared.
+   * Sets the state to clear data.
+   * @param arg - Indicates whether data should be cleared.
    */
   setOnClearData: (arg: boolean) => void;
   /**
    * @property {boolean}
-   * Indicates data is empty.
+   * Indicates whether the data is empty.
    */
   isEmptyData: boolean;
   /**
    * @property {string}
-   * Literal for user message
+   * Literal for the user message when data is empty.
    */
   emptyDataLiteral?: string;
   /**
    * @property {string}
-   * Title for ordering form group.
+   * Title for the ordering form group.
    */
   orderTitle: string;
   /**
-   * Handles change in ordering.
+   * Handles changes in ordering.
    * @param arg - Event representing the change in ordering.
    */
   onOrderChange: (arg: ChangeEvent<HTMLSelectElement>) => void;
@@ -62,29 +66,41 @@ export interface ICharactersControlPanel {
   orderOptions: string[];
   /**
    * @property {string[]}
-   * Literals matching ordering options.
+   * Literals matching the ordering options.
    */
   orderLiterals: string[];
   /**
    * @property {string}
-   * Title for filters form group.
+   * Title for the filters form group.
    */
   filtersTitle: string;
   /**
    * @property {string[]}
-   * Available options for filters.
+   * Available options for filtering.
    */
   filtersOptions: string[];
   /**
    * @property {string[]}
-   * Literals matching filter options.
+   * Literals matching the filter options.
    */
   filtersLiterals: string[];
   /**
-   * Sets filter criteria.
-   * @param arg - Function to set filter criteria state.
+   * Sets the filter criteria state.
+   * @param arg - Function to set the filter criteria state.
    */
   setFilters: Dispatch<SetStateAction<FilterCriteria[]>>;
+
+  /**
+   * Sets the state to clear selected checkboxes.
+   * @param arg - Function to handle clearing selected checkboxes state.
+   */
+  setOnClearChecks?: () => void;
+
+  /**
+   * @property {boolean}
+   * Indicates whether to clear the selected checkboxes.
+   */
+  onClearChecks: boolean;
 }
 
 const CharactersControlPanel = ({
@@ -104,6 +120,8 @@ const CharactersControlPanel = ({
   filtersOptions,
   filtersLiterals,
   setFilters,
+  setOnClearChecks,
+  onClearChecks,
 }: ICharactersControlPanel) => {
   const getStyles = () => `${isDesktop ? 'hidden md:flex gap-8 justify-center' : ''}`;
   const getLabels = () =>
@@ -136,6 +154,8 @@ const CharactersControlPanel = ({
         options={filtersOptions}
         optionLiterals={filtersLiterals}
         setOptions={setFilters}
+        setOnClear={setOnClearChecks}
+        onClearChecks={onClearChecks}
       />
     </form>
   );

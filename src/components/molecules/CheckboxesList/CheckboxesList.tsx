@@ -9,32 +9,40 @@ import FormGroupContainer from '../FormGroupContainer';
 export interface ICheckboxesListProps<T> {
   /**
    * @property {string}
-   * Title of options list
+   * Title of the options list.
    */
   title: string;
   /**
    * @property {string[]}
-   * List of options as checkboxes
+   * List of options to be rendered as checkboxes.
    */
   options: string[];
   /**
    * @property {string[]}
-   * List of literals corresponding to each option
+   * List of literals corresponding to each option.
    */
   optionLiterals: string[];
   /**
-   * Function to set the selected options
-   * @param arg - Array of type T represets selected options
+   * Function to set the selected options.
+   * @param arg - Array of type T representing selected options.
    */
   setOptions: (arg: Array<T>) => void;
   /**
+   * Function to handle clearing of selected options.
+   */
+  setOnClear?: () => void;
+  /**
+   * Indicates whether to clear the selected checkboxes.
+   */
+  onClearChecks?: boolean;
+  /**
    * @property {string}
-   * Additional class name for <fieldset>
+   * Additional class name for the <fieldset> element.
    */
   classNameFieldset?: string;
   /**
    * @property {string}
-   * Additional class name for <ul>
+   * Additional class name for the <ul> element.
    */
   classNameUL?: string;
 }
@@ -45,14 +53,21 @@ const CheckboxesList = <T extends unknown>({
   options,
   optionLiterals,
   setOptions,
+  setOnClear,
+  onClearChecks,
   classNameFieldset,
   classNameUL,
 }: ICheckboxesListProps<T>) => {
   const [checkedOptions, setCheckedOptions] = useState<string[]>([]);
 
   useEffect(() => {
+    if (onClearChecks) {
+      setCheckedOptions([]);
+      if (setOnClear) setOnClear();
+    }
+
     setOptions(checkedOptions as T[]);
-  }, [checkedOptions]);
+  }, [checkedOptions, onClearChecks]);
 
   const toggleOption = (event: ChangeEvent<HTMLInputElement>): void => {
     const value = event.target.value as T;
@@ -74,6 +89,7 @@ const CheckboxesList = <T extends unknown>({
               option={option}
               literal={optionLiterals[index]}
               toggleOption={toggleOption}
+              onClear={!!onClearChecks && onClearChecks}
             />
           </li>
         ))}

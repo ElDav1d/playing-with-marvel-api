@@ -24,8 +24,9 @@ const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
   const [searchString, setSearchString] = useState<string>('');
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
-  const [onClearData, setOnClearData] = useState<boolean>(false);
+  const [onClearData, setOnClearData] = useState(false);
   const [filters, setFilters] = useState<FilterCriteria[]>([]);
+  const [onClearFilters, setOnClearFilters] = useState(false);
   const maxCharactersRef = useRef(MAX_FETCH_CHARACTERS_DEFAULT);
 
   const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
@@ -94,6 +95,18 @@ const Characters = () => {
   const hasListDefaults =
     searchInput === '' && order === FetchingOrder.NAME_AZ && filters.length === 0;
 
+  const handleClear = () => {
+    setSearchInput('');
+    setSearchString('');
+    setOrder(FetchingOrder.NAME_AZ);
+    setFilters([]);
+    setOnClearFilters(true);
+  };
+
+  const handleClearChecks = () => {
+    setOnClearFilters(false);
+  };
+
   return (
     <>
       <Header classNameHeader='flex'>
@@ -114,6 +127,8 @@ const Characters = () => {
             filtersOptions={Object.values(FilterCriteria)}
             filtersLiterals={filterLiterals}
             setFilters={setFilters}
+            setOnClearChecks={handleClearChecks}
+            onClearChecks={onClearFilters}
           />
         </SideDrawer>
       </Header>
@@ -133,12 +148,15 @@ const Characters = () => {
               </p>
 
               {!hasListDefaults && (
-                <p className='text-sm'>
-                  Results for
-                  {searchInput && <strong> {searchInput}</strong>}
-                  {filters && <strong> {filters}</strong>}
-                  {order && <strong> {order}</strong>}
-                </p>
+                <>
+                  <p className='text-sm'>
+                    Results for
+                    {searchInput && <strong> {searchInput}</strong>}
+                    {filters && <strong> {filters}</strong>}
+                    {order && <strong> {order}</strong>}
+                  </p>
+                  <button onClick={handleClear}>CLEAR</button>
+                </>
               )}
             </div>
             <CharactersControlPanel
@@ -157,6 +175,8 @@ const Characters = () => {
               filtersOptions={Object.values(FilterCriteria)}
               filtersLiterals={filterLiterals}
               setFilters={setFilters}
+              setOnClearChecks={handleClearChecks}
+              onClearChecks={onClearFilters}
             />
           </Container>
         </section>

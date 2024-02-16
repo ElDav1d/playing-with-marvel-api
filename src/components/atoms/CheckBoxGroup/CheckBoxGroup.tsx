@@ -1,4 +1,4 @@
-import { ChangeEventHandler } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import Input from '../Input';
 
 /**
@@ -8,24 +8,39 @@ import Input from '../Input';
 export interface ICheckboxGroupProps {
   /**
    * @property {string}
-   * Label or value bound to option.
+   * Label or value bound to the option.
    */
   option: string;
   /**
    * @property {string}
-   * Literal  corresponding to option.
+   * Literal corresponding to the option.
    */
   literal: string;
   /**
    * Handles changes in the checkbox state.
    * @callback ChangeEventHandler
-   * @param {Event} event - The change event object.
-   * @property {ChangeEventHandler<HTMLInputElement>}
+   * @param {ChangeEvent<HTMLInputElement>} event - The change event object.
    */
-  toggleOption: ChangeEventHandler;
+  toggleOption: (event: ChangeEvent<HTMLInputElement>) => void;
+  /**
+   * @property {boolean}
+   * Indicates Checkbox should be cleared.
+   */
+  onClear: boolean;
 }
 
-const CheckboxGroup = ({ option, literal, toggleOption }: ICheckboxGroupProps) => {
+const CheckboxGroup = ({ option, literal, toggleOption, onClear }: ICheckboxGroupProps) => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  useEffect(() => {
+    if (onClear && isChecked) setIsChecked(false);
+  }, [onClear]);
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    toggleOption(event);
+    setIsChecked((prevState) => !prevState);
+  };
+
   return (
     <>
       <Input
@@ -33,7 +48,8 @@ const CheckboxGroup = ({ option, literal, toggleOption }: ICheckboxGroupProps) =
         id={option}
         name={option}
         value={option}
-        onChange={toggleOption}
+        onChange={handleChange}
+        checked={isChecked}
       />
       <label htmlFor={option}>{literal}</label>
     </>
