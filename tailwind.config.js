@@ -25,6 +25,9 @@ module.exports = {
       transitionDuration: {
         gridItem: '750ms',
       },
+      zIndex: {
+        1: '1'
+      }
     },
   },
   plugins: [],
