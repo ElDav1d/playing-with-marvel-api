@@ -1,7 +1,7 @@
 import { BASE_URL } from '@/utils/constants';
 import { CharacterItem, FetchingOrder } from '../interfaces/characters';
 
-export interface getCharactersServiceProps {
+export interface IGetCharactersServiceProps {
   pageParam?: number;
   maxCharacters: number;
   searchString: string;
@@ -13,7 +13,7 @@ const getCharactersService = async ({
   maxCharacters,
   searchString,
   order,
-}: getCharactersServiceProps) => {
+}: IGetCharactersServiceProps) => {
   const searchQuery = searchString ? `?nameStartsWith=${searchString}&` : '?';
   const fetchingOrder = order;
   const offset = maxCharacters * pageParam;

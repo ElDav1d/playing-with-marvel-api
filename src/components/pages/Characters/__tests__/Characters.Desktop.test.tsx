@@ -20,7 +20,7 @@ it('renders the loader when fetching initial page', () => {
     isFetching: true,
     isFetchingNextPage: false,
     isError: false,
-    characters: undefined
+    characters: undefined,
   });
 
   // ACT
@@ -35,14 +35,14 @@ it('renders the loader when fetching initial page', () => {
   // ASSERT
   expect(screen.getByRole('alert', { name: /(loading)/i })).toBeInTheDocument();
   expect(screen.queryByRole('heading', { name: /animal/i })).toBeNull();
-})
+});
 
 it('informs user on fetching error', () => {
   // ARRANGE
   mockUseCharacters.mockReturnValue({
-    isLoading: false,
+    isFetching: false,
     isError: true,
-    characters: undefined
+    characters: [],
   });
 
   // ACT
@@ -57,7 +57,7 @@ it('informs user on fetching error', () => {
   // ASSERT
   expect(screen.getByRole('heading', { name: /(error)/i })).toBeInTheDocument();
   expect(screen.queryByRole('heading', { name: /animal/i })).toBeNull();
-})
+});
 
 it('renders a page of characters', () => {
   // ARRANGE
@@ -143,7 +143,7 @@ it('renders a search by name input group', () => {
 
 it('fetches a new list of characters after typing on search by name input', () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   const INITIAL_HOOK_CALLS = 1;
 
@@ -159,7 +159,7 @@ it('fetches a new list of characters after typing on search by name input', () =
   const searchInputElement = screen.getByPlaceholderText(/name/i);
 
   user.type(searchInputElement, 'X');
-  
+
   // ASSERT
   expect(mockUseCharacters).toHaveBeenCalledTimes(INITIAL_HOOK_CALLS + 1);
   expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
@@ -168,7 +168,7 @@ it('fetches a new list of characters after typing on search by name input', () =
 
 it('renders an order select input group with its required options', () => {
   // ARRANGE
-  setUpHappyPath(setUpCharacters())
+  setUpHappyPath(setUpCharacters());
 
   // ACT
   render(
@@ -199,7 +199,7 @@ it('renders an order select input group with its required options', () => {
 
 it('fetches a new list of characters after selecting an order option', () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   const INITIAL_HOOK_CALLS = 1;
 
@@ -212,7 +212,6 @@ it('fetches a new list of characters after selecting an order option', () => {
     </QueryClientProvider>,
   );
 
-  
   // reordering not happening because items are mocked
   user.selectOptions(screen.getByRole('combobox'), '-name');
 
@@ -247,7 +246,7 @@ it('renders an filter input group with its required checkboxes', () => {
 
 it('renders a characters with image list when the image filter is checked', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -272,7 +271,7 @@ it('renders a characters with image list when the image filter is checked', asyn
 
 it('renders a characters with description list when the description filter is checked', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -292,12 +291,12 @@ it('renders a characters with description list when the description filter is ch
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: /crusher/i })).toBeNull();
-  })
+  });
 });
 
-it('keeps rendering a filtered characters list after selecting an order option', async  () => {
+it('keeps rendering a filtered characters list after selecting an order option', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -309,22 +308,22 @@ it('keeps rendering a filtered characters list after selecting an order option',
   );
 
   const checkWithImage = screen.getByRole('checkbox', { name: /(image)+/i });
-  
+
   user.click(checkWithImage);
 
   user.selectOptions(screen.getByRole('combobox'), '-name');
-  
+
   // ASSERT
   await waitFor(() => {
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
-    expect(screen.queryByRole('heading', {name: /braineater/i})).toBeNull();
-  })
+    expect(screen.queryByRole('heading', { name: /braineater/i })).toBeNull();
+  });
 });
 
 it('renders the complete characters list after unchecking a filter', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -336,16 +335,16 @@ it('renders the complete characters list after unchecking a filter', async () =>
   );
 
   const checkWithImage = screen.getByRole('checkbox', { name: /(image)+/i });
-  
+
   user.click(checkWithImage);
-    
+
   user.click(checkWithImage);
-  
+
   // ASSERT
   await waitFor(() => {
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /destructor/i })).toBeInTheDocument();
-  })
+  });
 });

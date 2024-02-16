@@ -5,11 +5,11 @@ import { FilterCriteria } from '@/components/pages/Characters/interfaces/charact
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
 export interface ICharactersControlPanel {
-    /**
+  /**
    * @property {boolean}
    * Indicates viewport.
    */
-    isDesktop?: boolean;
+  isDesktop?: boolean;
   /**
    * @property {string}
    * Current search input value.
@@ -44,7 +44,7 @@ export interface ICharactersControlPanel {
    * @property {string}
    * Literal for user message
    */
-  emptyDataLiteral: string;
+  emptyDataLiteral?: string;
   /**
    * @property {string}
    * Title for ordering form group.
@@ -105,8 +105,9 @@ const CharactersControlPanel = ({
   filtersLiterals,
   setFilters,
 }: ICharactersControlPanel) => {
-  const getStyles = () => `${isDesktop ? 'hidden md:flex gap-8 justify-center' : ''}`
-  const getLabels = () => isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel'
+  const getStyles = () => `${isDesktop ? 'hidden md:flex gap-8 justify-center' : ''}`;
+  const getLabels = () =>
+    isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel';
 
   return (
     <form className={getStyles()} aria-label={getLabels()}>
@@ -136,7 +137,6 @@ const CharactersControlPanel = ({
         optionLiterals={filtersLiterals}
         setOptions={setFilters}
       />
-      boo
     </form>
   );
 };

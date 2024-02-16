@@ -99,6 +99,10 @@ const Characters = () => {
     'By modification Last/First',
   ];
 
+  const EMPTY_DATA_LITERAL =
+    // eslint-disable-next-line quotes
+    "Sorry, none of our characters' name matches your search! Try typing again";
+
   return (
     <>
       <Header classNameHeader='flex'>
@@ -110,10 +114,7 @@ const Characters = () => {
             searchPlaceholder={'Type a character name'}
             setOnClearData={setOnClearData}
             isEmptyData={!isFetching && filteredCharacters?.length === 0}
-            emptyDataLiteral={
-              // eslint-disable-next-line quotes
-              "Sorry, none of our characters' name matches your search! Try typing again"
-            }
+            emptyDataLiteral={EMPTY_DATA_LITERAL}
             orderTitle='Order results'
             onOrderChange={(event) => orderHandler(event)}
             orderOptions={Object.values(FetchingOrder)}
@@ -149,44 +150,60 @@ const Characters = () => {
                 </p>
               )}
             </div>
-              <CharactersControlPanel
-                isDesktop
-                searchInput={searchInput}
-                setSearchInput={setSearchInput}
-                searchTitle={'Search by name'}
-                searchPlaceholder={'Type a character name'}
-                setOnClearData={setOnClearData}
-                isEmptyData={!isFetching && filteredCharacters?.length === 0}
-                emptyDataLiteral={
-                  // eslint-disable-next-line quotes
-                  "Sorry, none of our characters' name matches your search! Try typing again"
-                }
-                orderTitle='Order results'
-                onOrderChange={(event) => orderHandler(event)}
-                orderOptions={Object.values(FetchingOrder)}
-                orderLiterals={orderLiterals}
-                filtersTitle='Filter results:'
-                filtersOptions={Object.values(FilterCriteria)}
-                filtersLiterals={filterLiterals}
-                setFilters={setFilters}
-              />
+            <CharactersControlPanel
+              isDesktop
+              searchInput={searchInput}
+              setSearchInput={setSearchInput}
+              searchTitle={'Search by name'}
+              searchPlaceholder={'Type a character name'}
+              setOnClearData={setOnClearData}
+              isEmptyData={!isFetching && filteredCharacters?.length === 0}
+              orderTitle='Order results'
+              onOrderChange={(event) => orderHandler(event)}
+              orderOptions={Object.values(FetchingOrder)}
+              orderLiterals={orderLiterals}
+              filtersTitle='Filter results:'
+              filtersOptions={Object.values(FilterCriteria)}
+              filtersLiterals={filterLiterals}
+              setFilters={setFilters}
+            />
           </Container>
         </section>
         {isError && <h2>Oooops, there&apos;s an unexpected error...try reloading again!</h2>}
 
         {isFetching && !isFetchingNextPage && (
-          <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6'  role="alert" aria-label='Characters List is loading' aria-busy="true" aria-live="polite"/>
+          <RingLoader
+            color={MARVEL_RED}
+            size={LOADER_SIZE}
+            className='mx-auto my-6'
+            role='alert'
+            aria-label='Characters List is loading'
+            aria-busy='true'
+            aria-live='polite'
+          />
         )}
 
-        {filteredCharacters?.length > 0 && (
+        {!isFetching && (
           <Container>
-            <CharactersList characters={filteredCharacters} />
+            {filteredCharacters?.length === 0 ? (
+              <h3 className='text-center'>{EMPTY_DATA_LITERAL}</h3>
+            ) : (
+              <CharactersList characters={filteredCharacters} />
+            )}
           </Container>
         )}
 
         {hasNextPage && (
           <div ref={ref}>
-            <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6'  role="alert" aria-label='Characters List is loading' aria-busy="true" aria-live="polite"/>
+            <RingLoader
+              color={MARVEL_RED}
+              size={LOADER_SIZE}
+              className='mx-auto my-6'
+              role='alert'
+              aria-label='Characters List is loading'
+              aria-busy='true'
+              aria-live='polite'
+            />
           </div>
         )}
       </Container>

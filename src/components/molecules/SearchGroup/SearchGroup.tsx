@@ -4,7 +4,7 @@ import FormGroupContainer from '../FormGroupContainer';
 export interface SearchGroupProps {
   title: string;
   placeholderLiteral: string;
-  emptyDataLiteral: string;
+  emptyDataLiteral?: string;
   isEmptyData: boolean;
   searchInput: string;
   setOnClearData?: (arg: boolean) => void;
@@ -40,7 +40,7 @@ const SearchGroup = ({
           value={searchInput}
         />
       </div>
-      {isEmptyData && <h3>{emptyDataLiteral}</h3>}
+      {emptyDataLiteral && isEmptyData && <h3 className='md:hidden'>{emptyDataLiteral}</h3>}
     </FormGroupContainer>
   );
 };
