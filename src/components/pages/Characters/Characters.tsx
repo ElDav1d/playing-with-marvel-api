@@ -4,6 +4,8 @@ import { useCharacters, useDebounce } from './hooks';
 import { CharacterItem, FetchingOrder, FilterCriteria } from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import {
+  SELECT_ORDER_LITERALS,
+  EMPTY_DATA_LITERAL_LIST,
   LOADER_SIZE,
   MARVEL_RED,
   MAX_FETCH_CHARACTERS_DEFAULT,
@@ -92,17 +94,6 @@ const Characters = () => {
   const hasListDefaults =
     searchInput === '' && order === FetchingOrder.NAME_AZ && filters.length === 0;
 
-  const orderLiterals = [
-    'By name A/Z',
-    'By name Z/A',
-    'By modification First/Last',
-    'By modification Last/First',
-  ];
-
-  const EMPTY_DATA_LITERAL =
-    // eslint-disable-next-line quotes
-    "Sorry, none of our characters' name matches your search! Try typing again";
-
   return (
     <>
       <Header classNameHeader='flex'>
@@ -114,11 +105,11 @@ const Characters = () => {
             searchPlaceholder={'Type a character name'}
             setOnClearData={setOnClearData}
             isEmptyData={!isFetching && filteredCharacters?.length === 0}
-            emptyDataLiteral={EMPTY_DATA_LITERAL}
+            emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
             orderTitle='Order results'
             onOrderChange={(event) => orderHandler(event)}
             orderOptions={Object.values(FetchingOrder)}
-            orderLiterals={orderLiterals}
+            orderLiterals={SELECT_ORDER_LITERALS}
             filtersTitle='Filter results:'
             filtersOptions={Object.values(FilterCriteria)}
             filtersLiterals={filterLiterals}
@@ -161,7 +152,7 @@ const Characters = () => {
               orderTitle='Order results'
               onOrderChange={(event) => orderHandler(event)}
               orderOptions={Object.values(FetchingOrder)}
-              orderLiterals={orderLiterals}
+              orderLiterals={SELECT_ORDER_LITERALS}
               filtersTitle='Filter results:'
               filtersOptions={Object.values(FilterCriteria)}
               filtersLiterals={filterLiterals}
@@ -186,7 +177,7 @@ const Characters = () => {
         {!isFetching && (
           <Container>
             {filteredCharacters?.length === 0 ? (
-              <h3 className='text-center'>{EMPTY_DATA_LITERAL}</h3>
+              <h3 className='text-center'>{EMPTY_DATA_LITERAL_LIST}</h3>
             ) : (
               <CharactersList characters={filteredCharacters} />
             )}
