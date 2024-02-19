@@ -123,7 +123,8 @@ const CharactersControlPanel = ({
   setOnClearChecks,
   onClearChecks,
 }: ICharactersControlPanel) => {
-  const getStyles = () => `${isDesktop ? 'hidden md:flex gap-8 justify-center' : ''}`;
+  const getStyles = () =>
+    `${isDesktop ? 'hidden md:flex gap-8 justify-center' : 'flex flex-col gap-4'}`;
   const getLabels = () =>
     isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel';
 

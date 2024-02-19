@@ -48,21 +48,21 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
       )}
       <dialog
         open={isOpen}
-        className={`absolute top-0 m-0 h-full w-[80vw] z-1 px-8 py-8 transition-[left] delay-gridItem duration-gridItem ${
+        className={`absolute top-0 m-0 h-full w-[80vw] z-1 px-8 py-11 transition-[left] delay-gridItem duration-gridItem ${
           isOpen ? 'left-0' : 'left-[-100%]'
         } ${classNameContainer}`}
       >
         {isOpen && (
           <>
-            <div className='flex flex-col gap-5'>{children}</div>
+            {children}
             <button
               aria-label='Close Characters List Control Panel'
               onClick={handleClose}
-              className='absolute top-0 right-0 m-1 focus-visible'
+              className='absolute top-0 right-0 m-1 p-1 focus-visible'
             >
               <svg
                 aria-hidden='true'
-                className='h-8 w-8 text-gray-600'
+                className='h-6 w-6 text-white'
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
