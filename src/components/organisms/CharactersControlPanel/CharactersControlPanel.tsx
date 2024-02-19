@@ -128,7 +128,7 @@ const CharactersControlPanel = ({
     isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel';
 
   return (
-    <form className={getStyles()} aria-label={getLabels()}>
+    <form className={`focus-within ${getStyles()}`} aria-label={getLabels()}>
       <SearchGroup
         classNameFieldset='text-white'
         classNameInput='w-full md:w-auto'

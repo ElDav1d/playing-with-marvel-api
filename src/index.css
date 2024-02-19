@@ -18,3 +18,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+@layer components {
+  .focus-visible {
+    @apply focus-visible:border-red focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-double focus-visible:outline-red
+  }
+
+  .focus-within {
+    @apply focus-within:border-red focus-within:outline-2 focus-within:outline-offset-8 focus-within:outline-double focus-within:outline-red
+  }
+}

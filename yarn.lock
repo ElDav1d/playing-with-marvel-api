@@ -7832,9 +7832,9 @@
   dependencies:
     "postcss-selector-parser" "^6.0.9"
 
-"postcss-focus-within@^5.0.4":
+"postcss-focus-visible@^5.0.4":
   "integrity" "sha512-vvjDN++C0mu8jz4af5d52CB184ogg/sSxAFS+oUJQq2SuCe7T5U2iIsVJtsCp2d6R4j0jr5+q3rPkBVZkXD9fQ=="
-  "resolved" "https://registry.npmjs.org/postcss-focus-within/-/postcss-focus-within-5.0.4.tgz"
+  "resolved" "https://registry.npmjs.org/postcss-focus-visible/-/postcss-focus-visible-5.0.4.tgz"
   "version" "5.0.4"
   dependencies:
     "postcss-selector-parser" "^6.0.9"
@@ -8146,7 +8146,7 @@
     "postcss-double-position-gradients" "^3.1.2"
     "postcss-env-function" "^4.0.6"
     "postcss-focus-visible" "^6.0.4"
-    "postcss-focus-within" "^5.0.4"
+    "postcss-focus-visible" "^5.0.4"
     "postcss-font-variant" "^5.0.0"
     "postcss-gap-properties" "^3.0.5"
     "postcss-image-set-function" "^4.0.7"

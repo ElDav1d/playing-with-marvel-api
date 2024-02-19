@@ -27,7 +27,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
         <button
           aria-label='Open Characters List Control Panel'
           onClick={handleOpen}
-          className='p-4 text-white'
+          className='m-1 p-4 text-white focus-visible'
         >
           <svg
             aria-hidden='true'
@@ -48,6 +48,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
       )}
       <dialog
         open={isOpen}
+        className={`absolute top-0 m-0 h-full w-[80vw] z-1 px-8 py-8 transition-[left] delay-gridItem duration-gridItem ${
           isOpen ? 'left-0' : 'left-[-100%]'
         } ${classNameContainer}`}
       >
@@ -57,7 +58,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
             <button
               aria-label='Close Characters List Control Panel'
               onClick={handleClose}
-              className='absolute top-0 right-0'
+              className='absolute top-0 right-0 m-1 focus-visible'
             >
               <svg
                 aria-hidden='true'
@@ -77,7 +78,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
             </button>
           </>
         )}
-      </div>
+      </dialog>
     </div>
   );
 };

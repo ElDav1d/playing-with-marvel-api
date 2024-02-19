@@ -24,7 +24,11 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
       after:absolute after:content[""] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
     '
     >
-      <Link to={`character/${id}/${formatUrlName(name)}`} aria-labelledby={id.toString()}>
+      <Link
+        className='block'
+        to={`character/${id}/${formatUrlName(name)}`}
+        aria-labelledby={id.toString()}
+      >
         <Image
           classNameContainer='relative
           after:absolute after:content[""] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5'
