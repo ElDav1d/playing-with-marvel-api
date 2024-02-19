@@ -46,11 +46,8 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
           </svg>
         </button>
       )}
-
-      <div
-        aria-hidden={`${isOpen ? 'false' : 'true'}`}
-        role='dialog'
-        className={`absolute top-0 h-full w-[80vw] z-1 px-8 py-8 transition-[left] delay-gridItem duration-gridItem ${
+      <dialog
+        open={isOpen}
           isOpen ? 'left-0' : 'left-[-100%]'
         } ${classNameContainer}`}
       >
