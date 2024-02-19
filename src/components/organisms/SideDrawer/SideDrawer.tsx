@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export interface ISideDrawerProps {
   /**
@@ -12,6 +12,16 @@ export interface ISideDrawerProps {
 
 const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const openButtonRef = useRef<HTMLButtonElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      closeButtonRef?.current?.focus();
+    } else {
+      openButtonRef?.current?.focus();
+    }
+  }, [isOpen]);
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -28,6 +38,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
           aria-label='Open Characters List Control Panel'
           onClick={handleOpen}
           className='m-1 p-4 text-white focus-visible'
+          ref={openButtonRef}
         >
           <svg
             aria-hidden='true'
@@ -59,6 +70,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
               aria-label='Close Characters List Control Panel'
               onClick={handleClose}
               className='absolute top-0 right-0 m-1 p-1 focus-visible'
+              ref={closeButtonRef}
             >
               <svg
                 aria-hidden='true'
