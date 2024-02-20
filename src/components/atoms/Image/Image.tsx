@@ -83,7 +83,7 @@ const Image = ({
 
   const getSrcSet = () => {
     if (Array.isArray(sizing) && sizing.length > 1) {
-      const uniqueValues = [new Set(sizing)];
+      const uniqueValues = Array.from(new Set(sizing));
 
       if (uniqueValues.length > 1) {
         return `${path}/${uniqueValues[1]}.${extension}`;
