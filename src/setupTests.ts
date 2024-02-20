@@ -5,8 +5,6 @@
 import '@testing-library/jest-dom';
 import { QueryClient } from '@tanstack/react-query';
 
-jest.mock('./components/pages/Characters/hooks');
-
 const mockIntersectionObserver = jest.fn();
 
 mockIntersectionObserver.mockReturnValue({

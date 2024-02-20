@@ -6,7 +6,7 @@ import { useCharacters } from '../hooks';
 import userEvent from '@testing-library/user-event';
 import { CharacterItem } from '../interfaces/characters';
 
-jest.mock('../hooks');
+
 jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));

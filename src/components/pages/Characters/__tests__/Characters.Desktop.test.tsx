@@ -4,7 +4,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, screen, waitFor } from '@testing-library/react';
 import { useCharacters } from '../hooks';
 import Characters from '../Characters';
-import { setUpCharacters, setUpHappyPath, setUpHappyPathWithUser } from '../utils/testSetups';
+import { setUpCharacters, setUpHappyPath, setUpHappyPathWithUser } from '../utils/testHelpers';
+
+jest.mock('../hooks');
 
 const mockUseCharacters = useCharacters as jest.Mock;
 

@@ -6,7 +6,9 @@ import { useCharacters } from '../hooks';
 import Characters from '../Characters';
 import userEvent from '@testing-library/user-event';
 import customRender from '../utils';
-import { setUpHappyPathWithUser } from '../utils/testSetups';
+import { setUpHappyPathWithUser } from '../utils/testHelpers';
+
+jest.mock('../hooks');
 
 const mockUseCharacters = useCharacters as jest.Mock;
 
@@ -16,10 +18,9 @@ jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
 
-
 it('opens the Mobile Characters List Control Panel', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -28,23 +29,23 @@ it('opens the Mobile Characters List Control Panel', async () => {
         <Characters />
       </Router>
     </QueryClientProvider>,
-    { width: 500 }
+    { width: 500 },
   );
 
-  const openButton = screen.getByRole('button', {name: /open/i});
-  
+  const openButton = screen.getByRole('button', { name: /open/i });
+
   user.click(openButton);
-  
+
   // ASSERT
   await waitFor(() => {
-    const mobilePanel = screen.getByRole('form', {name: /mobile/i});
+    const mobilePanel = screen.getByRole('form', { name: /mobile/i });
     expect(mobilePanel).toBeInTheDocument();
-  })
+  });
 });
 
 it('closes the Mobile Characters List Control Panel', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -53,10 +54,10 @@ it('closes the Mobile Characters List Control Panel', async () => {
         <Characters />
       </Router>
     </QueryClientProvider>,
-    { width: 500 }
+    { width: 500 },
   );
-  
-  const openButton = screen.getByRole('button', {name: /open/i});
+
+  const openButton = screen.getByRole('button', { name: /open/i });
 
   user.click(openButton);
 
@@ -64,25 +65,24 @@ it('closes the Mobile Characters List Control Panel', async () => {
     const closeButton = screen.getByRole('button', { name: /close/i });
 
     userEvent.click(closeButton);
-  })
-  
-  
+  });
+
   // ASSERT
   await waitFor(() => {
     expect(screen.queryByRole('form', { name: /mobile/i })).toBeNull();
-  })
+  });
 });
 
 it('fetches a new list of characters after typing on search by name input', async () => {
   // ARRANGE
-  const user  = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // TODO: optmise calls
   // At SearchGroup
   // Or avoiding desktop form render
-  const DESKTOP_HOOK_CALLS = 1
+  const DESKTOP_HOOK_CALLS = 1;
   const MOBILE_HOOK_CALLS = 1;
-  const INITIAL_HOOK_CALLS = DESKTOP_HOOK_CALLS + MOBILE_HOOK_CALLS
+  const INITIAL_HOOK_CALLS = DESKTOP_HOOK_CALLS + MOBILE_HOOK_CALLS;
 
   // ACT
   customRender(
@@ -91,10 +91,10 @@ it('fetches a new list of characters after typing on search by name input', asyn
         <Characters />
       </Router>
     </QueryClientProvider>,
-    { width: 500 }
+    { width: 500 },
   );
 
-  const openButton = screen.getByRole('button', {name: /open/i});
+  const openButton = screen.getByRole('button', { name: /open/i });
 
   user.click(openButton);
 
@@ -102,30 +102,30 @@ it('fetches a new list of characters after typing on search by name input', asyn
     const mobilePanel = screen.getByRole('form', { name: /mobile/i });
 
     const searchInputGroup = within(mobilePanel).getByRole('group', { name: /search/i });
-    
+
     const searchInputElement = within(searchInputGroup).getByPlaceholderText(/name/i);
-    
+
     userEvent.type(searchInputElement, 'X');
-  })
-  
+  });
+
   // ASSERT
-  await waitFor(() => { 
+  await waitFor(() => {
     expect(mockUseCharacters).toHaveBeenCalledTimes(INITIAL_HOOK_CALLS + 1);
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
-  })
+  });
 });
 
 it('fetches a new list of characters after selecting an order option', async () => {
   // ARRANGE
-  const user  = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // TODO: optmise calls
   // At SearchGroup
   // Or avoiding CharactersControlPanel isDesktop
-  const DESKTOP_HOOK_CALLS = 1
+  const DESKTOP_HOOK_CALLS = 1;
   const MOBILE_HOOK_CALLS = 1;
-  const INITIAL_HOOK_CALLS = DESKTOP_HOOK_CALLS + MOBILE_HOOK_CALLS
+  const INITIAL_HOOK_CALLS = DESKTOP_HOOK_CALLS + MOBILE_HOOK_CALLS;
 
   // ACT
   customRender(
@@ -134,13 +134,12 @@ it('fetches a new list of characters after selecting an order option', async () 
         <Characters />
       </Router>
     </QueryClientProvider>,
-    { width: 500 }
+    { width: 500 },
   );
 
-  const openButton = screen.getByRole('button', {name: /open/i});
-  
-  user.click(openButton);
+  const openButton = screen.getByRole('button', { name: /open/i });
 
+  user.click(openButton);
 
   await waitFor(() => {
     const mobilePanel = screen.getByRole('form', { name: /mobile/i });
@@ -148,20 +147,20 @@ it('fetches a new list of characters after selecting an order option', async () 
     const selectInputGroup = within(mobilePanel).getByRole('group', { name: /order/i });
 
     // reordering not happening because items are mocked
-    userEvent.selectOptions(within(selectInputGroup).getByRole('combobox'), '-name');  
-  })
-  
+    userEvent.selectOptions(within(selectInputGroup).getByRole('combobox'), '-name');
+  });
+
   // ASSERT
   await waitFor(() => {
     expect(mockUseCharacters).toHaveBeenCalledTimes(INITIAL_HOOK_CALLS + 3);
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
-  })
+  });
 });
 
 it('renders an filter input group with its required checkboxes', async () => {
   // ARRANGE
-  const user  = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -170,30 +169,32 @@ it('renders an filter input group with its required checkboxes', async () => {
         <Characters />
       </Router>
     </QueryClientProvider>,
-    { width: 500 }
+    { width: 500 },
   );
 
-  const openButton = screen.getByRole('button', {name: /open/i});
+  const openButton = screen.getByRole('button', { name: /open/i });
 
   user.click(openButton);
-  
-  await waitFor (() => {
-    const mobilePanel = screen.getByRole('form', {name: /mobile/i});
+
+  await waitFor(() => {
+    const mobilePanel = screen.getByRole('form', { name: /mobile/i });
 
     const checkInputGroup = within(mobilePanel).getByRole('group', { name: /filter/i });
     const checkWithImage = within(mobilePanel).getByRole('checkbox', { name: /(image)+/i });
-    const checkWithDescription = within(mobilePanel).getByRole('checkbox', { name: /(description)+/i });
-    
+    const checkWithDescription = within(mobilePanel).getByRole('checkbox', {
+      name: /(description)+/i,
+    });
+
     // ASSERT
     expect(checkInputGroup).toBeInTheDocument();
     expect(checkWithImage).toBeInTheDocument();
     expect(checkWithDescription).toBeInTheDocument();
-  })
+  });
 });
 
 it('renders a characters with image list when the image filter is checked', async () => {
   // ARRANGE
-  const user  = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -202,35 +203,34 @@ it('renders a characters with image list when the image filter is checked', asyn
         <Characters />
       </Router>
     </QueryClientProvider>,
-    { width: 500 }
+    { width: 500 },
   );
 
-  const openButton = screen.getByRole('button', {name: /open/i});
+  const openButton = screen.getByRole('button', { name: /open/i });
 
   user.click(openButton);
 
   await waitFor(() => {
-    const mobilePanel = screen.getByRole('form', {name: /mobile/i});
+    const mobilePanel = screen.getByRole('form', { name: /mobile/i });
 
     const checkInputGroup = within(mobilePanel).getByRole('group', { name: /filter/i });
-    
+
     const checkWithImage = within(checkInputGroup).getByRole('checkbox', { name: /(image)+/i });
 
-    user.click(checkWithImage)
-  })
-  
+    user.click(checkWithImage);
+  });
 
   // ASSERT
   await waitFor(() => {
-    expect(screen.queryByRole('heading', { name: /animal/i })).toBeInTheDocument()
-    expect(screen.queryByRole('heading', { name: /crusher/i })).toBeInTheDocument()
-    expect(screen.queryByRole('heading', { name: /braineater/i })).toBeNull()
+    expect(screen.queryByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /crusher/i })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /braineater/i })).toBeNull();
   });
 });
 
 it('renders a characters with description list when the description filter is checked', async () => {
   // ARRANGE
-  const user  = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -239,34 +239,36 @@ it('renders a characters with description list when the description filter is ch
         <Characters />
       </Router>
     </QueryClientProvider>,
-    { width: 500 }
+    { width: 500 },
   );
 
-  const openButton = screen.getByRole('button', {name: /open/i});
+  const openButton = screen.getByRole('button', { name: /open/i });
 
   user.click(openButton);
 
   await waitFor(() => {
-    const mobilePanel = screen.getByRole('form', {name: /mobile/i});
+    const mobilePanel = screen.getByRole('form', { name: /mobile/i });
 
     const checkInputGroup = within(mobilePanel).getByRole('group', { name: /filter/i });
-    
-    const checkWithDescription = within(checkInputGroup).getByRole('checkbox', { name: /(description)+/i });
 
-    user.click(checkWithDescription)
-  })
+    const checkWithDescription = within(checkInputGroup).getByRole('checkbox', {
+      name: /(description)+/i,
+    });
+
+    user.click(checkWithDescription);
+  });
 
   // ASSERT
   await waitFor(() => {
-    expect(screen.queryByRole('heading', { name: /animal/i })).toBeInTheDocument()
-    expect(screen.queryByRole('heading', { name: /braineater/i })).toBeInTheDocument()
-    expect(screen.queryByRole('heading', { name: /crusher/i })).toBeNull()
-  })
+    expect(screen.queryByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /braineater/i })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /crusher/i })).toBeNull();
+  });
 });
 
 it('keeps rendering a filtered characters list after selecting an order option', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -275,39 +277,39 @@ it('keeps rendering a filtered characters list after selecting an order option',
         <Characters />
       </Router>
     </QueryClientProvider>,
-    { width: 500 }
+    { width: 500 },
   );
 
-  const openButton = screen.getByRole('button', {name: /open/i});
+  const openButton = screen.getByRole('button', { name: /open/i });
 
   user.click(openButton);
 
   await waitFor(() => {
-    const mobilePanel = screen.getByRole('form', {name: /mobile/i});
+    const mobilePanel = screen.getByRole('form', { name: /mobile/i });
 
     const checkInputGroup = within(mobilePanel).getByRole('group', { name: /filter/i });
-    
+
     const checkWithImage = within(checkInputGroup).getByRole('checkbox', { name: /(image)+/i });
 
-    user.click(checkWithImage)
+    user.click(checkWithImage);
 
     const selectInputGroup = within(mobilePanel).getByRole('group', { name: /order/i });
-    
+
     // reordering not happening because items are mocked
     user.selectOptions(within(selectInputGroup).getByRole('combobox'), '-name');
-  })
-  
+  });
+
   // ASSERT
   await waitFor(() => {
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: /braineater/i })).toBeNull();
-  })
+  });
 });
 
 it('renders the complete characters list after unchecking a filter', async () => {
   // ARRANGE
-  const user  = setUpHappyPathWithUser()
+  const user = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -318,7 +320,7 @@ it('renders the complete characters list after unchecking a filter', async () =>
     </QueryClientProvider>,
   );
 
-  const openButton = screen.getByRole('button', {name: /open/i});
+  const openButton = screen.getByRole('button', { name: /open/i });
 
   user.click(openButton);
 
@@ -326,13 +328,13 @@ it('renders the complete characters list after unchecking a filter', async () =>
     const checkWithImage = screen.getByRole('checkbox', { name: /(image)+/i });
 
     user.click(checkWithImage);
-  })
-  
+  });
+
   // ASSERT
   await waitFor(() => {
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /crusher/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /destructor/i })).toBeInTheDocument();
-  })
+  });
 });
