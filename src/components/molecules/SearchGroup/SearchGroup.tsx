@@ -31,15 +31,13 @@ const SearchGroup = ({
 
   return (
     <FormGroupContainer title={title} classNameFieldset={classNameFieldset}>
-      <div>
-        <Input
-          className={classNameInput}
-          type='text'
-          onChange={handleSearch}
-          placeholder={placeholderLiteral}
-          value={searchInput}
-        />
-      </div>
+      <Input
+        className={classNameInput}
+        type='text'
+        onChange={handleSearch}
+        placeholder={placeholderLiteral}
+        value={searchInput}
+      />
       {emptyDataLiteral && isEmptyData && <h3 className='md:hidden'>{emptyDataLiteral}</h3>}
     </FormGroupContainer>
   );
