@@ -1,7 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import Image, { PicVariant } from '../Image';
 
-describe.only('ImageComponent', () => {
+jest.mock('react-lazy-load-image-component', () => ({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
+  LazyLoadImage: ({ placeholderSrc, ...props }: any) => <img alt='' {...props} />,
+}));
+
+describe('ImageComponent', () => {
   it('renders being accessible', () => {
     // ARRANGE
     const TITLE = 'Spiderman';

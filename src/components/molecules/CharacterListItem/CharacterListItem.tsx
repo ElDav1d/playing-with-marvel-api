@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
-import Image from '@/components/atoms/Image/Image';
+import Image from '@/components/atoms/Image';
 export interface CharacterItemProps {
   id: number;
   name: string;

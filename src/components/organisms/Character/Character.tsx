@@ -1,4 +1,4 @@
-import Image from '@/components/atoms/Image/Image';
+import Image from '@/components/atoms/Image';
 
 export interface CharacterProps {
   name: string;

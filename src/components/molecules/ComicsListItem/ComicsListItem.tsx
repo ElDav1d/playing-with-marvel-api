@@ -1,5 +1,5 @@
 import { CharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
-import Image from '@/components/atoms/Image/Image';
+import Image from '@/components/atoms/Image';
 import { useMemo } from 'react';
 import { formatDate } from '@/utils/helpers';
 
