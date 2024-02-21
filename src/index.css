@@ -27,7 +27,7 @@ code {
 
 @layer components {
   .focus-visible {
-    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-double focus-visible:outline-red
+    @apply focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-double focus-visible:outline-red
   }
 
   .focus-within {
@@ -35,7 +35,7 @@ code {
   }
 
   .active {
-    @apply active:outline-2 active:outline-offset-8 active:outline-double active:outline-red
+    @apply active:outline-2 active:outline-offset-1 active:outline-double active:outline-red
   }
 
   .focus-visible-border {

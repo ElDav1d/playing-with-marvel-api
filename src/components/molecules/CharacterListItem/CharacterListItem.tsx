@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import Image from '@/components/atoms/Image';
+import { useState } from 'react';
 export interface CharacterItemProps {
   id: number;
   name: string;
@@ -9,6 +10,9 @@ export interface CharacterItemProps {
 }
 
 const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemProps) => {
+  const [isFocused, setIsFocused] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
   const formatUrlName = (name: string): string =>
     name
       .replace(/([()])/g, '')
@@ -18,16 +22,31 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
 
   const hasDescription = description && description !== ' ';
 
+  const toggleFocus = () => {
+    setIsFocused(!isFocused);
+  };
+
+  const handleClick = () => {
+    setIsActive(true);
+  };
+
+  const getFocusStyles = () =>
+    isFocused || isActive ? ' outline-2 outline-offset-2 outline-double outline-red' : '';
+
   return (
     <li
-      className='group bg-black text-white overflow-hidden relative z-0
+      className={`bg-black text-white overflow-hidden relative z-0
       after:absolute after:content[""] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
-    '
+      ${getFocusStyles()}
+    `}
     >
       <Link
-        className='block'
+        className='block group'
         to={`character/${id}/${formatUrlName(name)}`}
         aria-labelledby={id.toString()}
+        onFocus={toggleFocus}
+        onBlur={toggleFocus}
+        onClick={handleClick}
       >
         <Image
           classNameContainer='relative
