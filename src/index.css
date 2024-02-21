@@ -19,6 +19,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
 @layer components {
   .focus-visible {
     @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-double focus-visible:outline-red
