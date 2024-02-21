@@ -37,7 +37,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
         <button
           aria-label='Open Characters List Control Panel'
           onClick={handleOpen}
-          className='m-1 p-4 text-white focus-visible'
+          className='absolute top-0 right-0 m-1 p-4 text-white focus-visible'
           ref={openButtonRef}
         >
           <svg
