@@ -101,6 +101,7 @@ const Characters = () => {
     setOrder(FetchingOrder.NAME_AZ);
     setFilters([]);
     setOnClearFilters(true);
+    setOnClearData(true);
   };
 
   const handleClearChecks = () => {
