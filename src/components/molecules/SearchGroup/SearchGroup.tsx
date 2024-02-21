@@ -38,7 +38,11 @@ const SearchGroup = ({
         placeholder={placeholderLiteral}
         value={searchInput}
       />
-      {emptyDataLiteral && isEmptyData && <h3 className='md:hidden'>{emptyDataLiteral}</h3>}
+      {emptyDataLiteral && isEmptyData && (
+        <h3 aria-live='assertive' className='md:sr-only'>
+          {emptyDataLiteral}
+        </h3>
+      )}
     </FormGroupContainer>
   );
 };

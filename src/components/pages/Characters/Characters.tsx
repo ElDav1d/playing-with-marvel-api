@@ -173,6 +173,7 @@ const Characters = () => {
               searchPlaceholder={'Type a character name'}
               setOnClearData={setOnClearData}
               isEmptyData={!isFetching && filteredCharacters?.length === 0}
+              emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
               orderTitle='Order results'
               onOrderChange={(event) => orderHandler(event)}
               orderOptions={Object.values(FetchingOrder)}
