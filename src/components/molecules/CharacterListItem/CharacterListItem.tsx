@@ -30,14 +30,13 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
     setIsActive(true);
   };
 
-  const getFocusStyles = () =>
-    isFocused || isActive ? ' outline-2 outline-offset-2 outline-double outline-red' : '';
+  const getAccesibleStyles = () => (isFocused || isActive ? ' accesible-outline' : '');
 
   return (
     <li
       className={`bg-black text-white overflow-hidden relative z-0
       after:absolute after:content[""] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
-      ${getFocusStyles()}
+      ${getAccesibleStyles()}
     `}
     >
       <Link

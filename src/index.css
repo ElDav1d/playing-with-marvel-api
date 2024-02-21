@@ -26,16 +26,20 @@ code {
 }
 
 @layer components {
+  .accesible-outline {
+    @apply outline-2 outline-offset-2 outline-double outline-red
+  }
+
   .focus-visible {
-    @apply focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-double focus-visible:outline-red
+    @apply focus-visible:accesible-outline focus-visible:outline-offset-2 
   }
 
   .focus-within {
-    @apply focus-within:outline-2 focus-within:outline-offset-8 focus-within:outline-double focus-within:outline-red
+    @apply focus-within:accesible-outline focus-within:outline-offset-8
   }
 
   .active {
-    @apply active:outline-2 active:outline-offset-1 active:outline-double active:outline-red
+    @apply active:accesible-outline active:outline-offset-2 
   }
 
   .focus-visible-border {
