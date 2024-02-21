@@ -27,4 +27,8 @@ code {
   .focus-within {
     @apply focus-within:border-red focus-within:outline-2 focus-within:outline-offset-8 focus-within:outline-double focus-within:outline-red
   }
+
+  .active {
+    @apply active:border-red active:outline-2 active:outline-offset-8 active:outline-double active:outline-red
+  }
 }

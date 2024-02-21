@@ -155,7 +155,7 @@ const Characters = () => {
                     {filters && <strong> {filters}</strong>}
                     {order && <strong> {order}</strong>}
                   </p>
-                  <button className='focus-visible' onClick={handleClear}>
+                  <button className='active focus-visible' onClick={handleClear}>
                     CLEAR
                   </button>
                 </>
