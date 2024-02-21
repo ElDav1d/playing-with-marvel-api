@@ -59,7 +59,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
       )}
       <dialog
         open={isOpen}
-        className={`absolute top-0 m-0 h-full w-[80vw] z-1 px-8 py-11 transition-[left] delay-gridItem duration-gridItem ${
+        className={`absolute block top-0 m-0 h-full w-[80vw] z-1 px-8 py-11 transition-[left] delay-gridItem duration-gridItem ${
           isOpen ? 'left-0' : 'left-[-100%]'
         } ${classNameContainer}`}
       >
