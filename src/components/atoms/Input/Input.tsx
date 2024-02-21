@@ -12,7 +12,7 @@ export interface ISelectProps extends React.ComponentPropsWithoutRef<'select'> {
 }
 
 const Input: React.FC<IInputProps | ISelectProps> = ({ className, type, children, ...rest }) => {
-  const sharedStyle = `bg-black border-white shadow appearance-none border focus-visible ${className}`;
+  const sharedStyle = `bg-black border border-white shadow appearance-none focus-visible-border ${className}`;
 
   const textBoxStyles = 'py-2 px-3';
 

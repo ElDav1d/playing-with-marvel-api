@@ -150,13 +150,16 @@ const Characters = () => {
 
               {!hasListDefaults && (
                 <>
-                  <p className='text-sm'>
+                  <p className='text-sm mb-2'>
                     Results for
                     {searchInput && <strong> {searchInput}</strong>}
                     {filters && <strong> {filters}</strong>}
                     {order && <strong> {order}</strong>}
                   </p>
-                  <button className='active focus-visible' onClick={handleClear}>
+                  <button
+                    className='text-sm border border-white p-1 active-border focus-visible-border'
+                    onClick={handleClear}
+                  >
                     CLEAR
                   </button>
                 </>

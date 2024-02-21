@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const NavigationMain = () => {
   return (
     <Container element={'nav'}>
-      <Link to='/' className='block active focus-visible'>
+      <Link to='/' className='block focus-visible'>
         <h1 className='text-none'>
           Playing with Marvel API
           <Logo version={'default'} />
