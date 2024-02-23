@@ -19,6 +19,7 @@ import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
 import SideDrawer from '@/components/organisms/SideDrawer';
 import CharactersControlPanel from '@/components/organisms/CharactersControlPanel';
+import CharactersControlInfo from '@/components/molecules/CharactersControlInfo';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
@@ -147,23 +148,6 @@ const Characters = () => {
                 Get hooked on a hearty helping of heroes and villains from the humble House of
                 Ideas!
               </p>
-
-              {!hasListDefaults && (
-                <>
-                  <p className='text-sm mb-2'>
-                    Results for
-                    {searchInput && <strong> {searchInput}</strong>}
-                    {filters && <strong> {filters}</strong>}
-                    {order && <strong> {order}</strong>}
-                  </p>
-                  <button
-                    className='text-sm border border-white p-1 active-border focus-visible-border'
-                    onClick={handleClear}
-                  >
-                    CLEAR
-                  </button>
-                </>
-              )}
             </div>
             <CharactersControlPanel
               isDesktop
@@ -185,6 +169,15 @@ const Characters = () => {
               setOnClearChecks={handleClearChecks}
               onClearChecks={onClearFilters}
             />
+
+            {!hasListDefaults && (
+              <CharactersControlInfo
+                searchInput={searchInput}
+                filters={filters}
+                order={order}
+                onClear={handleClear}
+              />
+            )}
           </Container>
         </section>
         {isError && <h2>Oooops, there&apos;s an unexpected error...try reloading again!</h2>}

@@ -63,7 +63,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
           before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[""] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1]
           group-hover:before:max-h-[300px]'
         >
-          <h2 className='mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2'>{name}</h2>
+          <h3 className='mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2'>{name}</h3>
           {hasDescription && <p className='text-xs leading-5 line-clamp-4'>{description}</p>}
         </div>
       </Link>
