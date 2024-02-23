@@ -1,32 +1,28 @@
-import { FetchingOrder, FilterCriteria } from '@/components/pages/Characters/interfaces/characters';
-
 export interface ICharactersControlInfoProps {
-  searchInput?: string;
-  filters?: FilterCriteria[];
-  order?: FetchingOrder;
-  onClear: () => void;
+  infoCopy: string;
+  infoItems?: string[];
+  onClear?: () => void;
 }
 
-const CharactersControlInfo = ({
-  searchInput,
-  filters,
-  order,
-  onClear: handleClear,
-}: ICharactersControlInfoProps) => {
+const CharactersControlInfo = ({ infoCopy, infoItems, onClear }: ICharactersControlInfoProps) => {
   return (
-    <div className='my-3 text-sm text-center text-white'>
-      <p className='mb-2'>
-        Results for
-        {searchInput && <strong> {searchInput}</strong>}
-        {filters && <strong> {filters}</strong>}
-        {order && <strong> {order}</strong>}
-      </p>
-      <button
-        className='border border-white p-1 active-border focus-visible-border'
-        onClick={handleClear}
-      >
-        CLEAR
-      </button>
+    <div className='my-8 text-sm text-center text-white'>
+      {infoItems && infoItems.length > 0 && (
+        <p className='mb-2'>
+          {infoCopy}
+          {infoItems.map((item) => (
+            <strong key={item}> {item}</strong>
+          ))}
+        </p>
+      )}
+      {onClear && (
+        <button
+          className='border border-white p-1 active-border focus-visible-border'
+          onClick={onClear}
+        >
+          CLEAR
+        </button>
+      )}
     </div>
   );
 };

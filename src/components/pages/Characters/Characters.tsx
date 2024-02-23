@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useRef, useState, useMemo } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { useCharacters, useDebounce } from './hooks';
+import { useCharacters, useDebounce, useListControlInfo } from './hooks';
 import { CharacterItem, FetchingOrder, FilterCriteria } from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import {
@@ -32,6 +32,8 @@ const Characters = () => {
 
   const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
     useCharacters({ maxCharacters: maxCharactersRef.current, searchString, order, onClearData });
+
+  const listControlInfoItems = useListControlInfo({ searchInput, order, filters });
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -92,9 +94,6 @@ const Characters = () => {
     setOnClearData(true);
     setOrder(value);
   };
-
-  const hasListDefaults =
-    searchInput === '' && order === FetchingOrder.NAME_AZ && filters.length === 0;
 
   const handleClear = () => {
     setSearchInput('');
@@ -170,11 +169,10 @@ const Characters = () => {
               onClearChecks={onClearFilters}
             />
 
-            {!hasListDefaults && (
+            {listControlInfoItems && listControlInfoItems.length > 0 && (
               <CharactersControlInfo
-                searchInput={searchInput}
-                filters={filters}
-                order={order}
+                infoCopy='Results for'
+                infoItems={listControlInfoItems}
                 onClear={handleClear}
               />
             )}
