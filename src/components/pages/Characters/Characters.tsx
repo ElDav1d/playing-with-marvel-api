@@ -193,15 +193,13 @@ const Characters = () => {
           />
         )}
 
-        {!isFetching && (
-          <Container>
-            {filteredCharacters?.length === 0 ? (
-              <h3 className='text-center'>{EMPTY_DATA_LITERAL_LIST}</h3>
-            ) : (
-              <CharactersList characters={filteredCharacters} />
-            )}
-          </Container>
-        )}
+        <Container>
+          {filteredCharacters?.length === 0 ? (
+            <>{!isFetching && <h3 className='text-center'>{EMPTY_DATA_LITERAL_LIST}</h3>}</>
+          ) : (
+            <CharactersList characters={filteredCharacters} />
+          )}
+        </Container>
 
         {hasNextPage && (
           <div ref={ref}>
