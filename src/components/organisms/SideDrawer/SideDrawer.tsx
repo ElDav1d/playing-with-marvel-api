@@ -32,7 +32,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
   };
 
   return (
-    <div className='md:hidden'>
+    <aside className='md:hidden' onBlur={handleClose}>
       {!isOpen && (
         <button
           aria-label='Open Characters List Control Panel'
@@ -91,7 +91,7 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
           </>
         )}
       </dialog>
-    </div>
+    </aside>
   );
 };
 
