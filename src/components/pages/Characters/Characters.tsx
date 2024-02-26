@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useRef, useState, useMemo } from 'react';
+import { ChangeEvent, useEffect, useState, useMemo } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useCharacters, useDebounce, useListControlInfo } from './hooks';
 import { CharacterItem, FetchingOrder, FilterCriteria } from './interfaces/characters';
@@ -8,9 +8,7 @@ import {
   EMPTY_DATA_LITERAL_LIST,
   LOADER_SIZE,
   MARVEL_RED,
-  MAX_FETCH_CHARACTERS_DEFAULT,
-  MAX_FETCH_CHARACTERS_OPTIM,
-  MAX_FETCH_CHARACTERS_TOP,
+  MAX_FETCH_CHARACTERS,
   REGEX_IMAGE_PATH,
 } from '@/utils/constants';
 import Header from '@/components/organisms/Header';
@@ -28,10 +26,9 @@ const Characters = () => {
   const [onClearData, setOnClearData] = useState(false);
   const [filters, setFilters] = useState<FilterCriteria[]>([]);
   const [onClearFilters, setOnClearFilters] = useState(false);
-  const maxCharactersRef = useRef(MAX_FETCH_CHARACTERS_DEFAULT);
 
   const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
-    useCharacters({ maxCharacters: maxCharactersRef.current, searchString, order, onClearData });
+    useCharacters({ maxCharacters: MAX_FETCH_CHARACTERS, searchString, order, onClearData });
 
   const listControlInfoItems = useListControlInfo({ searchInput, order, filters });
 
@@ -59,32 +56,26 @@ const Characters = () => {
     const hasImage = (path: string) => !REGEX_IMAGE_PATH.test(path);
     const hasDescription = (description: string) => description && description !== ' ';
 
-    let maxCharacters;
     let filterCallback;
 
     switch (true) {
       case filters.includes(FilterCriteria.IMAGE) && filters.includes(FilterCriteria.DESCRIPTION):
-        maxCharacters = MAX_FETCH_CHARACTERS_TOP;
         filterCallback = (character: CharacterItem) =>
           hasImage(character.thumbnail.path) && hasDescription(character.description);
         break;
 
       case filters.includes(FilterCriteria.IMAGE):
-        maxCharacters = MAX_FETCH_CHARACTERS_OPTIM;
         filterCallback = (character: CharacterItem) => hasImage(character.thumbnail.path);
         break;
 
       case filters.includes(FilterCriteria.DESCRIPTION):
-        maxCharacters = MAX_FETCH_CHARACTERS_OPTIM;
         filterCallback = (character: CharacterItem) => hasDescription(character.description);
         break;
 
       default:
-        maxCharactersRef.current = MAX_FETCH_CHARACTERS_DEFAULT;
         return characters;
     }
 
-    maxCharactersRef.current = maxCharacters;
     return characters.filter(filterCallback);
   }, [characters, filters]);
 
