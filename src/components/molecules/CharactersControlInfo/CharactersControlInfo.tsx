@@ -8,7 +8,7 @@ const CharactersControlInfo = ({ infoCopy, infoItems, onClear }: ICharactersCont
   return (
     <div className='flex flex-col items-center justify-around gap-2 text-sm text-center text-white'>
       {infoItems && infoItems.length > 0 && (
-        <p>
+        <p className='md:hidden'>
           {infoCopy}
           {infoItems.map((item) => (
             <strong key={item}> {item}</strong>

@@ -135,19 +135,20 @@ const Characters = () => {
       </Header>
       <Container element={'main'}>
         <section
-          className='relative z-0 bg-black py-10 mb-4 bg-hero-image bg-center bg-cover
+          className='relative z-0 flex flex-col items-center justify-around gap-2 min-h-52 md:min-h-64 mb-4 bg-black bg-hero-image bg-center bg-cover
         before:absolute  before:content[""] before:h-full before:w-full  before:bg-gradient-to-b before:from-trans-0.75-black before:from-50% before:left-0 before:top-0 before:z-[-1]'
         >
-          <Container element={'div'}>
-            <div className='w-full text-white text-center mb-4'>
-              <h2 className='text-2xl font-semibold text-white text-center uppercase mb-1'>
+          <Container element={'div'} className='flex flex-col gap-4'>
+            <div className='w-full text-white text-center'>
+              <h2 className='text-2xl md:text-3xl font-semibold text-white text-center uppercase mb-1'>
                 Marvel Characters
               </h2>
-              <p className='text-sm text-center'>
+              <p className='text-sm md:text-base text-center'>
                 Get hooked on a hearty helping of heroes and villains from the humble House of
                 Ideas!
               </p>
             </div>
+
             <CharactersControlPanel
               isDesktop
               searchInput={searchInput}

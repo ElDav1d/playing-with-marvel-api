@@ -123,13 +123,12 @@ const CharactersControlPanel = ({
   setOnClearChecks,
   onClearChecks,
 }: ICharactersControlPanel) => {
-  const getStyles = () =>
-    `${isDesktop ? 'hidden md:flex gap-8 justify-center' : 'flex flex-col gap-4'}`;
+  const getStyles = () => `${isDesktop ? 'hidden md:flex justify-center' : 'flex flex-col'}`;
   const getLabels = () =>
     isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel';
 
   return (
-    <form className={`focus-within ${getStyles()}`} aria-label={getLabels()}>
+    <form className={`focus-within gap-4 ${getStyles()}`} aria-label={getLabels()}>
       <SearchGroup
         classNameFieldset='text-white'
         classNameInput='w-full md:w-auto'
