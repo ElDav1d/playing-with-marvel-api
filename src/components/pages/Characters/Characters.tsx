@@ -196,10 +196,10 @@ const Characters = () => {
         )}
 
         <Container>
-          {filteredCharacters?.length === 0 ? (
-            <>{!isFetching && <h3 className='text-center'>{EMPTY_DATA_LITERAL_LIST}</h3>}</>
-          ) : (
-            <CharactersList characters={filteredCharacters} />
+          {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
+
+          {!isFetching && filteredCharacters?.length === 0 && (
+            <h3 className='text-center'>{EMPTY_DATA_LITERAL_LIST}</h3>
           )}
         </Container>
 
