@@ -96,12 +96,23 @@ const Characters = () => {
   };
 
   const handleClear = () => {
-    setSearchInput('');
-    setSearchString('');
-    setOrder(FetchingOrder.NAME_AZ);
-    setFilters([]);
-    setOnClearFilters(true);
-    setOnClearData(true);
+    if (searchInput !== '' || order !== FetchingOrder.NAME_AZ) {
+      setOnClearData(true);
+
+      if (searchInput !== '') {
+        setSearchInput('');
+        setSearchString('');
+      }
+
+      if (order !== FetchingOrder.NAME_AZ) {
+        setOrder(FetchingOrder.NAME_AZ);
+      }
+    }
+
+    if (filters.length > 0) {
+      setFilters([]);
+      setOnClearFilters(true);
+    }
   };
 
   const handleClearChecks = () => {
