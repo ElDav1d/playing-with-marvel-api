@@ -6,16 +6,16 @@ export interface ICharactersControlInfoProps {
 
 const CharactersControlInfo = ({ infoCopy, infoItems, onClear }: ICharactersControlInfoProps) => {
   return (
-    <div className='my-8 text-sm text-center text-white'>
+    <div className='flex flex-col items-center justify-around gap-2 text-sm text-center text-white'>
       {infoItems && infoItems.length > 0 && (
-        <p className='mb-2'>
+        <p>
           {infoCopy}
           {infoItems.map((item) => (
             <strong key={item}> {item}</strong>
           ))}
         </p>
       )}
-      {onClear && (
+      {infoItems && infoItems.length > 0 && onClear && (
         <button
           className='border border-white p-1 active-border focus-visible-border'
           onClick={onClear}
