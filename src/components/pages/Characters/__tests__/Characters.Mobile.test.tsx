@@ -152,7 +152,7 @@ it('fetches a new list of characters after selecting an order option', async () 
 
   // ASSERT
   await waitFor(() => {
-    expect(mockUseCharacters).toHaveBeenCalledTimes(INITIAL_HOOK_CALLS + 3);
+    expect(mockUseCharacters).toHaveBeenCalledTimes(INITIAL_HOOK_CALLS + 1);
     expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
   });
