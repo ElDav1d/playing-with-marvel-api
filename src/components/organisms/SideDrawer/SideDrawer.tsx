@@ -1,3 +1,4 @@
+import useOutsideClick from '@/hooks';
 import { useEffect, useRef, useState } from 'react';
 
 export interface ISideDrawerProps {
@@ -31,8 +32,10 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
     setIsOpen(false);
   };
 
+  const containerRef = useOutsideClick(handleClose);
+
   return (
-    <aside className='md:hidden' onBlur={handleClose}>
+    <aside ref={containerRef} className='md:hidden'>
       {!isOpen && (
         <button
           aria-label='Open Characters List Control Panel'
