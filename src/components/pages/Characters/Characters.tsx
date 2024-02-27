@@ -1,10 +1,14 @@
 import { ChangeEvent, useEffect, useState, useMemo } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useCharacters, useDebounce, useListControlInfo } from './hooks';
-import { CharacterItem, FetchingOrder, FilterCriteria } from './interfaces/characters';
+import {
+  CharacterItem,
+  FetchingOrder,
+  FilterCriteria,
+  HumanizedOrder,
+} from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import {
-  SELECT_ORDER_LITERALS,
   EMPTY_DATA_LITERAL_LIST,
   LOADER_SIZE,
   MARVEL_RED,
@@ -17,7 +21,7 @@ import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
 import SideDrawer from '@/components/organisms/SideDrawer';
 import CharactersControlPanel from '@/components/organisms/CharactersControlPanel';
-import CharactersControlInfo from '@/components/molecules/CharactersControlInfo';
+import { ControlPanelInfo } from '@/components/molecules/ControlPanelInfo';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
@@ -30,7 +34,12 @@ const Characters = () => {
   const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
     useCharacters({ maxCharacters: MAX_FETCH_CHARACTERS, searchString, order, onClearData });
 
-  const listControlInfoItems = useListControlInfo({ searchInput, order, filters });
+  const listControlInfoItems = useListControlInfo({
+    describer: 'Results',
+    searchInput,
+    order: HumanizedOrder[order],
+    filters,
+  });
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -49,8 +58,6 @@ const Characters = () => {
   }, [order, searchString]);
 
   useDebounce(searchInput, 500, () => setSearchString(searchInput));
-
-  const filterLiterals = ['With Image', 'With Description'];
 
   const filteredCharacters = useMemo(() => {
     const hasImage = (path: string) => !REGEX_IMAGE_PATH.test(path);
@@ -118,17 +125,17 @@ const Characters = () => {
             searchInput={searchInput}
             setSearchInput={setSearchInput}
             searchTitle={'Search by name'}
-            searchPlaceholder={'Type a character name'}
+            searchPlaceholder={'type a character name'}
             setOnClearData={setOnClearData}
             isEmptyData={!isFetching && filteredCharacters?.length === 0}
             emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
             orderTitle='Order results'
             onOrderChange={(event) => orderHandler(event)}
             orderOptions={Object.values(FetchingOrder)}
-            orderLiterals={SELECT_ORDER_LITERALS}
+            orderLiterals={Object.values(HumanizedOrder)}
             filtersTitle='Filter results:'
             filtersOptions={Object.values(FilterCriteria)}
-            filtersLiterals={filterLiterals}
+            filtersLiterals={Object.values(FilterCriteria)}
             setFilters={setFilters}
             setOnClearChecks={handleClearChecks}
             onClearChecks={onClearFilters}
@@ -156,28 +163,24 @@ const Characters = () => {
               searchInput={searchInput}
               setSearchInput={setSearchInput}
               searchTitle={'Search by name'}
-              searchPlaceholder={'Type a character name'}
+              searchPlaceholder={'type a character name'}
               setOnClearData={setOnClearData}
               isEmptyData={!isFetching && filteredCharacters?.length === 0}
               emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
               orderTitle='Order results'
               onOrderChange={(event) => orderHandler(event)}
               orderOptions={Object.values(FetchingOrder)}
-              orderLiterals={SELECT_ORDER_LITERALS}
+              orderLiterals={Object.values(HumanizedOrder)}
               filtersTitle='Filter results:'
               filtersOptions={Object.values(FilterCriteria)}
-              filtersLiterals={filterLiterals}
+              filtersLiterals={Object.values(FilterCriteria)}
               setFilters={setFilters}
               setOnClearChecks={handleClearChecks}
               onClearChecks={onClearFilters}
             />
 
             {listControlInfoItems && listControlInfoItems.length > 0 && (
-              <CharactersControlInfo
-                infoCopy='Results for'
-                infoItems={listControlInfoItems}
-                onClear={handleClear}
-              />
+              <ControlPanelInfo infoItems={listControlInfoItems} onClear={handleClear} />
             )}
           </Container>
         </section>

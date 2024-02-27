@@ -1,4 +1,4 @@
-import useOutsideClick from '@/hooks';
+import { useOutsideClick } from '@/hooks';
 import { useEffect, useRef, useState } from 'react';
 
 export interface ISideDrawerProps {

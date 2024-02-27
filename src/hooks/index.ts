@@ -1,2 +1,1 @@
-import useOutsideClick from './useOutsideClick';
-export { useOutsideClick as default };
+export { default as useOutsideClick } from './useOutsideClick';

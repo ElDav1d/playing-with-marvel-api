@@ -1,21 +1,28 @@
 import { useMemo } from 'react';
-import { FetchingOrder, FilterCriteria } from '../interfaces/characters';
+import { HumanizedOrder, FilterCriteria, FetchingOrder } from '../interfaces/characters';
+import { IInfoItem } from '@/components/molecules/ControlPanelInfo/ControlPanelInfo';
 
 /**
  * Represents the properties used by the list control information hook.
  * @interface
  */
-export interface IUseListControlInfo {
+export interface IUseListControlInfoProps {
+  /**
+   * Info describer.
+   * Inits dialog with user
+   * @property {string}
+   */
+  describer: string;
   /**
    * The search input string.
    * @property {string}
    */
   searchInput: string;
   /**
-   * The fetching order for the list.
-   * @property {FetchingOrder}
+   * The formatted string for fetching order.
+   * @property {HumanizedOrder}
    */
-  order: FetchingOrder;
+  order: HumanizedOrder;
   /**
    * An array of filter criteria.
    * @property {FilterCriteria[]}
@@ -23,22 +30,37 @@ export interface IUseListControlInfo {
   filters: FilterCriteria[];
 }
 
-const useListControlInfo = ({ searchInput, order, filters }: IUseListControlInfo): string[] => {
+const useListControlInfo = ({
+  describer,
+  searchInput,
+  order,
+  filters,
+}: IUseListControlInfoProps) => {
   return useMemo(() => {
-    const info = [];
+    const info: IInfoItem[] = [{ type: 'describer', value: describer }];
+    const hasSearch = searchInput !== '';
+    const hasFilters = filters.length > 0;
 
-    if (searchInput !== '') {
-      info.push(`for ${searchInput}`);
+    if (hasSearch) {
+      info.push({ type: 'info', prefix: ' for ', value: searchInput });
     }
-    if (order !== FetchingOrder.NAME_AZ) {
-      info.push(`ordered by ${order}`);
+
+    if (hasSearch || hasFilters || order !== HumanizedOrder[FetchingOrder.NAME_AZ]) {
+      info.push({ type: 'info', prefix: ' ordered ', value: order });
     }
-    if (filters.length > 0) {
-      return [...info, ...filters];
+
+    if (hasFilters) {
+      const filterItems: IInfoItem[] = filters.map((filter, index) => {
+        const prefix = index === 0 ? '' : ' and ';
+
+        return { type: 'info', prefix, value: filter };
+      });
+
+      return [...info, ...filterItems] as IInfoItem[];
     }
 
     return info;
-  }, [searchInput, order, filters]);
+  }, [describer, searchInput, order, filters]);
 };
 
 export default useListControlInfo;

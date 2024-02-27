@@ -21,13 +21,6 @@ const EMPTY_DATA_LITERAL_LIST =
   // eslint-disable-next-line quotes
   "Sorry, none of our characters' name matches your search! Try typing again";
 
-const SELECT_ORDER_LITERALS = [
-  'By name A/Z',
-  'By name Z/A',
-  'By modification First/Last',
-  'By modification Last/First',
-];
-
 export {
   BASE_URL,
   MAX_FETCH_CHARACTERS,
@@ -38,5 +31,4 @@ export {
   MEDIA_BREAKPOINTS,
   HERO_BACKGROUND_URL,
   EMPTY_DATA_LITERAL_LIST,
-  SELECT_ORDER_LITERALS,
 };
