@@ -120,7 +120,7 @@ const Characters = () => {
   return (
     <>
       <Header classNameHeader='flex justify-center'>
-        <SideDrawer classNameContainer='bg-black'>
+        <SideDrawer elementsToFocus='input, button' classNameContainer='bg-black'>
           <CharactersControlPanel
             searchInput={searchInput}
             setSearchInput={setSearchInput}

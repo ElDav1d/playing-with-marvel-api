@@ -1,6 +1,6 @@
 /* eslint-disable quotes */
 import { useFocusTrap, useOutsideClick } from '@/hooks';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export interface ISideDrawerProps {
   /**
@@ -8,11 +8,16 @@ export interface ISideDrawerProps {
    * Additional class name for hidden container
    */
   classNameContainer?: string;
+  /**
+   * @property {string}
+   * List of HTML elements on focus trap
+   */
+  elementsToFocus: string;
 
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
+const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDrawerProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const openButtonRef = useRef<HTMLButtonElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -28,7 +33,13 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
 
   const sideDrawerRef = useOutsideClick(handleClose);
 
-  useFocusTrap(isOpen, sideDrawerRef, handleClose, 'button, [href], input, select, textarea');
+  React.Children.forEach(children, (child) => {
+    if (React.isValidElement(child)) {
+      console.log(child.type); // This will log the type of element
+    }
+  });
+
+  useFocusTrap(isOpen, sideDrawerRef, handleClose, elementsToFocus);
 
   useEffect(() => {
     console.log(childRef.current);
