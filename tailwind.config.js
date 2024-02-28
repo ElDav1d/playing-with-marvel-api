@@ -23,6 +23,7 @@ module.exports = {
         gridItem: '50ms',
       },
       transitionDuration: {
+        header: '250ms',
         gridItem: '750ms',
       },
       zIndex: {
