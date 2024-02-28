@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import { useOutsideClick } from '@/hooks';
 import { useEffect, useRef, useState } from 'react';
 
@@ -16,14 +17,6 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
   const openButtonRef = useRef<HTMLButtonElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
 
-  useEffect(() => {
-    if (isOpen) {
-      closeButtonRef?.current?.focus();
-    } else {
-      openButtonRef?.current?.focus();
-    }
-  }, [isOpen]);
-
   const handleOpen = () => {
     setIsOpen(true);
   };
@@ -32,10 +25,55 @@ const SideDrawer = ({ classNameContainer, children }: ISideDrawerProps) => {
     setIsOpen(false);
   };
 
-  const containerRef = useOutsideClick(handleClose);
+  const sideDrawerRef = useOutsideClick(handleClose);
+
+  useEffect(() => {
+    if (isOpen) {
+      closeButtonRef?.current?.focus();
+
+      const sideDraweElement = sideDrawerRef.current;
+
+      const focusableElements = sideDraweElement?.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      );
+
+      if (focusableElements) {
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+        const handleTabKeyPress = (event: KeyboardEvent) => {
+          if (event.key === 'Tab') {
+            if (event.shiftKey && document.activeElement === firstElement) {
+              event.preventDefault();
+              lastElement.focus();
+            } else if (!event.shiftKey && document.activeElement === lastElement) {
+              event.preventDefault();
+              firstElement.focus();
+            }
+          }
+        };
+
+        const handleEscapeKeyPress = (event: KeyboardEvent) => {
+          if (event.key === 'Escape') {
+            setIsOpen(false);
+          }
+        };
+
+        sideDraweElement?.addEventListener('keydown', handleTabKeyPress);
+        sideDraweElement?.addEventListener('keydown', handleEscapeKeyPress);
+
+        return () => {
+          sideDraweElement?.removeEventListener('keydown', handleTabKeyPress);
+          sideDraweElement?.removeEventListener('keydown', handleEscapeKeyPress);
+        };
+      }
+    } else {
+      openButtonRef?.current?.focus();
+    }
+  }, [isOpen, setIsOpen]);
 
   return (
-    <aside ref={containerRef} className='md:hidden'>
+    <aside ref={sideDrawerRef} className='md:hidden'>
       {!isOpen && (
         <button
           aria-label='Open Characters List Control Panel'

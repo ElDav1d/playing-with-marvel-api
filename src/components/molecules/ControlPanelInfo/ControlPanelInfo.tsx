@@ -26,10 +26,7 @@ const ControlPanelInfo = ({ infoItems, onClear }: IControlPanelInfoProps) => {
   const hasInfo = infoItems && infoItems?.length > 1;
   return (
     <div className='flex flex-col items-center justify-around gap-2 text-sm text-center text-white'>
-      {hasInfo && (
-        // <p className='md:hidden'>{infoItems.map((item) => getElement(item))}</p>
-        <p>{infoItems.map((item) => getElement(item))}</p>
-      )}
+      {hasInfo && <p className='md:hidden'>{infoItems.map((item) => getElement(item))}</p>}
       {hasInfo && onClear && (
         <button
           className='border border-white p-1 active-border focus-visible-border'
