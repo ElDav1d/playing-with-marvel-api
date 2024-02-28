@@ -1,5 +1,5 @@
 import Navigation from '@/components/molecules/NavigationMain';
-import { useEffect, useRef, useState } from 'react';
+import { useScrollY } from '@/hooks';
 
 export interface IHeaderProps {
   /**
@@ -12,29 +12,7 @@ export interface IHeaderProps {
 }
 
 const Header = ({ classNameHeader, children }: IHeaderProps) => {
-  const [onScrollDown, setOnScrollDown] = useState(false);
-
-  const prevScrollY = useRef(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > prevScrollY.current) {
-        setOnScrollDown(true);
-      } else if (currentScrollY < prevScrollY.current) {
-        setOnScrollDown(false);
-      }
-
-      prevScrollY.current = currentScrollY;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const onScrollDown = useScrollY();
 
   const hideHeader = () => (onScrollDown ? '-translate-y-full' : '');
 
