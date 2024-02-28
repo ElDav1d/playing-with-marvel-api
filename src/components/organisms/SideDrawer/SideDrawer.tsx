@@ -10,7 +10,7 @@ export interface ISideDrawerProps {
   classNameContainer?: string;
   /**
    * @property {string}
-   * List of HTML elements on focus trap
+   * CSS Selector for HTML elements on focus trap
    */
   elementsToFocus: string;
 
@@ -21,7 +21,6 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
   const [isOpen, setIsOpen] = useState(false);
   const openButtonRef = useRef<HTMLButtonElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
-  const childRef = useRef(null);
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -39,11 +38,9 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
     }
   });
 
-  useFocusTrap(isOpen, sideDrawerRef, handleClose, elementsToFocus);
+  useFocusTrap({ isOpen, ref: sideDrawerRef, onClose: handleClose, elementsToFocus });
 
   useEffect(() => {
-    console.log(childRef.current);
-
     if (isOpen) {
       closeButtonRef?.current?.focus();
     } else {

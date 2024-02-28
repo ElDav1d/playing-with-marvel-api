@@ -1,11 +1,33 @@
 import { useEffect, RefObject } from 'react';
 
-const useFocusTrap = (
-  isOpen: boolean,
-  ref: RefObject<HTMLElement> | null,
-  onClose: () => void,
-  elementsToFocus: string,
-) => {
+/**
+ * Props for the useFocusTrap custom hook.
+ * @interface
+ */
+export interface IUseFocusTrapProps {
+  /**
+   * Indicates whether the element to trap is open.
+   * @property {boolean}
+   */
+  isOpen: boolean;
+  /**
+   * Ref to the element to trap focus within.
+   * @property {RefObject<HTMLElement> | null}
+   */
+  ref: RefObject<HTMLElement> | null;
+  /**
+   * Callback for closing the trapped element .
+   * @property {() => void}
+   */
+  onClose: () => void;
+  /**
+   * CSS Selector for elements to focus within the trapped area.
+   * @property {string}
+   */
+  elementsToFocus: string;
+}
+
+const useFocusTrap = ({ isOpen, ref, onClose, elementsToFocus }: IUseFocusTrapProps) => {
   useEffect(() => {
     const trapFocus = (event: KeyboardEvent) => {
       if (!isOpen || !ref?.current) return;
