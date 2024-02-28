@@ -1,6 +1,6 @@
 /* eslint-disable quotes */
 import { useFocusTrap, useOutsideClick } from '@/hooks';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export interface ISideDrawerProps {
   /**
@@ -31,12 +31,6 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
   };
 
   const sideDrawerRef = useOutsideClick(handleClose);
-
-  React.Children.forEach(children, (child) => {
-    if (React.isValidElement(child)) {
-      console.log(child.type); // This will log the type of element
-    }
-  });
 
   useFocusTrap({ isOpen, ref: sideDrawerRef, onClose: handleClose, elementsToFocus });
 
