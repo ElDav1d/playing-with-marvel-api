@@ -1,4 +1,4 @@
-/* eslint-disable quotes */
+import { DialogOverlay } from '@/components/atoms/DialogOverlay';
 import { useFocusTrap, useOutsideClick } from '@/hooks';
 import { useEffect, useRef, useState } from 'react';
 
@@ -21,18 +21,21 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
   const [isOpen, setIsOpen] = useState(false);
   const openButtonRef = useRef<HTMLButtonElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
 
   const handleOpen = () => {
     setIsOpen(true);
+    document.body.classList.add('overflow-hidden');
   };
 
   const handleClose = () => {
     setIsOpen(false);
+    document.body.classList.remove('overflow-hidden');
   };
 
-  const sideDrawerRef = useOutsideClick(handleClose);
+  useOutsideClick(dialogRef, handleClose);
 
-  useFocusTrap({ isOpen, ref: sideDrawerRef, onClose: handleClose, elementsToFocus });
+  useFocusTrap({ isOpen, ref: dialogRef, onClose: handleClose, elementsToFocus });
 
   useEffect(() => {
     if (isOpen) {
@@ -43,7 +46,7 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
   }, [isOpen]);
 
   return (
-    <aside ref={sideDrawerRef} className='md:hidden'>
+    <aside className='md:hidden'>
       {!isOpen && (
         <button
           aria-label='Open Characters List Control Panel'
@@ -68,9 +71,12 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
           </svg>
         </button>
       )}
-      <dialog
-        open={isOpen}
-        className={`absolute block top-0 m-0 h-full w-[80vw] z-1 px-8 py-11 transition-[left] delay-gridItem duration-gridItem ${
+
+      {isOpen && <DialogOverlay />}
+
+      <div
+        ref={dialogRef}
+        className={`absolute top-0 m-0 h-screen w-[80vw] z-1 px-8 py-11 transition-[left] delay-gridItem duration-gridItem ${
           isOpen ? 'left-0' : 'left-[-100%]'
         } ${classNameContainer}`}
       >
@@ -101,7 +107,7 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
             </button>
           </>
         )}
-      </dialog>
+      </div>
     </aside>
   );
 };
