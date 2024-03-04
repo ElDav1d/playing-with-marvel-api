@@ -1,34 +1,45 @@
-import { ChangeEvent, useEffect, useRef, useState, useMemo } from 'react';
+import { ChangeEvent, useEffect, useState, useMemo } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { useCharacters, useDebounce } from './hooks';
-import { CharacterItem, FetchingOrder, FilterCriteria } from './interfaces/characters';
-import CharactersList from '@/components/organisms/CharactersList/CharactersList';
-import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
-import CheckboxesList from '@/components/molecules/CheckboxesList/CheckboxesList';
+import { useCharacters, useDebounce, useListControlInfo } from './hooks';
 import {
+  CharacterItem,
+  FetchingOrder,
+  FilterCriteria,
+  HumanizedOrder,
+} from './interfaces/characters';
+import CharactersList from '@/components/organisms/CharactersList/CharactersList';
+import {
+  EMPTY_DATA_LITERAL_LIST,
   LOADER_SIZE,
   MARVEL_RED,
-  MAX_FETCH_CHARACTERS_DEFAULT,
-  MAX_FETCH_CHARACTERS_OPTIM,
-  MAX_FETCH_CHARACTERS_TOP,
+  MAX_FETCH_CHARACTERS,
   REGEX_IMAGE_PATH,
 } from '@/utils/constants';
 import Header from '@/components/organisms/Header';
-import SearchGroup from '@/components/molecules/SearchGroup/SearchGroup';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
+import SideDrawer from '@/components/organisms/SideDrawer';
+import CharactersControlPanel from '@/components/organisms/CharactersControlPanel';
+import { ControlPanelInfo } from '@/components/molecules/ControlPanelInfo';
 
 const Characters = () => {
   const [searchInput, setSearchInput] = useState<string>('');
   const [searchString, setSearchString] = useState<string>('');
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
-  const [onClearData, setOnClearData] = useState<boolean>(false);
+  const [onClearData, setOnClearData] = useState(false);
   const [filters, setFilters] = useState<FilterCriteria[]>([]);
-  const maxCharactersRef = useRef(MAX_FETCH_CHARACTERS_DEFAULT);
+  const [onClearFilters, setOnClearFilters] = useState(false);
 
   const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
-    useCharacters({ maxCharacters: maxCharactersRef.current, searchString, order, onClearData });
+    useCharacters({ maxCharacters: MAX_FETCH_CHARACTERS, searchString, order, onClearData });
+
+  const listControlInfoItems = useListControlInfo({
+    describer: 'Results',
+    searchInput,
+    order: HumanizedOrder[order],
+    filters,
+  });
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -48,38 +59,30 @@ const Characters = () => {
 
   useDebounce(searchInput, 500, () => setSearchString(searchInput));
 
-  const filterLiterals = ['With Image', 'With Description'];
-
   const filteredCharacters = useMemo(() => {
     const hasImage = (path: string) => !REGEX_IMAGE_PATH.test(path);
     const hasDescription = (description: string) => description && description !== ' ';
 
-    let maxCharacters;
     let filterCallback;
 
     switch (true) {
       case filters.includes(FilterCriteria.IMAGE) && filters.includes(FilterCriteria.DESCRIPTION):
-        maxCharacters = MAX_FETCH_CHARACTERS_TOP;
         filterCallback = (character: CharacterItem) =>
           hasImage(character.thumbnail.path) && hasDescription(character.description);
         break;
 
       case filters.includes(FilterCriteria.IMAGE):
-        maxCharacters = MAX_FETCH_CHARACTERS_OPTIM;
         filterCallback = (character: CharacterItem) => hasImage(character.thumbnail.path);
         break;
 
       case filters.includes(FilterCriteria.DESCRIPTION):
-        maxCharacters = MAX_FETCH_CHARACTERS_OPTIM;
         filterCallback = (character: CharacterItem) => hasDescription(character.description);
         break;
 
       default:
-        maxCharactersRef.current = MAX_FETCH_CHARACTERS_DEFAULT;
         return characters;
     }
 
-    maxCharactersRef.current = maxCharacters;
     return characters.filter(filterCallback);
   }, [characters, filters]);
 
@@ -90,59 +93,130 @@ const Characters = () => {
     setOrder(value);
   };
 
-  const orderLiterals = [
-    'By name A/Z',
-    'By name Z/A',
-    'By modification First/Last',
-    'By modification Last/First',
-  ];
+  const handleClear = () => {
+    if (searchInput !== '' || order !== FetchingOrder.NAME_AZ) {
+      setOnClearData(true);
+
+      if (searchInput !== '') {
+        setSearchInput('');
+        setSearchString('');
+      }
+
+      if (order !== FetchingOrder.NAME_AZ) {
+        setOrder(FetchingOrder.NAME_AZ);
+      }
+    }
+
+    if (filters.length > 0) {
+      setFilters([]);
+      setOnClearFilters(true);
+    }
+  };
+
+  const handleClearChecks = () => {
+    setOnClearFilters(false);
+  };
 
   return (
     <>
-      <Header>
-        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]'>
-          <h2 className='text-3xl font-bold underline text-white'>This is the Characters Page</h2>
-          <SearchGroup
-            title={'Search by name'}
-            placeholderLiteral={'Type a character name'}
+      <Header classNameHeader='flex justify-center'>
+        <SideDrawer elementsToFocus='input, button' classNameContainer='bg-black'>
+          <CharactersControlPanel
+            searchInput={searchInput}
             setSearchInput={setSearchInput}
+            searchTitle={'Search by name'}
+            searchPlaceholder={'type a character name'}
             setOnClearData={setOnClearData}
             isEmptyData={!isFetching && filteredCharacters?.length === 0}
-            emptyDataLiteral={
-              // eslint-disable-next-line quotes
-              "Sorry, none of our characters' name matches your search! Try typing again"
-            }
+            emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
+            orderTitle='Order results'
+            onOrderChange={(event) => orderHandler(event)}
+            orderOptions={Object.values(FetchingOrder)}
+            orderLiterals={Object.values(HumanizedOrder)}
+            filtersTitle='Filter results:'
+            filtersOptions={Object.values(FilterCriteria)}
+            filtersLiterals={Object.values(FilterCriteria)}
+            setFilters={setFilters}
+            setOnClearChecks={handleClearChecks}
+            onClearChecks={onClearFilters}
           />
-
-          <SelectorGroup
-            title='Order results:'
-            onChange={(event) => orderHandler(event)}
-            options={Object.values(FetchingOrder)}
-            optionLiterals={orderLiterals}
-          />
-        </section>
-        <section className='mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px] text-white'>
-          <CheckboxesList
-            title='Filter results:'
-            options={Object.values(FilterCriteria)}
-            optionLiterals={filterLiterals}
-            setOptions={setFilters}
-          />
-        </section>
+        </SideDrawer>
       </Header>
+      <Container element={'main'}>
+        <section
+          className='relative z-0 flex flex-col items-center justify-around gap-2 min-h-52 md:min-h-72 mb-4 bg-black bg-hero-image bg-center bg-cover
+        before:absolute before:content[""] before:h-full before:w-full  before:bg-gradient-to-b before:from-trans-0.75-black before:from-50% before:left-0 before:top-0 before:z-[-1]'
+        >
+          <Container element={'div'} className='flex flex-col gap-4'>
+            <div className='w-full text-white text-center'>
+              <h2 className='text-2xl md:text-3xl font-semibold text-white text-center uppercase mb-1'>
+                Marvel Characters
+              </h2>
+              <p className='text-sm md:text-base text-center'>
+                Get hooked on a hearty helping of heroes and villains from the humble House of
+                Ideas!
+              </p>
+            </div>
 
-      <Container tag={'main'}>
-        {isError && <h2>Oooops...try reloading again!</h2>}
+            <CharactersControlPanel
+              isDesktop
+              searchInput={searchInput}
+              setSearchInput={setSearchInput}
+              searchTitle={'Search by name'}
+              searchPlaceholder={'type a character name'}
+              setOnClearData={setOnClearData}
+              isEmptyData={!isFetching && filteredCharacters?.length === 0}
+              emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
+              orderTitle='Order results'
+              onOrderChange={(event) => orderHandler(event)}
+              orderOptions={Object.values(FetchingOrder)}
+              orderLiterals={Object.values(HumanizedOrder)}
+              filtersTitle='Filter results:'
+              filtersOptions={Object.values(FilterCriteria)}
+              filtersLiterals={Object.values(FilterCriteria)}
+              setFilters={setFilters}
+              setOnClearChecks={handleClearChecks}
+              onClearChecks={onClearFilters}
+            />
+
+            {listControlInfoItems && listControlInfoItems.length > 0 && (
+              <ControlPanelInfo infoItems={listControlInfoItems} onClear={handleClear} />
+            )}
+          </Container>
+        </section>
+        {isError && <h2>Oooops, there&apos;s an unexpected error...try reloading again!</h2>}
 
         {isFetching && !isFetchingNextPage && (
-          <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
+          <RingLoader
+            color={MARVEL_RED}
+            size={LOADER_SIZE}
+            className='mx-auto my-6'
+            role='alert'
+            aria-label='Characters List is loading'
+            aria-busy='true'
+            aria-live='polite'
+          />
         )}
 
-        {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
+        <Container>
+          {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
+
+          {!isFetching && filteredCharacters?.length === 0 && (
+            <h3 className='text-center'>{EMPTY_DATA_LITERAL_LIST}</h3>
+          )}
+        </Container>
 
         {hasNextPage && (
           <div ref={ref}>
-            <RingLoader color={MARVEL_RED} size={LOADER_SIZE} className='mx-auto my-6' />
+            <RingLoader
+              color={MARVEL_RED}
+              size={LOADER_SIZE}
+              className='mx-auto my-6'
+              role='alert'
+              aria-label='Characters List is loading'
+              aria-busy='true'
+              aria-live='polite'
+            />
           </div>
         )}
       </Container>

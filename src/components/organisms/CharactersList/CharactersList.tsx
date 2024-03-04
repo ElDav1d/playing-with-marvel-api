@@ -6,7 +6,10 @@ export interface CharactersListProps {
 
 const CharactersList = ({ characters }: CharactersListProps) => {
   return (
-    <ul className='grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-190-auto'>
+    <ul
+      aria-live='polite'
+      className='grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto'
+    >
       {characters.map(({ id, name, thumbnail, description }) => (
         <CharacterListItem
           key={id}

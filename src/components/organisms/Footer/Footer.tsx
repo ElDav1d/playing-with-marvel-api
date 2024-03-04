@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className='absolute bottom-0 w-full p-6 bg-stone-900'>
       <Container>
-        <Link to='/'>
+        <Link to='/' className='block active focus-visible'>
           <Logo version={'condensed'} />
         </Link>
       </Container>

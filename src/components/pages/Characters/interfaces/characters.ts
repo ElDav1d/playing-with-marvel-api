@@ -77,7 +77,14 @@ export enum FetchingOrder {
   MODIFIED_LAST = '-modified',
 }
 
+export enum HumanizedOrder {
+  'name' = 'by name (A/Z)',
+  '-name' = 'by name (Z/A)',
+  'modified' = 'by modification (First/Last)',
+  '-modified' = 'by modification (Last/First)',
+}
+
 export enum FilterCriteria {
-  IMAGE = 'hasImage',
-  DESCRIPTION = 'hasDescription',
+  IMAGE = 'with image',
+  DESCRIPTION = 'with description',
 }

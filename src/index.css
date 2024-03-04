@@ -18,3 +18,35 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+@layer components {
+  .accesible-outline {
+    @apply outline-2 outline-offset-2 outline-double outline-red
+  }
+
+  .focus-visible {
+    @apply focus-visible:accesible-outline focus-visible:outline-offset-2 
+  }
+
+  .focus-within {
+    @apply focus-within:accesible-outline focus-within:outline-offset-8
+  }
+
+  .active {
+    @apply active:accesible-outline active:outline-offset-2 
+  }
+
+  .focus-visible-border {
+    @apply focus-visible focus-visible:border-red
+  }
+
+  .active-border {
+    @apply active active:border-red
+  }
+}

@@ -1,11 +1,47 @@
+import Input from '@/components/atoms/Input';
 import { ChangeEvent } from 'react';
+import FormGroupContainer from '../FormGroupContainer';
+
+/**
+ * UI group for search input .
+ */
 export interface SearchGroupProps {
+  /**
+   * The title of the search group.
+   */
   title: string;
+  /**
+   * The placeholder text for the search input.
+   */
   placeholderLiteral: string;
-  emptyDataLiteral: string;
+  /**
+   * The text to display when there is no data and `isEmptyData` is `true`.
+   */
+  emptyDataLiteral?: string;
+  /**
+   * Determines whether the data is empty or not.
+   */
   isEmptyData: boolean;
+  /**
+   * The current value of the search input.
+   */
+  searchInput: string;
+  /**
+   * Callback function to set the value of `isEmptyData` to `true` or `false`.
+   */
   setOnClearData?: (arg: boolean) => void;
+  /**
+   * Callback function to set the value of `searchInput`.
+   */
   setSearchInput: (arg: string) => void;
+  /**
+   * The class name for the search input.
+   */
+  classNameInput?: string;
+  /**
+   * The class name for the fieldset container.
+   */
+  classNameFieldset?: string;
 }
 
 const SearchGroup = ({
@@ -15,6 +51,9 @@ const SearchGroup = ({
   setSearchInput,
   emptyDataLiteral,
   isEmptyData,
+  searchInput,
+  classNameInput,
+  classNameFieldset,
 }: SearchGroupProps) => {
   const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
     if (setOnClearData) setOnClearData(true);
@@ -22,13 +61,20 @@ const SearchGroup = ({
   };
 
   return (
-    <fieldset>
-      <legend>{title}</legend>
-      <div>
-        <input type='text' onChange={handleSearch} placeholder={placeholderLiteral} />
-      </div>
-      {isEmptyData && <h3>{emptyDataLiteral}</h3>}
-    </fieldset>
+    <FormGroupContainer title={title} classNameFieldset={classNameFieldset}>
+      <Input
+        className={classNameInput}
+        type='text'
+        onChange={handleSearch}
+        placeholder={placeholderLiteral}
+        value={searchInput}
+      />
+      {emptyDataLiteral && isEmptyData && (
+        <h3 aria-live='assertive' className='md:sr-only'>
+          {emptyDataLiteral}
+        </h3>
+      )}
+    </FormGroupContainer>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useCharacterDetails, useCharacterComics } from './hooks';
-import SelectorGroup from '@/components/molecules/SelectorGroup/SelectorGroup';
+import SelectGroup from '@/components/molecules/SelectGroup';
 import Character from '@/components/organisms/Character/Character';
 import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
 import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
@@ -64,7 +64,7 @@ const CharacterDetail = () => {
   return (
     <>
       <Header />
-      <Container tag={'main'}>
+      <Container element={'main'}>
         {isError && <h2>Ooops, try refreshing your browser</h2>}
 
         {isLoadingCharacter && <h2>Loading Character Details...</h2>}
@@ -81,7 +81,7 @@ const CharacterDetail = () => {
             </section>
 
             <section>
-              <SelectorGroup
+              <SelectGroup
                 title='Order results:'
                 onChange={(event) => orderHandler(event)}
                 options={Object.values(FetchingOrder)}

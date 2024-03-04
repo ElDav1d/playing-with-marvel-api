@@ -1,5 +1,5 @@
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
-import { BreakpointStepName } from '@/interfaces/globals';
+import { BreakpointStepName } from '@/types/globals';
 import { MEDIA_BREAKPOINTS, REGEX_IMAGE_PATH } from '@/utils/constants';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -22,39 +22,38 @@ export type PicVariant =
  */
 export interface ImageProps extends Thumbnail {
   /**
-   * @property
+   * @property {PicVariant | PicVariant[]}
    * Size variant(s) of the picture
-   * A single image URL
+   * Single image URL
    * for single image approach
-   * or an array of image URL
+   * Array of image URL
    * for art direction
    */
   sizing: PicVariant | PicVariant[];
   /**
-   * @property
-   * CSS class name for <picture>.
+   * @property {string}
+   * Additional class name for <picture>.
    */
   classNameContainer?: string;
   /**
-   * @property
-   * CSS class name for <img>
-   * wrapped with <LazyLoadImage>
+   * @property {string}
+   * Additional class name for <img>
    */
   classNameContent?: string;
   /**
-   * @property
+   * @property {string}
    * Image title
    * appears on tooltip
    */
   title: string;
   /**
-   * @property
+   * @property {string}
    * Image alt text
    * applies on screenreaders
    */
   alt: string;
   /**
-   * @property
+   * @property {string}
    * ID for accesibility purposes
    * applied on external tag
    * aria-labelledby attribute
@@ -84,7 +83,7 @@ const Image = ({
 
   const getSrcSet = () => {
     if (Array.isArray(sizing) && sizing.length > 1) {
-      const uniqueValues = [new Set(sizing)];
+      const uniqueValues = Array.from(new Set(sizing));
 
       if (uniqueValues.length > 1) {
         return `${path}/${uniqueValues[1]}.${extension}`;
