@@ -1,15 +1,46 @@
 import Input from '@/components/atoms/Input';
 import { ChangeEvent } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
+
+/**
+ * UI group for search input .
+ */
 export interface SearchGroupProps {
+  /**
+   * The title of the search group.
+   */
   title: string;
+  /**
+   * The placeholder text for the search input.
+   */
   placeholderLiteral: string;
+  /**
+   * The text to display when there is no data and `isEmptyData` is `true`.
+   */
   emptyDataLiteral?: string;
+  /**
+   * Determines whether the data is empty or not.
+   */
   isEmptyData: boolean;
+  /**
+   * The current value of the search input.
+   */
   searchInput: string;
+  /**
+   * Callback function to set the value of `isEmptyData` to `true` or `false`.
+   */
   setOnClearData?: (arg: boolean) => void;
+  /**
+   * Callback function to set the value of `searchInput`.
+   */
   setSearchInput: (arg: string) => void;
+  /**
+   * The class name for the search input.
+   */
   classNameInput?: string;
+  /**
+   * The class name for the fieldset container.
+   */
   classNameFieldset?: string;
 }
 

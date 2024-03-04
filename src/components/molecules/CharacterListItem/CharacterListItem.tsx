@@ -1,11 +1,31 @@
+/**
+ * Represents a character item in the list.
+ */
 import { Link } from 'react-router-dom';
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import Image from '@/components/atoms/Image';
 import { useState } from 'react';
+
+/**
+ * Single character item in the list.
+ * @interface
+ */
 export interface CharacterItemProps {
+  /**
+   * The ID of the character.
+   */
   id: number;
+  /**
+   * The name of the character.
+   */
   name: string;
+  /**
+   * The description of the character.
+   */
   description: string;
+  /**
+   * The thumbnail of the character.
+   */
   thumbnail: Thumbnail;
 }
 

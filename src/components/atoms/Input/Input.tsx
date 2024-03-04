@@ -1,13 +1,34 @@
 import React from 'react';
 
+/**
+ * Props for text or checkbox input elements
+ */
 export interface IInputProps extends React.ComponentPropsWithoutRef<'input'> {
+  /**
+   * The type of the input.
+   */
   type?: 'text' | 'checkbox';
+  /**
+   * The class name for the input.
+   */
   className?: string;
 }
 
+/**
+ * Props for select input elements
+ */
 export interface ISelectProps extends React.ComponentPropsWithoutRef<'select'> {
+  /**
+   * The type of the select.
+   */
   type?: 'select';
+  /**
+   * The children of the select.
+   */
   children: React.ReactNode;
+  /**
+   * The class name for the select.
+   */
   className?: string;
 }
 
