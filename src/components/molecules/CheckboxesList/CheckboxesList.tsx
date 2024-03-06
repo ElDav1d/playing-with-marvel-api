@@ -3,10 +3,10 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
 
 /**
- * Interface for CheckboxesList component props
- * @template T - Type parameter for the setOptions function
+ * Interface for NewCheckboxesList component props
  */
-export interface ICheckboxesListProps<T> {
+
+export interface INewCheckboxesListProps<T> {
   /**
    * @property {string}
    * Title of the options list.
@@ -47,8 +47,7 @@ export interface ICheckboxesListProps<T> {
   classNameUL?: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-constraint
-const CheckboxesList = <T extends unknown>({
+const NewCheckboxesList = <T extends string>({
   title,
   options,
   optionLiterals,
@@ -57,26 +56,34 @@ const CheckboxesList = <T extends unknown>({
   onClearChecks,
   classNameFieldset,
   classNameUL,
-}: ICheckboxesListProps<T>) => {
-  const [checkedOptions, setCheckedOptions] = useState<string[]>([]);
+}: INewCheckboxesListProps<T>) => {
+  const [checkedOptions, setCheckedOptions] = useState<T[]>([]);
+
+  useEffect(() => {
+    setOptions(checkedOptions);
+  }, [checkedOptions]);
 
   useEffect(() => {
     if (onClearChecks) {
       setCheckedOptions([]);
-      if (setOnClear) setOnClear();
-    }
 
-    setOptions(checkedOptions as T[]);
-  }, [checkedOptions, onClearChecks]);
+      if (setOnClear) {
+        setOnClear();
+      }
+    }
+  }, [onClearChecks]);
 
   const toggleOption = (event: ChangeEvent<HTMLInputElement>): void => {
-    const value = event.target.value as T;
+    const { value } = event.target;
 
-    if (checkedOptions.includes(value as string)) {
+    if (checkedOptions.includes(value as T)) {
       const newOptions = checkedOptions.filter((option) => option !== value);
+
       setCheckedOptions(newOptions);
     } else {
-      setCheckedOptions([value as string, ...checkedOptions]);
+      const newOptions = [value, ...checkedOptions];
+
+      setCheckedOptions(newOptions as T[]);
     }
   };
 
@@ -98,4 +105,4 @@ const CheckboxesList = <T extends unknown>({
   );
 };
 
-export default CheckboxesList;
+export default NewCheckboxesList;

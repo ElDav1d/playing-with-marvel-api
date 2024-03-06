@@ -1,4 +1,4 @@
-import { NewCheckboxesList } from '@/components/molecules/NewCheckboxesList';
+import { CheckboxesList } from '@/components/molecules/CheckboxesList';
 import SearchGroup from '@/components/molecules/SearchGroup';
 import SelectGroup from '@/components/molecules/SelectGroup';
 import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
@@ -148,7 +148,7 @@ const CharactersControlPanel = ({
         options={selectOptions}
         optionLiterals={selectLiterals}
       />
-      <NewCheckboxesList
+      <CheckboxesList
         classNameFieldset='text-white'
         title={filtersTitle}
         options={filtersOptions}
