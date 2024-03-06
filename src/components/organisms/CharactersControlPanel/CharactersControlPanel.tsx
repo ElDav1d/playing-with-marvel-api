@@ -1,7 +1,7 @@
-import CheckboxesList from '@/components/molecules/CheckboxesList/CheckboxesList';
+import { NewCheckboxesList } from '@/components/molecules/NewCheckboxesList';
 import SearchGroup from '@/components/molecules/SearchGroup';
 import SelectGroup from '@/components/molecules/SelectGroup';
-import { FilterCriteria } from '@/components/pages/Characters/interfaces/characters';
+import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
 /**
@@ -88,7 +88,7 @@ export interface ICharactersControlPanel {
    * Sets the filter criteria state.
    * @param arg - Function to set the filter criteria state.
    */
-  setFilters: Dispatch<SetStateAction<FilterCriteria[]>>;
+  setFilters: Dispatch<SetStateAction<FilterCriteriaType[]>>;
 
   /**
    * Sets the state to clear selected checkboxes.
@@ -148,7 +148,7 @@ const CharactersControlPanel = ({
         options={selectOptions}
         optionLiterals={selectLiterals}
       />
-      <CheckboxesList
+      <NewCheckboxesList
         classNameFieldset='text-white'
         title={filtersTitle}
         options={filtersOptions}
