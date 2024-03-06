@@ -8,15 +8,12 @@ const useCharacterComics = (
   page: number,
   onClearData: boolean,
 ) => {
-  const { isError, data, isFetching, isPreviousData, refetch } = useQuery(
-    ['characterComics', characterId],
-    () => getCharacterComicsService({ characterId, maxComics, page }),
-    {
-      refetchOnWindowFocus: false,
-      keepPreviousData: true,
-      staleTime: 5000,
-    },
-  );
+  const { isError, data, isFetching, refetch } = useQuery({
+    queryKey: ['characterComics', characterId],
+    queryFn: () => getCharacterComicsService({ characterId, maxComics, page }),
+    refetchOnWindowFocus: false,
+    staleTime: 5000,
+  });
 
   const safeOffset = data ? data.offset : 0;
   const comics = data?.apiData.results;
@@ -37,7 +34,6 @@ const useCharacterComics = (
     isFetchingComics: isFetching,
     isLastPage: safeOffset + MAX_FETCH_CHARACTER_COMICS >= totalComics,
     isFirstPage: safeOffset === 0,
-    isPreviousData,
     refetch,
   };
 };
