@@ -44,6 +44,7 @@ const CheckboxGroup = ({ option, literal, toggleOption, onClear }: ICheckboxGrou
   return (
     <>
       <Input
+        aria-label={option}
         type='checkbox'
         id={option}
         name={option}

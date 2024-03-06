@@ -5,6 +5,7 @@ import {
   CharacterItem,
   FetchingOrder,
   FilterCriteria,
+  FilterCriteriaType,
   HumanizedOrder,
 } from './interfaces/characters';
 import CharactersList from '@/components/organisms/CharactersList/CharactersList';
@@ -28,7 +29,7 @@ const Characters = () => {
   const [searchString, setSearchString] = useState<string>('');
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
   const [onClearData, setOnClearData] = useState(false);
-  const [filters, setFilters] = useState<FilterCriteria[]>([]);
+  const [filters, setFilters] = useState<FilterCriteriaType[]>([]);
   const [onClearFilters, setOnClearFilters] = useState(false);
 
   const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =

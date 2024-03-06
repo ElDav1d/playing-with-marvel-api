@@ -88,3 +88,5 @@ export enum FilterCriteria {
   IMAGE = 'with image',
   DESCRIPTION = 'with description',
 }
+
+export type FilterCriteriaType = FilterCriteria.IMAGE | FilterCriteria.DESCRIPTION;
