@@ -1,4 +1,6 @@
+import CloseIcon from '@/components/atoms/CloseIcon/CloseIcon';
 import { DialogOverlay } from '@/components/atoms/DialogOverlay';
+import SearchIcon from '@/components/atoms/SearchIcon/SearchIcon';
 import { useFocusTrap, useOutsideClick } from '@/hooks';
 import { useEffect, useRef, useState } from 'react';
 
@@ -53,24 +55,9 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
           onClick={handleOpen}
           className='absolute top-0 right-0 m-1 p-3 text-white focus-visible'
           ref={openButtonRef}
-        >
-          <svg
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            width='19'
-            height='17'
-            viewBox='0 0 19 17'
-            stroke='white'
-            strokeWidth='2'
-            fillRule='evenodd'
-          >
-            <title>Search icon</title>
-            <desc>Magnifying glass illustration</desc>
-            <circle cx='6.5' cy='6.5' r='5.5'></circle>
-            <path d='M14 14l3.536 3.536'></path>
-          </svg>
-        </button>
+        ></button>
       )}
+      <SearchIcon />
 
       {isOpen && <DialogOverlay />}
 
@@ -89,21 +76,7 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
               className='absolute top-0 right-0 m-1 p-1 focus-visible'
               ref={closeButtonRef}
             >
-              <svg
-                aria-hidden='true'
-                className='h-6 w-6 text-white'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-              >
-                <title>Close icon</title>
-                <desc>Two crossed strokes</desc>
-                <line x1='18' y1='6' x2='6' y2='18' />
-                <line x1='6' y1='6' x2='18' y2='18' />
-              </svg>
+              <CloseIcon />
             </button>
           </>
         )}
