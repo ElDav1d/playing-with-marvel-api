@@ -89,15 +89,15 @@ export const useCharacters = ({
   onClearData,
 }: IUseCharactersProps): UseCharactersReturn => {
   const { isLoading, isError, data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
-    useInfiniteQuery(
-      ['characters'],
-      ({ pageParam }) => getCharactersService({ pageParam, maxCharacters, searchString, order }),
-      {
-        getNextPageParam: (lastPage) => lastPage?.nextCursor,
-        refetchOnWindowFocus: false,
-        staleTime: 1000 * 3,
-      },
-    );
+    useInfiniteQuery({
+      queryKey: ['characters'],
+      queryFn: ({ pageParam }: { pageParam: number | undefined }) =>
+        getCharactersService({ pageParam, maxCharacters, searchString, order }),
+      getNextPageParam: (lastPage) => lastPage?.nextCursor,
+      initialPageParam: undefined,
+      refetchOnWindowFocus: false,
+      staleTime: 1000 * 3,
+    });
 
   const queryClient = useQueryClient();
 
