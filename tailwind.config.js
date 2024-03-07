@@ -1,4 +1,4 @@
-import { MARVEL_RED, HERO_BACKGROUND_URL } from './src/utils/constants';
+import { MARVEL_RED, HERO_BACKGROUND_URL, LOGO_DEFAULT_HEIGHT } from './src/utils/constants';
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -18,6 +18,9 @@ module.exports = {
       gridTemplateColumns: {
         'auto-min-max-120-auto': 'repeat(auto-fill, minmax(120px, auto))',
         'auto-min-max-185-auto': 'repeat(auto-fill, minmax(185px, auto))',
+      },
+      spacing: {
+        logoDefaultHeight: `${LOGO_DEFAULT_HEIGHT}px`,
       },
       transitionDelay: {
         gridItem: '50ms',

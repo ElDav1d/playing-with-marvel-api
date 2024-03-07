@@ -1,3 +1,5 @@
+import { LOGO_DEFAULT_HEIGHT } from '@/utils/constants';
+
 export interface ILogoProps {
   version: 'default' | 'condensed';
 }
@@ -8,7 +10,7 @@ const Logo = ({ version }: ILogoProps) => {
       {version === 'default' && (
         <svg
           width='130'
-          height='52'
+          height={LOGO_DEFAULT_HEIGHT}
           xmlns='http://www.w3.org/2000/svg'
           role='img'
           aria-hidden='true'
