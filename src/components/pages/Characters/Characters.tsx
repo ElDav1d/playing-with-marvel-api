@@ -26,6 +26,13 @@ import { ControlPanelInfo } from '@/components/molecules/ControlPanelInfo';
 import { CharactersHeroSection } from '@/components/organisms/CharactersHeroSection';
 
 const Characters = () => {
+  const SEARCH_TITLE = 'Search by name';
+  const SEARCH_PLACEHOLDER = 'type a character name';
+  const ORDER_TITLE = 'Order results';
+  const FILTERS_TITLE = 'Filter results:';
+  const ERROR_MESSAGE = 'Oooops...unexpected error!! Try reloading again';
+  const LOADING_LABEL = 'Characters List is loading';
+
   const [searchInput, setSearchInput] = useState<string>('');
   const [searchString, setSearchString] = useState<string>('');
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
@@ -126,16 +133,16 @@ const Characters = () => {
           <CharactersControlPanel
             searchInput={searchInput}
             setSearchInput={setSearchInput}
-            searchTitle={'Search by name'}
-            searchPlaceholder={'type a character name'}
+            searchTitle={SEARCH_TITLE}
+            searchPlaceholder={SEARCH_PLACEHOLDER}
             setOnClearData={setOnClearData}
             isEmptyData={!isFetching && filteredCharacters?.length === 0}
             emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
-            orderTitle='Order results'
+            orderTitle={ORDER_TITLE}
             onOrderChange={(event) => orderHandler(event)}
             orderOptions={Object.values(FetchingOrder)}
             orderLiterals={Object.values(HumanizedOrder)}
-            filtersTitle='Filter results:'
+            filtersTitle={FILTERS_TITLE}
             filtersOptions={Object.values(FilterCriteria)}
             filtersLiterals={Object.values(FilterCriteria)}
             setFilters={setFilters}
@@ -150,16 +157,16 @@ const Characters = () => {
             isDesktop
             searchInput={searchInput}
             setSearchInput={setSearchInput}
-            searchTitle={'Search by name'}
-            searchPlaceholder={'type a character name'}
+            searchTitle={SEARCH_TITLE}
+            searchPlaceholder={SEARCH_PLACEHOLDER}
             setOnClearData={setOnClearData}
             isEmptyData={!isFetching && filteredCharacters?.length === 0}
             emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
-            orderTitle='Order results'
+            orderTitle={ORDER_TITLE}
             onOrderChange={(event) => orderHandler(event)}
             orderOptions={Object.values(FetchingOrder)}
             orderLiterals={Object.values(HumanizedOrder)}
-            filtersTitle='Filter results:'
+            filtersTitle={FILTERS_TITLE}
             filtersOptions={Object.values(FilterCriteria)}
             filtersLiterals={Object.values(FilterCriteria)}
             setFilters={setFilters}
@@ -172,7 +179,7 @@ const Characters = () => {
           )}
         </CharactersHeroSection>
 
-        {isError && <h2>Oooops, there&apos;s an unexpected error...try reloading again!</h2>}
+        {isError && <h2>{ERROR_MESSAGE}</h2>}
 
         {isFetching && !isFetchingNextPage && (
           <RingLoader
@@ -180,7 +187,7 @@ const Characters = () => {
             size={LOADER_SIZE}
             className='mx-auto my-6'
             role='alert'
-            aria-label='Characters List is loading'
+            aria-label={LOADING_LABEL}
             aria-busy='true'
             aria-live='polite'
           />
@@ -201,7 +208,7 @@ const Characters = () => {
               size={LOADER_SIZE}
               className='mx-auto my-6'
               role='alert'
-              aria-label='Characters List is loading'
+              aria-label={LOADING_LABEL}
               aria-busy='true'
               aria-live='polite'
             />
