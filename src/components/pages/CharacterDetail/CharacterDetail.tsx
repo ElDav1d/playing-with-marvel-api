@@ -27,7 +27,6 @@ const CharacterDetail = () => {
     isFetchingComics,
     isFirstPage,
     isLastPage,
-    isPreviousData,
     refetch,
   } = useCharacterComics(id, MAX_FETCH_CHARACTER_COMICS, page, onClearData);
 
@@ -101,12 +100,8 @@ const CharacterDetail = () => {
                 <h3>{character.name} has not comics</h3>
               )}
 
-              {!isPreviousData && !isFirstPage && (
-                <button onClick={handlePrevPage}>Previous Comics</button>
-              )}
-              {!isPreviousData && !isLastPage && (
-                <button onClick={handleNextPage}>Next Comics</button>
-              )}
+              {!isFirstPage && <button onClick={handlePrevPage}>Previous Comics</button>}
+              {!isLastPage && <button onClick={handleNextPage}>Next Comics</button>}
             </section>
           </article>
         )}
