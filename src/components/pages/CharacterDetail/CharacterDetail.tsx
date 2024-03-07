@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useCharacterDetails, useCharacterComics } from './hooks';
 import SelectGroup from '@/components/molecules/SelectGroup';
-import Character from '@/components/organisms/Character/Character';
+import CharacterDetailHeroSection from '@/components/organisms/CharacterDetailHeroSection/CharacterDetailHeroSection';
 import { ComicsList } from '@/components/organisms/ComicsList/ComicsList';
 import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
@@ -70,14 +70,12 @@ const CharacterDetail = () => {
 
         {character && (
           <article>
-            <section>
-              <Character
-                name={character.name}
-                description={character.description}
-                thumbnailPath={character.thumbnail.path}
-                thumbnailExtension={character.thumbnail.extension}
-              />
-            </section>
+            <CharacterDetailHeroSection
+              name={character.name}
+              description={character.description}
+              thumbnailPath={character.thumbnail.path}
+              thumbnailExtension={character.thumbnail.extension}
+            />
 
             <section>
               <SelectGroup

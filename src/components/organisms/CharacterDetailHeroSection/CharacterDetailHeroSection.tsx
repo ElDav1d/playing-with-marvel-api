@@ -7,9 +7,14 @@ export interface CharacterProps {
   thumbnailExtension: string;
 }
 
-const Character = ({ name, description, thumbnailPath, thumbnailExtension }: CharacterProps) => {
+const CharacterDetailHeroSection = ({
+  name,
+  description,
+  thumbnailPath,
+  thumbnailExtension,
+}: CharacterProps) => {
   return (
-    <>
+    <section>
       <h1>This is {name}</h1>
       <Image
         title={name}
@@ -24,8 +29,8 @@ const Character = ({ name, description, thumbnailPath, thumbnailExtension }: Cha
           {description}
         </p>
       ) : null}
-    </>
+    </section>
   );
 };
 
-export default Character;
+export default CharacterDetailHeroSection;
