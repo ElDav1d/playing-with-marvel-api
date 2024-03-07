@@ -1,4 +1,2 @@
-import useCharacterComics from './useCharacterComics';
-import useCharacterDetails from './useCharacterDetails';
-
-export { useCharacterDetails, useCharacterComics };
+export { default as useCharacterDetails } from './useCharacterDetails';
+export { default as useCharacterComics } from './useCharacterComics';
