@@ -43,7 +43,7 @@ export interface ICharactersControlPanel {
    * @property {boolean}
    * Indicates whether the data is empty.
    */
-  isEmptyData: boolean;
+  onEmptyData: boolean;
   /**
    * @property {string}
    * Literal for the user message when data is empty.
@@ -110,7 +110,7 @@ const CharactersControlPanel = ({
   searchTitle,
   searchPlaceholder,
   setOnClearData,
-  isEmptyData,
+  onEmptyData,
   emptyDataLiteral,
   orderTitle: selectTitle,
   onOrderChange: onSelectChange,
@@ -137,7 +137,7 @@ const CharactersControlPanel = ({
         searchInput={searchInput}
         setSearchInput={setSearchInput}
         setOnClearData={setOnClearData}
-        isEmptyData={isEmptyData}
+        onEmptyData={onEmptyData}
         emptyDataLiteral={emptyDataLiteral}
       />
       <SelectGroup

@@ -18,7 +18,7 @@ const Header = ({ classNameHeader, children }: IHeaderProps) => {
 
   return (
     <header
-      className={`w-full fixed z-1 top-0 transition-[transform] delay-gridItem duration-header ${hideHeader()} bg-black ${classNameHeader}`}
+      className={`w-full fixed z-1 top-0 flex justify-center transition-[transform] delay-gridItem duration-header ${hideHeader()} bg-black ${classNameHeader}`}
     >
       <Navigation />
       {children}
