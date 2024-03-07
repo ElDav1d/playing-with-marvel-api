@@ -55,9 +55,10 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
           onClick={handleOpen}
           className='absolute top-0 right-0 m-1 p-3 text-white focus-visible'
           ref={openButtonRef}
-        ></button>
+        >
+          <SearchIcon />
+        </button>
       )}
-      <SearchIcon />
 
       {isOpen && <DialogOverlay />}
 
