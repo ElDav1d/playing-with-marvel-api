@@ -13,6 +13,7 @@ export type PicVariant =
   | 'standard_small'
   | 'standard_xlarge'
   | 'standard_fantastic'
+  | 'landscape_amazing'
   | 'landscape_incredible';
 
 /**

@@ -1,4 +1,5 @@
 import Image from '@/components/atoms/Image';
+import Container from '../Container';
 
 export interface CharacterProps {
   name: string;
@@ -14,21 +15,18 @@ const CharacterDetailHeroSection = ({
   thumbnailExtension,
 }: CharacterProps) => {
   return (
-    <section>
-      <h1>This is {name}</h1>
+    <section className='relative mt-logoDefaultHeight bg-stone-900 text-white clip-hero'>
       <Image
         title={name}
         alt={`The big pic of ${name}`}
         path={thumbnailPath}
         extension={thumbnailExtension}
-        sizing='landscape_incredible'
+        sizing={['landscape_amazing', 'landscape_incredible']}
       />
-      {description ? (
-        <p>
-          <strong>DESCRIPTION: </strong>
-          {description}
-        </p>
-      ) : null}
+      <Container element='div' className='py-14'>
+        <h1 className='text-2xl uppercase font-semibold mb-4'>{name}</h1>
+        {description && <p>{description}</p>}
+      </Container>
     </section>
   );
 };
