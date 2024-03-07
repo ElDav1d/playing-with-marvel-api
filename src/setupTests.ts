@@ -3,7 +3,6 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
-import { QueryClient } from '@tanstack/react-query';
 
 const mockIntersectionObserver = jest.fn();
 
@@ -14,5 +13,3 @@ mockIntersectionObserver.mockReturnValue({
 });
 
 window.IntersectionObserver = mockIntersectionObserver;
-
-export const queryClient = new QueryClient();
