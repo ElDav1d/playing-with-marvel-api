@@ -21,13 +21,13 @@ export interface SearchGroupProps {
   /**
    * Determines whether the data is empty or not.
    */
-  isEmptyData: boolean;
+  onEmptyData: boolean;
   /**
    * The current value of the search input.
    */
   searchInput: string;
   /**
-   * Callback function to set the value of `isEmptyData` to `true` or `false`.
+   * Callback function to set the value of `isClearData` to `true` or `false`.
    */
   setOnClearData?: (arg: boolean) => void;
   /**
@@ -50,7 +50,7 @@ const SearchGroup = ({
   setOnClearData,
   setSearchInput,
   emptyDataLiteral,
-  isEmptyData,
+  onEmptyData,
   searchInput,
   classNameInput,
   classNameFieldset,
@@ -69,7 +69,7 @@ const SearchGroup = ({
         placeholder={placeholderLiteral}
         value={searchInput}
       />
-      {emptyDataLiteral && isEmptyData && (
+      {emptyDataLiteral && onEmptyData && (
         <h3 aria-live='assertive' className='md:sr-only'>
           {emptyDataLiteral}
         </h3>

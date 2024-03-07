@@ -126,6 +126,10 @@ const Characters = () => {
     setOnClearFilters(false);
   };
 
+  const hasEmptyData = (): boolean => {
+    return !isFetching && filteredCharacters?.length === 0;
+  };
+
   return (
     <>
       <Header classNameHeader='flex justify-center'>
@@ -136,7 +140,7 @@ const Characters = () => {
             searchTitle={SEARCH_TITLE}
             searchPlaceholder={SEARCH_PLACEHOLDER}
             setOnClearData={setOnClearData}
-            isEmptyData={!isFetching && filteredCharacters?.length === 0}
+            onEmptyData={hasEmptyData()}
             emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
             orderTitle={ORDER_TITLE}
             onOrderChange={(event) => orderHandler(event)}
@@ -160,7 +164,7 @@ const Characters = () => {
             searchTitle={SEARCH_TITLE}
             searchPlaceholder={SEARCH_PLACEHOLDER}
             setOnClearData={setOnClearData}
-            isEmptyData={!isFetching && filteredCharacters?.length === 0}
+            onEmptyData={hasEmptyData()}
             emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
             orderTitle={ORDER_TITLE}
             onOrderChange={(event) => orderHandler(event)}
@@ -196,9 +200,7 @@ const Characters = () => {
         <Container>
           {filteredCharacters?.length > 0 && <CharactersList characters={filteredCharacters} />}
 
-          {!isFetching && filteredCharacters?.length === 0 && (
-            <h3 className='text-center'>{EMPTY_DATA_LITERAL_LIST}</h3>
-          )}
+          {hasEmptyData() && <h3 className='text-center'>{EMPTY_DATA_LITERAL_LIST}</h3>}
         </Container>
 
         {hasNextPage && (
