@@ -9,12 +9,33 @@ import './Image.css';
  * @typedef
  * Type for picture size variants
  */
-export type PicVariant =
+export type PicVariantName =
   | 'standard_small'
   | 'standard_xlarge'
   | 'standard_fantastic'
   | 'landscape_amazing'
   | 'landscape_incredible';
+
+/**
+ * @typedef
+ * Type for picture width size values
+ * in pixels for each variant
+ *  */
+export type PicVariantWidthValue = 65 | 200 | 250 | 464;
+
+export type PicVariantWidths = {
+  [key in PicVariantName]: PicVariantWidthValue;
+};
+
+/* eslint-disable camelcase */
+const PIC_VARIANT_WIDTHS: PicVariantWidths = {
+  standard_small: 65,
+  standard_xlarge: 200,
+  standard_fantastic: 250,
+  landscape_amazing: 250,
+  landscape_incredible: 464,
+};
+/* eslint-enable camelcase */
 
 /**
  * @interface ImageProps
@@ -30,7 +51,7 @@ export interface ImageProps extends Thumbnail {
    * Array of image URL
    * for art direction
    */
-  sizing: PicVariant | PicVariant[];
+  sizing: PicVariantName | PicVariantName[];
   /**
    * @property {string}
    * Additional class name for <picture>.
@@ -75,32 +96,72 @@ const Image = ({
   const LAZYLOAD_SIZING_DEFAULT = 'standard_small';
   const LAZYLOAD_THRESHOLD = 50;
 
-  const getSrc = (sizing: PicVariant | PicVariant[]) => {
+  const orderSizes = (sizes: PicVariantName[]) => {
+    return sizes.sort((a, b) => {
+      return PIC_VARIANT_WIDTHS[a] - PIC_VARIANT_WIDTHS[b];
+    });
+  };
+
+  const getSrc = (sizing: PicVariantName | PicVariantName[]) => {
     if (typeof sizing === 'string') {
       return `${path}/${sizing}.${extension}`;
     }
-    return `${path}/${sizing[0]}.${extension}`;
+
+    if (Array.isArray(sizing) && sizing.length === 1) {
+      return `${path}/${sizing[0]}.${extension}`;
+    }
+
+    const getBiggestPic = (picSizes: PicVariantName[]) => {
+      return `${path}/${orderSizes(picSizes)[picSizes.length - 1]}.${extension}`;
+    };
+
+    return getBiggestPic(sizing);
   };
 
   const getSrcSet = () => {
-    if (Array.isArray(sizing) && sizing.length > 1) {
-      const uniqueValues = Array.from(new Set(sizing));
+    const hasMultipleSizes = Array.isArray(sizing) && sizing.length > 1;
 
-      if (uniqueValues.length > 1) {
-        return `${path}/${uniqueValues[1]}.${extension}`;
+    if (hasMultipleSizes) {
+      const uniquePicSizes = Array.from(new Set(sizing));
+
+      if (uniquePicSizes.length > 1) {
+        const getPathAndSize = (size: PicVariantName) =>
+          `${path}/${size}.${extension} ${PIC_VARIANT_WIDTHS[size]}w`;
+
+        return orderSizes(uniquePicSizes)
+          .map((size) => getPathAndSize(size))
+          .join(', ');
       }
     }
-    return '';
+
+    return undefined;
   };
 
-  const getBreakpointSizes = () => {
-    let sizes = '';
+  const getBreakpointSizes = (sizing: PicVariantName | PicVariantName[]) => {
+    const hasSingleSize =
+      typeof sizing === 'string' ||
+      (Array.isArray(sizing) && (sizing.length <= 1 || new Set(sizing).size === 1));
 
-    for (const step in MEDIA_BREAKPOINTS) {
-      sizes = `${sizes} (min-width: ${MEDIA_BREAKPOINTS[step as BreakpointStepName]}px)`;
+    if (hasSingleSize) {
+      return undefined;
     }
 
-    return sizes;
+    const uniqueSizes = Array.from(new Set(sizing));
+    const breakpointKeys = Object.keys(MEDIA_BREAKPOINTS);
+
+    const sizes = uniqueSizes.map((size, i) => {
+      const width = `${PIC_VARIANT_WIDTHS[size]}px`;
+      const isNotLastSize = i < breakpointKeys.length && i < uniqueSizes.length - 1;
+
+      if (isNotLastSize) {
+        const step = breakpointKeys[i] as BreakpointStepName;
+        return `(max-width: ${MEDIA_BREAKPOINTS[step]}px) ${width}`;
+      } else {
+        return width;
+      }
+    });
+
+    return sizes.join(', ');
   };
 
   const getAltText = () => {
@@ -116,7 +177,7 @@ const Image = ({
         wrapperClassName='w-full'
         className={`w-full ${classNameContent}`}
         srcSet={getSrcSet()}
-        sizes={getBreakpointSizes()}
+        sizes={getBreakpointSizes(sizing)}
         src={getSrc(sizing)}
         title={title}
         alt={getAltText()}
