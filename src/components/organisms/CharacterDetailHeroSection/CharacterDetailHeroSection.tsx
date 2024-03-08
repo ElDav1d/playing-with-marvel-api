@@ -1,10 +1,30 @@
 import Image from '@/components/atoms/Image';
 import Container from '../Container';
 
-export interface CharacterProps {
+/**
+ * @interface ICharacterDetailHeroSection
+ * Interface for the character detail hero section
+ */
+export interface ICharacterDetailHeroSection {
+  /**
+   * @property {string}
+   * The name of the character
+   */
   name: string;
+  /**
+   * @property {string}
+   * The description of the character
+   */
   description: string;
+  /**
+   * @property {string}
+   * The path to the thumbnail image of the character
+   */
   thumbnailPath: string;
+  /**
+   * @property {string}
+   * The file extension of the thumbnail image
+   */
   thumbnailExtension: string;
 }
 
@@ -13,7 +33,7 @@ const CharacterDetailHeroSection = ({
   description,
   thumbnailPath,
   thumbnailExtension,
-}: CharacterProps) => {
+}: ICharacterDetailHeroSection) => {
   return (
     <section className='relative mt-logoDefaultHeight bg-stone-900 text-white clip-hero'>
       <Image
