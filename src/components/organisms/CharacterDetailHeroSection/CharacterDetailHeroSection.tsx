@@ -40,8 +40,8 @@ const CharacterDetailHeroSection = ({
       md:before:absolute md:before:inset-0 md:before:content[""] md:before:bg-gradient-to-r md:before:from-trans-0.75-black md:before:to-transparent md:before:z-1'
     >
       <Image
-        classNameContainer='md:block: md:h-full'
-        classNameContent='h-full object-cover'
+        classNameContainer='md:block: md:h-full flex items-center justify-center'
+        classNameContent='h-full w-full object-cover'
         title={name}
         alt={`The big pic of ${name}`}
         path={thumbnailPath}
