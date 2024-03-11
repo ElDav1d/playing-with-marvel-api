@@ -75,6 +75,10 @@ it('renders a page of characters', () => {
   );
 
   // ASSERT
+  expect(screen.getByRole('banner', { name: /common header/i })).toBeInTheDocument();
+  expect(screen.getByRole('navigation', { name: /main navigation/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /Playing with Marvel API/i })).toBeInTheDocument();
+  expect(screen.getByRole('main', { name: /characters page main content/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /marvel characters/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
