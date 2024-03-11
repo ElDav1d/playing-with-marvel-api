@@ -7,7 +7,7 @@ export interface ComicsListProps {
 
 export const ComicsList = ({ comics }: ComicsListProps) => {
   return (
-    <ul>
+    <ul aria-live='polite'>
       {comics.map((comic) => (
         <ComicsListItem comic={comic} key={comic.id} />
       ))}

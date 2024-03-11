@@ -1,0 +1,1939 @@
+[
+  {
+    "id": 94083,
+    "digitalId": 59614,
+    "title": "Maestro: World War M (2022) #5",
+    "issueNumber": 5,
+    "variantDescription": "",
+    "description": "When you can live forever, what does it mean to live? In this shocking series finale, Maestro finds himself partnered with an old enemy against even older allies to determine once and for all the true ruler of Dystopia. But opportunism depends on knowing how your opponents think, and someone's failed to account for a few tricks…",
+    "modified": "2022-09-09T14:14:36-0400",
+    "isbn": "",
+    "upc": "75960620143300511",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/94083",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/94083/maestro_world_war_m_2022_5?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Maestro-World-War-M-5/digital-comic/59614?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=59614&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/32108",
+      "name": "Maestro: World War M (2022)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/99693",
+        "name": "Maestro: World War M (2022) #5 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2022-07-20T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2022-06-20T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2022-10-24T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2022-04-07T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/90/62d0454381496",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/90/62d0454381496",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 7,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/94083/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11482",
+          "name": "Jesus Aburtov",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13510",
+          "name": "Sebastian Cabrol",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/121",
+          "name": "Peter David",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13247",
+          "name": "Rafael Fonteriz",
+          "role": "inker (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14075",
+          "name": "Vc Ariana Maher",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12376",
+          "name": "Wilson Moss",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/101",
+          "name": "Carlos Pacheco",
+          "role": "penciler (cover)"
+        }
+      ],
+      "returned": 7
+    },
+    "characters": {
+      "available": 4,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/94083/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010932",
+          "name": "Human Torch (Jim Hammond)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011328",
+          "name": "Maestro"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009466",
+          "name": "Namor"
+        }
+      ],
+      "returned": 4
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/94083/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/209281",
+          "name": "cover from Maestro: TBD (2021) #5",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/209282",
+          "name": "story from Maestro: TBD (2021) #5",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/94083/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 94081,
+    "digitalId": 59149,
+    "title": "Maestro: World War M (2022) #3",
+    "issueNumber": 3,
+    "variantDescription": "",
+    "description": "Maestro clashes with the Abomination in a showdown for the ages! But Abomination is far from the only person gunning for Maestro, and when Emil Blonsky turns out to be just the opening salvo of a larger attack, can the Maestro continue to out-smash and outwit the forces that want him dead?",
+    "modified": "2022-07-09T09:04:48-0400",
+    "isbn": "",
+    "upc": "75960620143300311",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/94081",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/94081/maestro_world_war_m_2022_3?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Maestro-World-War-M-3/digital-comic/59149?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=59149&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/32108",
+      "name": "Maestro: World War M (2022)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/99691",
+        "name": "Maestro: World War M (2022) #3 (Variant)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2022-05-04T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2022-04-04T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2022-08-08T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2022-03-29T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/e/30/62685195f3744",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/e/30/62685195f3744",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 7,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/94081/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11482",
+          "name": "Jesus Aburtov",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/121",
+          "name": "Peter David",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13247",
+          "name": "Rafael Fonteriz",
+          "role": "inker (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/14075",
+          "name": "Vc Ariana Maher",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12376",
+          "name": "Wilson Moss",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/101",
+          "name": "Carlos Pacheco",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12435",
+          "name": "German Peralta",
+          "role": "inker"
+        }
+      ],
+      "returned": 7
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/94081/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011328",
+          "name": "Maestro"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/94081/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/209277",
+          "name": "cover from Maestro: TBD (2021) #3",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/209278",
+          "name": "story from Maestro: TBD (2021) #3",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/94081/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 60446,
+    "digitalId": 46323,
+    "title": "MARVEL MASTERWORKS: THE INCREDIBLE HULK VOL. 11 HC (Trade Paperback)",
+    "issueNumber": 11,
+    "variantDescription": "",
+    "description": "Collecting Incredible Hulk (1968) #184-196 and material from Giant-Size Hulk (1975) #1 and Marvel Treasury Edition #5. Hulk is the strongest! Why? Because it's hard not to be when you go from strength to strength with artists Herb Trimpe and Sal Buscema! Trimpe defined the incredible Hulk in an artistic tenure stretching from 1968 to 1975. When Sal Buscema took over the reins, not only did the series gain a great talent, but one that, unbelievably, would have a tenure longer than even Trimpe's! Add to that Len Wein writing some of his greatest Hulk stories and you've got a bona fi de Marvel Masterworks! The adventures include Hulk smashing his way through the Mole Man, the Gremlin, the Shaper of Worlds, Doc Samson, the Abomination...and, of course, the never-ending military machinations of Gen. \"Thunderbolt\" Ross!",
+    "modified": "2017-11-01T17:55:21-0400",
+    "isbn": "978-1-302-90349-7",
+    "upc": "",
+    "diamondCode": "MAY170938",
+    "ean": "9781302 903497 57500",
+    "issn": "",
+    "format": "Trade Paperback",
+    "pageCount": 272,
+    "textObjects": [
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "Collecting Incredible Hulk (1968) #184-196 and material from Giant-Size Hulk (1975) #1 and Marvel Treasury Edition #5. Hulk is the strongest! Why? Because it's hard not to be when you go from strength to strength with artists Herb Trimpe and Sal Buscema! Trimpe defined the incredible Hulk in an artistic tenure stretching from 1968 to 1975. When Sal Buscema took over the reins, not only did the series gain a great talent, but one that, unbelievably, would have a tenure longer than even Trimpe's! Add to that Len Wein writing some of his greatest Hulk stories and you've got a bonafide Marvel Masterworks! The adventures include Hulk smashing his way through the Mole Man, the Gremlin, the Shaper of Worlds, Doc Samson, the Abomination...and, of course, the never-ending military machinations of Gen. \"Thunderbolt\" Ross!"
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/60446",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/collection/60446/marvel_masterworks_the_incredible_hulk_vol_11_hc_trade_paperback?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=46323&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/22327",
+      "name": "MARVEL MASTERWORKS: THE INCREDIBLE HULK VOL. 11 HC (2017)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2017-11-08T00:00:00-0500"
+      },
+      {
+        "type": "focDate",
+        "date": "2017-07-10T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2023-04-28T17:18:07-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 75
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/f0/6467d162ca2a3",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/f0/6467d162ca2a3",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 14,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/60446/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/105",
+          "name": "Sal Buscema",
+          "role": "penciler"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13226",
+          "name": "Robert Cassell",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/967",
+          "name": "Len Wein",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1746",
+          "name": "John Costanza",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1759",
+          "name": "Joe Rosen",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13093",
+          "name": "Art Simek",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/7935",
+          "name": "Sheila Johnson",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/586",
+          "name": "Michael Kelleher",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1283",
+          "name": "Wesley Wong",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1872",
+          "name": "Glynis Oliver",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/198",
+          "name": "Marie Severin",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1217",
+          "name": "Joe Staton",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/199",
+          "name": "Herb Trimpe",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+          "name": "Jeff Youngquist",
+          "role": "editor"
+        }
+      ],
+      "returned": 14
+    },
+    "characters": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/60446/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009548",
+          "name": "Betty Ross"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009275",
+          "name": "Doc Samson"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009351",
+          "name": "Hulk"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009449",
+          "name": "Mole Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1014812",
+          "name": "Thunderbolt Ross"
+        }
+      ],
+      "returned": 6
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/60446/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/131361",
+          "name": "cover from Marvel Masterworks: The Incredible Hulk (2017)",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/131362",
+          "name": "story from Marvel Masterworks: The Incredible Hulk (2017)",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/60446/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 60692,
+    "digitalId": 46009,
+    "title": "Incredible Hulk Epic Collection: The Hulk Must Die (Trade Paperback)",
+    "issueNumber": 0,
+    "variantDescription": "",
+    "description": "Marvel’s Green Goliath is pulling no punches! After the cancellation of his debut series, the Incredible Hulk returns in TALES TO ASTONISH — and he means business! Dr. Robert Bruce Banner’s alter ego battles General “Thunderbolt” Ross, the Leader and his Humanoids, the Executioner, and more Communists than you can shake a tank at. And if that’s not enough, round two pits the Hulk against Hercules, introduces classic villain the Abomination, dives into the intrigue of the Secret Empire, and goes cosmic with the Silver Surfer and the High Evolutionary! Featuring stories by Stan Lee and art by a who’s who of Marvel greats — Steve Ditko, Jack Kirby, Gil Kane, Bill Everett and John Buscema — these are the tales that made the Hulk a global icon! Collecting material from TALES TO ASTONISH (1959) #60-96 and NOT BRAND ECHH #3.",
+    "modified": "2017-10-19T17:41:13-0400",
+    "isbn": "978-1-302-90445-6",
+    "upc": "",
+    "diamondCode": "AUG171040",
+    "ean": "9781302 904456 53999",
+    "issn": "",
+    "format": "Trade Paperback",
+    "pageCount": 432,
+    "textObjects": [
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "Marvel's green goliath is pulling no punches! After the cancellation of his debut series, the incredible Hulk returns in Tales to Astonish...and he means business! Dr. Robert Bruce Banner's alter ego battles General \"Thunderbolt\" Ross, the Leader and his Humanoids, the Executioner, and more communists than you can shake a tank at. And if that's not enough, round two pits the Hulk against Hercules, introduces classic villain the Abomination, dives into the intrigue of the Secret Empire, and goes cosmic with the Silver Surfer and the High Evolutionary! Featuring stories by Stan Lee and art by a who's who of Marvel greats - Steve Ditko, Jack Kirby, Gil Kane, Bill Everett and John Buscema - these are the tales that made the Incredible Hulk a global icon! Collects Tales to Astonish (1959) #60-96, material from Not Brand Echh (1967) #3."
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/60692",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/collection/60692/incredible_hulk_epic_collection_the_hulk_must_die_trade_paperback?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=46009&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/22424",
+      "name": "Incredible Hulk Epic Collection: The Hulk Must Die (2017)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2017-10-25T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2017-09-04T00:00:00-0400"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2023-04-28T17:18:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 39.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/00/646d1bcd80eca",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/00/646d1bcd80eca",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 8,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/60692/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1612",
+          "name": "John Buscema",
+          "role": "penciller"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/297",
+          "name": "Bill Everett",
+          "role": "penciller"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/148",
+          "name": "Gil Kane",
+          "role": "penciller"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1209",
+          "name": "Gary Friedrich",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/30",
+          "name": "Stan Lee",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/196",
+          "name": "Jack Kirby",
+          "role": "penciller (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/479",
+          "name": "Paul Mounts",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+          "name": "Jeff Youngquist",
+          "role": "editor"
+        }
+      ],
+      "returned": 8
+    },
+    "characters": {
+      "available": 9,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/60692/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009548",
+          "name": "Betty Ross"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009167",
+          "name": "Bruce Banner"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009343",
+          "name": "Hercules"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011300",
+          "name": "High Evolutionary"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009351",
+          "name": "Hulk"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009398",
+          "name": "Leader"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009592",
+          "name": "Silver Surfer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1014812",
+          "name": "Thunderbolt Ross"
+        }
+      ],
+      "returned": 9
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/60692/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/131853",
+          "name": "cover from Incredible Hulk Epic Collection: The Hulk Must Die (2017)",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/131854",
+          "name": "story from Incredible Hulk Epic Collection: The Hulk Must Die (2017)",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/60692/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 59511,
+    "digitalId": 44483,
+    "title": "Marvel Cinematic Universe Guidebook: The Avengers Initiative (Trade Paperback)",
+    "issueNumber": 1,
+    "variantDescription": "",
+    "description": "The official handbook of the Marvel Cinematic Universe takes you all the way through Phase One and to the dawn of Phase Two! Filled with fact sheets, movie-to-comic comparisons, behind-the-scenes art and production stills, this volume details the first eight blockbuster Marvel movies — from 2008’s Iron Man to 2013’s Thor: The Dark World. In-depth character profiles give you the whole story on heroes like Captain America, Hulk, Black Widow, War Machine, Hawkeye and more; deadly villains including Abomination, Loki, Red Skull and Mandarin; and a universe of supporting characters such as Nick Fury, Bucky Barnes, Peggy Carter and Phil Coulson! It’s your indispensable MCU guide! Collecting GUIDEBOOK TO THE MARVEL CINEMATIC UNIVERSE — MARVEL’S IRON MAN, MARVEL’S INCREDIBLE HULK, MARVEL’S IRON MAN 2, MARVEL’S THOR, MARVEL’S CAPTAIN AMERICA: THE FIRST AVENGER, MARVEL’S THE AVENGERS, MARVEL’S IRON MAN 3 and MARVEL’S THOR: THE DARK WORLD.",
+    "modified": "2017-03-31T17:15:07-0400",
+    "isbn": "978-0-7851-9660-0",
+    "upc": "",
+    "diamondCode": "OCT161004",
+    "ean": "9780785 196600 53499",
+    "issn": "",
+    "format": "Trade Paperback",
+    "pageCount": 192,
+    "textObjects": [
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "The official handbook of the Marvel Cinematic Universe takes you all the way through Phase One and to the dawn of Phase Two! Filled with fact sheets, movie-to-comic comparisons, behind-the-scenes art and production stills, this volume details the first eight blockbuster Marvel movies - from 2008's Iron Man to 2013's Thor: The Dark World. In-depth character profiles give you the whole story on heroes like Captain America, the Hulk, Black Widow, War Machine, Hawkeye and more! Deadly villains including Abomination, Loki, Red Skull and the Mandarin! Plus a universe of supporting characters like Nick Fury, Bucky Barnes, Peggy Carter and Phil Coulson! It's your indispensable guide to the MCU! Collects Guidebook To The Marvel Cinematic Universe - Marvel's Iron Man, Marvel's Incredible Hulk, Marvel's Iron Man 2, Marvel's Thor, Marvel's Captain America: The First Avenger, Marvel's The Avengers, Marvel's Iron Man 3, Marvel's Thor: The Dark World."
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/59511",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/collection/59511/marvel_cinematic_universe_guidebook_the_avengers_initiative_trade_paperback?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=44483&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/21675",
+      "name": "Marvel Cinematic Universe Guidebook: The Avengers Initiative (2017)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2017-04-05T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2016-12-05T00:00:00-0500"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2023-04-28T17:17:24-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 34.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/e0/58debf0a7c8e7",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/e0/58debf0a7c8e7",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/59511/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10785",
+          "name": "Stephanie Hans",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4430",
+          "name": "Jeff Youngquist",
+          "role": "editor"
+        }
+      ],
+      "returned": 2
+    },
+    "characters": {
+      "available": 4,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/59511/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009165",
+          "name": "Avengers"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009407",
+          "name": "Loki"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009421",
+          "name": "Mandarin"
+        }
+      ],
+      "returned": 4
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/59511/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/129523",
+          "name": "cover from Guidebook to the Marvel Cinematic Universe (2017)",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/129524",
+          "name": "story from Guidebook to the Marvel Cinematic Universe (2017)",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/59511/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 34050,
+    "digitalId": 18552,
+    "title": "Incredible Hulks (2010) #619",
+    "issueNumber": 619,
+    "variantDescription": "",
+    "description": "",
+    "modified": "2012-05-22T11:06:01-0400",
+    "isbn": "",
+    "upc": "5960606637-61911",
+    "diamondCode": "OCT100604",
+    "ean": "",
+    "issn": "0274-5275",
+    "format": "Comic",
+    "pageCount": 40,
+    "textObjects": [
+      {
+        "type": "issue_preview_text",
+        "language": "en-us",
+        "text": "CHAOS WAR TIE-IN! A terrible secret makes Marlo Chandler, Rick Jones's wife, the most important mortal on the planet. The Incredible Hulks race their enemies across the country to reach Marlo in time -- but can they handle the revelations she brings?\n"
+      },
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "A CHAOS WAR TIE-IN! Bring out your dead -- and the Hulks will smash them!  When the King of Chaos and Darkness unleashes his horrors upon Planet Earth, Doctor Strange calls on the strongest team there is to save life itself.  A Chaos War tie-in featuring the return of the most horrifying Hulk villain in Hades -- and fan-favorite \"Fall of the Hulks\" and \"World War Hulks\" penciller Paul Pelletier! Plus an all-new backup showcasing one Hulk's Allies! 40 PGS./Rated T  ...$3.99"
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/34050",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/34050/incredible_hulks_2010_619?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Incredible-Hulks-619/digital-comic/18552?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=18552&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "inAppLink",
+        "url": "https://applink.marvel.com/issue/18552?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/8842",
+      "name": "Incredible Hulks (2010 - 2011)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2010-12-22T00:00:00-0500"
+      },
+      {
+        "type": "focDate",
+        "date": "2010-12-11T00:00:00-0500"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2013-04-08T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2012-06-19T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      },
+      {
+        "type": "digitalPurchasePrice",
+        "price": 1.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/a0/52c5b57d98070",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/a0/52c5b57d98070",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/4c90e7b781b05",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/34050/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4992",
+          "name": "Simon Bowland",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13146",
+          "name": "Danny Miki",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/479",
+          "name": "Paul Mounts",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/537",
+          "name": "Carlo Pagulayan",
+          "role": "penciller (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/536",
+          "name": "Greg Pak",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/559",
+          "name": "Paul Pelletier",
+          "role": "penciller"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 7,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/34050/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009282",
+          "name": "Doctor Strange"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009351",
+          "name": "Hulk"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011080",
+          "name": "Korg"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009379",
+          "name": "Rick Jones"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009583",
+          "name": "She-Hulk (Jennifer Walters)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011223",
+          "name": "Skaar"
+        }
+      ],
+      "returned": 7
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/34050/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/76014",
+          "name": "Cover From Incredible Hulks (2009) #619",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/76015",
+          "name": "Interior From Incredible Hulks (2009) #619",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/34050/events",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/296",
+          "name": "Chaos War"
+        }
+      ],
+      "returned": 1
+    }
+  },
+  {
+    "id": 31236,
+    "digitalId": 18248,
+    "title": "Incredible Hulks (2010) #618",
+    "issueNumber": 618,
+    "variantDescription": "",
+    "description": "",
+    "modified": "2017-11-02T16:23:46-0400",
+    "isbn": "",
+    "upc": "5960606637-61811",
+    "diamondCode": "OCT100602",
+    "ean": "",
+    "issn": "0274-5275",
+    "format": "Comic",
+    "pageCount": 40,
+    "textObjects": [
+      {
+        "type": "issue_preview_text",
+        "language": "en-us",
+        "text": "CHAOS WAR TIE-IN! When the King of Chaos and Darkness unleashes his horrors upon Planet Earth, Doctor Strange calls on the strongest team there is to save life itself. Featuring the return of the most horrifying Hulk villain in Hades!"
+      },
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "A CHAOS WAR TIE-IN! Bring out your dead -- and the Hulks will smash them!  When the King of Chaos and Darkness unleashes his horrors upon Planet Earth, Doctor Strange calls on the strongest team there is to save life itself.  A Chaos War tie-in featuring the return of the most horrifying Hulk villain in Hades -- and fan-favorite \"Fall of the Hulks\" and \"World War Hulks\" penciller Paul Pelletier! Plus an all-new backup showcasing one Hulk's Allies! 40 PGS./Rated T  ...$3.99"
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/31236",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/31236/incredible_hulks_2010_618?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Incredible-Hulks-618/digital-comic/18248?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=18248&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "inAppLink",
+        "url": "https://applink.marvel.com/issue/18248?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/8842",
+      "name": "Incredible Hulks (2010 - 2011)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/37016",
+        "name": "Incredible Hulks (2010) #618 (TRON VARIANT)"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2010-12-08T00:00:00-0500"
+      },
+      {
+        "type": "focDate",
+        "date": "2010-11-27T00:00:00-0500"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2013-04-08T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2012-06-19T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      },
+      {
+        "type": "digitalPurchasePrice",
+        "price": 1.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/70/52c5b58c47334",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/70/52c5b58c47334",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/60/4c910ef6a8a63",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/31236/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4992",
+          "name": "Simon Bowland",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13146",
+          "name": "Danny Miki",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/479",
+          "name": "Paul Mounts",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/537",
+          "name": "Carlo Pagulayan",
+          "role": "penciler"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/536",
+          "name": "Greg Pak",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/559",
+          "name": "Paul Pelletier",
+          "role": "penciller"
+        }
+      ],
+      "returned": 6
+    },
+    "characters": {
+      "available": 6,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/31236/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009282",
+          "name": "Doctor Strange"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009351",
+          "name": "Hulk"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011080",
+          "name": "Korg"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011436",
+          "name": "Red She-Hulk"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009379",
+          "name": "Rick Jones"
+        }
+      ],
+      "returned": 6
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/31236/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/71181",
+          "name": "INCREDIBLE HULKS (2009) #618",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/71182",
+          "name": "Interior #71182",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 1,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/31236/events",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/296",
+          "name": "Chaos War"
+        }
+      ],
+      "returned": 1
+    }
+  },
+  {
+    "id": 29541,
+    "digitalId": 0,
+    "title": "Incredible Hulks (2010) #602 (SHS VARIANT)",
+    "issueNumber": 602,
+    "variantDescription": "SHS VARIANT",
+    "description": "",
+    "modified": "2011-09-20T14:33:30-0400",
+    "isbn": "",
+    "upc": "5960606637-60221",
+    "diamondCode": "JUL098007",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 32,
+    "textObjects": [
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "X marks the spot as the most insane father and son duo in the Marvel Universe take on one of the Green Goliath's most formidable adversaries. That's right, it's the JUGGERNAUT, bi--bi--boys and girls!  What happens when an unstoppable force meets the Old Power and the gamma-fueled genes of the Strongest One There Is?  Massive destruction and emotional revelation, that's what!  Continuing the acclaimed writer Greg Pak's return to the \"Incredible Hulk, plus, in the \"Savage She-Hulk\" backup story written by Fred Van Lente, Lyra takes on the all-new Gamma Corps Black! Rated T $3.99"
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/29541",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/29541/incredible_hulks_2010_602_shs_variant/shs_variant?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/8842",
+      "name": "Incredible Hulks (2010 - 2011)"
+    },
+    "variants": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/27646",
+        "name": "Incredible Hulks (2010) #602"
+      }
+    ],
+    "collections": [],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2009-09-23T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "2009-09-03T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 3.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/00/4e78dcbabf40a",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/00/4e78dcbabf40a",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 8,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/29541/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/8571",
+          "name": "Guru-eFX",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4992",
+          "name": "Simon Bowland",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1082",
+          "name": "Ariel Olivetti",
+          "role": "penciller"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/434",
+          "name": "Michael Ryan",
+          "role": "penciller"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/536",
+          "name": "Greg Pak",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/7894",
+          "name": "Fred Van Lente",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4600",
+          "name": "Mark Paniccia",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/8822",
+          "name": "Jordan D. White",
+          "role": "editor"
+        }
+      ],
+      "returned": 8
+    },
+    "characters": {
+      "available": 12,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/29541/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009175",
+          "name": "Beast"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009351",
+          "name": "Hulk"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009382",
+          "name": "Juggernaut"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009459",
+          "name": "Mr. Fantastic"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009325",
+          "name": "Norman Osborn"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009583",
+          "name": "She-Hulk (Jennifer Walters)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011392",
+          "name": "She-Hulk (Lyra)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011223",
+          "name": "Skaar"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010788",
+          "name": "Venom (Mac Gargan)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009718",
+          "name": "Wolverine"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009742",
+          "name": "Zzzax"
+        }
+      ],
+      "returned": 12
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/29541/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/64234",
+          "name": "Interior #64234",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/94784",
+          "name": "Incredible Hulks (2009) #602, SHS VARIANT",
+          "type": "cover"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/29541/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 20863,
+    "digitalId": 10797,
+    "title": "Hulk (2008) #3",
+    "issueNumber": 3,
+    "variantDescription": "",
+    "description": "",
+    "modified": "2016-11-30T14:53:31-0500",
+    "isbn": "",
+    "upc": "5960605992-00311",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Comic",
+    "pageCount": 0,
+    "textObjects": [
+      {
+        "type": "issue_preview_text",
+        "language": "en-us",
+        "text": "Not a flashback!  Not a dream! Together again for the first time! The battle you NEVER thought you'd see -- The Hulk Vs. The Abomination!  But...wait, we've seen that lots of times!  Well... No you HAVE NOT."
+      },
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "Not a flashback!  Not a dream! Together again for the first time! The battle you NEVER thought you'd see -- The Hulk Vs. The Abomination!  But...wait, we've seen that lots of times!  Well... No you HAVE NOT. And it isn't just because superstars Jeph Loeb & Ed McGuinness are bringing it to you for the first time -- it's because if you've been reading the Hulk (yes, we know there's one or two of you), it CAN'T be possible! But it is -- AND IN COLOR -- LOTS OF THEM! The pulse-pounding, gamma-spawned action adventure continues in Hulk #3!!!\r<br>Rated A...$2.99 \r<br>"
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/20863",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/issue/20863/hulk_2008_3?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Hulk-3/digital-comic/10797?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=10797&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "inAppLink",
+        "url": "https://applink.marvel.com/issue/10797?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/3374",
+      "name": "Hulk (2008 - 2012)"
+    },
+    "variants": [],
+    "collections": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/23677",
+        "name": "Hulk Vol. 1: Red Hulk (Trade Paperback)"
+      }
+    ],
+    "collectedIssues": [],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2008-04-23T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "-0001-11-30T00:00:00-0500"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2009-03-13T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2010-05-27T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 2.99
+      },
+      {
+        "type": "digitalPurchasePrice",
+        "price": 1.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/40/5109ab5908cce",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/40/5109ab5908cce",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/e0/4bb890a45c700",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/4babb066d6269",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/20863/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/807",
+          "name": "Comicraft",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/426",
+          "name": "Jason Keith",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/18",
+          "name": "Jeph Loeb",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/649",
+          "name": "Ed Mcguinness",
+          "role": "penciller (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/471",
+          "name": "Dexter Vines",
+          "role": "inker"
+        }
+      ],
+      "returned": 5
+    },
+    "characters": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/20863/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009351",
+          "name": "Hulk"
+        }
+      ],
+      "returned": 2
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/20863/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/44674",
+          "name": "Red Hulk 3 of 12",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/44675",
+          "name": "Red Hulk 3 of 12",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/20863/events",
+      "items": [],
+      "returned": 0
+    }
+  },
+  {
+    "id": 15894,
+    "digitalId": 30251,
+    "title": "IRREDEEMABLE ANT-MAN VOL. 1: LOW-LIFE DIGEST (Trade Paperback)",
+    "issueNumber": 0,
+    "variantDescription": "",
+    "description": "",
+    "modified": "2016-12-08T11:27:39-0500",
+    "isbn": "0-7851-1962-0",
+    "upc": "5960611962-00111",
+    "diamondCode": "",
+    "ean": "",
+    "issn": "",
+    "format": "Trade Paperback",
+    "pageCount": 0,
+    "textObjects": [
+      {
+        "type": "issue_solicit_text",
+        "language": "en-us",
+        "text": "Introducing the world's worst super hero! When a low-level S.H.I.E.L.D. agent gets a hold of Hank Pym's new Ant-Man suit, you know the Marvel Universe is in trouble. He's not concerned with saving the world or helping others. He's concerned with getting through the day and getting a leg up on life. He's not going to use his powers responsibly, he's going to use them for the betterment of himself. He's Ant-Man, a new \"hero\" for the modern world. If you thought Robert Kirkman pushed the boundaries of what could be in a Marvel Comic with MARVEL ZOMBIES just wait until you see what he does in here! \r<br>Collecting IRREDEEMABLE ANT-MAN #1-6.\r<br>144 PGS./Rated T+ ...$9.99\r<br>ISBN: 0-7851-1962-0\r<br>"
+      }
+    ],
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/15894",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/collection/15894/irredeemable_ant-man_vol_1_low-life_digest_trade_paperback?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "purchase",
+        "url": "http://comicstore.marvel.com/Irredeemable-Ant-Man-Vol-1-Low-Life-0/digital-comic/30251?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "reader",
+        "url": "http://marvel.com/digitalcomics/view.htm?iid=30251&utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      },
+      {
+        "type": "inAppLink",
+        "url": "https://applink.marvel.com/issue/30251?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+      }
+    ],
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/2423",
+      "name": "IRREDEEMABLE ANT-MAN VOL. 1: LOW-LIFE DIGEST (2007)"
+    },
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/6076",
+        "name": "Irredeemable Ant-Man (2006) #6"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/5938",
+        "name": "Irredeemable Ant-Man (2006) #5"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/5775",
+        "name": "Irredeemable Ant-Man (2006) #4"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/5628",
+        "name": "Irredeemable Ant-Man (2006) #3"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/5360",
+        "name": "Irredeemable Ant-Man (2006) #2"
+      },
+      {
+        "resourceURI": "http://gateway.marvel.com/v1/public/comics/5199",
+        "name": "Irredeemable Ant-Man (2006) #1"
+      }
+    ],
+    "dates": [
+      {
+        "type": "onsaleDate",
+        "date": "2007-06-27T00:00:00-0400"
+      },
+      {
+        "type": "focDate",
+        "date": "-0001-11-30T00:00:00-0500"
+      },
+      {
+        "type": "unlimitedDate",
+        "date": "2013-06-27T00:00:00-0400"
+      },
+      {
+        "type": "digitalPurchaseDate",
+        "date": "2013-06-27T00:00:00-0400"
+      }
+    ],
+    "prices": [
+      {
+        "type": "printPrice",
+        "price": 9.99
+      },
+      {
+        "type": "digitalPurchasePrice",
+        "price": 10.99
+      }
+    ],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/70/4bc353d839901",
+      "extension": "jpg"
+    },
+    "images": [
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/7/70/58498971b9eba",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/90/584988ab7b1a0",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/50/584987e1e7fba",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/90/584986f8b9797",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/e/60/584985c189045",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/e/70/58498477421c8",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/1/d0/517acfb8bcd0b",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/e/e0/4bc5a55b4ba5f",
+        "extension": "jpg"
+      },
+      {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/70/4bc353d839901",
+        "extension": "jpg"
+      }
+    ],
+    "creators": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/15894/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/2133",
+          "name": "Tom Brevoort",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13152",
+          "name": "Joe Quesada",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5249",
+          "name": "Aubrey Sitterson",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/868",
+          "name": "Bill Crabtree",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/832",
+          "name": "Val Staples",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/869",
+          "name": "Phil Hester",
+          "role": "penciller (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/553",
+          "name": "Robert Kirkman",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/5248",
+          "name": "Molly Lazer",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/410",
+          "name": "Rus Wooton",
+          "role": "letterer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/870",
+          "name": "Ande Parks",
+          "role": "inker"
+        }
+      ],
+      "returned": 10
+    },
+    "characters": {
+      "available": 9,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/15894/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009146",
+          "name": "Abomination (Emil Blonsky)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010802",
+          "name": "Ant-Man (Eric O'Grady)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009281",
+          "name": "Doctor Doom"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011490",
+          "name": "Hank Pym"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009359",
+          "name": "Hydra"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011335",
+          "name": "Maria Hill"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009471",
+          "name": "Nick Fury"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009639",
+          "name": "Super-Skrull"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009718",
+          "name": "Wolverine"
+        }
+      ],
+      "returned": 9
+    },
+    "stories": {
+      "available": 15,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/15894/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/5496",
+          "name": "Irredeemable Ant-Man (2006) #1",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/5497",
+          "name": "1 of 6 -",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/5498",
+          "name": "Irredeemable Ant-Man (2006) #2",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/5499",
+          "name": "2 of 6 -",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/5500",
+          "name": "Irredeemable Ant-Man (2006) #3",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/5501",
+          "name": "3 of 6 -",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/5502",
+          "name": "Irredeemable Ant-Man (2006) #4",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/5503",
+          "name": "4 of 6 - Story A",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/7767",
+          "name": "Irredeemable Ant-Man (2006) #5",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/7768",
+          "name": "5 of 6 - Story A; Franklin Richards back-ups",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/7769",
+          "name": "Irredeemable Ant-Man (2006) #6",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/7770",
+          "name": "6 of 6 - Story A",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/8239",
+          "name": "6 of 6 - Story A",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/8240",
+          "name": "6 of 6 - Story A",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/67490",
+          "name": "IRREDEEMABLE ANT-MAN VOL. 1: LOW-LIFE 0 cover",
+          "type": "cover"
+        }
+      ],
+      "returned": 15
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/15894/events",
+      "items": [],
+      "returned": 0
+    }
+  }
+]
