@@ -1,4 +1,4 @@
-import Navigation from '@/components/molecules/NavigationMain';
+import { NavigationMain } from '@/components/molecules/NavigationMain';
 import { useScrollY } from '@/hooks';
 import { getParentSelectors } from '@/utils/helpers';
 
@@ -19,11 +19,12 @@ const Header = ({ classNameHeader, children }: IHeaderProps) => {
 
   return (
     <header
+      aria-label='header'
       className={`w-full fixed z-1 top-0 flex justify-center transition-[transform] delay-gridItem duration-header ${hideHeader()} bg-black ${getParentSelectors(
         classNameHeader,
       )}`}
     >
-      <Navigation />
+      <NavigationMain />
       {children}
     </header>
   );
