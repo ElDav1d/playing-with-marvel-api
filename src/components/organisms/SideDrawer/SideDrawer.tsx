@@ -2,6 +2,7 @@ import CloseIcon from '@/components/atoms/CloseIcon/CloseIcon';
 import { DialogOverlay } from '@/components/atoms/DialogOverlay';
 import SearchIcon from '@/components/atoms/SearchIcon/SearchIcon';
 import { useFocusTrap, useOutsideClick } from '@/hooks';
+import { getParentSelectors } from '@/utils/helpers';
 import { useEffect, useRef, useState } from 'react';
 
 export interface ISideDrawerProps {
@@ -66,7 +67,7 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
         ref={dialogRef}
         className={`absolute top-0 m-0 h-screen w-[80vw] z-1 px-8 py-11 transition-[left] delay-gridItem duration-gridItem ${
           isOpen ? 'left-0' : 'left-[-100%]'
-        } ${classNameContainer}`}
+        } ${getParentSelectors(classNameContainer)}`}
       >
         {isOpen && (
           <>

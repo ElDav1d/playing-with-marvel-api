@@ -1,3 +1,5 @@
+import { getParentSelectors } from '@/utils/helpers';
+
 export interface IFormGroupContainerProps {
   title: string;
   /**
@@ -10,7 +12,7 @@ export interface IFormGroupContainerProps {
 
 const FormGroupContainer = ({ classNameFieldset, title, children }: IFormGroupContainerProps) => {
   return (
-    <fieldset className={classNameFieldset}>
+    <fieldset className={getParentSelectors(classNameFieldset)}>
       <legend className='mb-1'>{title}</legend>
       {children}
     </fieldset>

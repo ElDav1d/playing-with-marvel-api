@@ -1,6 +1,7 @@
 import CheckboxGroup from '@/components/atoms/CheckboxGroup';
 import { ChangeEvent, useEffect, useState } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
+import { getParentSelectors } from '@/utils/helpers';
 
 /**
  * Interface for NewCheckboxesList component props
@@ -88,8 +89,12 @@ const NewCheckboxesList = <T extends string>({
   };
 
   return (
-    <FormGroupContainer classNameFieldset={classNameFieldset} title={title}>
-      <ul className={`md:h-full flex flex-col md:flex-row gap-2 md:items-center ${classNameUL}`}>
+    <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
+      <ul
+        className={`md:h-full flex flex-col md:flex-row gap-2 md:items-center ${getParentSelectors(
+          classNameUL,
+        )}`}
+      >
         {options.map((option, index) => (
           <li className='flex items-center' key={option}>
             <CheckboxGroup

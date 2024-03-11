@@ -1,3 +1,4 @@
+import { getParentSelectors } from '@/utils/helpers';
 import React from 'react';
 
 /**
@@ -33,7 +34,9 @@ export interface ISelectProps extends React.ComponentPropsWithoutRef<'select'> {
 }
 
 const Input: React.FC<IInputProps | ISelectProps> = ({ className, type, children, ...rest }) => {
-  const sharedStyle = `bg-black border border-white shadow appearance-none focus-visible-border ${className}`;
+  const sharedStyle = `bg-black border border-white shadow appearance-none focus-visible-border ${getParentSelectors(
+    className,
+  )}`;
 
   const textBoxStyles = 'py-2 px-3';
 

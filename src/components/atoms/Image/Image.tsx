@@ -4,6 +4,7 @@ import { MEDIA_BREAKPOINTS, REGEX_IMAGE_PATH } from '@/utils/constants';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './Image.css';
+import { getParentSelectors } from '@/utils/helpers';
 
 /**
  * @typedef
@@ -172,10 +173,10 @@ const Image = ({
   };
 
   return (
-    <picture className={classNameContainer}>
+    <picture className={getParentSelectors(classNameContainer)}>
       <LazyLoadImage
         wrapperClassName='w-full h-inherit'
-        className={`w-full ${classNameContent}`}
+        className={`w-full ${getParentSelectors(classNameContent)}`}
         srcSet={getSrcSet()}
         sizes={getBreakpointSizes(sizing)}
         src={getSrc(sizing)}
