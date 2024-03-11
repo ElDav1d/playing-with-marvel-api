@@ -16,6 +16,23 @@ jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
 
+it('renders the page of characters and matches snapshot', () => {
+  // ARRANGE
+  setUpHappyPath(setUpCharacters());
+
+  // ACT
+  const { asFragment } = render(
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <Characters />
+      </Router>
+    </QueryClientProvider>,
+  );
+
+  // ASSERT
+  expect(asFragment()).toMatchSnapshot();
+});
+
 it('renders the loader when fetching initial page', () => {
   // ARRANGE
   mockUseCharacters.mockReturnValue({
@@ -61,7 +78,7 @@ it('informs user on fetching error', () => {
   expect(screen.queryByRole('heading', { name: /animal/i })).toBeNull();
 });
 
-it('renders a page of characters', () => {
+it('renders the page of characters', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());
 
