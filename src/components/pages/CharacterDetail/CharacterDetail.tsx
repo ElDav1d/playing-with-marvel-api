@@ -77,7 +77,7 @@ const CharacterDetail = () => {
               thumbnailExtension={character.thumbnail.extension}
             />
 
-            <section>
+            <Container element='section'>
               <SelectGroup
                 title='Order results:'
                 onChange={(event) => orderHandler(event)}
@@ -100,7 +100,7 @@ const CharacterDetail = () => {
 
               {!isFirstPage && <button onClick={handlePrevPage}>Previous Comics</button>}
               {!isLastPage && <button onClick={handleNextPage}>Next Comics</button>}
-            </section>
+            </Container>
           </article>
         )}
       </Container>

@@ -174,7 +174,7 @@ const Image = ({
   return (
     <picture className={classNameContainer}>
       <LazyLoadImage
-        wrapperClassName='w-full'
+        wrapperClassName='w-full h-inherit'
         className={`w-full ${classNameContent}`}
         srcSet={getSrcSet()}
         sizes={getBreakpointSizes(sizing)}

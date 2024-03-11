@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         red: MARVEL_RED,
         'trans-0.75-black': 'rgba(0, 0, 0, 0.75)',
+        'trans-0.5-black': 'rgba(0, 0, 0, 0.5)',
       },
       fontSize: {
         none: '0px',

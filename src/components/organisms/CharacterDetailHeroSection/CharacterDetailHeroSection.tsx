@@ -35,18 +35,25 @@ const CharacterDetailHeroSection = ({
   thumbnailExtension,
 }: ICharacterDetailHeroSection) => {
   return (
-    <section className='relative mt-logoDefaultHeight bg-stone-900 text-white clip-hero'>
+    <section
+      className='relative lg:h-[65vh] overflow-hidden pt-logoDefaultHeight bg-stone-900 text-white clip-hero
+      md:before:absolute md:before:inset-0 md:before:content[""] md:before:bg-gradient-to-r md:before:from-trans-0.75-black md:before:to-transparent md:before:z-1'
+    >
       <Image
+        classNameContainer='md:block: md:h-full'
+        classNameContent='h-full object-cover'
         title={name}
         alt={`The big pic of ${name}`}
         path={thumbnailPath}
         extension={thumbnailExtension}
         sizing={['landscape_amazing', 'landscape_incredible']}
       />
-      <Container element='div' className='py-14'>
-        <h1 className='text-2xl uppercase font-semibold mb-4'>{name}</h1>
-        {description && <p>{description}</p>}
-      </Container>
+      <div className='w-full h-full flex flex-col justify-center py-14 md:py-0 md:absolute md:top-0 md:left-0 md:z-10'>
+        <Container element='div'>
+          <h1 className='text-2xl uppercase font-semibold mb-4'>{name}</h1>
+          {description && <p>{description}</p>}
+        </Container>
+      </div>
     </section>
   );
 };
