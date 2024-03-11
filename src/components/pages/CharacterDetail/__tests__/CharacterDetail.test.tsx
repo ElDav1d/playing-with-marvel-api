@@ -1,6 +1,6 @@
 import mockCharacterDetail from '../mocks/mockCharacterDetail.json';
 import mockCharacterComics from '../mocks/mockCharacterComics.json';
-import { render, screen } from '@testing-library/react';
+import { RenderOptions, render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import CharacterDetail from '../CharacterDetail';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -17,6 +17,43 @@ jest.mock('react-lazy-load-image-component', () => ({
 const mockUseCharacterDetails = useCharacterDetails as jest.Mock;
 
 const mockUseCharacterComics = useCharacterComics as jest.Mock;
+
+const renderSnapshot = (ui: React.ReactElement, options?: RenderOptions) => {
+  return render(<QueryClientProvider client={queryClient}>{ui}</QueryClientProvider>, options);
+};
+
+it('renders the character detail page and matches snapshot', () => {
+  // ARRANGE
+  mockUseCharacterDetails.mockReturnValue({
+    isLoadingCharacter: false,
+    isErrorOnCharacter: false,
+    character: mockCharacterDetail,
+  });
+
+  mockUseCharacterComics.mockReturnValue({
+    comics: mockCharacterComics,
+    totalComics: 0,
+    rangeInit: 0,
+    rangeEnd: 0,
+    isErrorOnComics: false,
+    isFetchingComics: false,
+    isFirstPage: true,
+    isLastPage: true,
+    refetch: jest.fn(),
+  });
+
+  // ACT
+  const { asFragment } = renderSnapshot(
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <CharacterDetail />
+      </Router>
+    </QueryClientProvider>,
+  );
+
+  // ASSERT
+  expect(asFragment()).toMatchSnapshot();
+});
 
 it('renders the loader when fetching initial page', () => {
   // ARRANGE
@@ -88,6 +125,5 @@ it('renders the character detail page with appropiate elements', () => {
   expect(screen.getByRole('article', { name: /character detail article/i })).toBeInTheDocument();
   expect(screen.getByRole('group', { name: /Order results:/i })).toBeInTheDocument();
   expect(screen.getByRole('contentinfo', { name: /common footer/i })).toBeInTheDocument();
-  screen.getByRole('');
   expect(screen.getByRole('heading', { level: 2, name: /abomination/i })).toBeInTheDocument();
 });
