@@ -1,2 +1,1 @@
-import NavigationMain from './NavigationMain';
-export default NavigationMain;
+export { default as NavigationMain } from './NavigationMain';

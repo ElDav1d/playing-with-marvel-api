@@ -155,7 +155,7 @@ const Characters = () => {
           />
         </SideDrawer>
       </Header>
-      <Container element={'main'}>
+      <Container element={'main'} aria-label='characters page main content'>
         <CharactersHeroSection>
           <CharactersControlPanel
             isDesktop

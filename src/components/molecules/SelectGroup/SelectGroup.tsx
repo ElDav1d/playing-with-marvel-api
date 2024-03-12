@@ -1,6 +1,7 @@
 import Input from '@/components/atoms/Input';
 import { ChangeEventHandler } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
+import { getParentSelectors } from '@/utils/helpers';
 
 export interface ISelectProps {
   /**
@@ -39,8 +40,13 @@ const SelectGroup = ({
   classNameInput,
 }: ISelectProps) => {
   return (
-    <FormGroupContainer classNameFieldset={classNameFieldset} title={title}>
-      <Input className={classNameInput} type='select' onChange={onChange} name='order'>
+    <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
+      <Input
+        className={getParentSelectors(classNameInput)}
+        type='select'
+        onChange={onChange}
+        name='order'
+      >
         {options.map((option, index) => (
           <option key={option} value={option}>
             {optionLiterals[index]}

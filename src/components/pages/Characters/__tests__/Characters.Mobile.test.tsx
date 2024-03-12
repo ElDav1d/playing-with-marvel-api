@@ -18,6 +18,29 @@ jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
 
+it('renders the page of characters with the Mobile Characters List Control Panel and matches snapshot', async () => {
+  // ARRANGE
+  const user = setUpHappyPathWithUser();
+
+  // ACT
+  const { asFragment } = render(
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <Characters />
+      </Router>
+    </QueryClientProvider>,
+  );
+
+  const openButton = screen.getByRole('button', { name: /open/i });
+
+  user.click(openButton);
+
+  await waitFor(() => screen.getByRole('form', { name: /mobile/i }));
+
+  // ASSERT
+  expect(asFragment()).toMatchSnapshot();
+});
+
 it('opens the Mobile Characters List Control Panel', async () => {
   // ARRANGE
   const user = setUpHappyPathWithUser();

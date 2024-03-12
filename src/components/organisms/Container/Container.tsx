@@ -16,7 +16,7 @@ export interface IContainerProps {
   children?: React.ReactNode;
 }
 
-const Container = ({ element, className, children }: IContainerProps) => {
+const Container = ({ element, className, children, ...props }: IContainerProps) => {
   let Element: React.ElementType = 'section';
   let styles = 'mx-6 md:mx-12 lg:mx-18 xl:mx-auto max-w-[1240px]';
 
@@ -37,7 +37,11 @@ const Container = ({ element, className, children }: IContainerProps) => {
 
   if (className) styles = `${styles} ${className}`;
 
-  return <Element className={styles}>{children}</Element>;
+  return (
+    <Element className={styles} {...props}>
+      {children}
+    </Element>
+  );
 };
 
 export default Container;

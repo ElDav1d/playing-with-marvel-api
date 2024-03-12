@@ -50,3 +50,9 @@ code {
     @apply active active:border-red
   }
 }
+
+@layer utilities {
+  .clip-hero {
+    clip-path: polygon(0 0, 0 99%, 100% 95%, 100% 0);
+  }
+}

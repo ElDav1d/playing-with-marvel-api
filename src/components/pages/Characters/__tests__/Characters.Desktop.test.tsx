@@ -16,6 +16,23 @@ jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
 
+it('renders the page of characters and matches snapshot', () => {
+  // ARRANGE
+  setUpHappyPath(setUpCharacters());
+
+  // ACT
+  const { asFragment } = render(
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <Characters />
+      </Router>
+    </QueryClientProvider>,
+  );
+
+  // ASSERT
+  expect(asFragment()).toMatchSnapshot();
+});
+
 it('renders the loader when fetching initial page', () => {
   // ARRANGE
   mockUseCharacters.mockReturnValue({
@@ -61,7 +78,7 @@ it('informs user on fetching error', () => {
   expect(screen.queryByRole('heading', { name: /animal/i })).toBeNull();
 });
 
-it('renders a page of characters', () => {
+it('renders the page of characters', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());
 
@@ -75,6 +92,10 @@ it('renders a page of characters', () => {
   );
 
   // ASSERT
+  expect(screen.getByRole('banner', { name: /common header/i })).toBeInTheDocument();
+  expect(screen.getByRole('navigation', { name: /main navigation/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /Playing with Marvel API/i })).toBeInTheDocument();
+  expect(screen.getByRole('main', { name: /characters page main content/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /marvel characters/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
