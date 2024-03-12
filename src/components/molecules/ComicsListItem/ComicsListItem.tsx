@@ -7,7 +7,7 @@ export interface ComicsListItemProps {
   comic: CharacterComicDetails;
 }
 
-export const ComicsListItem = ({ comic }: ComicsListItemProps) => {
+const ComicsListItem = ({ comic }: ComicsListItemProps) => {
   const dateTypes = ['onsaleDate', 'focDate'];
 
   const filteredDates = useMemo(() => {
@@ -50,3 +50,5 @@ export const ComicsListItem = ({ comic }: ComicsListItemProps) => {
     </li>
   );
 };
+
+export default ComicsListItem;

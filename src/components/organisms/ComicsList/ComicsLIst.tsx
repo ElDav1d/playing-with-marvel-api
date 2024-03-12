@@ -1,4 +1,4 @@
-import { ComicsListItem } from '@/components/molecules/ComicsListItem/ComicsListItem';
+import { ComicsListItem } from '@/components/molecules/ComicsListItem';
 import { CharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 
 export interface ComicsListProps {

@@ -1,5 +1,6 @@
+import { CharacterListItem } from '@/components/molecules/CharacterListItem';
 import { CharacterItem } from '@/components/pages/Characters/interfaces/characters';
-import CharacterListItem from '@/components/molecules/CharacterListItem/CharacterListItem';
+
 export interface CharactersListProps {
   characters: CharacterItem[];
 }
