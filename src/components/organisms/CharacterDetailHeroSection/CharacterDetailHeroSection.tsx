@@ -49,7 +49,7 @@ const CharacterDetailHeroSection = ({
         sizing={['landscape_amazing', 'landscape_incredible']}
       />
       <div className='w-full h-full flex flex-col justify-center py-14 md:py-0 md:absolute md:top-0 md:left-0 md:z-10'>
-        <Container element='div'>
+        <Container element='div' className='w-full'>
           <h2 className='text-2xl uppercase font-semibold mb-4'>{name}</h2>
           {description && <p>{description}</p>}
         </Container>
