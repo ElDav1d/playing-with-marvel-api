@@ -147,11 +147,14 @@ exports[`renders the character detail page and matches snapshot 1`] = `
             </option>
           </select>
         </fieldset>
-        <h3>
+        <h3
+          class="mb-2"
+        >
           Displaying 0 to 0 from 0 available comics
         </h3>
         <ul
           aria-live="polite"
+          class="grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto"
         >
           <li>
             <picture
