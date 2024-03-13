@@ -19,7 +19,9 @@ const CharacterDetail = () => {
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.FOC_DATE_FIRST);
   const [onClearData, setOnClearData] = useState<boolean>(false);
 
-  const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails(id);
+  const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails({
+    characterId: id,
+  });
 
   const {
     comics,
@@ -31,7 +33,12 @@ const CharacterDetail = () => {
     isFirstPage,
     isLastPage,
     refetch,
-  } = useCharacterComics(id, MAX_FETCH_CHARACTER_COMICS, page, onClearData);
+  } = useCharacterComics({
+    characterId: id,
+    maxComics: MAX_FETCH_CHARACTER_COMICS,
+    page,
+    onClearData,
+  });
 
   useEffect(() => {
     refetch();
@@ -83,12 +90,14 @@ const CharacterDetail = () => {
 
         {character && (
           <article aria-label='character detail article'>
-            <CharacterDetailHeroSection
-              name={character.name}
-              description={character.description}
-              thumbnailPath={character.thumbnail.path}
-              thumbnailExtension={character.thumbnail.extension}
-            />
+            {character && (
+              <CharacterDetailHeroSection
+                name={character.name}
+                description={character.description}
+                thumbnailPath={character.thumbnail.path}
+                thumbnailExtension={character.thumbnail.extension}
+              />
+            )}
 
             <Container element='section'>
               <SelectGroup
@@ -100,9 +109,9 @@ const CharacterDetail = () => {
 
               {isFetchingComics && <h2>Loading Character Comics</h2>}
 
-              {comics?.length > 0 ? (
+              {comics && comics.length > 0 ? (
                 <>
-                  <h3>
+                  <h3 className='mb-2'>
                     Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
                   </h3>
                   <ComicsList comics={comics} />
