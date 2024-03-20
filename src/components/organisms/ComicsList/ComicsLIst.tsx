@@ -11,17 +11,8 @@ const ComicsList = ({ comics }: IComicsListProps) => {
       aria-live='polite'
       className='grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto'
     >
-      {comics.map(({ id, dates, images, title, description, issueNumber, modified }) => (
-        <ComicsListItem
-          key={id}
-          id={id}
-          dates={dates}
-          images={images}
-          title={title}
-          description={description}
-          issueNumber={issueNumber}
-          modified={modified}
-        />
+      {comics.map(({ id, images, title, description }) => (
+        <ComicsListItem key={id} id={id} images={images} title={title} description={description} />
       ))}
     </ul>
   );

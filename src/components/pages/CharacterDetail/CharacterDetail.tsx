@@ -15,7 +15,7 @@ const CharacterDetail = () => {
   const LOADING_LABEL = 'Character Details are loading';
   const { id } = useParams();
   const [page, setPage] = useState<number>(0);
-  const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.FOC_DATE_FIRST);
+  const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.TITLE_AZ);
   const [onClearData, setOnClearData] = useState<boolean>(false);
 
   const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails({

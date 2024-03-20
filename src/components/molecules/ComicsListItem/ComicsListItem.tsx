@@ -1,7 +1,4 @@
 import Image from '@/components/atoms/Image';
-import { useMemo } from 'react';
-import { formatDate } from '@/utils/helpers';
-import { DateElement } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 
 /**
@@ -14,11 +11,7 @@ export interface IComicsListItemProps {
    * @type {number}
    */
   id: number;
-  /**
-   * The dates of the comic.
-   * @type {DateElement[]}
-   */
-  dates: DateElement[];
+
   /**
    * The images of the comic.
    * @type {Thumbnail[]}
@@ -34,32 +27,9 @@ export interface IComicsListItemProps {
    * @type {string}
    */
   description: string | null;
-  /**
-   * The issue number of the comic.
-   * @type {number}
-   */
-  issueNumber: number;
-  /**
-   * The modified date of the comic.
-   * @type {string}
-   */
-  modified: string;
 }
 
-const ComicsListItem = ({
-  id,
-  dates,
-  images,
-  title,
-  description,
-  issueNumber,
-  modified,
-}: IComicsListItemProps) => {
-  const dateTypes = ['onsaleDate', 'focDate'];
-
-  const filteredDates = useMemo(() => {
-    return dates?.filter((date) => dateTypes.includes(date.type));
-  }, [dates]);
+const ComicsListItem = ({ id, images, title, description }: IComicsListItemProps) => {
   return (
     <li
       aria-label={title}
@@ -85,22 +55,8 @@ const ComicsListItem = ({
           group-hover:before:max-h-[300px]'
       >
         <h3 className='mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2'>{title}</h3>
-        <p className='text-xs leading-5'>
-          <strong>Issue: </strong>
-          {issueNumber}
-        </p>
-        {description && <p className='text-xs leading-5 line-clamp-1'>{description}</p>}
 
-        <p className='text-xs leading-5'>
-          <strong>Modified: </strong>
-          {formatDate(modified)}
-        </p>
-        {filteredDates.map((date) => (
-          <p className='text-xs leading-5' key={date.date}>
-            <strong>{date.type}: </strong>
-            {formatDate(date.date)}
-          </p>
-        ))}
+        {description && <p className='text-xs leading-5 line-clamp-4'>{description}</p>}
       </div>
     </li>
   );
