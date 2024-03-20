@@ -1,11 +1,11 @@
 import { ComicsListItem } from '@/components/molecules/ComicsListItem';
 import { CharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 
-export interface ComicsListProps {
+export interface IComicsListProps {
   comics: CharacterComicDetails[];
 }
 
-export const ComicsList = ({ comics }: ComicsListProps) => {
+const ComicsList = ({ comics }: IComicsListProps) => {
   return (
     <ul
       aria-live='polite'
@@ -14,6 +14,7 @@ export const ComicsList = ({ comics }: ComicsListProps) => {
       {comics.map(({ id, dates, images, title, description, issueNumber, modified }) => (
         <ComicsListItem
           key={id}
+          id={id}
           dates={dates}
           images={images}
           title={title}
@@ -25,3 +26,5 @@ export const ComicsList = ({ comics }: ComicsListProps) => {
     </ul>
   );
 };
+
+export default ComicsList;

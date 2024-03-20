@@ -156,425 +156,550 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           aria-live="polite"
           class="grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto"
         >
-          <li>
+          <li
+            aria-label="Maestro: World War M (2022) #5"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              Maestro: World War M (2022) #5
-            </h3>
-            <p>
-              When you can live forever, what does it mean to live? In this shocking series finale, Maestro finds himself partnered with an old enemy against even older allies to determine once and for all the true ruler of Dystopia. But opportunism depends on knowing how your opponents think, and someone's failed to account for a few tricks…
-            </p>
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Maestro: World War M (2022) #5
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 5
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5 line-clamp-1"
+              >
+                When you can live forever, what does it mean to live? In this shocking series finale, Maestro finds himself partnered with an old enemy against even older allies to determine once and for all the true ruler of Dystopia. But opportunism depends on knowing how your opponents think, and someone's failed to account for a few tricks…
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 9/9/2022
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 7/20/2022
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 6/20/2022
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="Maestro: World War M (2022) #3"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              Maestro: World War M (2022) #3
-            </h3>
-            <p>
-              Maestro clashes with the Abomination in a showdown for the ages! But Abomination is far from the only person gunning for Maestro, and when Emil Blonsky turns out to be just the opening salvo of a larger attack, can the Maestro continue to out-smash and outwit the forces that want him dead?
-            </p>
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Maestro: World War M (2022) #3
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 3
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5 line-clamp-1"
+              >
+                Maestro clashes with the Abomination in a showdown for the ages! But Abomination is far from the only person gunning for Maestro, and when Emil Blonsky turns out to be just the opening salvo of a larger attack, can the Maestro continue to out-smash and outwit the forces that want him dead?
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 7/9/2022
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 5/4/2022
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 4/4/2022
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="MARVEL MASTERWORKS: THE INCREDIBLE HULK VOL. 11 HC (Trade Paperback)"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              MARVEL MASTERWORKS: THE INCREDIBLE HULK VOL. 11 HC (Trade Paperback)
-            </h3>
-            <p>
-              Collecting Incredible Hulk (1968) #184-196 and material from Giant-Size Hulk (1975) #1 and Marvel Treasury Edition #5. Hulk is the strongest! Why? Because it's hard not to be when you go from strength to strength with artists Herb Trimpe and Sal Buscema! Trimpe defined the incredible Hulk in an artistic tenure stretching from 1968 to 1975. When Sal Buscema took over the reins, not only did the series gain a great talent, but one that, unbelievably, would have a tenure longer than even Trimpe's! Add to that Len Wein writing some of his greatest Hulk stories and you've got a bona fi de Marvel Masterworks! The adventures include Hulk smashing his way through the Mole Man, the Gremlin, the Shaper of Worlds, Doc Samson, the Abomination...and, of course, the never-ending military machinations of Gen. "Thunderbolt" Ross!
-            </p>
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                MARVEL MASTERWORKS: THE INCREDIBLE HULK VOL. 11 HC (Trade Paperback)
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 11
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5 line-clamp-1"
+              >
+                Collecting Incredible Hulk (1968) #184-196 and material from Giant-Size Hulk (1975) #1 and Marvel Treasury Edition #5. Hulk is the strongest! Why? Because it's hard not to be when you go from strength to strength with artists Herb Trimpe and Sal Buscema! Trimpe defined the incredible Hulk in an artistic tenure stretching from 1968 to 1975. When Sal Buscema took over the reins, not only did the series gain a great talent, but one that, unbelievably, would have a tenure longer than even Trimpe's! Add to that Len Wein writing some of his greatest Hulk stories and you've got a bona fi de Marvel Masterworks! The adventures include Hulk smashing his way through the Mole Man, the Gremlin, the Shaper of Worlds, Doc Samson, the Abomination...and, of course, the never-ending military machinations of Gen. "Thunderbolt" Ross!
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 11/1/2017
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 11/8/2017
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 7/10/2017
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="Incredible Hulk Epic Collection: The Hulk Must Die (Trade Paperback)"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              Incredible Hulk Epic Collection: The Hulk Must Die (Trade Paperback)
-            </h3>
-            <p>
-              Marvel’s Green Goliath is pulling no punches! After the cancellation of his debut series, the Incredible Hulk returns in TALES TO ASTONISH — and he means business! Dr. Robert Bruce Banner’s alter ego battles General “Thunderbolt” Ross, the Leader and his Humanoids, the Executioner, and more Communists than you can shake a tank at. And if that’s not enough, round two pits the Hulk against Hercules, introduces classic villain the Abomination, dives into the intrigue of the Secret Empire, and goes cosmic with the Silver Surfer and the High Evolutionary! Featuring stories by Stan Lee and art by a who’s who of Marvel greats — Steve Ditko, Jack Kirby, Gil Kane, Bill Everett and John Buscema — these are the tales that made the Hulk a global icon! Collecting material from TALES TO ASTONISH (1959) #60-96 and NOT BRAND ECHH #3.
-            </p>
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Incredible Hulk Epic Collection: The Hulk Must Die (Trade Paperback)
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 0
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5 line-clamp-1"
+              >
+                Marvel’s Green Goliath is pulling no punches! After the cancellation of his debut series, the Incredible Hulk returns in TALES TO ASTONISH — and he means business! Dr. Robert Bruce Banner’s alter ego battles General “Thunderbolt” Ross, the Leader and his Humanoids, the Executioner, and more Communists than you can shake a tank at. And if that’s not enough, round two pits the Hulk against Hercules, introduces classic villain the Abomination, dives into the intrigue of the Secret Empire, and goes cosmic with the Silver Surfer and the High Evolutionary! Featuring stories by Stan Lee and art by a who’s who of Marvel greats — Steve Ditko, Jack Kirby, Gil Kane, Bill Everett and John Buscema — these are the tales that made the Hulk a global icon! Collecting material from TALES TO ASTONISH (1959) #60-96 and NOT BRAND ECHH #3.
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 10/19/2017
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 10/25/2017
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 9/4/2017
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="Marvel Cinematic Universe Guidebook: The Avengers Initiative (Trade Paperback)"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              Marvel Cinematic Universe Guidebook: The Avengers Initiative (Trade Paperback)
-            </h3>
-            <p>
-              The official handbook of the Marvel Cinematic Universe takes you all the way through Phase One and to the dawn of Phase Two! Filled with fact sheets, movie-to-comic comparisons, behind-the-scenes art and production stills, this volume details the first eight blockbuster Marvel movies — from 2008’s Iron Man to 2013’s Thor: The Dark World. In-depth character profiles give you the whole story on heroes like Captain America, Hulk, Black Widow, War Machine, Hawkeye and more; deadly villains including Abomination, Loki, Red Skull and Mandarin; and a universe of supporting characters such as Nick Fury, Bucky Barnes, Peggy Carter and Phil Coulson! It’s your indispensable MCU guide! Collecting GUIDEBOOK TO THE MARVEL CINEMATIC UNIVERSE — MARVEL’S IRON MAN, MARVEL’S INCREDIBLE HULK, MARVEL’S IRON MAN 2, MARVEL’S THOR, MARVEL’S CAPTAIN AMERICA: THE FIRST AVENGER, MARVEL’S THE AVENGERS, MARVEL’S IRON MAN 3 and MARVEL’S THOR: THE DARK WORLD.
-            </p>
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Marvel Cinematic Universe Guidebook: The Avengers Initiative (Trade Paperback)
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 1
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5 line-clamp-1"
+              >
+                The official handbook of the Marvel Cinematic Universe takes you all the way through Phase One and to the dawn of Phase Two! Filled with fact sheets, movie-to-comic comparisons, behind-the-scenes art and production stills, this volume details the first eight blockbuster Marvel movies — from 2008’s Iron Man to 2013’s Thor: The Dark World. In-depth character profiles give you the whole story on heroes like Captain America, Hulk, Black Widow, War Machine, Hawkeye and more; deadly villains including Abomination, Loki, Red Skull and Mandarin; and a universe of supporting characters such as Nick Fury, Bucky Barnes, Peggy Carter and Phil Coulson! It’s your indispensable MCU guide! Collecting GUIDEBOOK TO THE MARVEL CINEMATIC UNIVERSE — MARVEL’S IRON MAN, MARVEL’S INCREDIBLE HULK, MARVEL’S IRON MAN 2, MARVEL’S THOR, MARVEL’S CAPTAIN AMERICA: THE FIRST AVENGER, MARVEL’S THE AVENGERS, MARVEL’S IRON MAN 3 and MARVEL’S THOR: THE DARK WORLD.
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 3/31/2017
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 4/5/2017
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 12/5/2016
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="Incredible Hulks (2010) #619"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              Incredible Hulks (2010) #619
-            </h3>
-            <p />
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Incredible Hulks (2010) #619
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 619
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 5/22/2012
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 12/22/2010
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 12/11/2010
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="Incredible Hulks (2010) #618"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              Incredible Hulks (2010) #618
-            </h3>
-            <p />
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Incredible Hulks (2010) #618
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 618
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 11/2/2017
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 12/8/2010
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 11/27/2010
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="Incredible Hulks (2010) #602 (SHS VARIANT)"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              Incredible Hulks (2010) #602 (SHS VARIANT)
-            </h3>
-            <p />
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Incredible Hulks (2010) #602 (SHS VARIANT)
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 602
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 9/20/2011
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 9/23/2009
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 9/3/2009
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="Hulk (2008) #3"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              Hulk (2008) #3
-            </h3>
-            <p />
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Hulk (2008) #3
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 3
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 11/30/2016
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 4/23/2008
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 Invalid Date
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
-          <li>
+          <li
+            aria-label="IRREDEEMABLE ANT-MAN VOL. 1: LOW-LIFE DIGEST (Trade Paperback)"
+            class="bg-black text-white overflow-hidden relative z-0
+    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+  "
+          >
             <picture
-              class=""
+              class="relative
+after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
-            <h3>
-              IRREDEEMABLE ANT-MAN VOL. 1: LOW-LIFE DIGEST (Trade Paperback)
-            </h3>
-            <p />
-            <p>
-              <small>
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                IRREDEEMABLE ANT-MAN VOL. 1: LOW-LIFE DIGEST (Trade Paperback)
+              </h3>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Issue: 
                 </strong>
                 0
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   Modified: 
                 </strong>
                 12/8/2016
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   onsaleDate: 
                 </strong>
                 6/27/2007
-              </small>
-            </p>
-            <p>
-              <small>
+              </p>
+              <p
+                class="text-xs leading-5"
+              >
                 <strong>
                   focDate: 
                 </strong>
                 Invalid Date
-              </small>
-            </p>
+              </p>
+            </div>
           </li>
         </ul>
       </section>
