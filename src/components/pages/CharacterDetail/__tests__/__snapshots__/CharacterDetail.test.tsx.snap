@@ -93,7 +93,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           </legend>
           <select
             aria-label="Order comics by:"
-            class="py-2 px-3 bg-black border border-white shadow appearance-none focus-visible-border "
+            class="py-2 px-3 bg-black border border-white shadow appearance-none focus-visible-border text-white"
             name="order"
           >
             <option

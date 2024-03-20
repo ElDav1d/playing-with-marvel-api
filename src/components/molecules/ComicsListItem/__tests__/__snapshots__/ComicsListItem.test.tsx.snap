@@ -15,46 +15,14 @@ exports[`matches snapshot 1`] = `
       class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
     >
       <h3
-        class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+        class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-3"
       >
         Hulk (2008) #55
       </h3>
       <p
-        class="text-xs leading-5"
-      >
-        <strong>
-          Issue: 
-        </strong>
-        55
-      </p>
-      <p
-        class="text-xs leading-5 line-clamp-1"
+        class="text-xs leading-5 line-clamp-3"
       >
         The hands of the doomsday clock race towards MAYAN RULE! Former Avengers arrive to help stop the end of the world as more Mayan gods return. Rick "A-Bomb" Jones falls in battle!
-      </p>
-      <p
-        class="text-xs leading-5"
-      >
-        <strong>
-          Modified: 
-        </strong>
-        6/19/2012
-      </p>
-      <p
-        class="text-xs leading-5"
-      >
-        <strong>
-          onsaleDate: 
-        </strong>
-        7/4/2012
-      </p>
-      <p
-        class="text-xs leading-5"
-      >
-        <strong>
-          focDate: 
-        </strong>
-        6/20/2012
       </p>
     </div>
   </li>
