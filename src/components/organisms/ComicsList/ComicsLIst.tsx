@@ -8,6 +8,7 @@ export interface IComicsListProps {
 const ComicsList = ({ comics }: IComicsListProps) => {
   return (
     <ul
+      aria-label='List of comics for the character.'
       aria-live='polite'
       className='grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto'
     >

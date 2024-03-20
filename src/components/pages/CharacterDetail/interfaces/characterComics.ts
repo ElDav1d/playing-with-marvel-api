@@ -163,3 +163,10 @@ export enum FetchingOrder {
   ISSUE_NUMBER_FIRST = 'issueNumber',
   ISSUE_NUMBER_LAST = '-issueNumber',
 }
+
+export enum HumanizedOrder {
+  'title' = 'by title (A/Z)',
+  '-title' = 'by title (Z/A)',
+  'issueNumber' = 'by issue number (First/Last)',
+  '-issueNumber' = 'by issue humber (Last/First)',
+}

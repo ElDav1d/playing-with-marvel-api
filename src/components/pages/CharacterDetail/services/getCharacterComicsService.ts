@@ -1,19 +1,23 @@
 import { BASE_URL } from '@/utils/constants';
+import { FetchingOrder } from '../interfaces/characterComics';
 
 export interface getCharacterComicsServiceProps {
   page: number;
   characterId: string | undefined;
   maxComics: number;
+  order: FetchingOrder;
 }
 
 const getCharacterComicsService = async ({
   page,
   characterId,
+  order,
   maxComics,
 }: getCharacterComicsServiceProps) => {
+  const fetchingOrder = order;
   const offset = maxComics * page;
   const KEY = process.env.REACT_APP_MARVEL_API_KEY;
-  const url = `${BASE_URL}/${characterId}/comics?limit=${maxComics}&offset=${offset}&apikey=${KEY}`;
+  const url = `${BASE_URL}/${characterId}/comics?orderBy=${fetchingOrder}&limit=${maxComics}&offset=${offset}&apikey=${KEY}`;
 
   try {
     const response = await fetch(url);

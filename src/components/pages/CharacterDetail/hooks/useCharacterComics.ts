@@ -1,7 +1,7 @@
 import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getCharacterComicsService } from '../services';
-import { CharacterComicDetails } from '../interfaces/characterComics';
+import { CharacterComicDetails, FetchingOrder } from '../interfaces/characterComics';
 
 /**
  * Props for the useCharacterComics custom hook.
@@ -30,6 +30,11 @@ export interface IUseCharacterComicsProps {
    * @default false
    */
   onClearData: boolean;
+  /**
+   * The fetching order for the comics.
+   * @type {FetchingOrder}
+   */
+  order: FetchingOrder;
 }
 
 /**
@@ -92,11 +97,12 @@ const useCharacterComics = ({
   characterId,
   maxComics,
   page,
+  order,
   onClearData,
 }: IUseCharacterComicsProps): IUseCharacterComicsReturn => {
   const { isError, data, isFetching, refetch } = useQuery({
     queryKey: ['characterComics', characterId],
-    queryFn: () => getCharacterComicsService({ characterId, maxComics, page }),
+    queryFn: () => getCharacterComicsService({ characterId, maxComics, page, order }),
     refetchOnWindowFocus: false,
     staleTime: 5000,
   });

@@ -4,7 +4,7 @@ import SelectGroup from '@/components/molecules/SelectGroup';
 import CharacterDetailHeroSection from '@/components/organisms/CharacterDetailHeroSection/CharacterDetailHeroSection';
 import { LOADER_SIZE, MARVEL_RED, MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
-import { FetchingOrder } from './interfaces/characterComics';
+import { FetchingOrder, HumanizedOrder } from './interfaces/characterComics';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
@@ -36,6 +36,7 @@ const CharacterDetail = () => {
     characterId: id,
     maxComics: MAX_FETCH_CHARACTER_COMICS,
     page,
+    order,
     onClearData,
   });
 
@@ -67,7 +68,7 @@ const CharacterDetail = () => {
     setPage(0);
   };
 
-  const orderLiterals = Object.values(FetchingOrder);
+  const orderLiterals = Object.values(HumanizedOrder);
 
   return (
     <>
@@ -99,12 +100,15 @@ const CharacterDetail = () => {
             )}
 
             <Container element='section'>
-              <SelectGroup
-                title='Order results:'
-                onChange={(event) => orderHandler(event)}
-                options={Object.values(FetchingOrder)}
-                optionLiterals={orderLiterals}
-              />
+              {comics && comics.length > 1 && (
+                <SelectGroup
+                  inputAriaLabel='Order comics by:'
+                  title='Order comics by:'
+                  onChange={(event) => orderHandler(event)}
+                  options={Object.values(FetchingOrder)}
+                  optionLiterals={orderLiterals}
+                />
+              )}
 
               {isFetchingComics && <h2>Loading Character Comics</h2>}
 

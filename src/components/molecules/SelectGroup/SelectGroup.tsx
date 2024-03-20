@@ -22,6 +22,10 @@ export interface ISelectProps {
    */
   optionLiterals: string[];
   /**
+   * Optional aria label for the select input.
+   */
+  inputAriaLabel?: string;
+  /**
    * Optional class name for the select input.
    */
   classNameInput?: string;
@@ -32,6 +36,7 @@ export interface ISelectProps {
 }
 
 const SelectGroup = ({
+  inputAriaLabel,
   title,
   onChange,
   options,
@@ -42,6 +47,7 @@ const SelectGroup = ({
   return (
     <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
       <Input
+        aria-label={inputAriaLabel}
         className={getParentSelectors(classNameInput)}
         type='select'
         onChange={onChange}
