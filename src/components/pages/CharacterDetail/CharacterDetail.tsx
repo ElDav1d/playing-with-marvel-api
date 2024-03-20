@@ -2,24 +2,25 @@ import { useParams } from 'react-router-dom';
 import { useCharacterDetails, useCharacterComics } from './hooks';
 import SelectGroup from '@/components/molecules/SelectGroup';
 import CharacterDetailHeroSection from '@/components/organisms/CharacterDetailHeroSection/CharacterDetailHeroSection';
-
 import { LOADER_SIZE, MARVEL_RED, MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
-import { FetchingOrder } from './interfaces/characterComics';
+import { FetchingOrder, HumanizedOrder } from './interfaces/characterComics';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
-import { ComicsList } from '@/components/organisms/ComicsList/ComicsLIst';
+import { ComicsList } from '@/components/organisms/ComicsList';
 
 const CharacterDetail = () => {
   const LOADING_LABEL = 'Character Details are loading';
   const { id } = useParams();
   const [page, setPage] = useState<number>(0);
-  const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.FOC_DATE_FIRST);
+  const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.TITLE_AZ);
   const [onClearData, setOnClearData] = useState<boolean>(false);
 
-  const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails(id);
+  const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails({
+    characterId: id,
+  });
 
   const {
     comics,
@@ -31,7 +32,13 @@ const CharacterDetail = () => {
     isFirstPage,
     isLastPage,
     refetch,
-  } = useCharacterComics(id, MAX_FETCH_CHARACTER_COMICS, page, onClearData);
+  } = useCharacterComics({
+    characterId: id,
+    maxComics: MAX_FETCH_CHARACTER_COMICS,
+    page,
+    order,
+    onClearData,
+  });
 
   useEffect(() => {
     refetch();
@@ -61,7 +68,7 @@ const CharacterDetail = () => {
     setPage(0);
   };
 
-  const orderLiterals = Object.values(FetchingOrder);
+  const orderLiterals = Object.values(HumanizedOrder);
 
   return (
     <>
@@ -83,26 +90,32 @@ const CharacterDetail = () => {
 
         {character && (
           <article aria-label='character detail article'>
-            <CharacterDetailHeroSection
-              name={character.name}
-              description={character.description}
-              thumbnailPath={character.thumbnail.path}
-              thumbnailExtension={character.thumbnail.extension}
-            />
+            {character && (
+              <CharacterDetailHeroSection
+                name={character.name}
+                description={character.description}
+                thumbnailPath={character.thumbnail.path}
+                thumbnailExtension={character.thumbnail.extension}
+              />
+            )}
 
             <Container element='section'>
-              <SelectGroup
-                title='Order results:'
-                onChange={(event) => orderHandler(event)}
-                options={Object.values(FetchingOrder)}
-                optionLiterals={orderLiterals}
-              />
+              {comics && comics.length > 1 && (
+                <SelectGroup
+                  classNameInput='text-white'
+                  inputAriaLabel='Order comics by:'
+                  title='Order comics by:'
+                  onChange={(event) => orderHandler(event)}
+                  options={Object.values(FetchingOrder)}
+                  optionLiterals={orderLiterals}
+                />
+              )}
 
               {isFetchingComics && <h2>Loading Character Comics</h2>}
 
-              {comics?.length > 0 ? (
+              {comics && comics.length > 0 ? (
                 <>
-                  <h3>
+                  <h3 className='mb-2'>
                     Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
                   </h3>
                   <ComicsList comics={comics} />

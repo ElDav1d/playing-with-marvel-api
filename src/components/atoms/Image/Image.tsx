@@ -38,12 +38,26 @@ const PIC_VARIANT_WIDTHS: PicVariantWidths = {
 };
 /* eslint-enable camelcase */
 
+const PIC_FALLBACK: Thumbnail = {
+  path: 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available',
+  extension: 'jpg',
+};
 /**
  * @interface ImageProps
  * @extends {Thumbnail}
  *
  */
-export interface ImageProps extends Thumbnail {
+export interface ImageProps {
+  /**
+   * @property {string}
+   * Image path
+   */
+  path: string | undefined;
+  /**
+   * @property {string}
+   * Image extension
+   */
+  extension: string | undefined;
   /**
    * @property {PicVariant | PicVariant[]}
    * Size variant(s) of the picture
@@ -96,6 +110,8 @@ const Image = ({
 }: ImageProps) => {
   const LAZYLOAD_SIZING_DEFAULT = 'standard_small';
   const LAZYLOAD_THRESHOLD = 50;
+  const imagePath = path || PIC_FALLBACK.path;
+  const imageExtension = extension || PIC_FALLBACK.extension;
 
   const orderSizes = (sizes: PicVariantName[]) => {
     return sizes.sort((a, b) => {
@@ -105,15 +121,15 @@ const Image = ({
 
   const getSrc = (sizing: PicVariantName | PicVariantName[]) => {
     if (typeof sizing === 'string') {
-      return `${path}/${sizing}.${extension}`;
+      return `${imagePath}/${sizing}.${imageExtension}`;
     }
 
     if (Array.isArray(sizing) && sizing.length === 1) {
-      return `${path}/${sizing[0]}.${extension}`;
+      return `${imagePath}/${sizing[0]}.${imageExtension}`;
     }
 
     const getBiggestPic = (picSizes: PicVariantName[]) => {
-      return `${path}/${orderSizes(picSizes)[picSizes.length - 1]}.${extension}`;
+      return `${imagePath}/${orderSizes(picSizes)[picSizes.length - 1]}.${imageExtension}`;
     };
 
     return getBiggestPic(sizing);
@@ -127,7 +143,7 @@ const Image = ({
 
       if (uniquePicSizes.length > 1) {
         const getPathAndSize = (size: PicVariantName) =>
-          `${path}/${size}.${extension} ${PIC_VARIANT_WIDTHS[size]}w`;
+          `${imagePath}/${size}.${imageExtension} ${PIC_VARIANT_WIDTHS[size]}w`;
 
         return orderSizes(uniquePicSizes)
           .map((size) => getPathAndSize(size))
@@ -166,8 +182,8 @@ const Image = ({
   };
 
   const getAltText = () => {
-    if (REGEX_IMAGE_PATH.test(path)) {
-      return `${alt}' is not available`;
+    if (REGEX_IMAGE_PATH.test(imagePath)) {
+      return `${alt} is not available`;
     }
     return alt;
   };
