@@ -164,3 +164,53 @@ it('correctly sets sizes attribute when sizing is an array with 2 unique sizes',
   // ASSERT
   expect(img.getAttribute('sizes')).toEqual('(max-width: 768px) 200px, 250px');
 });
+
+it('renders an image fallback when no image', () => {
+  // ARRANGE
+  const TITLE = 'Spiderman';
+  const ALT = 'The pic of Spiderman';
+  const PATH = undefined;
+  const EXTENSION = undefined;
+  const VARIANT: PicVariantName = 'standard_xlarge';
+  const FALLBACK = `http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/${VARIANT}.jpg`;
+
+  // ACT
+  render(<Image title={TITLE} alt={ALT} path={PATH} extension={EXTENSION} sizing={VARIANT} />);
+  const img = screen.getByRole('img', { name: /the pic of spiderman/i });
+
+  // ASSERT
+  expect(img.getAttribute('src')).toEqual(FALLBACK);
+});
+
+it('provides alt text when no image', () => {
+  // ARRANGE
+  const TITLE = 'Spiderman';
+  const ALT = 'The pic of Spiderman';
+  const PATH = undefined;
+  const EXTENSION = undefined;
+  const VARIANT: PicVariantName = 'standard_xlarge';
+
+  // ACT
+  render(<Image title={TITLE} alt={ALT} path={PATH} extension={EXTENSION} sizing={VARIANT} />);
+  const img = screen.getByRole('img', { name: /the pic of spiderman/i });
+
+  // ASSERT
+  expect(img.getAttribute('alt')).toEqual(ALT);
+});
+
+it('provides alt text when no image', () => {
+  // ARRANGE
+  const TITLE = 'Spiderman';
+  const ALT = 'The pic of Spiderman';
+  const PATH = undefined;
+  const EXTENSION = undefined;
+  const VARIANT: PicVariantName = 'standard_xlarge';
+  const FORMATTED_ALT = `${ALT} is not available`;
+
+  // ACT
+  render(<Image title={TITLE} alt={ALT} path={PATH} extension={EXTENSION} sizing={VARIANT} />);
+  const img = screen.getByRole('img', { name: /the pic of spiderman/i });
+
+  // ASSERT
+  expect(img.getAttribute('alt')).toEqual(FORMATTED_ALT);
+});

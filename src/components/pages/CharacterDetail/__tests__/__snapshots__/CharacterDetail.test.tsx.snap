@@ -163,8 +163,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -220,8 +219,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -277,8 +275,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -334,8 +331,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -391,8 +387,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -448,8 +443,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -500,8 +494,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -552,8 +545,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -604,8 +596,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
@@ -656,8 +647,7 @@ after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:l
   "
           >
             <picture
-              class="relative
-after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
             />
             <div
               class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
