@@ -54,9 +54,9 @@ const ComicsListItem = ({ id, images, title, description }: IComicsListItemProps
           before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[""] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1]
           group-hover:before:max-h-[300px]'
       >
-        <h3 className='mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2'>{title}</h3>
+        <h3 className='mb-2 font-semibold uppercase text-sm leading-5 line-clamp-3'>{title}</h3>
 
-        {description && <p className='text-xs leading-5 line-clamp-4'>{description}</p>}
+        {description && <p className='text-xs leading-5 line-clamp-3'>{description}</p>}
       </div>
     </li>
   );
