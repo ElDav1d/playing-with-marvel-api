@@ -112,10 +112,10 @@ const CharactersControlPanel = ({
   setOnClearData,
   onEmptyData,
   emptyDataLiteral,
-  orderTitle: selectTitle,
-  onOrderChange: onSelectChange,
-  orderOptions: selectOptions,
-  orderLiterals: selectLiterals,
+  orderTitle,
+  onOrderChange,
+  orderOptions,
+  orderLiterals,
   filtersTitle,
   filtersOptions,
   filtersLiterals,
@@ -143,10 +143,10 @@ const CharactersControlPanel = ({
       <SelectGroup
         classNameFieldset='text-white'
         classNameInput='w-full md:w-auto'
-        title={selectTitle}
-        onChange={onSelectChange}
-        options={selectOptions}
-        optionLiterals={selectLiterals}
+        title={orderTitle}
+        onChange={onOrderChange}
+        options={orderOptions}
+        optionLiterals={orderLiterals}
       />
       <CheckboxesList
         classNameFieldset='text-white'
