@@ -1,4 +1,4 @@
-import Input from '@/components/atoms/Input';
+import Select from 'react-select';
 import { ChangeEventHandler } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
 import { getParentSelectors } from '@/utils/helpers';
@@ -28,7 +28,7 @@ export interface ISelectProps {
   /**
    * Optional class name for the select input.
    */
-  classNameInput?: string;
+  classNameSelect?: string;
   /**
    * Optional class name for the select fieldset.
    */
@@ -42,23 +42,31 @@ const SelectGroup = ({
   options,
   optionLiterals,
   classNameFieldset,
-  classNameInput,
+  classNameSelect,
 }: ISelectProps) => {
+  const mappedOptions = options.map((option, index) => ({
+    value: option,
+    label: optionLiterals[index],
+  }));
+
+  const handleSelectChange = (newValue: { value: string; label: string } | null) => {
+    console.log(newValue);
+    if (newValue) {
+      onChange({
+        target: { value: newValue.value, name: 'order' },
+      } as React.ChangeEvent<HTMLSelectElement>);
+    }
+  };
+
   return (
     <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
-      <Input
+      <Select
+        options={mappedOptions}
+        onChange={handleSelectChange}
         aria-label={inputAriaLabel}
-        className={getParentSelectors(classNameInput)}
-        type='select'
-        onChange={onChange}
-        name='order'
-      >
-        {options.map((option, index) => (
-          <option key={option} value={option}>
-            {optionLiterals[index]}
-          </option>
-        ))}
-      </Input>
+        className={classNameSelect}
+        placeholder={mappedOptions[0].label}
+      />
     </FormGroupContainer>
   );
 };

@@ -142,7 +142,7 @@ const CharactersControlPanel = ({
       />
       <SelectGroup
         classNameFieldset='text-white'
-        classNameInput='w-full md:w-auto'
+        classNameSelect='w-full md:w-auto'
         title={orderTitle}
         onChange={onOrderChange}
         options={orderOptions}
