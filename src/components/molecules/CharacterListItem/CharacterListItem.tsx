@@ -70,7 +70,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
         <Image
           classNameContainer='relative
           after:absolute after:content[""] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5'
-          classNameContent='box-border transition ease-in-out delay-gridItem duration-gridItem group-hover:scale-105'
+          classNameContent='box-border transition ease-in-out delay-s duration-l group-hover:scale-105'
           title={name}
           alt={`The pic of ${name}`}
           ariaId={id.toString()}
@@ -80,7 +80,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
         />
         <div
           className='relative z-0 h-40 p-3
-          before:absolute before:transition-[max-height] before:ease-in-out before:delay-gridItem before:duration-gridItem before:content[""] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1]
+          before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[""] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1]
           group-hover:before:max-h-[300px]'
         >
           <h3 className='mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2'>{name}</h3>

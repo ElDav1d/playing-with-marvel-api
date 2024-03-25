@@ -21,7 +21,13 @@ const EMPTY_DATA_LITERAL_LIST =
   // eslint-disable-next-line quotes
   "Sorry, none of our characters' name matches your search! Try typing again";
 
-const LOGO_DEFAULT_HEIGHT = 52;
+const LOGO_DEFAULT_HEIGHT = '52px';
+
+const TRANSITION_TIMING = {
+  s: '50ms',
+  m: '250ms',
+  l: '750ms',
+};
 
 export {
   BASE_URL,
@@ -34,4 +40,5 @@ export {
   HERO_BACKGROUND_URL,
   EMPTY_DATA_LITERAL_LIST,
   LOGO_DEFAULT_HEIGHT,
+  TRANSITION_TIMING,
 };

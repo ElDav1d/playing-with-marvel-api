@@ -85,7 +85,7 @@ const SelectGroup = ({
         isFocused ? 'accesible-outline border-red' : 'border-white'
       } ${getParentSelectors(classNameSelect)}`,
     control: () => 'bg-black shadow appearance-none border-none',
-    menu: () => 'my-0 bg-black border border-red rounded-none',
+    menu: () => 'my-0 bg-black border border-red rounded-none animate-appearFromTop',
     menuList: () => 'p-0',
     option: ({ isFocused }: { isFocused: boolean }) =>
       `bg-black text-white ${isFocused ? 'bg-red' : ''}`,

@@ -65,7 +65,7 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
 
       <div
         ref={dialogRef}
-        className={`absolute top-0 m-0 h-screen w-[80vw] z-1 px-8 py-11 transition-[left] delay-gridItem duration-gridItem ${
+        className={`absolute top-0 m-0 h-screen w-[80vw] z-1 px-8 py-11 transition-[left] delay-s duration-l ${
           isOpen ? 'left-0' : 'left-[-100%]'
         } ${getParentSelectors(classNameContainer)}`}
       >
