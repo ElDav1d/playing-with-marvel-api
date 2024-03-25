@@ -31,7 +31,7 @@ code {
   }
 
   .focus-visible {
-    @apply focus-visible:accesible-outline focus-visible:outline-offset-2 
+    @apply focus-visible:accesible-outline
   }
 
   .focus-within {
@@ -39,7 +39,7 @@ code {
   }
 
   .active {
-    @apply active:accesible-outline active:outline-offset-2 
+    @apply active:accesible-outline
   }
 
   .focus-visible-border {

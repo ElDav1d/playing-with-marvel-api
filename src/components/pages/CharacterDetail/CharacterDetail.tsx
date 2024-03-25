@@ -102,7 +102,7 @@ const CharacterDetail = () => {
             <Container element='section'>
               {comics && comics.length > 1 && (
                 <SelectGroup
-                  classNameSelect='text-white'
+                  classNameSelect='w-1/4'
                   inputAriaLabel='Order comics by:'
                   title='Order comics by:'
                   onChange={(event) => orderHandler(event)}
