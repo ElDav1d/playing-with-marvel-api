@@ -15,6 +15,12 @@ jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
 
+jest.mock('../../../molecules/SelectGroup', () => {
+  return {
+    EmotionCacheProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  };
+});
+
 const mockUseCharacterDetails = useCharacterDetails as jest.Mock;
 
 const mockUseCharacterComics = useCharacterComics as jest.Mock;

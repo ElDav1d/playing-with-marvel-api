@@ -16,6 +16,12 @@ jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
 
+jest.mock('../../../molecules/SelectGroup', () => {
+  return {
+    EmotionCacheProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  };
+});
+
 it('renders the page of characters and matches snapshot', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());

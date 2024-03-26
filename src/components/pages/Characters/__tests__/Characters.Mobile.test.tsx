@@ -18,6 +18,12 @@ jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
 
+jest.mock('../../../molecules/SelectGroup', () => {
+  return {
+    EmotionCacheProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  };
+});
+
 it('renders the page of characters with the Mobile Characters List Control Panel and matches snapshot', async () => {
   // ARRANGE
   const user = setUpHappyPathWithUser();
