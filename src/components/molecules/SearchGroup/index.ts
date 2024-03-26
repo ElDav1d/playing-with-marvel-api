@@ -1,2 +1,1 @@
-import SearchGroup from './SearchGroup';
-export default SearchGroup;
+export { default as SearchGroup } from './SearchGroup';

@@ -1,6 +1,6 @@
 import { CheckboxesList } from '@/components/molecules/CheckboxesList';
-import SearchGroup from '@/components/molecules/SearchGroup';
-import SelectGroup from '@/components/molecules/SelectGroup';
+import { SearchGroup } from '@/components/molecules/SearchGroup';
+import { SelectGroup } from '@/components/molecules/SelectGroup';
 import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
 

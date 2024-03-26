@@ -1,10 +1,7 @@
-import '@/index.css';
-import createCache from '@emotion/cache';
-import { CacheProvider } from '@emotion/react';
-import Select from 'react-select';
-import { ChangeEventHandler, useMemo } from 'react';
+import { ChangeEventHandler } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
 import { getParentSelectors } from '@/utils/helpers';
+import { InputSelect } from '@/components/atoms/InputSelect';
 
 export interface ISelectProps {
   /**
@@ -38,24 +35,10 @@ export interface ISelectProps {
   classNameFieldset?: string;
 }
 
-const EmotionCacheProvider = ({ children }: { children: React.ReactNode }) => {
-  const titleElement = document.querySelector('title');
-
-  if (!titleElement) {
-    throw new Error('No <title> element found in document');
-  }
-
-  const cache = useMemo(
-    () =>
-      createCache({
-        key: 'with-tailwind',
-        insertionPoint: titleElement,
-      }),
-    [],
-  );
-
-  return <CacheProvider value={cache}>{children}</CacheProvider>;
-};
+export interface IOption {
+  value: string;
+  label: string;
+}
 
 const SelectGroup = ({
   inputAriaLabel,
@@ -66,44 +49,15 @@ const SelectGroup = ({
   classNameFieldset,
   classNameSelect,
 }: ISelectProps) => {
-  const mappedOptions = options.map((option, index) => ({
-    value: option,
-    label: optionLiterals[index],
-  }));
-
-  const handleSelectChange = (newValue: { value: string; label: string } | null) => {
-    if (newValue) {
-      onChange({
-        target: { value: newValue.value, name: 'order' },
-      } as React.ChangeEvent<HTMLSelectElement>);
-    }
-  };
-
-  const classNamesOverride = {
-    container: ({ isFocused }: { isFocused: boolean }) =>
-      `h-full bg-black border shadow appearance-none focus-visible-border ${
-        isFocused ? 'accesible-outline border-red' : 'border-white'
-      } ${getParentSelectors(classNameSelect)}`,
-    control: () => 'bg-black shadow appearance-none border-none',
-    menu: () => 'my-0 bg-black border border-red rounded-none animate-appearFromTop',
-    menuList: () => 'p-0',
-    option: ({ isFocused }: { isFocused: boolean }) =>
-      `bg-black text-white ${isFocused ? 'bg-red' : ''}`,
-    singleValue: () => 'text-white',
-  };
-
   return (
     <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
-      <EmotionCacheProvider>
-        <Select
-          options={mappedOptions}
-          onChange={handleSelectChange}
-          aria-label={inputAriaLabel}
-          className={classNameSelect}
-          placeholder={mappedOptions[0].label}
-          classNames={classNamesOverride}
-        />
-      </EmotionCacheProvider>
+      <InputSelect
+        options={options}
+        optionLiterals={optionLiterals}
+        onChange={onChange}
+        aria-label={inputAriaLabel}
+        className={classNameSelect}
+      />
     </FormGroupContainer>
   );
 };
