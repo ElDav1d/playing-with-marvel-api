@@ -1,8 +1,9 @@
 import Select from 'react-select';
-import { ChangeEventHandler, useState } from 'react';
-import { getParentSelectors } from '@/utils/helpers';
-import { IOption } from '@/components/molecules/SelectGroup/SelectGroup';
+import { ChangeEventHandler } from 'react';
 import EmotionCacheProvider from './EmotionCacheProvider';
+import { useHandleSelectChange } from './hooks';
+import { overrideClasses } from './utils';
+import { IOverrideClassesConfig } from './utils/overrideClasses';
 
 export interface IInputSelectProps {
   /**
@@ -40,27 +41,31 @@ const InputSelect = ({
     label: optionLiterals[index],
   }));
 
-  const [selectedOption, setSelectedOption] = useState<IOption | null>(null);
+  const handleSelectChange = useHandleSelectChange(onChange);
 
-  const handleSelectChange = (newValue: { value: string; label: string } | null) => {
-    if (newValue && newValue.value !== selectedOption?.value) {
-      setSelectedOption(newValue);
-      onChange({
-        target: { value: newValue.value, name: 'order' },
-      } as React.ChangeEvent<HTMLSelectElement>);
-    }
+  type overrideClassesConfig = Omit<IOverrideClassesConfig, 'state'>;
+
+  const containerConfig: overrideClassesConfig = {
+    outerClassName: className,
+    defaultClassNames: 'h-full bg-black border shadow appearance-none focus-visible-border',
+    onStateClassNames: 'accesible-outline border-red',
+    statelessClassNames: 'border-white',
+  };
+
+  const optionConfig: overrideClassesConfig = {
+    defaultClassNames: 'bg-black text-white',
+    onStateClassNames: 'bg-red',
+    statelessClassNames: '',
   };
 
   const classNamesOverride = {
     container: ({ isFocused }: { isFocused: boolean }) =>
-      `h-full bg-black border shadow appearance-none focus-visible-border ${
-        isFocused ? 'accesible-outline border-red' : 'border-white'
-      } ${getParentSelectors(className)}`,
+      overrideClasses({ state: isFocused, ...containerConfig }),
     control: () => 'bg-black shadow appearance-none border-none',
     menu: () => 'my-0 bg-black border border-red rounded-none animate-appearFromTop',
     menuList: () => 'p-0',
     option: ({ isFocused }: { isFocused: boolean }) =>
-      `bg-black text-white ${isFocused ? 'bg-red' : ''}`,
+      overrideClasses({ state: isFocused, ...optionConfig }),
     singleValue: () => 'text-white',
   };
 
