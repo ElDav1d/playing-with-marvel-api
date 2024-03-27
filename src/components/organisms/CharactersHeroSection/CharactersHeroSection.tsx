@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 const CharactersHeroSection = ({ children }: { children: ReactNode }) => (
   <section
-    className='relative flex flex-col items-center justify-around pt-logoDefaultHeight gap-2 min-h-52 md:min-h-72 mb-4 bg-black bg-hero-image bg-center bg-cover
+    className='relative flex flex-col items-center justify-around pt-logoDefaultHeight gap-2 min-h-64 md:min-h-96 lg:min-h-72 mb-4 bg-black bg-hero-image bg-center bg-cover
     before:absolute before:content[""] before:bg-gradient-to-b before:from-trans-0.5-black before:from-50% before:left-0 before:top-0 before:z-[-1]'
   >
     <Container element='div' className='my-4 lg:w-2/3 flex flex-col gap-4'>

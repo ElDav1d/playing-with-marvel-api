@@ -39,8 +39,6 @@ module.exports = {
       transitionDuration: {
         m: `${TRANSITION_TIMING.m}`,
         l: `${TRANSITION_TIMING.l}`,
-        
-
       },
       zIndex: {
         1: '1'
