@@ -33,5 +33,5 @@ export const setUpHappyPath = (characters: CharacterItem[]) => {
 
 export const setUpHappyPathWithUser = () => {
   setUpHappyPath(setUpCharacters());
-  return userEvent.setup();
+  return { user: userEvent.setup() };
 };
