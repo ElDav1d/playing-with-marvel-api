@@ -23,11 +23,10 @@ const EMPTY_DATA_LITERAL_LIST =
 
 const LOGO_DEFAULT_HEIGHT = '52px';
 
-const TRANSITION_TIMING = {
-  s: '50ms',
-  m: '250ms',
-  l: '750ms',
-};
+const TRANSITION_TIMING = new Map<string, string>();
+TRANSITION_TIMING.set('s', '50ms');
+TRANSITION_TIMING.set('m', '250ms');
+TRANSITION_TIMING.set('l', '750ms');
 
 export {
   BASE_URL,
