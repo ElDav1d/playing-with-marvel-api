@@ -6,7 +6,7 @@ import { useCharacters } from '../hooks';
 import Characters from '../Characters';
 import userEvent from '@testing-library/user-event';
 import customRender from '../utils';
-import { setUpHappyPathWithUser } from '../utils/testHelpers';
+import { setUpHappyPathWithUser, setUpMatchMedia } from '../utils/testHelpers';
 
 jest.mock('../hooks');
 
@@ -23,6 +23,8 @@ document.title = 'Test Title';
 it('renders the page of characters with the Mobile Characters List Control Panel and matches snapshot', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // ACT
   const { asFragment } = render(
@@ -46,6 +48,8 @@ it('renders the page of characters with the Mobile Characters List Control Panel
 it('opens the Mobile Characters List Control Panel', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // ACT
   customRender(
@@ -71,6 +75,8 @@ it('opens the Mobile Characters List Control Panel', async () => {
 it('closes the Mobile Characters List Control Panel', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // ACT
   customRender(
@@ -101,6 +107,8 @@ it('closes the Mobile Characters List Control Panel', async () => {
 it('fetches a new list of characters after typing on search by name input', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // TODO: optmise calls
   // At SearchGroup
@@ -144,6 +152,8 @@ it('fetches a new list of characters after typing on search by name input', asyn
 it('fetches a new list of characters after selecting an order option', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // TODO: optmise calls
   // At SearchGroup
@@ -193,6 +203,8 @@ it('renders an filter input group with its required checkboxes', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
 
+  setUpMatchMedia(false);
+
   // ACT
   customRender(
     <QueryClientProvider client={queryClient}>
@@ -226,6 +238,8 @@ it('renders an filter input group with its required checkboxes', async () => {
 it('renders a characters with image list when the image filter is checked', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // ACT
   customRender(
@@ -262,6 +276,8 @@ it('renders a characters with image list when the image filter is checked', asyn
 it('renders a characters with description list when the description filter is checked', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // ACT
   customRender(
@@ -300,6 +316,8 @@ it('renders a characters with description list when the description filter is ch
 it('keeps rendering a filtered characters list after selecting an order option', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // ACT
   customRender(
@@ -346,6 +364,8 @@ it('keeps rendering a filtered characters list after selecting an order option',
 it('renders the complete characters list after unchecking a filter', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(false);
 
   // ACT
   render(

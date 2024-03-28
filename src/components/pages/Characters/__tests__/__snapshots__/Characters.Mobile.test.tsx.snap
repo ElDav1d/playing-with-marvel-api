@@ -91,7 +91,7 @@ exports[`renders the page of characters with the Mobile Characters List Control 
             >
               <span
                 class="with-tailwind-1f43avz-a11yText-A11yText"
-                id="react-select-3-live-region"
+                id="react-select-2-live-region"
               />
               <span
                 aria-atomic="false"
@@ -108,7 +108,7 @@ exports[`renders the page of characters with the Mobile Characters List Control 
                 >
                   <div
                     class=" with-tailwind-1jqq78o-placeholder"
-                    id="react-select-3-placeholder"
+                    id="react-select-2-placeholder"
                   >
                     by name (A/Z)
                   </div>
@@ -119,14 +119,14 @@ exports[`renders the page of characters with the Mobile Characters List Control 
                     <input
                       aria-activedescendant=""
                       aria-autocomplete="list"
-                      aria-describedby="react-select-3-placeholder"
+                      aria-describedby="react-select-2-placeholder"
                       aria-expanded="false"
                       aria-haspopup="true"
                       autocapitalize="none"
                       autocomplete="off"
                       autocorrect="off"
                       class=""
-                      id="react-select-3-input"
+                      id="react-select-2-input"
                       role="combobox"
                       spellcheck="false"
                       style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
@@ -272,158 +272,6 @@ exports[`renders the page of characters with the Mobile Characters List Control 
             Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!
           </p>
         </div>
-        <form
-          aria-label="Desktop Characters List Control Panel"
-          class="focus-within gap-4 hidden md:flex justify-center flex-wrap"
-        >
-          <fieldset
-            class="text-white grow"
-          >
-            <legend
-              class="mb-1"
-            >
-              Search by name
-            </legend>
-            <input
-              class="py-2 px-3 bg-black border border-white shadow appearance-none focus-visible-border w-full"
-              placeholder="type a character name"
-              type="text"
-              value=""
-            />
-          </fieldset>
-          <fieldset
-            class="text-white grow"
-          >
-            <legend
-              class="mb-1"
-            >
-              Order results
-            </legend>
-            <div
-              class="h-full bg-black border shadow appearance-none focus-visible-border border-white w-full with-tailwind-b62m3t-container"
-            >
-              <span
-                class="with-tailwind-1f43avz-a11yText-A11yText"
-                id="react-select-2-live-region"
-              />
-              <span
-                aria-atomic="false"
-                aria-live="polite"
-                aria-relevant="additions text"
-                class="with-tailwind-1f43avz-a11yText-A11yText"
-                role="log"
-              />
-              <div
-                class="bg-black shadow appearance-none border-none with-tailwind-13cymwt-control"
-              >
-                <div
-                  class=" with-tailwind-1fdsijx-ValueContainer"
-                >
-                  <div
-                    class=" with-tailwind-1jqq78o-placeholder"
-                    id="react-select-2-placeholder"
-                  >
-                    by name (A/Z)
-                  </div>
-                  <div
-                    class=" with-tailwind-qbdosj-Input"
-                    data-value=""
-                  >
-                    <input
-                      aria-activedescendant=""
-                      aria-autocomplete="list"
-                      aria-describedby="react-select-2-placeholder"
-                      aria-expanded="false"
-                      aria-haspopup="true"
-                      autocapitalize="none"
-                      autocomplete="off"
-                      autocorrect="off"
-                      class=""
-                      id="react-select-2-input"
-                      role="combobox"
-                      spellcheck="false"
-                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                      tabindex="0"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <div
-                  class=" with-tailwind-1hb7zxy-IndicatorsContainer"
-                >
-                  <span
-                    class=" with-tailwind-1u9des2-indicatorSeparator"
-                  />
-                  <div
-                    aria-hidden="true"
-                    class=" with-tailwind-1xc3v61-indicatorContainer"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="with-tailwind-tj5bde-Svg"
-                      focusable="false"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      width="20"
-                    >
-                      <path
-                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset
-            class="text-white w-full lg:w-auto"
-          >
-            <legend
-              class="mb-1"
-            >
-              Filter results:
-            </legend>
-            <ul
-              class="md:h-full flex flex-col md:flex-row gap-2 md:items-center "
-            >
-              <li
-                class="flex items-center"
-              >
-                <input
-                  aria-label="with image"
-                  class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
-                  id="with image"
-                  name="with image"
-                  type="checkbox"
-                  value="with image"
-                />
-                <label
-                  for="with image"
-                >
-                  with image
-                </label>
-              </li>
-              <li
-                class="flex items-center"
-              >
-                <input
-                  aria-label="with description"
-                  class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
-                  id="with description"
-                  name="with description"
-                  type="checkbox"
-                  value="with description"
-                />
-                <label
-                  for="with description"
-                >
-                  with description
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-        </form>
       </div>
     </section>
     <section

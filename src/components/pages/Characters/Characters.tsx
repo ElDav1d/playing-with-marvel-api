@@ -24,6 +24,7 @@ import SideDrawer from '@/components/organisms/SideDrawer';
 import CharactersControlPanel from '@/components/organisms/CharactersControlPanel';
 import { ControlPanelInfo } from '@/components/molecules/ControlPanelInfo';
 import { CharactersHeroSection } from '@/components/organisms/CharactersHeroSection';
+import { useMediaQuery } from '@/hooks';
 
 const Characters = () => {
   const SEARCH_TITLE = 'Search by name';
@@ -130,6 +131,8 @@ const Characters = () => {
     return !isFetching && filteredCharacters?.length === 0;
   };
 
+  const isDesktop = useMediaQuery('(min-width: 768px)');
+
   const controlPanelProps = {
     searchInput,
     setSearchInput,
@@ -153,13 +156,15 @@ const Characters = () => {
   return (
     <>
       <Header>
-        <SideDrawer elementsToFocus='input, button' classNameContainer='bg-black'>
-          <CharactersControlPanel {...controlPanelProps} />
-        </SideDrawer>
+        {!isDesktop && (
+          <SideDrawer elementsToFocus='input, button' classNameContainer='bg-black'>
+            <CharactersControlPanel {...controlPanelProps} />
+          </SideDrawer>
+        )}
       </Header>
       <Container element={'main'} aria-label='characters page main content'>
         <CharactersHeroSection>
-          <CharactersControlPanel isDesktop {...controlPanelProps} />
+          {isDesktop && <CharactersControlPanel isDesktop {...controlPanelProps} />}
 
           {listControlInfoItems && listControlInfoItems.length > 0 && (
             <ControlPanelInfo infoItems={listControlInfoItems} onClear={handleClear} />

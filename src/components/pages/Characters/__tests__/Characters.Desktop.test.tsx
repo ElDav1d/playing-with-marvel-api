@@ -4,7 +4,12 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, screen, waitFor, within } from '@testing-library/react';
 import { useCharacters } from '../hooks';
 import Characters from '../Characters';
-import { setUpCharacters, setUpHappyPath, setUpHappyPathWithUser } from '../utils/testHelpers';
+import {
+  setUpCharacters,
+  setUpHappyPath,
+  setUpHappyPathWithUser,
+  setUpMatchMedia,
+} from '../utils/testHelpers';
 
 jest.mock('../hooks');
 
@@ -21,6 +26,8 @@ document.title = 'Test Title';
 it('renders the page of characters and matches snapshot', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());
+
+  setUpMatchMedia(true);
 
   // ACT
   const { asFragment } = render(
@@ -44,6 +51,8 @@ it('renders the loader when fetching initial page', () => {
     characters: undefined,
   });
 
+  setUpMatchMedia(true);
+
   // ACT
   render(
     <QueryClientProvider client={queryClient}>
@@ -66,6 +75,8 @@ it('informs user on fetching error', () => {
     characters: [],
   });
 
+  setUpMatchMedia(true);
+
   // ACT
   render(
     <QueryClientProvider client={queryClient}>
@@ -83,6 +94,8 @@ it('informs user on fetching error', () => {
 it('renders the page of characters', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());
+
+  setUpMatchMedia(true);
 
   // ACT
   render(
@@ -107,6 +120,8 @@ it('renders a list with characters', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());
 
+  setUpMatchMedia(true);
+
   // ACT
   render(
     <QueryClientProvider client={queryClient}>
@@ -126,6 +141,8 @@ it('renders a list with characters', () => {
 it('renders a list with characters as list items', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());
+
+  setUpMatchMedia(true);
 
   // ACT
   render(
@@ -149,6 +166,8 @@ it('renders a search by name input group', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());
 
+  setUpMatchMedia(true);
+
   // ACT
   render(
     <QueryClientProvider client={queryClient}>
@@ -169,6 +188,8 @@ it('renders a search by name input group', () => {
 it('fetches a new list of characters after typing on search by name input', () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(true);
 
   const INITIAL_HOOK_CALLS = 1;
 
@@ -194,6 +215,8 @@ it('fetches a new list of characters after typing on search by name input', () =
 it('renders an order select input group with its required options', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(true);
 
   // ACT
   render(
@@ -231,6 +254,8 @@ it('fetches a new list of characters after selecting an order option', async () 
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
 
+  setUpMatchMedia(true);
+
   const INITIAL_HOOK_CALLS = 1;
 
   // ACT
@@ -265,6 +290,8 @@ it('renders an filter input group with its required checkboxes', () => {
   // ARRANGE
   setUpHappyPath(setUpCharacters());
 
+  setUpMatchMedia(true);
+
   // ACT
   render(
     <QueryClientProvider client={queryClient}>
@@ -287,6 +314,8 @@ it('renders an filter input group with its required checkboxes', () => {
 it('renders a characters with image list when the image filter is checked', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(true);
 
   // ACT
   render(
@@ -313,6 +342,8 @@ it('renders a characters with description list when the description filter is ch
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
 
+  setUpMatchMedia(true);
+
   // ACT
   render(
     <QueryClientProvider client={queryClient}>
@@ -337,6 +368,8 @@ it('renders a characters with description list when the description filter is ch
 it('keeps rendering a filtered characters list after selecting an order option', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(true);
 
   // ACT
   render(
@@ -374,6 +407,8 @@ it('keeps rendering a filtered characters list after selecting an order option',
 it('renders the complete characters list after unchecking a filter', async () => {
   // ARRANGE
   const { user } = setUpHappyPathWithUser();
+
+  setUpMatchMedia(true);
 
   // ACT
   render(

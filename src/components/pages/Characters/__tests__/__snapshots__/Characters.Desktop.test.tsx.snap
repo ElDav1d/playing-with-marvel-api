@@ -49,43 +49,6 @@ exports[`renders the page of characters and matches snapshot 1`] = `
         </h1>
       </a>
     </nav>
-    <aside
-      class="md:hidden"
-    >
-      <button
-        aria-label="Open Characters List Control Panel"
-        class="absolute top-0 right-0 m-1 p-3 text-white focus-visible"
-      >
-        <svg
-          aria-hidden="true"
-          fill-rule="evenodd"
-          height="17"
-          stroke="white"
-          stroke-width="2"
-          viewBox="0 0 19 17"
-          width="19"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            Search icon
-          </title>
-          <desc>
-            Magnifying glass illustration
-          </desc>
-          <circle
-            cx="6.5"
-            cy="6.5"
-            r="5.5"
-          />
-          <path
-            d="M14 14l3.536 3.536"
-          />
-        </svg>
-      </button>
-      <div
-        class="absolute top-0 m-0 h-screen w-[80vw] z-1 px-8 py-11 transition-[left] delay-s duration-l left-[-100%] bg-black"
-      />
-    </aside>
   </header>
   <main
     aria-label="characters page main content"
