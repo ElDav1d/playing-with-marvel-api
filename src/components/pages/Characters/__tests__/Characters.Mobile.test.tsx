@@ -18,9 +18,11 @@ jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
 
+document.title = 'Test Title';
+
 it('renders the page of characters with the Mobile Characters List Control Panel and matches snapshot', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   const { asFragment } = render(
@@ -43,7 +45,7 @@ it('renders the page of characters with the Mobile Characters List Control Panel
 
 it('opens the Mobile Characters List Control Panel', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -68,7 +70,7 @@ it('opens the Mobile Characters List Control Panel', async () => {
 
 it('closes the Mobile Characters List Control Panel', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -98,7 +100,7 @@ it('closes the Mobile Characters List Control Panel', async () => {
 
 it('fetches a new list of characters after typing on search by name input', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // TODO: optmise calls
   // At SearchGroup
@@ -141,7 +143,7 @@ it('fetches a new list of characters after typing on search by name input', asyn
 
 it('fetches a new list of characters after selecting an order option', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // TODO: optmise calls
   // At SearchGroup
@@ -166,11 +168,17 @@ it('fetches a new list of characters after selecting an order option', async () 
 
   await waitFor(() => {
     const mobilePanel = screen.getByRole('form', { name: /mobile/i });
+    const selectGroup = within(mobilePanel).getByRole('group', { name: /order/i });
+    const selectInput = within(selectGroup).getByRole('combobox');
 
-    const selectInputGroup = within(mobilePanel).getByRole('group', { name: /order/i });
+    user.click(selectInput);
+  });
 
+  await waitFor(() => {
     // reordering not happening because items are mocked
-    userEvent.selectOptions(within(selectInputGroup).getByRole('combobox'), '-name');
+    const selecOptionNameAZ = screen.getByRole('option', { name: /(a\/z)+/i });
+
+    user.click(selecOptionNameAZ);
   });
 
   // ASSERT
@@ -183,7 +191,7 @@ it('fetches a new list of characters after selecting an order option', async () 
 
 it('renders an filter input group with its required checkboxes', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -217,7 +225,7 @@ it('renders an filter input group with its required checkboxes', async () => {
 
 it('renders a characters with image list when the image filter is checked', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -253,7 +261,7 @@ it('renders a characters with image list when the image filter is checked', asyn
 
 it('renders a characters with description list when the description filter is checked', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -291,7 +299,7 @@ it('renders a characters with description list when the description filter is ch
 
 it('keeps rendering a filtered characters list after selecting an order option', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   customRender(
@@ -309,17 +317,22 @@ it('keeps rendering a filtered characters list after selecting an order option',
 
   await waitFor(() => {
     const mobilePanel = screen.getByRole('form', { name: /mobile/i });
-
     const checkInputGroup = within(mobilePanel).getByRole('group', { name: /filter/i });
-
     const checkWithImage = within(checkInputGroup).getByRole('checkbox', { name: /(image)+/i });
 
     user.click(checkWithImage);
 
-    const selectInputGroup = within(mobilePanel).getByRole('group', { name: /order/i });
+    const selectGroup = within(mobilePanel).getByRole('group', { name: /order/i });
+    const selectInput = within(selectGroup).getByRole('combobox');
 
+    user.click(selectInput);
+  });
+
+  await waitFor(() => {
     // reordering not happening because items are mocked
-    user.selectOptions(within(selectInputGroup).getByRole('combobox'), '-name');
+    const selecOptionNameAZ = screen.getByRole('option', { name: /(a\/z)+/i });
+
+    user.click(selecOptionNameAZ);
   });
 
   // ASSERT
@@ -332,7 +345,7 @@ it('keeps rendering a filtered characters list after selecting an order option',
 
 it('renders the complete characters list after unchecking a filter', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   render(

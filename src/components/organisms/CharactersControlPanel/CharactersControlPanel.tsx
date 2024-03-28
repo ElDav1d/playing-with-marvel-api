@@ -1,6 +1,6 @@
 import { CheckboxesList } from '@/components/molecules/CheckboxesList';
-import SearchGroup from '@/components/molecules/SearchGroup';
-import SelectGroup from '@/components/molecules/SelectGroup';
+import { SearchGroup } from '@/components/molecules/SearchGroup';
+import { SelectGroup } from '@/components/molecules/SelectGroup';
 import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
@@ -112,10 +112,10 @@ const CharactersControlPanel = ({
   setOnClearData,
   onEmptyData,
   emptyDataLiteral,
-  orderTitle: selectTitle,
-  onOrderChange: onSelectChange,
-  orderOptions: selectOptions,
-  orderLiterals: selectLiterals,
+  orderTitle,
+  onOrderChange,
+  orderOptions,
+  orderLiterals,
   filtersTitle,
   filtersOptions,
   filtersLiterals,
@@ -123,15 +123,16 @@ const CharactersControlPanel = ({
   setOnClearChecks,
   onClearChecks,
 }: ICharactersControlPanel) => {
-  const getStyles = () => `${isDesktop ? 'hidden md:flex justify-center' : 'flex flex-col'}`;
+  const getStyles = () =>
+    `${isDesktop ? 'hidden md:flex justify-center flex-wrap' : 'flex flex-col'}`;
   const getLabels = () =>
     isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel';
 
   return (
     <form className={`focus-within gap-4 ${getStyles()}`} aria-label={getLabels()}>
       <SearchGroup
-        classNameFieldset='text-white'
-        classNameInput='w-full md:w-auto'
+        classNameFieldset='text-white grow'
+        classNameInput='w-full'
         title={searchTitle}
         placeholderLiteral={searchPlaceholder}
         searchInput={searchInput}
@@ -141,15 +142,15 @@ const CharactersControlPanel = ({
         emptyDataLiteral={emptyDataLiteral}
       />
       <SelectGroup
-        classNameFieldset='text-white'
-        classNameInput='w-full md:w-auto'
-        title={selectTitle}
-        onChange={onSelectChange}
-        options={selectOptions}
-        optionLiterals={selectLiterals}
+        classNameFieldset='text-white grow'
+        classNameSelect='w-full'
+        title={orderTitle}
+        onChange={onOrderChange}
+        options={orderOptions}
+        optionLiterals={orderLiterals}
       />
       <CheckboxesList
-        classNameFieldset='text-white'
+        classNameFieldset='text-white w-full lg:w-auto'
         title={filtersTitle}
         options={filtersOptions}
         optionLiterals={filtersLiterals}

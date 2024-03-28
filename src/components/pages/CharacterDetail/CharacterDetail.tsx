@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import { useCharacterDetails, useCharacterComics } from './hooks';
-import SelectGroup from '@/components/molecules/SelectGroup';
 import CharacterDetailHeroSection from '@/components/organisms/CharacterDetailHeroSection/CharacterDetailHeroSection';
 import { LOADER_SIZE, MARVEL_RED, MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
@@ -10,6 +9,7 @@ import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
 import { ComicsList } from '@/components/organisms/ComicsList';
+import { SelectGroup } from '@/components/molecules/SelectGroup';
 
 const CharacterDetail = () => {
   const LOADING_LABEL = 'Character Details are loading';
@@ -102,7 +102,7 @@ const CharacterDetail = () => {
             <Container element='section'>
               {comics && comics.length > 1 && (
                 <SelectGroup
-                  classNameInput='text-white'
+                  classNameSelect='w-1/4'
                   inputAriaLabel='Order comics by:'
                   title='Order comics by:'
                   onChange={(event) => orderHandler(event)}

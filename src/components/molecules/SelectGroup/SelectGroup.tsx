@@ -1,7 +1,7 @@
-import Input from '@/components/atoms/Input';
 import { ChangeEventHandler } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
 import { getParentSelectors } from '@/utils/helpers';
+import { InputSelect } from '@/components/atoms/InputSelect';
 
 export interface ISelectProps {
   /**
@@ -28,11 +28,16 @@ export interface ISelectProps {
   /**
    * Optional class name for the select input.
    */
-  classNameInput?: string;
+  classNameSelect?: string;
   /**
    * Optional class name for the select fieldset.
    */
   classNameFieldset?: string;
+}
+
+export interface IOption {
+  value: string;
+  label: string;
 }
 
 const SelectGroup = ({
@@ -42,23 +47,17 @@ const SelectGroup = ({
   options,
   optionLiterals,
   classNameFieldset,
-  classNameInput,
+  classNameSelect,
 }: ISelectProps) => {
   return (
     <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
-      <Input
-        aria-label={inputAriaLabel}
-        className={getParentSelectors(classNameInput)}
-        type='select'
+      <InputSelect
+        options={options}
+        optionLiterals={optionLiterals}
         onChange={onChange}
-        name='order'
-      >
-        {options.map((option, index) => (
-          <option key={option} value={option}>
-            {optionLiterals[index]}
-          </option>
-        ))}
-      </Input>
+        aria-label={inputAriaLabel}
+        className={classNameSelect}
+      />
     </FormGroupContainer>
   );
 };

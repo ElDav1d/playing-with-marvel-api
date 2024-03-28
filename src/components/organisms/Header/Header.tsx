@@ -20,7 +20,7 @@ const Header = ({ classNameHeader, children }: IHeaderProps) => {
   return (
     <header
       aria-label='common header'
-      className={`w-full fixed z-1 top-0 flex justify-center transition-[transform] delay-gridItem duration-header ${hideHeader()} bg-black ${getParentSelectors(
+      className={`w-full fixed z-1 top-0 flex justify-center transition-[transform] delay-s duration-m ${hideHeader()} bg-black ${getParentSelectors(
         classNameHeader,
       )}`}
     >

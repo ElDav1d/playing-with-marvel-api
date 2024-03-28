@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, within } from '@testing-library/react';
 import { useCharacters } from '../hooks';
 import Characters from '../Characters';
 import { setUpCharacters, setUpHappyPath, setUpHappyPathWithUser } from '../utils/testHelpers';
@@ -15,6 +15,8 @@ const queryClient = new QueryClient();
 jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
 }));
+
+document.title = 'Test Title';
 
 it('renders the page of characters and matches snapshot', () => {
   // ARRANGE
@@ -166,7 +168,7 @@ it('renders a search by name input group', () => {
 
 it('fetches a new list of characters after typing on search by name input', () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   const INITIAL_HOOK_CALLS = 1;
 
@@ -189,9 +191,9 @@ it('fetches a new list of characters after typing on search by name input', () =
   expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
 });
 
-it('renders an order select input group with its required options', () => {
+it('renders an order select input group with its required options', async () => {
   // ARRANGE
-  setUpHappyPath(setUpCharacters());
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -202,27 +204,32 @@ it('renders an order select input group with its required options', () => {
     </QueryClientProvider>,
   );
 
-  const selectInputGroup = screen.getByRole('group', { name: /order/i });
-  const selecOptionNameAZ = screen.getByRole('option', { name: /(a\/z)+/i }) as HTMLOptionElement;
-  const selecOptionNameZA = screen.getByRole('option', { name: /(z\/a)+/i }) as HTMLOptionElement;
-  const selecOptionModifiedFirstLast = screen.getByRole('option', {
-    name: /(first\/last)+/i,
-  }) as HTMLOptionElement;
-  const selecOptionModifiedLastFirst = screen.getByRole('option', {
-    name: /(last\/first)+/i,
-  }) as HTMLOptionElement;
+  const selectGroup = screen.getByRole('group', { name: /order/i });
+  const selectInput = within(selectGroup).getByRole('combobox');
 
-  // ASSERT
-  expect(selectInputGroup).toBeInTheDocument();
-  expect(selecOptionNameAZ.value).toBe('name');
-  expect(selecOptionNameZA.value).toBe('-name');
-  expect(selecOptionModifiedFirstLast.value).toBe('modified');
-  expect(selecOptionModifiedLastFirst.value).toBe('-modified');
+  user.click(selectInput);
+
+  await waitFor(() => {
+    const selecOptionNameAZ = screen.getByRole('option', { name: /(a\/z)+/i });
+    const selecOptionNameZA = screen.getByRole('option', { name: /(z\/a)+/i });
+    const selecOptionModifiedFirstLast = screen.getByRole('option', {
+      name: /(first\/last)+/i,
+    });
+    const selecOptionModifiedLastFirst = screen.getByRole('option', {
+      name: /(last\/first)+/i,
+    });
+
+    // ASSERT
+    expect(selecOptionNameAZ).toBeInTheDocument();
+    expect(selecOptionNameZA).toBeInTheDocument();
+    expect(selecOptionModifiedFirstLast).toBeInTheDocument();
+    expect(selecOptionModifiedLastFirst).toBeInTheDocument();
+  });
 });
 
-it('fetches a new list of characters after selecting an order option', () => {
+it('fetches a new list of characters after selecting an order option', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   const INITIAL_HOOK_CALLS = 1;
 
@@ -236,12 +243,22 @@ it('fetches a new list of characters after selecting an order option', () => {
   );
 
   // reordering not happening because items are mocked
-  user.selectOptions(screen.getByRole('combobox'), '-name');
+  const selectGroup = screen.getByRole('group', { name: /order/i });
+  const selectInput = within(selectGroup).getByRole('combobox');
+
+  user.click(selectInput);
+
+  await waitFor(() => {
+    const selecOptionNameAZ = screen.getByRole('option', { name: /(a\/z)+/i });
+    user.click(selecOptionNameAZ);
+  });
 
   // ASSERT
-  expect(mockUseCharacters).toHaveBeenCalledTimes(INITIAL_HOOK_CALLS + 1);
-  expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
-  expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
+  await waitFor(() => {
+    expect(mockUseCharacters).toHaveBeenCalledTimes(INITIAL_HOOK_CALLS + 1);
+    expect(screen.getByRole('heading', { name: /animal/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /braineater/i })).toBeInTheDocument();
+  });
 });
 
 it('renders an filter input group with its required checkboxes', () => {
@@ -269,7 +286,7 @@ it('renders an filter input group with its required checkboxes', () => {
 
 it('renders a characters with image list when the image filter is checked', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -294,7 +311,7 @@ it('renders a characters with image list when the image filter is checked', asyn
 
 it('renders a characters with description list when the description filter is checked', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -319,7 +336,7 @@ it('renders a characters with description list when the description filter is ch
 
 it('keeps rendering a filtered characters list after selecting an order option', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   render(
@@ -334,7 +351,17 @@ it('keeps rendering a filtered characters list after selecting an order option',
 
   user.click(checkWithImage);
 
-  user.selectOptions(screen.getByRole('combobox'), '-name');
+  const selectGroup = screen.getByRole('group', { name: /order/i });
+  const selectInput = within(selectGroup).getByRole('combobox');
+
+  user.click(selectInput);
+
+  await waitFor(() => {
+    // reordering not happening because items are mocked
+    const selecOptionNameAZ = screen.getByRole('option', { name: /(a\/z)+/i });
+
+    user.click(selecOptionNameAZ);
+  });
 
   // ASSERT
   await waitFor(() => {
@@ -346,7 +373,7 @@ it('keeps rendering a filtered characters list after selecting an order option',
 
 it('renders the complete characters list after unchecking a filter', async () => {
   // ARRANGE
-  const user = setUpHappyPathWithUser();
+  const { user } = setUpHappyPathWithUser();
 
   // ACT
   render(

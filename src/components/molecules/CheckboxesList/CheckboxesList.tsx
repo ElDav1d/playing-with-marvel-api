@@ -4,10 +4,10 @@ import FormGroupContainer from '../FormGroupContainer';
 import { getParentSelectors } from '@/utils/helpers';
 
 /**
- * Interface for NewCheckboxesList component props
+ * Interface for CheckboxesList component props
  */
 
-export interface INewCheckboxesListProps<T> {
+export interface ICheckboxesListProps<T> {
   /**
    * @property {string}
    * Title of the options list.
@@ -48,7 +48,7 @@ export interface INewCheckboxesListProps<T> {
   classNameUL?: string;
 }
 
-const NewCheckboxesList = <T extends string>({
+const CheckboxesList = <T extends string>({
   title,
   options,
   optionLiterals,
@@ -57,7 +57,7 @@ const NewCheckboxesList = <T extends string>({
   onClearChecks,
   classNameFieldset,
   classNameUL,
-}: INewCheckboxesListProps<T>) => {
+}: ICheckboxesListProps<T>) => {
   const [checkedOptions, setCheckedOptions] = useState<T[]>([]);
 
   useEffect(() => {
@@ -110,4 +110,4 @@ const NewCheckboxesList = <T extends string>({
   );
 };
 
-export default NewCheckboxesList;
+export default CheckboxesList;
