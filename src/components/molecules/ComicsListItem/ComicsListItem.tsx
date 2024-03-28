@@ -34,12 +34,12 @@ const ComicsListItem = ({ id, images, title, description }: IComicsListItemProps
     <li
       aria-label={title}
       className={`bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[""] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[""] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   `}
     >
       <Image
         classNameContainer='relative
-  after:absolute after:content[""] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5'
+        after:absolute after:content[""] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5'
         classNameContent='box-border transition ease-in-out delay-s duration-l group-hover:scale-105'
         title={title}
         alt={`The cover of ${title}`}
