@@ -28,10 +28,6 @@ import { CharactersHeroSection } from '@/components/organisms/CharactersHeroSect
 import { useMediaQuery } from '@/hooks';
 
 const Characters = () => {
-  const SEARCH_TITLE = 'Search by name';
-  const SEARCH_PLACEHOLDER = 'type a character name';
-  const ORDER_TITLE = 'Order results';
-  const FILTERS_TITLE = 'Filter results:';
   const ERROR_MESSAGE = 'Oooops...unexpected error!! Try reloading again';
   const LOADING_LABEL = 'Characters List is loading';
 
@@ -137,18 +133,9 @@ const Characters = () => {
   const controlPanelProps = {
     searchInput,
     setSearchInput,
-    searchTitle: SEARCH_TITLE,
-    searchPlaceholder: SEARCH_PLACEHOLDER,
     setOnClearData,
     onEmptyData: hasEmptyData(),
-    emptyDataLiteral: EMPTY_DATA_LITERAL_LIST,
-    orderTitle: ORDER_TITLE,
     onOrderChange: (event: ChangeEvent<HTMLSelectElement>) => orderHandler(event),
-    orderOptions: Object.values(FetchingOrder),
-    orderLiterals: Object.values(HumanizedOrder),
-    filtersTitle: FILTERS_TITLE,
-    filtersOptions: Object.values(FilterCriteria),
-    filtersLiterals: Object.values(FilterCriteria),
     setFilters,
     setOnClearChecks: handleClearChecks,
     onClearChecks: onClearFilters,

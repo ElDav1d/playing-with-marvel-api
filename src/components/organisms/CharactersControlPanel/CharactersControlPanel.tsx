@@ -1,7 +1,13 @@
 import { CheckboxesList } from '@/components/molecules/CheckboxesList';
 import { SearchGroup } from '@/components/molecules/SearchGroup';
 import { SelectGroup } from '@/components/molecules/SelectGroup';
-import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
+import {
+  FetchingOrder,
+  FilterCriteria,
+  FilterCriteriaType,
+  HumanizedOrder,
+} from '@/components/pages/Characters/interfaces/characters';
+import { EMPTY_DATA_LITERAL_LIST } from '@/utils/constants';
 import { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
 /**
@@ -25,16 +31,6 @@ export interface ICharactersControlPanel {
    */
   setSearchInput: (arg: string) => void;
   /**
-   * @property {string}
-   * Title for the search form group.
-   */
-  searchTitle: string;
-  /**
-   * @property {string}
-   * Placeholder text for the search input.
-   */
-  searchPlaceholder: string;
-  /**
    * Sets the state to clear data.
    * @param arg - Indicates whether data should be cleared.
    */
@@ -45,57 +41,20 @@ export interface ICharactersControlPanel {
    */
   onEmptyData: boolean;
   /**
-   * @property {string}
-   * Literal for the user message when data is empty.
-   */
-  emptyDataLiteral?: string;
-  /**
-   * @property {string}
-   * Title for the ordering form group.
-   */
-  orderTitle: string;
-  /**
    * Handles changes in ordering.
    * @param arg - Event representing the change in ordering.
    */
   onOrderChange: (arg: ChangeEvent<HTMLSelectElement>) => void;
   /**
-   * @property {string[]}
-   * Available options for ordering.
-   */
-  orderOptions: string[];
-  /**
-   * @property {string[]}
-   * Literals matching the ordering options.
-   */
-  orderLiterals: string[];
-  /**
-   * @property {string}
-   * Title for the filters form group.
-   */
-  filtersTitle: string;
-  /**
-   * @property {string[]}
-   * Available options for filtering.
-   */
-  filtersOptions: string[];
-  /**
-   * @property {string[]}
-   * Literals matching the filter options.
-   */
-  filtersLiterals: string[];
-  /**
    * Sets the filter criteria state.
    * @param arg - Function to set the filter criteria state.
    */
   setFilters: Dispatch<SetStateAction<FilterCriteriaType[]>>;
-
   /**
    * Sets the state to clear selected checkboxes.
    * @param arg - Function to handle clearing selected checkboxes state.
    */
   setOnClearChecks?: () => void;
-
   /**
    * @property {boolean}
    * Indicates whether to clear the selected checkboxes.
@@ -107,55 +66,50 @@ const CharactersControlPanel = ({
   isDesktop,
   searchInput,
   setSearchInput,
-  searchTitle,
-  searchPlaceholder,
   setOnClearData,
   onEmptyData,
-  emptyDataLiteral,
-  orderTitle,
   onOrderChange,
-  orderOptions,
-  orderLiterals,
-  filtersTitle,
-  filtersOptions,
-  filtersLiterals,
   setFilters,
   setOnClearChecks,
   onClearChecks,
 }: ICharactersControlPanel) => {
+  const SEARCH_TITLE = 'Search by name';
+  const SEARCH_PLACEHOLDER = 'type a character name';
+  const ORDER_TITLE = 'Order results';
+  const FILTERS_TITLE = 'Filter results:';
+
   const getStyles = () =>
     `${isDesktop ? 'hidden md:flex justify-center flex-wrap' : 'flex flex-col'}`;
+
   const getLabels = () =>
     isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel';
-
-  // console.log('CharactersControlPanel rendered', 'desktop: ', isDesktop);
 
   return (
     <form className={`focus-within gap-4 ${getStyles()}`} aria-label={getLabels()}>
       <SearchGroup
         classNameFieldset='text-white grow'
         classNameInput='w-full'
-        title={searchTitle}
-        placeholderLiteral={searchPlaceholder}
+        title={SEARCH_TITLE}
+        placeholderLiteral={SEARCH_PLACEHOLDER}
         searchInput={searchInput}
         setSearchInput={setSearchInput}
         setOnClearData={setOnClearData}
         onEmptyData={onEmptyData}
-        emptyDataLiteral={emptyDataLiteral}
+        emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
       />
       <SelectGroup
         classNameFieldset='text-white grow'
         classNameSelect='w-full'
-        title={orderTitle}
+        title={ORDER_TITLE}
         onChange={onOrderChange}
-        options={orderOptions}
-        optionLiterals={orderLiterals}
+        options={Object.values(FetchingOrder)}
+        optionLiterals={Object.values(HumanizedOrder)}
       />
       <CheckboxesList
         classNameFieldset='text-white w-full lg:w-auto'
-        title={filtersTitle}
-        options={filtersOptions}
-        optionLiterals={filtersLiterals}
+        title={FILTERS_TITLE}
+        options={Object.values(FilterCriteria)}
+        optionLiterals={Object.values(FilterCriteria)}
         setOptions={setFilters}
         setOnClear={setOnClearChecks}
         onClearChecks={onClearChecks}
