@@ -128,6 +128,8 @@ const CharactersControlPanel = ({
   const getLabels = () =>
     isDesktop ? 'Desktop Characters List Control Panel' : 'Mobile Characters List Control Panel';
 
+  // console.log('CharactersControlPanel rendered', 'desktop: ', isDesktop);
+
   return (
     <form className={`focus-within gap-4 ${getStyles()}`} aria-label={getLabels()}>
       <SearchGroup

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 
-const useMediaQuery = (query: string) => {
+export type MediaQuery = '(min-width: 768px)';
+
+const useMediaQuery = (query: MediaQuery): boolean => {
   const firstMatching = window.matchMedia(query).matches;
 
   const [isMatching, setIsMatching] = useState(firstMatching);

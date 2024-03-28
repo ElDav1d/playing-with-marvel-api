@@ -14,6 +14,7 @@ import {
   LOADER_SIZE,
   MARVEL_RED,
   MAX_FETCH_CHARACTERS,
+  MEDIA_BREAKPOINTS,
   REGEX_IMAGE_PATH,
 } from '@/utils/constants';
 import Header from '@/components/organisms/Header';
@@ -131,7 +132,7 @@ const Characters = () => {
     return !isFetching && filteredCharacters?.length === 0;
   };
 
-  const isDesktop = useMediaQuery('(min-width: 768px)');
+  const isDesktop = useMediaQuery(`(min-width: ${MEDIA_BREAKPOINTS.MD}px)`);
 
   const controlPanelProps = {
     searchInput,
