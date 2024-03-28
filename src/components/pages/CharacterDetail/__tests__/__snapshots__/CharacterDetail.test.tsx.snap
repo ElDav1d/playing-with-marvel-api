@@ -181,7 +181,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="Maestro: World War M (2022) #5"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -205,7 +205,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="Maestro: World War M (2022) #3"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -229,7 +229,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="MARVEL MASTERWORKS: THE INCREDIBLE HULK VOL. 11 HC (Trade Paperback)"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -253,7 +253,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="Incredible Hulk Epic Collection: The Hulk Must Die (Trade Paperback)"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -277,7 +277,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="Marvel Cinematic Universe Guidebook: The Avengers Initiative (Trade Paperback)"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -301,7 +301,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="Incredible Hulks (2010) #619"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -320,7 +320,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="Incredible Hulks (2010) #618"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -339,7 +339,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="Incredible Hulks (2010) #602 (SHS VARIANT)"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -358,7 +358,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="Hulk (2008) #3"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
@@ -377,7 +377,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
           <li
             aria-label="IRREDEEMABLE ANT-MAN VOL. 1: LOW-LIFE DIGEST (Trade Paperback)"
             class="bg-black text-white overflow-hidden relative z-0
-    after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
   "
           >
             <picture
