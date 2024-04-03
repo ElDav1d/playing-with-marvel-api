@@ -1,14 +1,13 @@
-import { CheckboxesList } from '@/components/molecules/CheckboxesList';
+import { CharactersCheckboxesList } from '@/components/molecules/CharactersCheckboxesList';
 import { SearchGroup } from '@/components/molecules/SearchGroup';
 import { SelectGroup } from '@/components/molecules/SelectGroup';
 import {
   FetchingOrder,
   FilterCriteria,
-  FilterCriteriaType,
   HumanizedOrder,
 } from '@/components/pages/Characters/interfaces/characters';
-import { EMPTY_DATA_LITERAL_LIST } from '@/utils/constants';
-import { ChangeEvent, Dispatch, SetStateAction } from 'react';
+import { EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
+import { ChangeEvent } from 'react';
 
 /**
  * Represents a control panel for managing characters.
@@ -45,21 +44,6 @@ export interface ICharactersControlPanel {
    * @param arg - Event representing the change in ordering.
    */
   onOrderChange: (arg: ChangeEvent<HTMLSelectElement>) => void;
-  /**
-   * Sets the filter criteria state.
-   * @param arg - Function to set the filter criteria state.
-   */
-  setFilters: Dispatch<SetStateAction<FilterCriteriaType[]>>;
-  /**
-   * Sets the state to clear selected checkboxes.
-   * @param arg - Function to handle clearing selected checkboxes state.
-   */
-  setOnClearChecks?: () => void;
-  /**
-   * @property {boolean}
-   * Indicates whether to clear the selected checkboxes.
-   */
-  onClearChecks: boolean;
 }
 
 const CharactersControlPanel = ({
@@ -69,9 +53,6 @@ const CharactersControlPanel = ({
   setOnClearData,
   onEmptyData,
   onOrderChange,
-  setFilters,
-  setOnClearChecks,
-  onClearChecks,
 }: ICharactersControlPanel) => {
   const SEARCH_TITLE = 'Search by name';
   const SEARCH_PLACEHOLDER = 'type a character name';
@@ -95,7 +76,7 @@ const CharactersControlPanel = ({
         setSearchInput={setSearchInput}
         setOnClearData={setOnClearData}
         onEmptyData={onEmptyData}
-        emptyDataLiteral={EMPTY_DATA_LITERAL_LIST}
+        emptyDataLiteral={EMPTY_SEARCH_RESULTS_LITERAL}
       />
       <SelectGroup
         classNameFieldset='text-white grow'
@@ -105,14 +86,11 @@ const CharactersControlPanel = ({
         options={Object.values(FetchingOrder)}
         optionLiterals={Object.values(HumanizedOrder)}
       />
-      <CheckboxesList
+      <CharactersCheckboxesList
         classNameFieldset='text-white w-full lg:w-auto'
         title={FILTERS_TITLE}
         options={Object.values(FilterCriteria)}
         optionLiterals={Object.values(FilterCriteria)}
-        setOptions={setFilters}
-        setOnClear={setOnClearChecks}
-        onClearChecks={onClearChecks}
       />
     </form>
   );

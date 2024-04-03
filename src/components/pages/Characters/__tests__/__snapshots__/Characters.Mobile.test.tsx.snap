@@ -178,34 +178,34 @@ exports[`renders the page of characters with the Mobile Characters List Control 
                 class="flex items-center"
               >
                 <input
-                  aria-label="with image"
+                  aria-label="withImage"
                   class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
-                  id="with image"
-                  name="with image"
+                  id="withImage"
+                  name="withImage"
                   type="checkbox"
-                  value="with image"
+                  value="withImage"
                 />
                 <label
-                  for="with image"
+                  for="withImage"
                 >
-                  with image
+                  withImage
                 </label>
               </li>
               <li
                 class="flex items-center"
               >
                 <input
-                  aria-label="with description"
+                  aria-label="withDescription"
                   class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
-                  id="with description"
-                  name="with description"
+                  id="withDescription"
+                  name="withDescription"
                   type="checkbox"
-                  value="with description"
+                  value="withDescription"
                 />
                 <label
-                  for="with description"
+                  for="withDescription"
                 >
-                  with description
+                  withDescription
                 </label>
               </li>
             </ul>

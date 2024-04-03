@@ -85,8 +85,13 @@ export enum HumanizedOrder {
 }
 
 export enum FilterCriteria {
-  IMAGE = 'with image',
-  DESCRIPTION = 'with description',
+  IMAGE = 'withImage',
+  DESCRIPTION = 'withDescription',
+}
+
+export enum HumanizedFilterCriteria {
+  'withImage' = 'with image',
+  'withDescription' = 'with description',
 }
 
 export type FilterCriteriaType = FilterCriteria.IMAGE | FilterCriteria.DESCRIPTION;
