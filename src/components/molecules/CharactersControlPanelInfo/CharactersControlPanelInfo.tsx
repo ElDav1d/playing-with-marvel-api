@@ -49,13 +49,13 @@ const CharactersControlPanelInfo = ({
   order,
   onClear,
 }: ICharactersControlPanelInfoProps) => {
-  const { filters, clearFilters } = useFiltersContext();
+  const { filtersContextState, filtersContextDispatch } = useFiltersContext();
 
   const infoItems = useControlPanelInputInfo({
     describer: 'Results',
     searchInput,
     order,
-    filters,
+    filters: filtersContextState,
   });
 
   const getInfoElements = (item: IInfoItem) => {
@@ -73,7 +73,7 @@ const CharactersControlPanelInfo = ({
 
   const handleClick = () => {
     onClear && onClear();
-    clearFilters();
+    filtersContextDispatch({ type: 'CLEAR_FILTERS' });
   };
 
   const hasInfo = infoItems && infoItems?.length > 1;

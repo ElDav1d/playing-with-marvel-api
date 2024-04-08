@@ -1,12 +1,10 @@
 import { createContext } from 'react';
-import { FilterCriteriaType } from '../interfaces/characters';
+import { FiltersState, FiltersAction } from '../reducers/FiltersReducer';
 
-export interface IFiltersContextType {
-  filters: Record<FilterCriteriaType, boolean>;
-  setFilter: (filter: FilterCriteriaType, isChecked: boolean) => void;
-  clearFilters: () => void;
-}
+type Dispatch = (action: FiltersAction) => void;
 
-const FiltersContext = createContext<IFiltersContextType | null>(null);
+const FiltersContext = createContext<
+  { filtersContextState: FiltersState; filtersContextDispatch: Dispatch } | undefined
+>(undefined);
 
 export default FiltersContext;

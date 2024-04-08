@@ -9,7 +9,7 @@ export interface CharactersListProps {
 }
 
 const CharactersList = ({ characters }: CharactersListProps) => {
-  const { filters } = useFiltersContext();
+  const { filtersContextState } = useFiltersContext();
 
   const filteredCharacters = useMemo(() => {
     const hasImage = (path: string) => !REGEX_IMAGE_PATH.test(path);
@@ -18,16 +18,17 @@ const CharactersList = ({ characters }: CharactersListProps) => {
     let filterCallback;
 
     switch (true) {
-      case filters[FilterCriteria.IMAGE] && filters[FilterCriteria.DESCRIPTION]:
+      case filtersContextState[FilterCriteria.IMAGE] &&
+        filtersContextState[FilterCriteria.DESCRIPTION]:
         filterCallback = (character: CharacterItem) =>
           hasImage(character.thumbnail.path) && hasDescription(character.description);
         break;
 
-      case filters[FilterCriteria.IMAGE]:
+      case filtersContextState[FilterCriteria.IMAGE]:
         filterCallback = (character: CharacterItem) => hasImage(character.thumbnail.path);
         break;
 
-      case filters[FilterCriteria.DESCRIPTION]:
+      case filtersContextState[FilterCriteria.DESCRIPTION]:
         filterCallback = (character: CharacterItem) => hasDescription(character.description);
         break;
 
@@ -36,7 +37,7 @@ const CharactersList = ({ characters }: CharactersListProps) => {
     }
 
     return characters.filter(filterCallback);
-  }, [characters, filters]);
+  }, [characters, filtersContextState]);
 
   return (
     <>

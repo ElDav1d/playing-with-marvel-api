@@ -20,10 +20,14 @@ export interface ICharactersCheckBoxGroupProps {
 }
 
 const CharactersCheckBoxGroup = ({ option, literal }: ICharactersCheckBoxGroupProps) => {
-  const { filters, setFilter } = useFiltersContext();
+  const { filtersContextState, filtersContextDispatch } = useFiltersContext();
 
   const handleChange = () => {
-    setFilter(option, !filters[option]);
+    filtersContextDispatch({
+      type: 'SET_FILTER',
+      filter: option,
+      isChecked: !filtersContextState[option],
+    });
   };
 
   return (
@@ -35,7 +39,7 @@ const CharactersCheckBoxGroup = ({ option, literal }: ICharactersCheckBoxGroupPr
         name={option}
         value={option}
         onChange={handleChange}
-        checked={filters[option]}
+        checked={filtersContextState[option]}
       />
       <label htmlFor={option}>{literal}</label>
     </>

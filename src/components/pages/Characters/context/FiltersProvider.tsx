@@ -1,30 +1,20 @@
-import { useState } from 'react';
-import { FilterCriteriaType } from '../interfaces/characters';
+import { useReducer } from 'react';
 import FiltersContext from './FiltersContext';
+import { filtersReducer } from '../reducers';
+import { initialFiltersState } from '../reducers/FiltersReducer';
+import { FilterCriteriaType } from '../interfaces/characters';
 
 export interface IFilterProviderProps {
   children: React.ReactNode;
 }
 
-const initialFiltersState: Record<FilterCriteriaType, boolean> = {
-  withImage: false,
-  withDescription: false,
-};
-
 const FiltersProvider = ({ children }: IFilterProviderProps) => {
-  const [filters, setFiltersState] = useState(initialFiltersState);
+  const [filtersContextState, filtersContextDispatch] = useReducer(
+    filtersReducer,
+    initialFiltersState,
+  );
 
-  const setFilter = (filter: FilterCriteriaType, isChecked: boolean) => {
-    setFiltersState((prevFilters) => ({ ...prevFilters, [filter]: isChecked }));
-  };
-
-  const clearFilters = () => {
-    setFiltersState({
-      ...initialFiltersState,
-    });
-  };
-
-  const value = { filters, setFilter, clearFilters };
+  const value = { filtersContextState, filtersContextDispatch };
 
   return <FiltersContext.Provider value={value}>{children}</FiltersContext.Provider>;
 };
