@@ -2,7 +2,6 @@ import { useReducer } from 'react';
 import FiltersContext from './FiltersContext';
 import { filtersReducer } from '../reducers';
 import { initialFiltersState } from '../reducers/FiltersReducer';
-import { FilterCriteriaType } from '../interfaces/characters';
 
 export interface IFilterProviderProps {
   children: React.ReactNode;

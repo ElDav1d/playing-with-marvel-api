@@ -1,8 +1,6 @@
 import { CharacterListItem } from '@/components/molecules/CharacterListItem';
 import { useFiltersContext } from '@/components/pages/Characters/hooks';
-import { CharacterItem, FilterCriteria } from '@/components/pages/Characters/interfaces/characters';
-import { REGEX_IMAGE_PATH } from '@/utils/constants';
-import { useMemo } from 'react';
+import { CharacterItem } from '@/components/pages/Characters/interfaces/characters';
 import { useFilteredCharacters } from './hooks';
 
 export interface CharactersListProps {

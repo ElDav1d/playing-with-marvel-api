@@ -3,7 +3,7 @@ import { getParentSelectors } from '@/utils/helpers';
 import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
 import { CharactersCheckBoxGroup } from '@/components/atoms/CharactersCheckBoxGroup';
 
-export interface ICharactersCheckboxesListProps<T> {
+export interface ICharactersCheckboxesListProps {
   /**
    * @property {string}
    * Title of the options list.
@@ -31,13 +31,13 @@ export interface ICharactersCheckboxesListProps<T> {
   classNameUL?: string;
 }
 
-const CharactersCheckboxesList = <T extends string>({
+const CharactersCheckboxesList = ({
   title,
   options,
   optionLiterals,
   classNameFieldset,
   classNameUL,
-}: ICharactersCheckboxesListProps<T>) => {
+}: ICharactersCheckboxesListProps) => {
   return (
     <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
       <ul
