@@ -3,6 +3,7 @@ import { useFiltersContext } from '@/components/pages/Characters/hooks';
 import { CharacterItem, FilterCriteria } from '@/components/pages/Characters/interfaces/characters';
 import { REGEX_IMAGE_PATH } from '@/utils/constants';
 import { useMemo } from 'react';
+import { useFilteredCharacters } from './hooks';
 
 export interface CharactersListProps {
   characters: CharacterItem[];
@@ -10,34 +11,7 @@ export interface CharactersListProps {
 
 const CharactersList = ({ characters }: CharactersListProps) => {
   const { filtersContextState } = useFiltersContext();
-
-  const filteredCharacters = useMemo(() => {
-    const hasImage = (path: string) => !REGEX_IMAGE_PATH.test(path);
-    const hasDescription = (description: string) => description && description !== ' ';
-
-    let filterCallback;
-
-    switch (true) {
-      case filtersContextState[FilterCriteria.IMAGE] &&
-        filtersContextState[FilterCriteria.DESCRIPTION]:
-        filterCallback = (character: CharacterItem) =>
-          hasImage(character.thumbnail.path) && hasDescription(character.description);
-        break;
-
-      case filtersContextState[FilterCriteria.IMAGE]:
-        filterCallback = (character: CharacterItem) => hasImage(character.thumbnail.path);
-        break;
-
-      case filtersContextState[FilterCriteria.DESCRIPTION]:
-        filterCallback = (character: CharacterItem) => hasDescription(character.description);
-        break;
-
-      default:
-        return characters;
-    }
-
-    return characters.filter(filterCallback);
-  }, [characters, filtersContextState]);
+  const filteredCharacters = useFilteredCharacters(characters, filtersContextState);
 
   return (
     <>
