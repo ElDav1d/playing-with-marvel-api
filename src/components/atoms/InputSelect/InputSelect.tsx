@@ -24,6 +24,10 @@ export interface IInputSelectProps {
    */
   ariaLabel?: string;
   /**
+   *  Placeholder for the select input.
+   */
+  placeholder: string;
+  /**
    * Optional class name for the select input.
    */
   className?: string;
@@ -34,6 +38,7 @@ const InputSelect = ({
   onChange,
   options,
   optionLiterals,
+  placeholder,
   className,
 }: IInputSelectProps) => {
   const mappedOptions = options.map((option, index) => ({
@@ -75,7 +80,7 @@ const InputSelect = ({
         options={mappedOptions}
         onChange={handleSelectChange}
         aria-label={ariaLabel}
-        placeholder={mappedOptions[0].label}
+        placeholder={placeholder}
         classNames={classNamesOverride}
       />
     </EmotionCacheProvider>

@@ -40,7 +40,7 @@ export interface IOption {
   label: string;
 }
 
-const SelectGroup = ({
+const ComicsSelectGroup = ({
   inputAriaLabel,
   title,
   onChange,
@@ -57,9 +57,10 @@ const SelectGroup = ({
         onChange={onChange}
         aria-label={inputAriaLabel}
         className={classNameSelect}
+        placeholder='Select comics order'
       />
     </FormGroupContainer>
   );
 };
 
-export default SelectGroup;
+export default ComicsSelectGroup;

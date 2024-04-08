@@ -9,7 +9,7 @@ import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
 import { ComicsList } from '@/components/organisms/ComicsList';
-import { SelectGroup } from '@/components/molecules/SelectGroup';
+import { ComicsSelectGroup } from '@/components/molecules/ComicsSelectGroup';
 
 const CharacterDetail = () => {
   const LOADING_LABEL = 'Character Details are loading';
@@ -101,7 +101,7 @@ const CharacterDetail = () => {
 
             <Container element='section'>
               {comics && comics.length > 1 && (
-                <SelectGroup
+                <ComicsSelectGroup
                   classNameSelect='w-1/4'
                   inputAriaLabel='Order comics by:'
                   title='Order comics by:'

@@ -1,5 +1,5 @@
+import { IOption } from '@/types/globals';
 import { useState, ChangeEventHandler } from 'react';
-import { IOption } from '@/components/molecules/SelectGroup/SelectGroup';
 
 const useHandleSelectChange = (onChange: ChangeEventHandler<HTMLSelectElement>) => {
   const [selectedOption, setSelectedOption] = useState<IOption | null>(null);

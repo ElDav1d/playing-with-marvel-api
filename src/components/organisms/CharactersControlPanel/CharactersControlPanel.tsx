@@ -1,6 +1,7 @@
 import { CharactersCheckboxesList } from '@/components/molecules/CharactersCheckboxesList';
+import { CharactersSelectGroup } from '@/components/molecules/CharactersSelectGroup';
+
 import { SearchGroup } from '@/components/molecules/SearchGroup';
-import { SelectGroup } from '@/components/molecules/SelectGroup';
 import {
   FetchingOrder,
   FilterCriteria,
@@ -78,7 +79,7 @@ const CharactersControlPanel = ({
         onEmptyData={onEmptyData}
         emptyDataLiteral={EMPTY_SEARCH_RESULTS_LITERAL}
       />
-      <SelectGroup
+      <CharactersSelectGroup
         classNameFieldset='text-white grow'
         classNameSelect='w-full'
         title={ORDER_TITLE}
