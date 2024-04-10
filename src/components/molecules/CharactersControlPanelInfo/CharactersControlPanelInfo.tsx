@@ -1,4 +1,7 @@
-import { useControlPanelInputInfo, useFiltersContext } from '@/components/pages/Characters/hooks';
+import {
+  useControlPanelInputInfo,
+  useCharactersContext,
+} from '@/components/pages/Characters/hooks';
 import { FetchingOrder } from '@/components/pages/Characters/interfaces/characters';
 
 /**
@@ -49,13 +52,13 @@ const CharactersControlPanelInfo = ({
   order,
   onClear,
 }: ICharactersControlPanelInfoProps) => {
-  const { filtersContextState, filtersContextDispatch } = useFiltersContext();
+  const { charactersContextState, charactersContextDispatch } = useCharactersContext();
 
   const infoItems = useControlPanelInputInfo({
     describer: 'Results',
     searchInput,
     order,
-    filters: filtersContextState,
+    filters: charactersContextState.filters,
   });
 
   const getInfoElements = (item: IInfoItem) => {
@@ -73,7 +76,7 @@ const CharactersControlPanelInfo = ({
 
   const handleClick = () => {
     onClear && onClear();
-    filtersContextDispatch({ type: 'CLEAR_FILTERS' });
+    charactersContextDispatch({ type: 'CLEAR_FILTERS' });
   };
 
   const hasInfo = infoItems && infoItems?.length > 1;

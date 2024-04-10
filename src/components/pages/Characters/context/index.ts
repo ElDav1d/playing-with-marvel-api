@@ -1,2 +1,2 @@
-export { default as FiltersContext } from './FiltersContext';
-export { default as FiltersProvider } from './FiltersProvider';
+export { default as Characters } from './Characters';
+export { default as CharactersProvider } from './CharactersProvider';

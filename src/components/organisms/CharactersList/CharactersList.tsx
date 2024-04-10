@@ -1,15 +1,15 @@
-import { CharacterListItem } from '@/components/molecules/CharacterListItem';
-import { useFiltersContext } from '@/components/pages/Characters/hooks';
-import { CharacterItem } from '@/components/pages/Characters/interfaces/characters';
 import { useFilteredCharacters } from './hooks';
+import { CharacterListItem } from '@/components/molecules/CharacterListItem';
+import { CharacterItem } from '@/components/pages/Characters/interfaces/characters';
+import { useCharactersContext } from '@/components/pages/Characters/hooks';
 
 export interface CharactersListProps {
   characters: CharacterItem[];
 }
 
 const CharactersList = ({ characters }: CharactersListProps) => {
-  const { filtersContextState } = useFiltersContext();
-  const filteredCharacters = useFilteredCharacters(characters, filtersContextState);
+  const { charactersContextState } = useCharactersContext();
+  const filteredCharacters = useFilteredCharacters(characters, charactersContextState.filters);
 
   return (
     <>

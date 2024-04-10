@@ -18,8 +18,9 @@ import SideDrawer from '@/components/organisms/SideDrawer';
 import CharactersControlPanel from '@/components/organisms/CharactersControlPanel';
 import { CharactersHeroSection } from '@/components/organisms/CharactersHeroSection';
 import { useMediaQuery } from '@/hooks';
-import { FiltersProvider } from './context';
+
 import { CharactersControlPanelInfo } from '@/components/molecules/CharactersControlPanelInfo';
+import { CharactersProvider } from './context';
 
 const Characters = () => {
   const ERROR_MESSAGE = 'Oooops...unexpected error!! Try reloading again';
@@ -88,7 +89,7 @@ const Characters = () => {
   };
 
   return (
-    <FiltersProvider>
+    <CharactersProvider>
       <Header>
         {!isDesktop && (
           <SideDrawer elementsToFocus='input, button' classNameContainer='bg-black'>
@@ -144,7 +145,7 @@ const Characters = () => {
         )}
       </Container>
       <Footer />
-    </FiltersProvider>
+    </CharactersProvider>
   );
 };
 

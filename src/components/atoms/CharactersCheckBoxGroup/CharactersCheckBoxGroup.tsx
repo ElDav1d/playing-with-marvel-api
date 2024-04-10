@@ -1,6 +1,6 @@
 import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
 import Input from '../Input';
-import { useFiltersContext } from '@/components/pages/Characters/hooks';
+import { useCharactersContext } from '@/components/pages/Characters/hooks';
 
 /**
  * Single checkbox within a group of characters filtering checkboxes
@@ -20,13 +20,14 @@ export interface ICharactersCheckBoxGroupProps {
 }
 
 const CharactersCheckBoxGroup = ({ option, literal }: ICharactersCheckBoxGroupProps) => {
-  const { filtersContextState, filtersContextDispatch } = useFiltersContext();
+  const { charactersContextState, charactersContextDispatch } = useCharactersContext();
 
+  console.log(charactersContextState);
   const handleChange = () => {
-    filtersContextDispatch({
+    charactersContextDispatch({
       type: 'SET_FILTER',
       filter: option,
-      isChecked: !filtersContextState[option],
+      isChecked: !charactersContextState.filters[option],
     });
   };
 
@@ -39,7 +40,7 @@ const CharactersCheckBoxGroup = ({ option, literal }: ICharactersCheckBoxGroupPr
         name={option}
         value={option}
         onChange={handleChange}
-        checked={filtersContextState[option]}
+        checked={charactersContextState.filters[option]}
       />
       <label htmlFor={option}>{literal}</label>
     </>
