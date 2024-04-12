@@ -7,7 +7,6 @@ import {
   EMPTY_SEARCH_RESULTS_LITERAL,
   LOADER_SIZE,
   MARVEL_RED,
-  MAX_FETCH_CHARACTERS,
   MEDIA_BREAKPOINTS,
 } from '@/utils/constants';
 import Header from '@/components/organisms/Header';
@@ -23,7 +22,6 @@ import { CharactersControlPanelInfo } from '@/components/molecules/CharactersCon
 import { CharactersProvider } from './context';
 
 const Characters = () => {
-  const ERROR_MESSAGE = 'Oooops...unexpected error!! Try reloading again';
   const LOADING_LABEL = 'Characters List is loading';
 
   const [searchInput, setSearchInput] = useState<string>('');
@@ -31,18 +29,15 @@ const Characters = () => {
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.NAME_AZ);
   const [onClearData, setOnClearData] = useState(false);
 
-  const { isError, characters, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
-    useCharacters({ maxCharacters: MAX_FETCH_CHARACTERS, searchString, order, onClearData });
+  const { characters, hasNextPage, isFetching, isFetchingNextPage } = useCharacters({
+    searchString,
+    order,
+    onClearData,
+  });
 
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
-
-  useEffect(() => {
-    if (inView) {
-      fetchNextPage();
-    }
-  }, [inView]);
 
   useEffect(() => {
     if (onClearData) {
@@ -108,8 +103,6 @@ const Characters = () => {
           />
         </CharactersHeroSection>
 
-        {isError && <h2>{ERROR_MESSAGE}</h2>}
-
         {isFetching && !isFetchingNextPage && (
           <RingLoader
             color={MARVEL_RED}
@@ -126,7 +119,12 @@ const Characters = () => {
           {hasEmptyData() ? (
             <h3 className='text-center'>{EMPTY_SEARCH_RESULTS_LITERAL}</h3>
           ) : (
-            <CharactersList characters={characters} />
+            <CharactersList
+              inView={inView}
+              searchString={searchString}
+              order={order}
+              onClearData={onClearData}
+            />
           )}
         </Container>
 

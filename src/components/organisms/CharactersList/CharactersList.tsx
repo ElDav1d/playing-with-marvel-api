@@ -1,19 +1,39 @@
 import { useFilteredCharacters } from './hooks';
 import { CharacterListItem } from '@/components/molecules/CharacterListItem';
-import { CharacterItem } from '@/components/pages/Characters/interfaces/characters';
-import { useCharactersContext } from '@/components/pages/Characters/hooks';
+import { FetchingOrder } from '@/components/pages/Characters/interfaces/characters';
+import { useCharacters, useCharactersContext } from '@/components/pages/Characters/hooks';
+import { useEffect } from 'react';
 
 export interface CharactersListProps {
-  characters: CharacterItem[];
+  inView: boolean;
+  searchString: string;
+  order: FetchingOrder;
+  onClearData: boolean;
 }
 
-const CharactersList = ({ characters }: CharactersListProps) => {
+const CharactersList = ({ inView, searchString, order, onClearData }: CharactersListProps) => {
+  const ERROR_MESSAGE = 'Oooops...unexpected error!! Try reloading again';
   const { charactersContextState } = useCharactersContext();
+
+  const { characters, isError, fetchNextPage } = useCharacters({
+    searchString,
+    order,
+    onClearData,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      fetchNextPage();
+    }
+  }, [inView]);
+
   const filteredCharacters = useFilteredCharacters(characters, charactersContextState.filters);
 
   return (
     <>
-      {filteredCharacters?.length > 0 && (
+      {isError && <h2>{ERROR_MESSAGE}</h2>}
+
+      {!isError && filteredCharacters?.length > 0 && (
         <ul
           aria-live='polite'
           className='grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto'

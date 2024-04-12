@@ -22,7 +22,6 @@ export interface ICharactersCheckBoxGroupProps {
 const CharactersCheckBoxGroup = ({ option, literal }: ICharactersCheckBoxGroupProps) => {
   const { charactersContextState, charactersContextDispatch } = useCharactersContext();
 
-  console.log(charactersContextState);
   const handleChange = () => {
     charactersContextDispatch({
       type: 'SET_FILTER',

@@ -6,17 +6,13 @@ import {
   useQueryClient,
 } from '@tanstack/react-query';
 import { CharacterItem, FetchingOrder } from '../interfaces/characters';
+import { MAX_FETCH_CHARACTERS } from '@/utils/constants';
 
 /**
  * Props for the useCharacters custom hook.
  * @interface
  */
 export interface IUseCharactersProps {
-  /**
-   * The maximum number of characters to fetch.
-   * @property {number}
-   */
-  maxCharacters: number;
   /**
    * The search string to filter characters.
    * @property {string}
@@ -83,7 +79,6 @@ export interface UseCharactersReturn {
  * @returns {UseCharactersReturn} The hook return values.
  */
 export const useCharacters = ({
-  maxCharacters,
   searchString,
   order,
   onClearData,
@@ -92,7 +87,12 @@ export const useCharacters = ({
     useInfiniteQuery({
       queryKey: ['characters'],
       queryFn: ({ pageParam }: { pageParam: number | undefined }) =>
-        getCharactersService({ pageParam, maxCharacters, searchString, order }),
+        getCharactersService({
+          pageParam,
+          maxCharacters: MAX_FETCH_CHARACTERS,
+          searchString,
+          order,
+        }),
       getNextPageParam: (lastPage) => lastPage?.nextCursor,
       initialPageParam: undefined,
       refetchOnWindowFocus: false,
