@@ -13,13 +13,21 @@ export interface CharactersListProps {
 
 const CharactersList = ({ inView, searchString, order, onClearData }: CharactersListProps) => {
   const ERROR_MESSAGE = 'Oooops...unexpected error!! Try reloading again';
-  const { charactersContextState } = useCharactersContext();
+  const { charactersContextState, charactersContextDispatch } = useCharactersContext();
 
   const { characters, isError, fetchNextPage } = useCharacters({
     searchString,
     order,
     onClearData,
   });
+
+  useEffect(() => {
+    charactersContextDispatch({ type: 'SET_ORDER', order });
+  }, [order]);
+
+  useEffect(() => {
+    charactersContextDispatch({ type: 'SET_SEARCH_STRING', searchString });
+  }, [searchString]);
 
   useEffect(() => {
     if (inView) {

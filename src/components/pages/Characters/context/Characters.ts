@@ -10,10 +10,16 @@ import orderReducer, {
   IOrderAction,
   initialOrderState,
 } from '../reducers/OrderReducer';
+import searchStringReducer, {
+  SearchStringAction,
+  SearchStringState,
+  initialSearchStringState,
+} from '../reducers/SearchStringReducer';
 
-type Action = FiltersAction | IOrderAction;
+type Action = SearchStringAction | FiltersAction | IOrderAction;
 
 interface IState {
+  searchString: SearchStringState;
   filters: FiltersState;
   order: IOrderState;
 }
@@ -23,6 +29,7 @@ type CombinedReducer = (state: IState, action: Action) => IState;
 type Dispatch = (action: Action) => void;
 
 export const [combinedReducer, initialCombinedState] = combineReducers<CombinedReducer>({
+  searchString: [searchStringReducer, initialSearchStringState],
   filters: [filtersReducer, initialFiltersState],
   order: [orderReducer, initialOrderState],
 });
