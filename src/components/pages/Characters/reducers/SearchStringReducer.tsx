@@ -4,10 +4,10 @@ export type SearchStringAction =
   | { type: 'SET_SEARCH'; searchString: string }
   | { type: 'CLEAR_SEARCH' };
 
-const storageItem = localStorage.getItem('charactersContext');
+const persistedState = localStorage.getItem('__characters__state__');
 
-export const initialSearchStringState: SearchStringState = storageItem
-  ? JSON.parse(storageItem).searchString
+export const initialSearchStringState: SearchStringState = persistedState
+  ? JSON.parse(persistedState).searchString
   : '';
 
 const searchStringReducer = (state: SearchStringState, action: SearchStringAction) => {

@@ -4,10 +4,10 @@ export type OrderState = FetchingOrder;
 
 export type OrderAction = { type: 'SET_ORDER'; order: FetchingOrder } | { type: 'CLEAR_ORDER' };
 
-const storageItem = localStorage.getItem('charactersContext');
+const persistedState = localStorage.getItem('__characters__state__');
 
-export const initialOrderState: OrderState = storageItem
-  ? JSON.parse(storageItem).order
+export const initialOrderState: OrderState = persistedState
+  ? JSON.parse(persistedState).order
   : FetchingOrder.NAME_AZ;
 
 const orderReducer = (state: OrderState, action: OrderAction): OrderState => {

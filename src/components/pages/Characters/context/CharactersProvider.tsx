@@ -12,7 +12,7 @@ const CharactersProvider = ({ children }: IFilterProviderProps) => {
   );
 
   useEffect(() => {
-    localStorage.setItem('charactersContext', JSON.stringify(charactersContextState));
+    localStorage.setItem('__characters__state__', JSON.stringify(charactersContextState));
   }, [charactersContextState]);
 
   const value = { charactersContextState, charactersContextDispatch };
