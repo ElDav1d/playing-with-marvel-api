@@ -4,7 +4,11 @@ export type SearchStringAction =
   | { type: 'SET_SEARCH'; searchString: string }
   | { type: 'CLEAR_SEARCH' };
 
-export const initialSearchStringState: SearchStringState = '';
+const storageItem = localStorage.getItem('charactersContext');
+
+export const initialSearchStringState: SearchStringState = storageItem
+  ? JSON.parse(storageItem).searchString
+  : '';
 
 const searchStringReducer = (state: SearchStringState, action: SearchStringAction) => {
   switch (action.type) {

@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import CharactersContext, { combinedReducer, initialCombinedState } from './Characters';
 
 export interface IFilterProviderProps {
@@ -10,6 +10,10 @@ const CharactersProvider = ({ children }: IFilterProviderProps) => {
     combinedReducer,
     initialCombinedState,
   );
+
+  useEffect(() => {
+    localStorage.setItem('charactersContext', JSON.stringify(charactersContextState));
+  }, [charactersContextState]);
 
   const value = { charactersContextState, charactersContextDispatch };
 
