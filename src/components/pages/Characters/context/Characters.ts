@@ -5,23 +5,19 @@ import filtersReducer, {
   FiltersAction,
   initialFiltersState,
 } from '../reducers/FiltersReducer';
-import orderReducer, {
-  IOrderState,
-  IOrderAction,
-  initialOrderState,
-} from '../reducers/OrderReducer';
+import orderReducer, { OrderState, OrderAction, initialOrderState } from '../reducers/OrderReducer';
 import searchStringReducer, {
   SearchStringAction,
   SearchStringState,
   initialSearchStringState,
 } from '../reducers/SearchStringReducer';
 
-type Action = SearchStringAction | FiltersAction | IOrderAction;
+type Action = SearchStringAction | FiltersAction | OrderAction;
 
 interface IState {
   searchString: SearchStringState;
   filters: FiltersState;
-  order: IOrderState;
+  order: OrderState;
 }
 
 type CombinedReducer = (state: IState, action: Action) => IState;

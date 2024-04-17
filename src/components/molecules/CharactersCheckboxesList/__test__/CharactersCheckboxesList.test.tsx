@@ -4,7 +4,8 @@ import { FilterCriteria } from '@/components/pages/Characters/interfaces/charact
 
 it('has a titled group', () => {
   // ARRANGE
-  render(<CharactersCheckboxesList title='Test Title' options={[]} optionLiterals={[]} />);
+  render(<CharactersCheckboxesList />);
+
   // ASSERT
   const titledGroup = screen.getByRole('group', { name: /title/i });
   expect(titledGroup).toBeInTheDocument();
@@ -14,12 +15,9 @@ it('renders the options as checkboxes', () => {
   // ARRANGE
   const options = Object.values(FilterCriteria);
 
-  render(
-    <CharactersCheckboxesList title='Test Title' options={options} optionLiterals={options} />,
-  );
+  render(<CharactersCheckboxesList />);
 
   // ASSERT
-
   options.forEach((option: string) => {
     expect(screen.getByRole('checkbox', { name: option })).toBeInTheDocument();
   });

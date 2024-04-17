@@ -1,58 +1,37 @@
-import { ChangeEventHandler } from 'react';
+import { ChangeEvent } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
-import { getParentSelectors } from '@/utils/helpers';
 import { InputSelect } from '@/components/atoms/InputSelect';
+import { useCharactersContext } from '@/components/pages/Characters/hooks';
+import { FetchingOrder, HumanizedOrder } from '@/components/pages/Characters/interfaces/characters';
 
 export interface ISelectProps {
-  /**
-   * Title of the select.
-   */
-  title: string;
-  /**
-   * Handles change events on the select.
-   * @param event - The change event.
-   */
-  onChange: ChangeEventHandler<HTMLSelectElement>;
-  /**
-   * Available options for the select.
-   */
-  options: string[];
-  /**
-   * Literal strings corresponding to the options.
-   */
-  optionLiterals: string[];
-  /**
-   * Optional aria label for the select input.
-   */
   inputAriaLabel?: string;
-  /**
-   * Optional class name for the select input.
-   */
-  classNameSelect?: string;
-  /**
-   * Optional class name for the select fieldset.
-   */
-  classNameFieldset?: string;
 }
 
-const CharactersSelectGroup = ({
-  inputAriaLabel,
-  title,
-  onChange,
-  options,
-  optionLiterals,
-  classNameFieldset,
-  classNameSelect,
-}: ISelectProps) => {
+const CharactersSelectGroup = ({ inputAriaLabel }: ISelectProps) => {
+  const SELECT_TITLE = 'Order results';
+
+  const { charactersContextState, charactersContextDispatch } = useCharactersContext();
+
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>): void => {
+    const value = event.target.value as FetchingOrder;
+
+    charactersContextDispatch({
+      type: 'SET_ORDER',
+      order: value,
+    });
+  };
+
   return (
-    <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
+    <FormGroupContainer classNameFieldset='text-white grow' title={SELECT_TITLE}>
       <InputSelect
-        options={options}
-        optionLiterals={optionLiterals}
-        onChange={onChange}
+        options={Object.values(FetchingOrder)}
+        optionLiterals={Object.values(HumanizedOrder)}
+        onChange={handleChange}
         aria-label={inputAriaLabel}
-        className={classNameSelect}
-        placeholder='Select characters order'
+        className='w-full'
+        placeholder={HumanizedOrder[charactersContextState.order]}
+        controlledValue={charactersContextState.order}
       />
     </FormGroupContainer>
   );

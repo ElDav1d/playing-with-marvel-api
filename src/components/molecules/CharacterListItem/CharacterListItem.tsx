@@ -10,7 +10,7 @@ import { useState } from 'react';
  * Single character item in the list.
  * @interface
  */
-export interface CharacterItemProps {
+export interface ICharacterItemProps {
   /**
    * The ID of the character.
    */
@@ -29,7 +29,7 @@ export interface CharacterItemProps {
   thumbnail: Thumbnail;
 }
 
-const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemProps) => {
+const CharacterListItem = ({ id, name, thumbnail, description }: ICharacterItemProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isActive, setIsActive] = useState(false);
 

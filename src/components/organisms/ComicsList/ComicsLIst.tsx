@@ -1,8 +1,8 @@
 import { ComicsListItem } from '@/components/molecules/ComicsListItem';
-import { CharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
+import { ICharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 
 export interface IComicsListProps {
-  comics: CharacterComicDetails[];
+  comics: ICharacterComicDetails[];
 }
 
 const ComicsList = ({ comics }: IComicsListProps) => {

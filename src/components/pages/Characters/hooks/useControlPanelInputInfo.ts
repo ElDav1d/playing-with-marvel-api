@@ -4,8 +4,8 @@ import {
   FetchingOrder,
   FilterCriteriaType,
   HumanizedFilterCriteria,
+  ICharactersInfoItem,
 } from '../interfaces/characters';
-import { IInfoItem } from '@/components/molecules/CharactersControlPanelInfo/CharactersControlPanelInfo';
 
 /**
  * Represents the properties used by the list control information hook.
@@ -35,14 +35,14 @@ export interface IUseControlPanelInputInfo {
   filters: Record<FilterCriteriaType, boolean>;
 }
 
-const useListControlInfo = ({
+const useControlPanelInputInfo = ({
   describer,
   searchInput,
   order,
   filters,
 }: IUseControlPanelInputInfo) => {
   return useMemo(() => {
-    const info: IInfoItem[] = [{ type: 'describer', name: describer }];
+    const info: ICharactersInfoItem[] = [{ type: 'describer', name: describer }];
     const hasSearch = searchInput !== '';
     const hasFilters = Object.values(filters).some((filter) => filter === true);
 
@@ -55,8 +55,8 @@ const useListControlInfo = ({
     }
 
     if (hasFilters) {
-      const filterItems: IInfoItem[] = Object.entries(filters).reduce(
-        (acc: IInfoItem[], [key, value], index) => {
+      const filterItems: ICharactersInfoItem[] = Object.entries(filters).reduce(
+        (acc: ICharactersInfoItem[], [key, value], index) => {
           if (value === true) {
             const prefix = index === 0 ? ' with ' : ' and ';
 
@@ -71,11 +71,11 @@ const useListControlInfo = ({
         },
         [],
       );
-      return [...info, ...filterItems] as IInfoItem[];
+      return [...info, ...filterItems] as ICharactersInfoItem[];
     }
 
     return info;
   }, [describer, searchInput, order, filters]);
 };
 
-export default useListControlInfo;
+export default useControlPanelInputInfo;

@@ -1,7 +1,7 @@
 import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getCharacterComicsService } from '../services';
-import { CharacterComicDetails, FetchingOrder } from '../interfaces/characterComics';
+import { ICharacterComicDetails, FetchingOrder } from '../interfaces/characterComics';
 
 /**
  * Props for the useCharacterComics custom hook.
@@ -44,9 +44,9 @@ export interface IUseCharacterComicsProps {
 export interface IUseCharacterComicsReturn {
   /**
    * An array of character comics.
-   * @property {CharacterComicDetails[] | undefined}
+   * @property {ICharacterComicDetails[] | undefined}
    */
-  comics: CharacterComicDetails[] | undefined;
+  comics: ICharacterComicDetails[] | undefined;
   /**
    * The total number of available comics.
    * @property {number | undefined}

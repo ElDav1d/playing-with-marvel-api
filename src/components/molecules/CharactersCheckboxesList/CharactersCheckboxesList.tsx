@@ -1,53 +1,17 @@
 import FormGroupContainer from '../FormGroupContainer';
-import { getParentSelectors } from '@/utils/helpers';
-import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
+import { FilterCriteria } from '@/components/pages/Characters/interfaces/characters';
 import { CharactersCheckBoxGroup } from '@/components/atoms/CharactersCheckBoxGroup';
 
-export interface ICharactersCheckboxesListProps {
-  /**
-   * @property {string}
-   * Title of the options list.
-   */
-  title: string;
-  /**
-   * @property {FilterCriteriaType[]}
-   * List of options to be rendered as checkboxes.
-   */
-  options: FilterCriteriaType[];
-  /**
-   * @property {string[]}
-   * List of literals corresponding to each option.
-   */
-  optionLiterals: string[];
-  /**
-   * @property {string}
-   * Additional class name for the <fieldset> element.
-   */
-  classNameFieldset?: string;
-  /**
-   * @property {string}
-   * Additional class name for the <ul> element.
-   */
-  classNameUL?: string;
-}
+const CharactersCheckboxesList = () => {
+  const FILTERS_TITLE = 'Filter results:';
+  const options = Object.values(FilterCriteria);
 
-const CharactersCheckboxesList = ({
-  title,
-  options,
-  optionLiterals,
-  classNameFieldset,
-  classNameUL,
-}: ICharactersCheckboxesListProps) => {
   return (
-    <FormGroupContainer classNameFieldset={getParentSelectors(classNameFieldset)} title={title}>
-      <ul
-        className={`md:h-full flex flex-col md:flex-row gap-2 md:items-center ${getParentSelectors(
-          classNameUL,
-        )}`}
-      >
+    <FormGroupContainer classNameFieldset='text-white w-full lg:w-auto' title={FILTERS_TITLE}>
+      <ul className='md:h-full flex flex-col md:flex-row gap-2 md:items-center'>
         {options.map((option, index) => (
           <li className='flex items-center' key={option}>
-            <CharactersCheckBoxGroup option={option} literal={optionLiterals[index]} />
+            <CharactersCheckBoxGroup option={option} literal={options[index]} />
           </li>
         ))}
       </ul>

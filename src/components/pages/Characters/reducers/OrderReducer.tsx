@@ -1,24 +1,16 @@
 import { FetchingOrder } from '../interfaces/characters';
 
-export interface IOrderState {
-  order: FetchingOrder;
-}
+export type OrderState = FetchingOrder;
 
-export interface IOrderAction {
-  type: 'SET_ORDER' | 'CLEAR_ORDER';
-  order: FetchingOrder;
-}
+export type OrderAction = { type: 'SET_ORDER'; order: FetchingOrder } | { type: 'CLEAR_ORDER' };
 
-export const initialOrderState: IOrderState = {
-  order: FetchingOrder.NAME_AZ,
-};
-
-const orderReducer = (state: IOrderState, action: IOrderAction): IOrderState => {
+export const initialOrderState: OrderState = FetchingOrder.NAME_AZ;
+const orderReducer = (state: OrderState, action: OrderAction): OrderState => {
   switch (action.type) {
     case 'SET_ORDER':
-      return { ...state, order: action.order };
+      return action.order;
     case 'CLEAR_ORDER':
-      return { ...initialOrderState };
+      return initialOrderState;
     default:
       return state;
   }

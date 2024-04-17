@@ -3,38 +3,16 @@ import {
   FetchNextPageOptions,
   useInfiniteQuery,
   UseInfiniteQueryResult,
-  useQueryClient,
 } from '@tanstack/react-query';
-import { CharacterItem, FetchingOrder } from '../interfaces/characters';
+import { ICharacterItem } from '../interfaces/characters';
 import { MAX_FETCH_CHARACTERS } from '@/utils/constants';
-
-/**
- * Props for the useCharacters custom hook.
- * @interface
- */
-export interface IUseCharactersProps {
-  /**
-   * The search string to filter characters.
-   * @property {string}
-   */
-  searchString: string;
-  /**
-   * The fetching order for the characters.
-   * @property {FetchingOrder}
-   */
-  order: FetchingOrder;
-  /**
-   * Indicates whether to clear data.
-   * @property {boolean}
-   */
-  onClearData: boolean;
-}
+import useCharactersContext from './useCharactersContext';
 
 /**
  * Return type for the useCharacters custom hook.
  * @interface
  */
-export interface UseCharactersReturn {
+export interface IUseCharactersReturn {
   /**
    * Indicates if there is an error.
    * @property {boolean}
@@ -47,9 +25,9 @@ export interface UseCharactersReturn {
   isLoading: boolean;
   /**
    * An array of character items.
-   * @property {CharacterItem[]}
+   * @property {ICharacterItem[]}
    */
-  characters: CharacterItem[];
+  characters: ICharacterItem[];
   /**
    * Function to fetch the next page of characters.
    * @property {(options?: FetchNextPageOptions) => Promise<UseInfiniteQueryResult>}
@@ -75,35 +53,26 @@ export interface UseCharactersReturn {
 /**
  * Custom hook to fetch characters with pagination.
  * @function
- * @param {IUseCharactersProps} props - The hook props.
- * @returns {UseCharactersReturn} The hook return values.
+ * @returns {IUseCharactersReturn} The hook return values.
  */
-export const useCharacters = ({
-  searchString,
-  order,
-  onClearData,
-}: IUseCharactersProps): UseCharactersReturn => {
+export const useCharacters = (): IUseCharactersReturn => {
+  const { charactersContextState } = useCharactersContext();
+
   const { isLoading, isError, data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
     useInfiniteQuery({
-      queryKey: ['characters'],
+      queryKey: ['characters', charactersContextState.searchString, charactersContextState.order],
       queryFn: ({ pageParam }: { pageParam: number | undefined }) =>
         getCharactersService({
           pageParam,
           maxCharacters: MAX_FETCH_CHARACTERS,
-          searchString,
-          order,
+          searchString: charactersContextState.searchString,
+          order: charactersContextState.order,
         }),
       getNextPageParam: (lastPage) => lastPage?.nextCursor,
       initialPageParam: undefined,
       refetchOnWindowFocus: false,
       staleTime: 1000 * 3,
     });
-
-  const queryClient = useQueryClient();
-
-  if (onClearData) {
-    queryClient.removeQueries({ queryKey: ['characters'] });
-  }
 
   return {
     isLoading,

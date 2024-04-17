@@ -1,9 +1,12 @@
 import { useMemo } from 'react';
-import { CharacterItem, FilterCriteria } from '@/components/pages/Characters/interfaces/characters';
+import {
+  ICharacterItem,
+  FilterCriteria,
+} from '@/components/pages/Characters/interfaces/characters';
 import { REGEX_IMAGE_PATH } from '@/utils/constants';
 
 const useFilteredCharacters = (
-  characters: CharacterItem[],
+  characters: ICharacterItem[],
   filtersContextState: Record<FilterCriteria, boolean>,
 ) => {
   return useMemo(() => {
@@ -15,16 +18,16 @@ const useFilteredCharacters = (
     switch (true) {
       case filtersContextState[FilterCriteria.IMAGE] &&
         filtersContextState[FilterCriteria.DESCRIPTION]:
-        filterCallback = (character: CharacterItem) =>
+        filterCallback = (character: ICharacterItem) =>
           hasImage(character.thumbnail.path) && hasDescription(character.description);
         break;
 
       case filtersContextState[FilterCriteria.IMAGE]:
-        filterCallback = (character: CharacterItem) => hasImage(character.thumbnail.path);
+        filterCallback = (character: ICharacterItem) => hasImage(character.thumbnail.path);
         break;
 
       case filtersContextState[FilterCriteria.DESCRIPTION]:
-        filterCallback = (character: CharacterItem) => hasDescription(character.description);
+        filterCallback = (character: ICharacterItem) => hasDescription(character.description);
         break;
 
       default:

@@ -3,7 +3,7 @@
 import mockCharactersAZ from '../mocks/mockCharactersAZ.json';
 import { useCharacters } from '../hooks';
 import userEvent from '@testing-library/user-event';
-import { CharacterItem } from '../interfaces/characters';
+import { ICharacterItem } from '../interfaces/characters';
 
 jest.mock('react-lazy-load-image-component', () => ({
   LazyLoadImage: () => null,
@@ -23,7 +23,7 @@ window.IntersectionObserver = mockIntersectionObserver;
 
 export const setUpCharacters = () => JSON.parse(JSON.stringify(mockCharactersAZ));
 
-export const setUpHappyPath = (characters: CharacterItem[]) => {
+export const setUpHappyPath = (characters: ICharacterItem[]) => {
   mockUseCharacters.mockReturnValue({
     isLoading: false,
     isError: false,

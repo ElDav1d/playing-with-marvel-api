@@ -111,7 +111,7 @@ it('fetches a new list of characters after typing on search by name input', asyn
   setUpMatchMedia(false);
 
   // TODO: optmise calls
-  // At SearchGroup
+  // At CharactersSearchGroup
   // Or avoiding desktop form render
   const DESKTOP_HOOK_CALLS = 1;
   const MOBILE_HOOK_CALLS = 1;
@@ -156,7 +156,7 @@ it('fetches a new list of characters after selecting an order option', async () 
   setUpMatchMedia(false);
 
   // TODO: optmise calls
-  // At SearchGroup
+  // At CharactersSearchGroup
   // Or avoiding CharactersControlPanel isDesktop
   const DESKTOP_HOOK_CALLS = 1;
   const MOBILE_HOOK_CALLS = 1;

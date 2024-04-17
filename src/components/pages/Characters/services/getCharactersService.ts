@@ -1,5 +1,5 @@
 import { BASE_URL } from '@/utils/constants';
-import { CharacterItem, FetchingOrder } from '../interfaces/characters';
+import { ICharacterItem, FetchingOrder } from '../interfaces/characters';
 
 export interface IGetCharactersServiceProps {
   pageParam?: number;
@@ -30,7 +30,7 @@ const getCharactersService = async ({
     const res = await response.json();
 
     const characters = res.data.results.filter(
-      (character: CharacterItem) => character !== undefined,
+      (character: ICharacterItem) => character !== undefined,
     );
 
     const getNextCursor = () => {
