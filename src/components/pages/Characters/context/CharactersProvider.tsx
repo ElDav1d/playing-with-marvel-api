@@ -6,9 +6,12 @@ export interface IFilterProviderProps {
 }
 
 const CharactersProvider = ({ children }: IFilterProviderProps) => {
+  const persistedState = localStorage.getItem('__characters__state__');
+  const initialState = persistedState ? JSON.parse(persistedState) : initialCombinedState;
+
   const [charactersContextState, charactersContextDispatch] = useReducer(
     combinedReducer,
-    initialCombinedState,
+    initialState,
   );
 
   useEffect(() => {
