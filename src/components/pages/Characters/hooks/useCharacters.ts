@@ -71,7 +71,7 @@ export const useCharacters = (): IUseCharactersReturn => {
       getNextPageParam: (lastPage) => lastPage?.nextCursor,
       initialPageParam: undefined,
       refetchOnWindowFocus: false,
-      staleTime: 1000 * 3,
+      staleTime: Infinity,
     });
 
   return {
