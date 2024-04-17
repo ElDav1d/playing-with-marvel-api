@@ -4,7 +4,12 @@ export type OrderState = FetchingOrder;
 
 export type OrderAction = { type: 'SET_ORDER'; order: FetchingOrder } | { type: 'CLEAR_ORDER' };
 
-export const initialOrderState: OrderState = FetchingOrder.NAME_AZ;
+const storageItem = localStorage.getItem('charactersContext');
+
+export const initialOrderState: OrderState = storageItem
+  ? JSON.parse(storageItem).order
+  : FetchingOrder.NAME_AZ;
+
 const orderReducer = (state: OrderState, action: OrderAction): OrderState => {
   switch (action.type) {
     case 'SET_ORDER':
