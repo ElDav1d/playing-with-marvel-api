@@ -9,8 +9,6 @@ const MARVEL_RED = '#EC1D24';
 
 const LOADER_SIZE = 40;
 
-const REGEX_IMAGE_PATH = /image_not_available/g;
-
 const MEDIA_BREAKPOINTS: MediaBreakpoints = {
   MD: 768,
 };
@@ -34,7 +32,6 @@ export {
   MAX_FETCH_CHARACTER_COMICS,
   MARVEL_RED,
   LOADER_SIZE,
-  REGEX_IMAGE_PATH,
   MEDIA_BREAKPOINTS,
   HERO_BACKGROUND_URL,
   EMPTY_SEARCH_RESULTS_LITERAL,

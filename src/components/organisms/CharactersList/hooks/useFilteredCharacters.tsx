@@ -3,14 +3,13 @@ import {
   ICharacterItem,
   FilterCriteria,
 } from '@/components/pages/Characters/interfaces/characters';
-import { REGEX_IMAGE_PATH } from '@/utils/constants';
 
 const useFilteredCharacters = (
   characters: ICharacterItem[],
   filtersContextState: Record<FilterCriteria, boolean>,
 ) => {
   return useMemo(() => {
-    const hasImage = (path: string) => !REGEX_IMAGE_PATH.test(path);
+    const hasImage = (path: string) => !path.includes('image_not_available');
     const hasDescription = (description: string) => description && description !== ' ';
 
     let filterCallback;
