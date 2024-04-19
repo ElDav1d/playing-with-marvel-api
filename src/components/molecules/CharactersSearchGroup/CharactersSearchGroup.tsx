@@ -19,7 +19,7 @@ const CharactersSearchGroup = () => {
   const { charactersContextState, charactersContextDispatch } = useCharactersContext();
 
   const [searchInput, setSearchInput] = useState<string>(charactersContextState.searchString);
-  const [searchString, setSearchString] = useState<string>('');
+  const [searchString, setSearchString] = useState<string>(charactersContextState.searchString);
 
   const { characters, isFetching } = useCharacters();
 
