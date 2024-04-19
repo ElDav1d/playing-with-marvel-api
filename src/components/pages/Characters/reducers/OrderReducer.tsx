@@ -4,7 +4,7 @@ export type OrderState = FetchingOrder;
 
 export type OrderAction = { type: 'SET_ORDER'; order: FetchingOrder } | { type: 'CLEAR_ORDER' };
 
-const persistedState = localStorage.getItem('__characters__state__');
+const persistedState = sessionStorage.getItem('__characters__state__');
 
 export const initialOrderState: OrderState = persistedState
   ? JSON.parse(persistedState).order

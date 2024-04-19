@@ -6,7 +6,7 @@ export interface IFilterProviderProps {
 }
 
 const CharactersProvider = ({ children }: IFilterProviderProps) => {
-  const persistedState = localStorage.getItem('__characters__state__');
+  const persistedState = sessionStorage.getItem('__characters__state__');
   const initialState = persistedState ? JSON.parse(persistedState) : initialCombinedState;
 
   const [charactersContextState, charactersContextDispatch] = useReducer(
@@ -15,7 +15,7 @@ const CharactersProvider = ({ children }: IFilterProviderProps) => {
   );
 
   useEffect(() => {
-    localStorage.setItem('__characters__state__', JSON.stringify(charactersContextState));
+    sessionStorage.setItem('__characters__state__', JSON.stringify(charactersContextState));
   }, [charactersContextState]);
 
   const value = { charactersContextState, charactersContextDispatch };

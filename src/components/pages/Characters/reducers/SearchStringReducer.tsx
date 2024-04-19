@@ -4,7 +4,7 @@ export type SearchStringAction =
   | { type: 'SET_SEARCH'; searchString: string }
   | { type: 'CLEAR_SEARCH' };
 
-const persistedState = localStorage.getItem('__characters__state__');
+const persistedState = sessionStorage.getItem('__characters__state__');
 
 export const initialSearchStringState: SearchStringState = persistedState
   ? JSON.parse(persistedState).searchString

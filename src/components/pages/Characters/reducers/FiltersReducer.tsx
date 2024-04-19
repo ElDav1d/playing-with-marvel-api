@@ -7,7 +7,7 @@ export type FiltersAction =
   | { type: 'SET_FILTER'; filter: FilterCriteriaType; isChecked: boolean }
   | { type: 'CLEAR_FILTERS' };
 
-const persistedState = localStorage.getItem('__characters__state__');
+const persistedState = sessionStorage.getItem('__characters__state__');
 
 export const initialFiltersState: FiltersState = persistedState
   ? JSON.parse(persistedState).filters
