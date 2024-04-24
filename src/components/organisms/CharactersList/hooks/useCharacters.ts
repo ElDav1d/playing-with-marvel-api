@@ -1,12 +1,12 @@
+import { ICharacterItem } from '@/components/pages/Characters/interfaces/characters';
 import getCharactersService from '../services/getCharactersService';
 import {
   FetchNextPageOptions,
   useInfiniteQuery,
   UseInfiniteQueryResult,
 } from '@tanstack/react-query';
-import { ICharacterItem } from '../interfaces/characters';
+import { useCharactersContext } from '@/components/pages/Characters/hooks';
 import { MAX_FETCH_CHARACTERS } from '@/utils/constants';
-import useCharactersContext from './useCharactersContext';
 
 /**
  * Return type for the useCharacters custom hook.

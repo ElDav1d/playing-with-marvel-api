@@ -1,5 +1,5 @@
+import { FetchingOrder, ICharacterItem } from '@/components/pages/Characters/interfaces/characters';
 import { BASE_URL } from '@/utils/constants';
-import { ICharacterItem, FetchingOrder } from '../interfaces/characters';
 
 export interface IGetCharactersServiceProps {
   pageParam?: number;

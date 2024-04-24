@@ -54,6 +54,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: ICharacterItemP
 
   return (
     <li
+      aria-label={name}
       className={`bg-black text-white overflow-hidden relative z-0
       after:absolute after:content[""] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
       ${getAccesibleStyles()}

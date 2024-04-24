@@ -25,6 +25,7 @@ const CharactersSelectGroup = ({ inputAriaLabel }: ISelectProps) => {
   return (
     <FormGroupContainer classNameFieldset='text-white grow' title={SELECT_TITLE}>
       <InputSelect
+        ariaLabel='order results select'
         options={Object.values(FetchingOrder)}
         optionLiterals={Object.values(HumanizedOrder)}
         onChange={handleChange}

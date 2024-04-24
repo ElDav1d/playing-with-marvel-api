@@ -189,22 +189,6 @@ it('provides alt text when no image', () => {
   const PATH = undefined;
   const EXTENSION = undefined;
   const VARIANT: PicVariantName = 'standard_xlarge';
-
-  // ACT
-  render(<Image title={TITLE} alt={ALT} path={PATH} extension={EXTENSION} sizing={VARIANT} />);
-  const img = screen.getByRole('img', { name: /the pic of spiderman/i });
-
-  // ASSERT
-  expect(img.getAttribute('alt')).toEqual(ALT);
-});
-
-it('provides alt text when no image', () => {
-  // ARRANGE
-  const TITLE = 'Spiderman';
-  const ALT = 'The pic of Spiderman';
-  const PATH = undefined;
-  const EXTENSION = undefined;
-  const VARIANT: PicVariantName = 'standard_xlarge';
   const FORMATTED_ALT = `${ALT} is not available`;
 
   // ACT

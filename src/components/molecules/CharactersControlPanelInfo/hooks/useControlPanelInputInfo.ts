@@ -1,11 +1,11 @@
-import { useMemo } from 'react';
 import {
-  HumanizedOrder,
   FetchingOrder,
   FilterCriteriaType,
-  HumanizedFilterCriteria,
   ICharactersInfoItem,
-} from '../interfaces/characters';
+  HumanizedOrder,
+  HumanizedFilterCriteria,
+} from '@/components/pages/Characters/interfaces/characters';
+import { useMemo } from 'react';
 
 /**
  * Represents the properties used by the list control information hook.

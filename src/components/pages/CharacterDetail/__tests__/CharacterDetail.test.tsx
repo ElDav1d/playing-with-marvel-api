@@ -9,15 +9,9 @@ jest.mock('../hooks');
 
 const queryClient = new QueryClient();
 
-jest.mock('react-lazy-load-image-component', () => ({
-  LazyLoadImage: () => null,
-}));
-
 const mockUseCharacterDetails = useCharacterDetails as jest.Mock;
 
 const mockUseCharacterComics = useCharacterComics as jest.Mock;
-
-document.title = 'Test Title';
 
 it('renders the character detail page and matches snapshot', () => {
   // ARRANGE

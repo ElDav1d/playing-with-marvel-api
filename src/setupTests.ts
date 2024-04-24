@@ -13,3 +13,9 @@ mockIntersectionObserver.mockReturnValue({
 });
 
 window.IntersectionObserver = mockIntersectionObserver;
+
+document.title = 'Test Title';
+
+jest.mock('react-lazy-load-image-component', () => ({
+  LazyLoadImage: () => null,
+}));

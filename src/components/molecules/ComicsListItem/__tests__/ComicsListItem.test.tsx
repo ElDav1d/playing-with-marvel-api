@@ -5,10 +5,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
 
-jest.mock('react-lazy-load-image-component', () => ({
-  LazyLoadImage: () => null,
-}));
-
 const comic: IComicsListItemProps = JSON.parse(JSON.stringify(mockComic));
 
 it('renders a comic list item', () => {
@@ -17,12 +13,9 @@ it('renders a comic list item', () => {
     <QueryClientProvider client={queryClient}>
       <ComicsListItem
         id={comic.id}
-        dates={comic.dates}
         images={comic.images}
         title={comic.title}
         description={comic.description}
-        issueNumber={comic.issueNumber}
-        modified={comic.modified}
       />
     </QueryClientProvider>,
   );
@@ -38,12 +31,9 @@ it('matches snapshot', () => {
     <QueryClientProvider client={queryClient}>
       <ComicsListItem
         id={comic.id}
-        dates={comic.dates}
         images={comic.images}
         title={comic.title}
         description={comic.description}
-        issueNumber={comic.issueNumber}
-        modified={comic.modified}
       />
     </QueryClientProvider>,
   );

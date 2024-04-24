@@ -1,12 +1,9 @@
 import Input from '@/components/atoms/Input';
 import { ChangeEvent, useEffect, useState } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
-import {
-  useCharacters,
-  useCharactersContext,
-  useDebounce,
-} from '@/components/pages/Characters/hooks';
+import { useCharactersContext, useDebounce } from '@/components/pages/Characters/hooks';
 import { EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
+import { useCharacters } from '@/components/organisms/CharactersList/hooks';
 
 /**
  * UI group for search input .
@@ -36,6 +33,7 @@ const CharactersSearchGroup = () => {
   return (
     <FormGroupContainer title={SEARCH_TITLE} classNameFieldset='text-white grow'>
       <Input
+        aria-label='search by name input'
         className='w-full'
         type='text'
         onChange={handleSearch}

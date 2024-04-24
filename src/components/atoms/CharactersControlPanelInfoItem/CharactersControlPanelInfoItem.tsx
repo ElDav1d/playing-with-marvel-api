@@ -1,7 +1,7 @@
 import { ICharactersInfoItem } from '@/components/pages/Characters/interfaces/characters';
 
 const CharactersControlPanelInfoItem = ({ type, prefix, name }: ICharactersInfoItem) => {
-  return <span>{type === 'describer' ? name : `${prefix} ${name}`}</span>;
+  return <>{type === 'describer' ? name : `${prefix} ${name}`}</>;
 };
 
 export default CharactersControlPanelInfoItem;

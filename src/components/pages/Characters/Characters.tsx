@@ -8,7 +8,6 @@ import SideDrawer from '@/components/organisms/SideDrawer';
 import CharactersControlPanel from '@/components/organisms/CharactersControlPanel';
 import { CharactersHeroSection } from '@/components/organisms/CharactersHeroSection';
 import { useMediaQuery } from '@/hooks';
-import { CharactersControlPanelInfo } from '@/components/molecules/CharactersControlPanelInfo';
 import { CharactersProvider } from './context';
 
 const Characters = () => {
@@ -24,10 +23,7 @@ const Characters = () => {
         )}
       </Header>
       <Container element={'main'} aria-label='characters page main content'>
-        <CharactersHeroSection>
-          {isDesktop && <CharactersControlPanel isDesktop />}
-          <CharactersControlPanelInfo />
-        </CharactersHeroSection>
+        <CharactersHeroSection />
         <Container>
           <CharactersList />
         </Container>

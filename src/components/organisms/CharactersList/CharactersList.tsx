@@ -1,6 +1,6 @@
-import { useFilteredCharacters } from './hooks';
+import { useCharacters, useFilteredCharacters } from './hooks';
 import { CharacterListItem } from '@/components/molecules/CharacterListItem';
-import { useCharacters, useCharactersContext } from '@/components/pages/Characters/hooks';
+import { useCharactersContext } from '@/components/pages/Characters/hooks';
 import { EMPTY_SEARCH_RESULTS_LITERAL, LOADER_SIZE, MARVEL_RED } from '@/utils/constants';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -37,6 +37,7 @@ const CharactersList = () => {
 
       {filteredCharacters?.length > 0 && (
         <ul
+          aria-label='characters list'
           aria-live='polite'
           className='grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto'
         >
