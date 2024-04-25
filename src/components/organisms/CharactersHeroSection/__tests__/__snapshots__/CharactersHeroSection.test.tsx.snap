@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches desktop snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="relative flex flex-col items-center justify-around pt-logoDefaultHeight gap-2 min-h-64 md:min-h-96 lg:min-h-72 mb-4 bg-black bg-hero-image bg-center bg-cover before:absolute before:content[\\"\\"] before:bg-gradient-to-b before:from-trans-0.5-black before:from-50% before:left-0 before:top-0 before:z-[-1]"
+  >
+    <div
+      class="max-w-[1240px] mx-6 xl:mx-auto my-4 lg:w-2/3 flex flex-col gap-4"
+    >
+      <div
+        class="text-white text-center"
+      >
+        <h2
+          class="text-2xl md:text-3xl font-semibold text-white text-center uppercase mb-1"
+        >
+          Marvel Characters
+        </h2>
+        <p
+          class="text-sm md:text-base text-center"
+        >
+          Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!
+        </p>
+      </div>
+      <form
+        aria-label="Desktop Characters List Control Panel"
+        class="focus-within gap-4 hidden md:flex justify-center flex-wrap"
+      >
+        <fieldset
+          class="text-white grow"
+        >
+          <legend
+            class="mb-1"
+          >
+            Search by name
+          </legend>
+          <input
+            aria-label="search by name input"
+            class="py-2 px-3 bg-black border border-white shadow appearance-none focus-visible-border w-full"
+            placeholder="type a character name"
+            type="text"
+            value=""
+          />
+        </fieldset>
+        <fieldset
+          class="text-white grow"
+        >
+          <legend
+            class="mb-1"
+          >
+            Order results
+          </legend>
+          <div
+            class="h-full bg-black border shadow appearance-none focus-visible-border border-white w-full with-tailwind-b62m3t-container"
+          >
+            <span
+              class="with-tailwind-1f43avz-a11yText-A11yText"
+              id="react-select-4-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              class="with-tailwind-1f43avz-a11yText-A11yText"
+              role="log"
+            />
+            <div
+              class="bg-black shadow appearance-none border-none with-tailwind-13cymwt-control"
+            >
+              <div
+                class=" with-tailwind-1fdsijx-ValueContainer"
+              >
+                <div
+                  class="text-white with-tailwind-1jqq78o-placeholder"
+                  id="react-select-4-placeholder"
+                >
+                  by name (A/Z)
+                </div>
+                <div
+                  class=" with-tailwind-qbdosj-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-activedescendant=""
+                    aria-autocomplete="list"
+                    aria-describedby="react-select-4-placeholder"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="order results select"
+                    autocapitalize="none"
+                    autocomplete="off"
+                    autocorrect="off"
+                    class=""
+                    id="react-select-4-input"
+                    role="combobox"
+                    spellcheck="false"
+                    style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                    tabindex="0"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class=" with-tailwind-1hb7zxy-IndicatorsContainer"
+              >
+                <span
+                  class=" with-tailwind-1u9des2-indicatorSeparator"
+                />
+                <div
+                  aria-hidden="true"
+                  class=" with-tailwind-1xc3v61-indicatorContainer"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="with-tailwind-tj5bde-Svg"
+                    focusable="false"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          class="text-white w-full lg:w-auto"
+        >
+          <legend
+            class="mb-1"
+          >
+            Filter results:
+          </legend>
+          <ul
+            class="md:h-full flex flex-col md:flex-row gap-2 md:items-center"
+          >
+            <li
+              class="flex items-center"
+            >
+              <input
+                aria-label="withImage"
+                class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
+                id="withImage"
+                name="withImage"
+                type="checkbox"
+                value="withImage"
+              />
+              <label
+                for="withImage"
+              >
+                withImage
+              </label>
+            </li>
+            <li
+              class="flex items-center"
+            >
+              <input
+                aria-label="withDescription"
+                class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
+                id="withDescription"
+                name="withDescription"
+                type="checkbox"
+                value="withDescription"
+              />
+              <label
+                for="withDescription"
+              >
+                withDescription
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`matches mobile snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="relative flex flex-col items-center justify-around pt-logoDefaultHeight gap-2 min-h-64 md:min-h-96 lg:min-h-72 mb-4 bg-black bg-hero-image bg-center bg-cover before:absolute before:content[\\"\\"] before:bg-gradient-to-b before:from-trans-0.5-black before:from-50% before:left-0 before:top-0 before:z-[-1]"
+  >
+    <div
+      class="max-w-[1240px] mx-6 xl:mx-auto my-4 lg:w-2/3 flex flex-col gap-4"
+    >
+      <div
+        class="text-white text-center"
+      >
+        <h2
+          class="text-2xl md:text-3xl font-semibold text-white text-center uppercase mb-1"
+        >
+          Marvel Characters
+        </h2>
+        <p
+          class="text-sm md:text-base text-center"
+        >
+          Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!
+        </p>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

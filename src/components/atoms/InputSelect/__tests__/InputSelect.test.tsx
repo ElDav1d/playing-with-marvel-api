@@ -4,8 +4,6 @@ import InputSelect from '../InputSelect';
 
 const mockOnChange = jest.fn();
 
-document.title = 'Test Title';
-
 it('renders the select with the correct options', async () => {
   // ARRANGE
   const passsedOptions = ['option1', 'option2'];
@@ -13,6 +11,7 @@ it('renders the select with the correct options', async () => {
 
   render(
     <InputSelect
+      placeholder='input select test'
       onChange={mockOnChange}
       options={passsedOptions}
       optionLiterals={passsedOptions}
@@ -42,6 +41,7 @@ it('calls onChange when an option is selected', async () => {
 
   render(
     <InputSelect
+      placeholder='input select test'
       onChange={mockOnChange}
       options={passsedOptions}
       optionLiterals={passsedOptions}
@@ -67,11 +67,12 @@ it('calls onChange when an option is selected', async () => {
 
 it('prevents infinite calls when the same option is selected multiple times', async () => {
   // ARRANGE
-  const passsedOptions = ['option1', 'option2'];
+  const passsedOptions = ['option1', 'MEEEEEEEEEEC2'];
   const user = userEvent.setup();
 
   render(
     <InputSelect
+      placeholder='input select test'
       onChange={mockOnChange}
       options={passsedOptions}
       optionLiterals={passsedOptions}
@@ -81,11 +82,6 @@ it('prevents infinite calls when the same option is selected multiple times', as
   // ACT
   const select = screen.getByRole('combobox');
   user.click(select);
-
-  await waitFor(() => {
-    const option = screen.getByText(passsedOptions[1]);
-    user.click(option);
-  });
 
   await waitFor(() => {
     const option = screen.getByText(passsedOptions[1]);

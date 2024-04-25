@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { getCharacterDetailsService } from '../services';
-import { CharacterDetail } from '../interfaces/characterDetail';
+import { ICharacterDetail } from '../interfaces/characterDetail';
 
 /**
  * Props for the useCharacterDetails custom hook.
@@ -33,7 +33,7 @@ export interface IUseCharacterDetailsReturn {
    * The character details.
    * @property {CharacterDetail | undefined}
    */
-  character: CharacterDetail | undefined;
+  character: ICharacterDetail | undefined;
 }
 
 /**

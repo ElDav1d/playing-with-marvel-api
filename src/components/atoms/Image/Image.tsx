@@ -1,6 +1,6 @@
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import { BreakpointStepName } from '@/types/globals';
-import { MEDIA_BREAKPOINTS, REGEX_IMAGE_PATH } from '@/utils/constants';
+import { MEDIA_BREAKPOINTS } from '@/utils/constants';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './Image.css';
@@ -182,7 +182,7 @@ const Image = ({
   };
 
   const getAltText = () => {
-    if (REGEX_IMAGE_PATH.test(imagePath)) {
+    if (imagePath.includes('image_not_available')) {
       return `${alt} is not available`;
     }
     return alt;

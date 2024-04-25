@@ -10,7 +10,7 @@ import { useState } from 'react';
  * Single character item in the list.
  * @interface
  */
-export interface CharacterItemProps {
+export interface ICharacterItemProps {
   /**
    * The ID of the character.
    */
@@ -29,7 +29,7 @@ export interface CharacterItemProps {
   thumbnail: Thumbnail;
 }
 
-const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemProps) => {
+const CharacterListItem = ({ id, name, thumbnail, description }: ICharacterItemProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
@@ -54,6 +54,7 @@ const CharacterListItem = ({ id, name, thumbnail, description }: CharacterItemPr
 
   return (
     <li
+      aria-label={name}
       className={`bg-black text-white overflow-hidden relative z-0
       after:absolute after:content[""] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
       ${getAccesibleStyles()}

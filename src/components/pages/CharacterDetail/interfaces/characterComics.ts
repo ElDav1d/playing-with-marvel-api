@@ -1,22 +1,4 @@
-export interface CharactersComics {
-  code: number;
-  status: string;
-  copyright: string;
-  attributionText: string;
-  attributionHTML: string;
-  etag: string;
-  data: Data;
-}
-
-export interface Data {
-  offset: number;
-  limit: number;
-  total: number;
-  count: number;
-  results: CharacterComicDetails[];
-}
-
-export interface CharacterComicDetails {
+export interface ICharacterComicDetails {
   id: number;
   digitalId: number;
   title: string;
@@ -31,31 +13,31 @@ export interface CharacterComicDetails {
   issn: string;
   format: string;
   pageCount: number;
-  textObjects: TextObject[];
+  textObjects: ITextObject[];
   resourceURI: string;
-  urls: URL[];
-  series: Series;
-  variants: Series[];
+  urls: IURL[];
+  series: ISeries;
+  variants: ISeries[];
   collections: unknown[];
-  collectedIssues: Series[];
-  dates: DateElement[];
+  collectedIssues: ISeries[];
+  dates: IDateElement[];
   prices: Price[];
-  thumbnail: Thumbnail;
-  images: Thumbnail[];
+  thumbnail: IThumbnail;
+  images: IThumbnail[];
   creators: Creators;
-  characters: Characters;
-  stories: Stories;
-  events: Characters;
+  characters: ICharacters;
+  stories: IStories;
+  events: ICharacters;
 }
 
-export interface Characters {
+export interface ICharacters {
   available: number;
   collectionURI: string;
-  items: Series[];
+  items: ISeries[];
   returned: number;
 }
 
-export interface Series {
+export interface ISeries {
   resourceURI: string;
   name: string;
 }
@@ -63,11 +45,11 @@ export interface Series {
 export interface Creators {
   available: number;
   collectionURI: string;
-  items: CreatorsItem[];
+  items: ICreatorsItem[];
   returned: number;
 }
 
-export interface CreatorsItem {
+export interface ICreatorsItem {
   resourceURI: string;
   name: string;
   role: Role;
@@ -87,7 +69,7 @@ export enum Role {
   Writer = 'writer',
 }
 
-export interface DateElement {
+export interface IDateElement {
   type: DateType;
   date: string;
 }
@@ -99,7 +81,7 @@ export enum DateType {
   UnlimitedDate = 'unlimitedDate',
 }
 
-export interface Thumbnail {
+export interface IThumbnail {
   path: string;
   extension: Extension;
 }
@@ -117,14 +99,14 @@ export enum PriceType {
   PrintPrice = 'printPrice',
 }
 
-export interface Stories {
+export interface IStories {
   available: number;
   collectionURI: string;
-  items: StoriesItem[];
+  items: IStoriesItem[];
   returned: number;
 }
 
-export interface StoriesItem {
+export interface IStoriesItem {
   resourceURI: string;
   name: string;
   type: ItemType;
@@ -135,13 +117,13 @@ export enum ItemType {
   InteriorStory = 'interiorStory',
 }
 
-export interface TextObject {
+export interface ITextObject {
   type: string;
   language: string;
   text: string;
 }
 
-export interface URL {
+export interface IURL {
   type: URLType;
   url: string;
 }

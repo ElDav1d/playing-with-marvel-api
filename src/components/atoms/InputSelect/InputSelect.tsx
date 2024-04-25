@@ -1,7 +1,7 @@
 import Select from 'react-select';
 import { ChangeEventHandler } from 'react';
 import EmotionCacheProvider from './EmotionCacheProvider';
-import { useHandleSelectChange } from './hooks';
+import { useReactSelectChange } from './hooks';
 import { overrideClasses } from './utils';
 import { IOverrideClassesConfig } from './utils/overrideClasses';
 
@@ -23,6 +23,11 @@ export interface IInputSelectProps {
    * Optional aria label for the select input.
    */
   ariaLabel?: string;
+  controlledValue?: string;
+  /**
+   *  Placeholder for the select input.
+   */
+  placeholder: string;
   /**
    * Optional class name for the select input.
    */
@@ -34,6 +39,8 @@ const InputSelect = ({
   onChange,
   options,
   optionLiterals,
+  placeholder,
+  controlledValue,
   className,
 }: IInputSelectProps) => {
   const mappedOptions = options.map((option, index) => ({
@@ -41,7 +48,9 @@ const InputSelect = ({
     label: optionLiterals[index],
   }));
 
-  const handleSelectChange = useHandleSelectChange(onChange);
+  const getDefaultValue = () => controlledValue || mappedOptions[0];
+
+  const handleSelectChange = useReactSelectChange(onChange);
 
   type overrideClassesConfig = Omit<IOverrideClassesConfig, 'state'>;
 
@@ -67,6 +76,7 @@ const InputSelect = ({
     option: ({ isFocused }: { isFocused: boolean }) =>
       overrideClasses({ state: isFocused, ...optionConfig }),
     singleValue: () => 'text-white',
+    placeholder: () => 'text-white',
   };
 
   return (
@@ -75,8 +85,9 @@ const InputSelect = ({
         options={mappedOptions}
         onChange={handleSelectChange}
         aria-label={ariaLabel}
-        placeholder={mappedOptions[0].label}
+        placeholder={placeholder}
         classNames={classNamesOverride}
+        value={getDefaultValue()}
       />
     </EmotionCacheProvider>
   );

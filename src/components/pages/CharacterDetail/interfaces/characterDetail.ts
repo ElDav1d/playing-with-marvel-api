@@ -1,66 +1,48 @@
-export interface CharactersDetailResults {
-  code: number;
-  status: string;
-  copyright: string;
-  attributionText: string;
-  attributionHTML: string;
-  etag: string;
-  data: Data;
-}
-
-export interface Data {
-  offset: number;
-  limit: number;
-  total: number;
-  count: number;
-  results: CharacterDetail[];
-}
-
-export interface CharacterDetail {
+export interface ICharacterDetail {
   id: number;
   name: string;
   description: string;
   modified: string;
-  thumbnail: Thumbnail;
+  thumbnail: IThumbnail;
   resourceURI: string;
-  comics: Comics;
-  series: Comics;
-  stories: Stories;
-  events: Comics;
-  urls: URL[];
+  comics: IComics;
+  series: IComics;
+  stories: IStories;
+  events: IComics;
+  urls: IURL[];
 }
 
-export interface Comics {
+export interface IComics {
   available: number;
   collectionURI: string;
-  items: ComicsItem[];
+  items: IComicsItem[];
   returned: number;
 }
 
-export interface ComicsItem {
+export interface IComicsItem {
   resourceURI: string;
   name: string;
 }
 
-export interface Stories {
+export interface IStories {
   available: number;
   collectionURI: string;
-  items: StoriesItem[];
+  items: IStoriesItem[];
   returned: number;
 }
 
-export interface StoriesItem {
+export interface IStoriesItem {
   resourceURI: string;
   name: string;
   type: string;
 }
 
-export interface Thumbnail {
+export interface IThumbnail {
   path: string;
   extension: string;
 }
 
-export interface URL {
+export interface IURL {
   type: string;
   url: string;
 }

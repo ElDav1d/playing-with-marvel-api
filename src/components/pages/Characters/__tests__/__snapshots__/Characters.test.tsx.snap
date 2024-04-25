@@ -1,0 +1,676 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the desktop page of characters and matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    aria-label="common header"
+    class="w-full fixed z-1 top-0 flex justify-center transition-[transform] delay-s duration-m  bg-black "
+  >
+    <nav
+      aria-label="main navigation"
+      class="max-w-[1240px] mx-6 xl:mx-auto"
+    >
+      <a
+        class="block focus-visible"
+        href="/"
+      >
+        <h1
+          class="text-none"
+        >
+          Playing with Marvel API
+          <svg
+            aria-hidden="true"
+            height="52px"
+            role="img"
+            width="130"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              MARVEL logo
+            </title>
+            <rect
+              fill="#EC1D24"
+              height="100%"
+              width="100%"
+            />
+            <path
+              d="M126.222 40.059v7.906H111.58V4h7.885v36.059h6.757zm-62.564-14.5c-.61.294-1.248.44-1.87.442v-14.14h.04c.622-.005 5.264.184 5.264 6.993 0 3.559-1.58 5.804-3.434 6.705zM40.55 34.24l2.183-18.799 2.265 18.799H40.55zm69.655-22.215V4.007H87.879l-3.675 26.779-3.63-26.78h-8.052l.901 7.15c-.928-1.832-4.224-7.15-11.48-7.15-.047-.002-8.06 0-8.06 0l-.031 39.032-5.868-39.031-10.545-.005-6.072 40.44.002-40.435H21.278L17.64 26.724 14.096 4.006H4v43.966h7.95V26.78l3.618 21.192h4.226l3.565-21.192v21.192h15.327l.928-6.762h6.17l.927 6.762 15.047.008h.01v-.008h.02V33.702l1.845-.27 3.817 14.55h7.784l-.002-.01h.022l-5.011-17.048c2.538-1.88 5.406-6.644 4.643-11.203v-.002C74.894 19.777 79.615 48 79.615 48l9.256-.027 6.327-39.85v39.85h15.007v-7.908h-7.124v-10.08h7.124v-8.03h-7.124v-9.931h7.124z"
+              fill="#FEFEFE"
+            />
+            <path
+              d="M0 0h30v52H0z"
+              fill="#EC1D24"
+            />
+            <path
+              d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"
+              fill="#FEFEFE"
+            />
+          </svg>
+        </h1>
+      </a>
+    </nav>
+  </header>
+  <main
+    aria-label="characters page main content"
+    class="pb-48 min-h-[100vh]"
+  >
+    <section
+      class="relative flex flex-col items-center justify-around pt-logoDefaultHeight gap-2 min-h-64 md:min-h-96 lg:min-h-72 mb-4 bg-black bg-hero-image bg-center bg-cover before:absolute before:content[\\"\\"] before:bg-gradient-to-b before:from-trans-0.5-black before:from-50% before:left-0 before:top-0 before:z-[-1]"
+    >
+      <div
+        class="max-w-[1240px] mx-6 xl:mx-auto my-4 lg:w-2/3 flex flex-col gap-4"
+      >
+        <div
+          class="text-white text-center"
+        >
+          <h2
+            class="text-2xl md:text-3xl font-semibold text-white text-center uppercase mb-1"
+          >
+            Marvel Characters
+          </h2>
+          <p
+            class="text-sm md:text-base text-center"
+          >
+            Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!
+          </p>
+        </div>
+        <form
+          aria-label="Desktop Characters List Control Panel"
+          class="focus-within gap-4 hidden md:flex justify-center flex-wrap"
+        >
+          <fieldset
+            class="text-white grow"
+          >
+            <legend
+              class="mb-1"
+            >
+              Search by name
+            </legend>
+            <input
+              aria-label="search by name input"
+              class="py-2 px-3 bg-black border border-white shadow appearance-none focus-visible-border w-full"
+              placeholder="type a character name"
+              type="text"
+              value=""
+            />
+          </fieldset>
+          <fieldset
+            class="text-white grow"
+          >
+            <legend
+              class="mb-1"
+            >
+              Order results
+            </legend>
+            <div
+              class="h-full bg-black border shadow appearance-none focus-visible-border border-white w-full with-tailwind-b62m3t-container"
+            >
+              <span
+                class="with-tailwind-1f43avz-a11yText-A11yText"
+                id="react-select-3-live-region"
+              />
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="with-tailwind-1f43avz-a11yText-A11yText"
+                role="log"
+              />
+              <div
+                class="bg-black shadow appearance-none border-none with-tailwind-13cymwt-control"
+              >
+                <div
+                  class=" with-tailwind-1fdsijx-ValueContainer"
+                >
+                  <div
+                    class="text-white with-tailwind-1jqq78o-placeholder"
+                    id="react-select-3-placeholder"
+                  >
+                    by name (A/Z)
+                  </div>
+                  <div
+                    class=" with-tailwind-qbdosj-Input"
+                    data-value=""
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-describedby="react-select-3-placeholder"
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="order results select"
+                      autocapitalize="none"
+                      autocomplete="off"
+                      autocorrect="off"
+                      class=""
+                      id="react-select-3-input"
+                      role="combobox"
+                      spellcheck="false"
+                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                      tabindex="0"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class=" with-tailwind-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" with-tailwind-1u9des2-indicatorSeparator"
+                  />
+                  <div
+                    aria-hidden="true"
+                    class=" with-tailwind-1xc3v61-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="with-tailwind-tj5bde-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset
+            class="text-white w-full lg:w-auto"
+          >
+            <legend
+              class="mb-1"
+            >
+              Filter results:
+            </legend>
+            <ul
+              class="md:h-full flex flex-col md:flex-row gap-2 md:items-center"
+            >
+              <li
+                class="flex items-center"
+              >
+                <input
+                  aria-label="withImage"
+                  class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
+                  id="withImage"
+                  name="withImage"
+                  type="checkbox"
+                  value="withImage"
+                />
+                <label
+                  for="withImage"
+                >
+                  withImage
+                </label>
+              </li>
+              <li
+                class="flex items-center"
+              >
+                <input
+                  aria-label="withDescription"
+                  class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
+                  id="withDescription"
+                  name="withDescription"
+                  type="checkbox"
+                  value="withDescription"
+                />
+                <label
+                  for="withDescription"
+                >
+                  withDescription
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <section
+      class="max-w-[1240px] mx-6 xl:mx-auto"
+    >
+      <ul
+        aria-label="characters list"
+        aria-live="polite"
+        class="grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto"
+      >
+        <li
+          aria-label="Animal"
+          class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+        >
+          <a
+            aria-labelledby="1011176"
+            class="block group"
+            href="/character/1011176/animal"
+          >
+            <picture
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+            />
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Animal
+              </h3>
+              <p
+                class="text-xs leading-5 line-clamp-4"
+              >
+                Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li
+          aria-label="Braineater"
+          class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+        >
+          <a
+            aria-labelledby="1011177"
+            class="block group"
+            href="/character/1011177/braineater"
+          >
+            <picture
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+            />
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Braineater
+              </h3>
+              <p
+                class="text-xs leading-5 line-clamp-4"
+              >
+                Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li
+          aria-label="Crusher"
+          class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+        >
+          <a
+            aria-labelledby="1011178"
+            class="block group"
+            href="/character/1011178/crusher"
+          >
+            <picture
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+            />
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Crusher
+              </h3>
+            </div>
+          </a>
+        </li>
+        <li
+          aria-label="Destructor"
+          class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+        >
+          <a
+            aria-labelledby="1011179"
+            class="block group"
+            href="/character/1011179/destructor"
+          >
+            <picture
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+            />
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Destructor
+              </h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer
+    aria-label="common footer"
+    class="absolute bottom-0 w-full p-6 bg-stone-900"
+  >
+    <section
+      class="max-w-[1240px] mx-6 xl:mx-auto"
+    >
+      <a
+        class="block active focus-visible"
+        href="/"
+      >
+        <span
+          aria-hidden="true"
+        >
+          <svg
+            aria-hidden="true"
+            height="115"
+            viewBox="0 0 36 52"
+            width="80"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              MARVEL only M logo
+            </title>
+            <rect
+              fill="#EC1D24"
+              height="100%"
+              width="100%"
+            />
+            <path
+              d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"
+              fill="#FEFEFE"
+            />
+          </svg>
+        </span>
+      </a>
+    </section>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`renders the mobile page of characters and matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    aria-label="common header"
+    class="w-full fixed z-1 top-0 flex justify-center transition-[transform] delay-s duration-m  bg-black "
+  >
+    <nav
+      aria-label="main navigation"
+      class="max-w-[1240px] mx-6 xl:mx-auto"
+    >
+      <a
+        class="block focus-visible"
+        href="/"
+      >
+        <h1
+          class="text-none"
+        >
+          Playing with Marvel API
+          <svg
+            aria-hidden="true"
+            height="52px"
+            role="img"
+            width="130"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              MARVEL logo
+            </title>
+            <rect
+              fill="#EC1D24"
+              height="100%"
+              width="100%"
+            />
+            <path
+              d="M126.222 40.059v7.906H111.58V4h7.885v36.059h6.757zm-62.564-14.5c-.61.294-1.248.44-1.87.442v-14.14h.04c.622-.005 5.264.184 5.264 6.993 0 3.559-1.58 5.804-3.434 6.705zM40.55 34.24l2.183-18.799 2.265 18.799H40.55zm69.655-22.215V4.007H87.879l-3.675 26.779-3.63-26.78h-8.052l.901 7.15c-.928-1.832-4.224-7.15-11.48-7.15-.047-.002-8.06 0-8.06 0l-.031 39.032-5.868-39.031-10.545-.005-6.072 40.44.002-40.435H21.278L17.64 26.724 14.096 4.006H4v43.966h7.95V26.78l3.618 21.192h4.226l3.565-21.192v21.192h15.327l.928-6.762h6.17l.927 6.762 15.047.008h.01v-.008h.02V33.702l1.845-.27 3.817 14.55h7.784l-.002-.01h.022l-5.011-17.048c2.538-1.88 5.406-6.644 4.643-11.203v-.002C74.894 19.777 79.615 48 79.615 48l9.256-.027 6.327-39.85v39.85h15.007v-7.908h-7.124v-10.08h7.124v-8.03h-7.124v-9.931h7.124z"
+              fill="#FEFEFE"
+            />
+            <path
+              d="M0 0h30v52H0z"
+              fill="#EC1D24"
+            />
+            <path
+              d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"
+              fill="#FEFEFE"
+            />
+          </svg>
+        </h1>
+      </a>
+    </nav>
+    <aside
+      class="md:hidden"
+    >
+      <button
+        aria-label="Open Characters List Control Panel"
+        class="absolute top-0 right-0 m-1 p-3 text-white focus-visible"
+      >
+        <svg
+          aria-hidden="true"
+          fill-rule="evenodd"
+          height="17"
+          stroke="white"
+          stroke-width="2"
+          viewBox="0 0 19 17"
+          width="19"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Search icon
+          </title>
+          <desc>
+            Magnifying glass illustration
+          </desc>
+          <circle
+            cx="6.5"
+            cy="6.5"
+            r="5.5"
+          />
+          <path
+            d="M14 14l3.536 3.536"
+          />
+        </svg>
+      </button>
+      <div
+        class="absolute top-0 m-0 h-screen w-[80vw] z-1 px-8 py-11 transition-[left] delay-s duration-l left-[-100%] bg-black"
+      />
+    </aside>
+  </header>
+  <main
+    aria-label="characters page main content"
+    class="pb-48 min-h-[100vh]"
+  >
+    <section
+      class="relative flex flex-col items-center justify-around pt-logoDefaultHeight gap-2 min-h-64 md:min-h-96 lg:min-h-72 mb-4 bg-black bg-hero-image bg-center bg-cover before:absolute before:content[\\"\\"] before:bg-gradient-to-b before:from-trans-0.5-black before:from-50% before:left-0 before:top-0 before:z-[-1]"
+    >
+      <div
+        class="max-w-[1240px] mx-6 xl:mx-auto my-4 lg:w-2/3 flex flex-col gap-4"
+      >
+        <div
+          class="text-white text-center"
+        >
+          <h2
+            class="text-2xl md:text-3xl font-semibold text-white text-center uppercase mb-1"
+          >
+            Marvel Characters
+          </h2>
+          <p
+            class="text-sm md:text-base text-center"
+          >
+            Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="max-w-[1240px] mx-6 xl:mx-auto"
+    >
+      <ul
+        aria-label="characters list"
+        aria-live="polite"
+        class="grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto"
+      >
+        <li
+          aria-label="Animal"
+          class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+        >
+          <a
+            aria-labelledby="1011176"
+            class="block group"
+            href="/character/1011176/animal"
+          >
+            <picture
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+            />
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Animal
+              </h3>
+              <p
+                class="text-xs leading-5 line-clamp-4"
+              >
+                Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li
+          aria-label="Braineater"
+          class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+        >
+          <a
+            aria-labelledby="1011177"
+            class="block group"
+            href="/character/1011177/braineater"
+          >
+            <picture
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+            />
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Braineater
+              </h3>
+              <p
+                class="text-xs leading-5 line-clamp-4"
+              >
+                Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.
+              </p>
+            </div>
+          </a>
+        </li>
+        <li
+          aria-label="Crusher"
+          class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+        >
+          <a
+            aria-labelledby="1011178"
+            class="block group"
+            href="/character/1011178/crusher"
+          >
+            <picture
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+            />
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Crusher
+              </h3>
+            </div>
+          </a>
+        </li>
+        <li
+          aria-label="Destructor"
+          class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+        >
+          <a
+            aria-labelledby="1011179"
+            class="block group"
+            href="/character/1011179/destructor"
+          >
+            <picture
+              class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+            />
+            <div
+              class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+            >
+              <h3
+                class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+              >
+                Destructor
+              </h3>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer
+    aria-label="common footer"
+    class="absolute bottom-0 w-full p-6 bg-stone-900"
+  >
+    <section
+      class="max-w-[1240px] mx-6 xl:mx-auto"
+    >
+      <a
+        class="block active focus-visible"
+        href="/"
+      >
+        <span
+          aria-hidden="true"
+        >
+          <svg
+            aria-hidden="true"
+            height="115"
+            viewBox="0 0 36 52"
+            width="80"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              MARVEL only M logo
+            </title>
+            <rect
+              fill="#EC1D24"
+              height="100%"
+              width="100%"
+            />
+            <path
+              d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"
+              fill="#FEFEFE"
+            />
+          </svg>
+        </span>
+      </a>
+    </section>
+  </footer>
+</DocumentFragment>
+`;

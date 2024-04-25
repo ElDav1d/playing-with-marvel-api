@@ -1,55 +1,37 @@
-export interface CharactersResults {
-  code: number;
-  status: string;
-  copyright: string;
-  attributionText: string;
-  attributionHTML: string;
-  etag: string;
-  data: Data;
-}
-
-export interface Data {
-  offset: number;
-  limit: number;
-  total: number;
-  count: number;
-  results: CharacterItem[];
-}
-
-export interface CharacterItem {
+export interface ICharacterItem {
   id: number;
   name: string;
   description: string;
   modified: string;
   thumbnail: Thumbnail;
   resourceURI: string;
-  comics: Comics;
-  series: Comics;
-  stories: Stories;
-  events: Comics;
+  comics: IComics;
+  series: IComics;
+  stories: IStories;
+  events: IComics;
   urls: URL[];
 }
 
-export interface Comics {
+export interface IComics {
   available: number;
   collectionURI: string;
-  items: ComicsItem[];
+  items: IComicsItem[];
   returned: number;
 }
 
-export interface ComicsItem {
+export interface IComicsItem {
   resourceURI: string;
   name: string;
 }
 
-export interface Stories {
+export interface IStories {
   available: number;
   collectionURI: string;
-  items: StoriesItem[];
+  items: IStoriesItem[];
   returned: number;
 }
 
-export interface StoriesItem {
+export interface IStoriesItem {
   resourceURI: string;
   name: string;
   type: Type;
@@ -85,8 +67,19 @@ export enum HumanizedOrder {
 }
 
 export enum FilterCriteria {
-  IMAGE = 'with image',
-  DESCRIPTION = 'with description',
+  IMAGE = 'withImage',
+  DESCRIPTION = 'withDescription',
+}
+
+export enum HumanizedFilterCriteria {
+  'withImage' = 'with image',
+  'withDescription' = 'with description',
 }
 
 export type FilterCriteriaType = FilterCriteria.IMAGE | FilterCriteria.DESCRIPTION;
+
+export interface ICharactersInfoItem {
+  type: 'describer' | 'info';
+  prefix?: string;
+  name: string;
+}
