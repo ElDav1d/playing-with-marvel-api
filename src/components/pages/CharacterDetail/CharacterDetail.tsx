@@ -8,8 +8,8 @@ import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
 import { RingLoader } from 'react-spinners';
-import { ComicsList } from '@/components/organisms/ComicsList';
 import { ComicsSelectGroup } from '@/components/molecules/ComicsSelectGroup';
+import { ComicsList } from '@/components/organisms/ComicsList';
 
 const CharacterDetail = () => {
   const LOADING_LABEL = 'Character Details are loading';
