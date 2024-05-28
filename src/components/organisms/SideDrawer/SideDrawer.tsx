@@ -1,5 +1,5 @@
 import CloseIcon from '@/components/atoms/CloseIcon/CloseIcon';
-import { DialogOverlay } from '@/components/atoms/DialogOverlay';
+import { DialogOverlay } from 'eldav1d-marvel-ui';
 import SearchIcon from '@/components/atoms/SearchIcon/SearchIcon';
 import { useFocusTrap, useOutsideClick } from '@/hooks';
 import { getParentSelectors } from '@/utils/helpers';
@@ -61,8 +61,7 @@ const SideDrawer = ({ classNameContainer, elementsToFocus, children }: ISideDraw
         </button>
       )}
 
-      {isOpen && <DialogOverlay />}
-
+      {isOpen && <DialogOverlay testId='sidedrawer-overlay' />}
       <div
         ref={dialogRef}
         className={`absolute top-0 m-0 h-screen w-[80vw] z-1 px-8 py-11 transition-[left] delay-s duration-l ${

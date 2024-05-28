@@ -33,7 +33,7 @@ it('user cannot manipulate the content while the sidedrawer is open', async () =
 
   await waitFor(() => {
     // ASSERT
-    expect(screen.queryByTestId('dialog-overlay')).toBeInTheDocument();
+    expect(screen.queryByTestId('sidedrawer-overlay')).toBeInTheDocument();
   });
 });
 
@@ -58,6 +58,6 @@ it('user can close the sidedrawer', async () => {
 
   // ASSERT
   await waitFor(() => {
-    expect(screen.queryByTestId('dialog-overlay')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('sidedrawer-overlay')).not.toBeInTheDocument();
   });
 });

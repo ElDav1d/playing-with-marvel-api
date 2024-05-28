@@ -13,7 +13,7 @@
     "@types/node": "20.11.17",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
-    "eldav1d-marvel-ui": "^0.0.0",
+    "eldav1d-marvel-ui": "^0.0.48",
     "postcss-focus-within": "^8.0.1",
     "react": "18.2.0",
     "react-combine-reducers": "^1.1.1",
@@ -67,7 +67,7 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "2.8.8",
-    "tailwindcss": "^3.4.1",
-    "ts-jest": "29.1.2"
+    "tailwindcss": "^3.4.3",
+    "ts-jest": "29.1.3"
   }
 }
