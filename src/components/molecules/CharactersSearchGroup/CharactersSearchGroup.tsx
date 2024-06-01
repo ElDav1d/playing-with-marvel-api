@@ -1,4 +1,4 @@
-import Input from '@/components/atoms/Input';
+import { Input } from 'eldav1d-marvel-ui';
 import { ChangeEvent, useEffect, useState } from 'react';
 import FormGroupContainer from '../FormGroupContainer';
 import { useCharactersContext, useDebounce } from '@/components/pages/Characters/hooks';

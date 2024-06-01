@@ -1,5 +1,5 @@
 import { FilterCriteriaType } from '@/components/pages/Characters/interfaces/characters';
-import Input from '../Input';
+import { Input } from 'eldav1d-marvel-ui';
 import { useCharactersContext } from '@/components/pages/Characters/hooks';
 
 /**
