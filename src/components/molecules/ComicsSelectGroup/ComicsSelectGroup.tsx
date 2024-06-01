@@ -1,5 +1,5 @@
 import { ChangeEventHandler } from 'react';
-import FormGroupContainer from '../FormGroupContainer';
+import { FormGroupContainer } from 'eldav1d-marvel-ui';
 import { getParentSelectors } from '@/utils/helpers';
 import { InputSelect } from '@/components/atoms/InputSelect';
 

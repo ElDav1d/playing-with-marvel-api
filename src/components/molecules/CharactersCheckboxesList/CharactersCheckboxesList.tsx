@@ -1,4 +1,4 @@
-import FormGroupContainer from '../FormGroupContainer';
+import { FormGroupContainer } from 'eldav1d-marvel-ui';
 import { FilterCriteria } from '@/components/pages/Characters/interfaces/characters';
 import { CharactersCheckBoxGroup } from '@/components/atoms/CharactersCheckBoxGroup';
 

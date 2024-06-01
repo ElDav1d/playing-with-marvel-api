@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import FormGroupContainer from '../FormGroupContainer';
+import { FormGroupContainer } from 'eldav1d-marvel-ui';
 import { InputSelect } from '@/components/atoms/InputSelect';
 import { useCharactersContext } from '@/components/pages/Characters/hooks';
 import { FetchingOrder, HumanizedOrder } from '@/components/pages/Characters/interfaces/characters';

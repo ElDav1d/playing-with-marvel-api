@@ -1,6 +1,5 @@
-import { Input } from 'eldav1d-marvel-ui';
+import { Input, FormGroupContainer } from 'eldav1d-marvel-ui';
 import { ChangeEvent, useEffect, useState } from 'react';
-import FormGroupContainer from '../FormGroupContainer';
 import { useCharactersContext, useDebounce } from '@/components/pages/Characters/hooks';
 import { EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
 import { useCharacters } from '@/components/organisms/CharactersList/hooks';
