@@ -13,7 +13,7 @@
     "@types/node": "20.11.17",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
-    "eldav1d-marvel-ui": "^0.1.0",
+    "eldav1d-marvel-ui": "^0.2.4",
     "postcss-focus-within": "^8.0.1",
     "react": "18.2.0",
     "react-combine-reducers": "^1.1.1",
