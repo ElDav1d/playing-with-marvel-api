@@ -109,7 +109,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
               class="bg-black shadow appearance-none border-none with-tailwind-13cymwt-control"
             >
               <div
-                class=" with-tailwind-wli1rv-Be"
+                class=" with-tailwind-hlgwow"
               >
                 <div
                   class="text-white with-tailwind-1dimb5e-singleValue"
@@ -117,7 +117,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
                   by title (A/Z)
                 </div>
                 <div
-                  class=" with-tailwind-hhsl1c-Be"
+                  class=" with-tailwind-19bb58m"
                   data-value=""
                 >
                   <input
@@ -140,7 +140,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
                 </div>
               </div>
               <div
-                class=" with-tailwind-lcpdx-Be"
+                class=" with-tailwind-1wy0on6"
               >
                 <span
                   class=" with-tailwind-1u9des2-indicatorSeparator"
