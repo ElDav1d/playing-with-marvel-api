@@ -1,4 +1,4 @@
-import { FormGroupContainer, CheckboxGroup } from 'eldav1d-marvel-ui';
+import { FormGroupContainer, CheckboxGroup, CheckboxList } from 'eldav1d-marvel-ui';
 import {
   FilterCriteriaType,
   FilterCriteria,
@@ -20,18 +20,16 @@ const CharactersCheckboxesList = () => {
 
   return (
     <FormGroupContainer classNameFieldset='text-white w-full lg:w-auto' title={FILTERS_TITLE}>
-      <ul className='md:h-full flex flex-col md:flex-row gap-2 md:items-center'>
-        {options.map((option, index) => (
-          <li className='flex items-center' key={option}>
-            <CheckboxGroup
-              option={option}
-              literal={options[index]}
-              isChecked={false}
-              onChange={() => changeHandler(option, index)}
-            />
-          </li>
-        ))}
-      </ul>
+      <CheckboxList options={options}>
+        {(option, index) => (
+          <CheckboxGroup
+            option={option}
+            literal={options[index]}
+            isChecked={charactersContextState.filters[option as FilterCriteriaType]}
+            onChange={() => changeHandler(option as FilterCriteriaType, index)}
+          />
+        )}
+      </CheckboxList>
     </FormGroupContainer>
   );
 };

@@ -2,10 +2,6 @@ import { FilterCriteriaType } from '../interfaces/characters';
 
 export type FiltersState = Record<FilterCriteriaType, boolean>;
 
-// export interface FiltersState {
-//   [key: string]: boolean;
-// }
-
 export type FiltersAction =
   | { type: 'RETRIEVE_FILTERS'; filters: FiltersState }
   | { type: 'SET_FILTER'; filter: FilterCriteriaType; isChecked: boolean }
