@@ -205,7 +205,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
                 <label
                   for="withImage"
                 >
-                  withImage
+                  with image
                 </label>
               </li>
               <li
@@ -222,7 +222,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
                 <label
                   for="withDescription"
                 >
-                  withDescription
+                  with description
                 </label>
               </li>
             </ul>

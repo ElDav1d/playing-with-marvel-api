@@ -2,6 +2,7 @@ import { FormGroupContainer, CheckboxGroup, CheckboxList } from 'eldav1d-marvel-
 import {
   FilterCriteriaType,
   FilterCriteria,
+  HumanizedFilterCriteria,
 } from '@/components/pages/Characters/interfaces/characters';
 import { useCharactersContext } from '@/components/pages/Characters/hooks';
 
@@ -24,7 +25,7 @@ const CharactersCheckboxesList = () => {
         {(option, index) => (
           <CheckboxGroup
             option={option}
-            literal={options[index]}
+            literal={HumanizedFilterCriteria[options[index]]}
             isChecked={charactersContextState.filters[option as FilterCriteriaType]}
             onChange={() => changeHandler(option as FilterCriteriaType, index)}
           />
