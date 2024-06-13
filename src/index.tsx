@@ -1,8 +1,21 @@
-import React from 'react';
+import { Bugfender } from '@bugfender/sdk';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+Bugfender.init({
+  appKey: 'cRgdisyZMu3wfmmw2ZKHpRZB8RfkGpHb',
+  // apiURL: 'https://api.bugfender.com',
+  // baseURL: 'https://dashboard.bugfender.com',
+  // overrideConsoleMethods: true,
+  // printToConsole: true,
+  // registerErrorHandler: true,
+  // logBrowserEvents: true,
+  // logUIEvents: true,
+  // version: '',
+  // build: '',
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(<App />);
