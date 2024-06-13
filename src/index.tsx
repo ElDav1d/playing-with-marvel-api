@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 Bugfender.init({
   appKey: 'cRgdisyZMu3wfmmw2ZKHpRZB8RfkGpHb',
-  // apiURL: 'https://api.bugfender.com',
-  // baseURL: 'https://dashboard.bugfender.com',
-  // overrideConsoleMethods: true,
+  // apiURL: 'https://api.bugfender.com', //Usually not required, should be used for on-premises or custom data centers
+  // baseURL: 'https://dashboard.bugfender.com', //Usually not required, should be used for on-premises or custom data centers
+  overrideConsoleMethods: true,
   // printToConsole: true,
   // registerErrorHandler: true,
   // logBrowserEvents: true,
