@@ -1,10 +1,10 @@
 import { useCharacters, useFilteredCharacters } from './hooks';
 import { CharacterListItem } from '@/components/molecules/CharacterListItem';
 import { useCharactersContext } from '@/components/pages/Characters/hooks';
-import { EMPTY_SEARCH_RESULTS_LITERAL, LOADER_SIZE, MARVEL_RED } from '@/utils/constants';
+import { EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
+import { Loader } from 'eldav1d-marvel-ui';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { RingLoader } from 'react-spinners';
 
 const CharactersList = () => {
   const ERROR_MESSAGE = 'Oooops...unexpected error!! Try reloading again';
@@ -55,15 +55,7 @@ const CharactersList = () => {
 
       {(isLoading || hasNextPage) && (
         <div ref={ref}>
-          <RingLoader
-            color={MARVEL_RED}
-            size={LOADER_SIZE}
-            className='mx-auto my-6'
-            role='alert'
-            aria-label={LOADING_LABEL}
-            aria-busy='true'
-            aria-live='polite'
-          />
+          <Loader loadingLabel={LOADING_LABEL} />
         </div>
       )}
     </>

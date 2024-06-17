@@ -1,4 +1,5 @@
-import { MARVEL_RED, HERO_BACKGROUND_URL, LOGO_DEFAULT_HEIGHT, TRANSITION_TIMING } from './src/utils/constants';
+import { MARVEL_RED } from 'eldav1d-marvel-ui/'
+import { HERO_BACKGROUND_URL, LOGO_DEFAULT_HEIGHT, TRANSITION_TIMING } from './src/utils/constants';
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],

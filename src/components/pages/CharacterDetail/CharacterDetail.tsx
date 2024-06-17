@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom';
+import { Loader } from 'eldav1d-marvel-ui';
 import { useCharacterDetails, useCharacterComics } from './hooks';
 import CharacterDetailHeroSection from '@/components/organisms/CharacterDetailHeroSection/CharacterDetailHeroSection';
-import { LOADER_SIZE, MARVEL_RED, MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
+import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { FetchingOrder, HumanizedOrder } from './interfaces/characterComics';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import Container from '@/components/organisms/Container';
-import { RingLoader } from 'react-spinners';
 import { ComicsSelectGroup } from '@/components/molecules/ComicsSelectGroup';
 import { ComicsList } from '@/components/organisms/ComicsList';
 
@@ -76,17 +76,7 @@ const CharacterDetail = () => {
       <Container element={'main'} aria-label='character detail main content'>
         {isError && <h2>Ooops, try refreshing your browser</h2>}
 
-        {isLoadingCharacter && (
-          <RingLoader
-            color={MARVEL_RED}
-            size={LOADER_SIZE}
-            className='mx-auto my-24'
-            role='alert'
-            aria-label={LOADING_LABEL}
-            aria-busy='true'
-            aria-live='polite'
-          />
-        )}
+        {isLoadingCharacter && <Loader loadingLabel={LOADING_LABEL} />}
 
         {character && (
           <article aria-label='character detail article'>
