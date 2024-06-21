@@ -1,10 +1,7 @@
+import { ResponsiveLazyImage } from 'eldav1d-marvel-ui';
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import { BreakpointStepName } from '@/types/globals';
 import { MEDIA_BREAKPOINTS } from '@/utils/constants';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import './Image.css';
-import { getParentSelectors } from '@/utils/helpers';
 
 /**
  * @typedef
@@ -109,8 +106,6 @@ const Image = ({
   ariaId,
 }: ImageProps) => {
   const LAZYLOAD_SIZING_DEFAULT = 'standard_small';
-  const LAZYLOAD_THRESHOLD = 50;
-  const imagePath = path || PIC_FALLBACK.path;
   const imageExtension = extension || PIC_FALLBACK.extension;
 
   const orderSizes = (sizes: PicVariantName[]) => {
@@ -119,20 +114,21 @@ const Image = ({
     });
   };
 
+  const getBiggestPicPath = (picSizes: PicVariantName[]) => {
+    return `${path}/${orderSizes(picSizes)[picSizes.length - 1]}.${imageExtension}`;
+  };
+
   const getSrc = (sizing: PicVariantName | PicVariantName[]) => {
-    if (typeof sizing === 'string') {
-      return `${imagePath}/${sizing}.${imageExtension}`;
+    const isSpecificSized = typeof sizing === 'string';
+    const isSingleSized = Array.isArray(sizing) && sizing.length === 1;
+
+    if (isSpecificSized) {
+      return `${path}/${sizing}.${imageExtension}`;
+    } else if (isSingleSized) {
+      return `${path}/${sizing[0]}.${imageExtension}`;
+    } else {
+      return getBiggestPicPath(sizing);
     }
-
-    if (Array.isArray(sizing) && sizing.length === 1) {
-      return `${imagePath}/${sizing[0]}.${imageExtension}`;
-    }
-
-    const getBiggestPic = (picSizes: PicVariantName[]) => {
-      return `${imagePath}/${orderSizes(picSizes)[picSizes.length - 1]}.${imageExtension}`;
-    };
-
-    return getBiggestPic(sizing);
   };
 
   const getSrcSet = () => {
@@ -143,7 +139,7 @@ const Image = ({
 
       if (uniquePicSizes.length > 1) {
         const getPathAndSize = (size: PicVariantName) =>
-          `${imagePath}/${size}.${imageExtension} ${PIC_VARIANT_WIDTHS[size]}w`;
+          `${path}/${size}.${imageExtension} ${PIC_VARIANT_WIDTHS[size]}w`;
 
         return orderSizes(uniquePicSizes)
           .map((size) => getPathAndSize(size))
@@ -181,29 +177,20 @@ const Image = ({
     return sizes.join(', ');
   };
 
-  const getAltText = () => {
-    if (imagePath.includes('image_not_available')) {
-      return `${alt} is not available`;
-    }
-    return alt;
-  };
-
   return (
-    <picture className={getParentSelectors(classNameContainer)}>
-      <LazyLoadImage
-        wrapperClassName='w-full h-inherit'
-        className={`w-full ${getParentSelectors(classNameContent)}`}
-        srcSet={getSrcSet()}
-        sizes={getBreakpointSizes(sizing)}
-        src={getSrc(sizing)}
-        title={title}
-        alt={getAltText()}
-        id={ariaId}
-        placeholderSrc={getSrc(LAZYLOAD_SIZING_DEFAULT)}
-        threshold={LAZYLOAD_THRESHOLD}
-        effect='blur'
-      />
-    </picture>
+    <ResponsiveLazyImage
+      title={title}
+      alt={alt}
+      ariaId={ariaId}
+      classNameContainer={classNameContainer}
+      classNameContent={classNameContent}
+      isAvailable={!path?.includes('image_not_available')}
+      path={getSrc(sizing)}
+      fallback={`${PIC_FALLBACK.path}.${PIC_FALLBACK.extension}`}
+      lazyFallback={getSrc(LAZYLOAD_SIZING_DEFAULT)}
+      srcSet={getSrcSet()}
+      sizes={getBreakpointSizes(sizing)}
+    />
   );
 };
 
