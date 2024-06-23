@@ -1,7 +1,6 @@
 import { ChangeEventHandler } from 'react';
-import FormGroupContainer from '../FormGroupContainer';
+import { FormGroupContainer, InputSelect } from 'eldav1d-marvel-ui';
 import { getParentSelectors } from '@/utils/helpers';
-import { InputSelect } from '@/components/atoms/InputSelect';
 
 export interface ISelectProps {
   /**
@@ -55,6 +54,7 @@ const ComicsSelectGroup = ({
         options={options}
         optionLiterals={optionLiterals}
         onChange={onChange}
+        selectName='order'
         aria-label={inputAriaLabel}
         className={classNameSelect}
         placeholder='Select comics order'

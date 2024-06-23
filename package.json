@@ -14,16 +14,14 @@
     "@types/node": "20.11.17",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
+    "eldav1d-marvel-ui": "^1.0.0",
     "postcss-focus-within": "^8.0.1",
     "react": "18.2.0",
     "react-combine-reducers": "^1.1.1",
     "react-dom": "18.2.0",
     "react-intersection-observer": "9.4.3",
-    "react-lazy-load-image-component": "^1.6.0",
     "react-router-dom": "6.4.1",
     "react-scripts": "5.0.1",
-    "react-select": "^5.8.0",
-    "react-spinners": "^0.13.8",
     "typescript": "4.4.2",
     "web-vitals": "2.1.0"
   },
@@ -55,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/react-combine-reducers": "^1.0.3",
     "@types/react-lazy-load-image-component": "^1.6.3",
     "@typescript-eslint/eslint-plugin": "5.59.1",
@@ -67,7 +66,7 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "2.8.8",
-    "tailwindcss": "^3.4.1",
-    "ts-jest": "29.1.2"
+    "tailwindcss": "^3.4.3",
+    "ts-jest": "29.1.3"
   }
 }

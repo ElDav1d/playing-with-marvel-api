@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import 'eldav1d-marvel-ui/dist/lib.css';
 import Characters from './components/pages/Characters/Characters';
 import CharacterDetail from './components/pages/CharacterDetail/CharacterDetail';
 import { Bugfender } from '@bugfender/sdk';

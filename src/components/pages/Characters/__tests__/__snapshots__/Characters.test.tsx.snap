@@ -88,7 +88,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
             </legend>
             <input
               aria-label="search by name input"
-              class="py-2 px-3 bg-black border border-white shadow appearance-none focus-visible-border w-full"
+              class="input py-2 px-3 w-full"
               placeholder="type a character name"
               type="text"
               value=""
@@ -120,7 +120,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
                 class="bg-black shadow appearance-none border-none with-tailwind-13cymwt-control"
               >
                 <div
-                  class=" with-tailwind-1fdsijx-ValueContainer"
+                  class=" with-tailwind-wli1rv-Be"
                 >
                   <div
                     class="text-white with-tailwind-1jqq78o-placeholder"
@@ -129,7 +129,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
                     by name (A/Z)
                   </div>
                   <div
-                    class=" with-tailwind-qbdosj-Input"
+                    class=" with-tailwind-hhsl1c-Be"
                     data-value=""
                   >
                     <input
@@ -154,7 +154,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" with-tailwind-1hb7zxy-IndicatorsContainer"
+                  class=" with-tailwind-lcpdx-Be"
                 >
                   <span
                     class=" with-tailwind-1u9des2-indicatorSeparator"
@@ -196,7 +196,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
               >
                 <input
                   aria-label="withImage"
-                  class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
+                  class="input mr-2 h-4 w-4 checked:bg-red"
                   id="withImage"
                   name="withImage"
                   type="checkbox"
@@ -205,7 +205,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
                 <label
                   for="withImage"
                 >
-                  withImage
+                  with image
                 </label>
               </li>
               <li
@@ -213,7 +213,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
               >
                 <input
                   aria-label="withDescription"
-                  class="mr-2 h-4 w-4 checked:bg-red bg-black border border-white shadow appearance-none focus-visible-border "
+                  class="input mr-2 h-4 w-4 checked:bg-red"
                   id="withDescription"
                   name="withDescription"
                   type="checkbox"
@@ -222,7 +222,7 @@ exports[`renders the desktop page of characters and matches snapshot 1`] = `
                 <label
                   for="withDescription"
                 >
-                  withDescription
+                  with description
                 </label>
               </li>
             </ul>

@@ -1,6 +1,5 @@
-import Input from '@/components/atoms/Input';
+import { InputText, FormGroupContainer } from 'eldav1d-marvel-ui';
 import { ChangeEvent, useEffect, useState } from 'react';
-import FormGroupContainer from '../FormGroupContainer';
 import { useCharactersContext, useDebounce } from '@/components/pages/Characters/hooks';
 import { EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
 import { useCharacters } from '@/components/organisms/CharactersList/hooks';
@@ -32,10 +31,9 @@ const CharactersSearchGroup = () => {
 
   return (
     <FormGroupContainer title={SEARCH_TITLE} classNameFieldset='text-white grow'>
-      <Input
+      <InputText
         aria-label='search by name input'
         className='w-full'
-        type='text'
         onChange={handleSearch}
         placeholder={SEARCH_PLACEHOLDER}
         value={searchInput}

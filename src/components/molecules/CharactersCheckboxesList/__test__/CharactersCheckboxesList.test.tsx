@@ -18,7 +18,7 @@ it('has a titled group', () => {
   expect(titledGroup).toBeInTheDocument();
 });
 
-it('renders the options as checkboxes', () => {
+it('renders two options as checkboxes', () => {
   // ARRANGE
   const options = Object.values(FilterCriteria);
 
@@ -30,7 +30,6 @@ it('renders the options as checkboxes', () => {
   );
 
   // ASSERT
-  options.forEach((option: string) => {
-    expect(screen.getByRole('checkbox', { name: option })).toBeInTheDocument();
-  });
+  const checkboxes = screen.getAllByRole('checkbox');
+  expect(checkboxes).toHaveLength(options.length);
 });

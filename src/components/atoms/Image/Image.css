@@ -1,6 +1,0 @@
-.lazy-load-image-background.blur.lazy-load-image-loaded > img {
-  transition-duration: 750ms;
-  transition-timing-function: ease-in-out;
-  transition-delay: 50ms;
-  transition-property: all;
-}

@@ -1,6 +1,5 @@
 import { ChangeEvent } from 'react';
-import FormGroupContainer from '../FormGroupContainer';
-import { InputSelect } from '@/components/atoms/InputSelect';
+import { FormGroupContainer, InputSelect } from 'eldav1d-marvel-ui';
 import { useCharactersContext } from '@/components/pages/Characters/hooks';
 import { FetchingOrder, HumanizedOrder } from '@/components/pages/Characters/interfaces/characters';
 
@@ -29,6 +28,7 @@ const CharactersSelectGroup = ({ inputAriaLabel }: ISelectProps) => {
         options={Object.values(FetchingOrder)}
         optionLiterals={Object.values(HumanizedOrder)}
         onChange={handleChange}
+        selectName='order'
         aria-label={inputAriaLabel}
         className='w-full'
         placeholder={HumanizedOrder[charactersContextState.order]}
