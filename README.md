@@ -1,8 +1,12 @@
 # Playing With Marvel API
 
 This project is a web application built with React and TypeScript that mimics the look and feel of the [Marvel Characters](https://www.marvel.com/characters) page.
-It fetches data from the Marvel API and allows users to navigate through a list of characters, to a character detail page
+
+It fetches data from the Marvel API and allows users to navigate through a list of characters to a character detail page.
+
 This project is designed to practice and display my accesible UI development skills and sensibility.
+
+Some of its UI patterns are being extracted to [eldav1d-marvel-ui](https://www.npmjs.com/package/eldav1d-marvel-ui), a UI components library. [Here you can check its repo](https://github.com/ElDav1d/eldav1d-marvel-ui)
 
 ## Features
 
