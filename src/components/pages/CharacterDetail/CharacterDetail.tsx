@@ -104,16 +104,16 @@ const CharacterDetail = () => {
 
               {isFetchingComics && <Loader loadingLabel={LOADING_LABEL_COMICS} />}
 
-              {!isFetchingComics && comics && comics.length > 0 ? (
+              {comics && comics.length > 0 && (
                 <>
                   <h3 className='mb-2'>
                     Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
                   </h3>
                   <ComicsList comics={comics} />
                 </>
-              ) : (
-                <h3>{character.name} has not comics</h3>
               )}
+
+              {comics?.length === 0 && <h3>{character.name} has no comics</h3>}
 
               {!isFirstPage && <button onClick={handlePrevPage}>Previous Comics</button>}
               {!isLastPage && <button onClick={handleNextPage}>Next Comics</button>}
