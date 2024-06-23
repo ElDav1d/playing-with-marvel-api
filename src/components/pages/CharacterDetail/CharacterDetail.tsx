@@ -102,17 +102,19 @@ const CharacterDetail = () => {
                 />
               )}
 
-              {isFetchingComics && <Loader loadingLabel={LOADING_LABEL_COMICS} />}
-
-              {comics && comics.length > 0 && (
-                <>
-                  <h3 className='mb-2'>
-                    Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
-                  </h3>
-                  <ComicsList comics={comics} />
-                </>
+              {isFetchingComics ? (
+                <Loader loadingLabel={LOADING_LABEL_COMICS} />
+              ) : (
+                comics &&
+                comics.length > 0 && (
+                  <>
+                    <h3 className='mb-2'>
+                      Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
+                    </h3>
+                    <ComicsList comics={comics} />
+                  </>
+                )
               )}
-
               {comics?.length === 0 && <h3>{character.name} has no comics</h3>}
 
               {!isFirstPage && <button onClick={handlePrevPage}>Previous Comics</button>}
