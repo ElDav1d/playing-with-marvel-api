@@ -1,5 +1,6 @@
 import { FetchingOrder, ICharacterItem } from '@/components/pages/Characters/interfaces/characters';
 import { BASE_URL } from '@/utils/constants';
+import { Bugfender } from '@bugfender/sdk';
 
 export interface IGetCharactersServiceProps {
   pageParam?: number;
@@ -24,6 +25,7 @@ const getCharactersService = async ({
     const response = await fetch(url);
 
     if (!response.ok) {
+      Bugfender.error(`HTTP STATUS: ${response.status}`);
       throw new Error(`HTTP STATUS: ${response.status}`);
     }
 
@@ -36,11 +38,16 @@ const getCharactersService = async ({
     const getNextCursor = () => {
       const hasMoreResults = maxCharacters * (pageParam + 1) < res.data.total;
 
+      Bugfender.log(`ON NEXT CURSOR Characters fetched: ${characters.length}`);
+
       return hasMoreResults ? pageParam + 1 : null;
     };
 
+    Bugfender.log(`Characters fetched: ${characters.length}`);
+
     return { characters, nextCursor: getNextCursor() };
   } catch (error) {
+    Bugfender.error(error);
     console.log(error);
   }
 };
