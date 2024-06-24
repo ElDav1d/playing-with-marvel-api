@@ -1,7 +1,12 @@
 import { InputText, FormGroupContainer } from 'eldav1d-marvel-ui';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { useCharactersContext, useDebounce } from '@/components/pages/Characters/hooks';
-import { EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
+import {
+  DEBOUNCE_DELAY,
+  EMPTY_SEARCH_RESULTS_LITERAL,
+  SEARCH_PLACEHOLDER,
+  SEARCH_TITLE,
+} from '@/utils/constants';
 import { useCharacters } from '@/components/organisms/CharactersList/hooks';
 
 /**
@@ -9,9 +14,6 @@ import { useCharacters } from '@/components/organisms/CharactersList/hooks';
  */
 
 const CharactersSearchGroup = () => {
-  const SEARCH_PLACEHOLDER = 'type a character name';
-  const SEARCH_TITLE = 'Search by name';
-
   const { charactersContextState, charactersContextDispatch } = useCharactersContext();
 
   const [searchInput, setSearchInput] = useState<string>(charactersContextState.searchString);
@@ -19,9 +21,9 @@ const CharactersSearchGroup = () => {
 
   const { characters, isFetching } = useCharacters();
 
-  useDebounce(searchInput, 500, () => setSearchString(searchInput));
+  useDebounce(searchInput, DEBOUNCE_DELAY, () => setSearchString(searchInput));
 
-  const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setSearchInput(event.target.value);
   };
 
@@ -29,12 +31,18 @@ const CharactersSearchGroup = () => {
     charactersContextDispatch({ type: 'SET_SEARCH', searchString });
   }, [searchString]);
 
+  useEffect(() => {
+    if (charactersContextState.searchString !== searchInput) {
+      setSearchInput(charactersContextState.searchString);
+    }
+  }, [charactersContextState.searchString]);
+
   return (
     <FormGroupContainer title={SEARCH_TITLE} classNameFieldset='text-white grow'>
       <InputText
         aria-label='search by name input'
         className='w-full'
-        onChange={handleSearch}
+        onChange={handleChange}
         placeholder={SEARCH_PLACEHOLDER}
         value={searchInput}
       />
