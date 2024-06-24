@@ -1,7 +1,7 @@
 import { InputText, FormGroupContainer } from 'eldav1d-marvel-ui';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { useCharactersContext, useDebounce } from '@/components/pages/Characters/hooks';
-import { EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
+import { DEBOUNCE_DELAY, EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
 import { useCharacters } from '@/components/organisms/CharactersList/hooks';
 
 /**
@@ -19,7 +19,7 @@ const CharactersSearchGroup = () => {
 
   const { characters, isFetching } = useCharacters();
 
-  useDebounce(searchInput, 500, () => setSearchString(searchInput));
+  useDebounce(searchInput, DEBOUNCE_DELAY, () => setSearchString(searchInput));
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
     setSearchInput(event.target.value);
@@ -28,6 +28,10 @@ const CharactersSearchGroup = () => {
   useEffect(() => {
     charactersContextDispatch({ type: 'SET_SEARCH', searchString });
   }, [searchString]);
+
+  useEffect(() => {
+    setSearchInput(charactersContextState.searchString);
+  }, [charactersContextState.searchString]);
 
   return (
     <FormGroupContainer title={SEARCH_TITLE} classNameFieldset='text-white grow'>
