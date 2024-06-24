@@ -11,6 +11,8 @@ const MEDIA_BREAKPOINTS: MediaBreakpoints = {
 
 const HERO_BACKGROUND_URL = 'https://cdn.marvel.com/content/1x/characters_art_mas_mob_01.jpg';
 
+const SEARCH_PLACEHOLDER = 'type a character name';
+const SEARCH_TITLE = 'Search by name';
 const EMPTY_SEARCH_RESULTS_LITERAL =
   // eslint-disable-next-line quotes
   "Sorry, none of our characters' name matches your search! Try typing again";
@@ -33,6 +35,8 @@ export {
   MAX_FETCH_CHARACTER_COMICS,
   MEDIA_BREAKPOINTS,
   HERO_BACKGROUND_URL,
+  SEARCH_PLACEHOLDER,
+  SEARCH_TITLE,
   EMPTY_SEARCH_RESULTS_LITERAL,
   HERO_TITLE_LITERAL,
   HERO_PARAGRAPH_LITERAL,
