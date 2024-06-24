@@ -14,6 +14,9 @@ const HERO_BACKGROUND_URL = 'https://cdn.marvel.com/content/1x/characters_art_ma
 const EMPTY_SEARCH_RESULTS_LITERAL =
   // eslint-disable-next-line quotes
   "Sorry, none of our characters' name matches your search! Try typing again";
+const HERO_TITLE_LITERAL = 'Marvel Characters';
+const HERO_PARAGRAPH_LITERAL =
+  'Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!';
 
 const LOGO_DEFAULT_HEIGHT = '52px';
 
@@ -29,6 +32,8 @@ export {
   MEDIA_BREAKPOINTS,
   HERO_BACKGROUND_URL,
   EMPTY_SEARCH_RESULTS_LITERAL,
+  HERO_TITLE_LITERAL,
+  HERO_PARAGRAPH_LITERAL,
   LOGO_DEFAULT_HEIGHT,
   TRANSITION_TIMING,
 };
