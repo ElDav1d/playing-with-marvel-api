@@ -23,7 +23,7 @@ const CharactersSearchGroup = () => {
 
   useDebounce(searchInput, DEBOUNCE_DELAY, () => setSearchString(searchInput));
 
-  const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setSearchInput(event.target.value);
   };
 
@@ -32,7 +32,9 @@ const CharactersSearchGroup = () => {
   }, [searchString]);
 
   useEffect(() => {
-    setSearchInput(charactersContextState.searchString);
+    if (charactersContextState.searchString !== searchInput) {
+      setSearchInput(charactersContextState.searchString);
+    }
   }, [charactersContextState.searchString]);
 
   return (
@@ -40,7 +42,7 @@ const CharactersSearchGroup = () => {
       <InputText
         aria-label='search by name input'
         className='w-full'
-        onChange={handleSearch}
+        onChange={handleChange}
         placeholder={SEARCH_PLACEHOLDER}
         value={searchInput}
       />
