@@ -11,6 +11,10 @@ const MEDIA_BREAKPOINTS: MediaBreakpoints = {
 
 const HERO_BACKGROUND_URL = 'https://cdn.marvel.com/content/1x/characters_art_mas_mob_01.jpg';
 
+const CHARACTERS_LOADING_ERROR_LITERAL = 'Oooops...unexpected error!! Try reloading again';
+const CHARACTERS_LOADING_LABEL_LITERAL = 'Characters List is loading';
+const CHARACTER_DETAILS_LOADING_LABEL_LITERAL = 'Character Details are loading';
+const CHARACTER_COMICS_LOADING_LABEL_LITERAL = 'Character Comics are loading';
 const SEARCH_PLACEHOLDER = 'type a character name';
 const SEARCH_TITLE = 'Search by name';
 const EMPTY_SEARCH_RESULTS_LITERAL =
@@ -19,6 +23,10 @@ const EMPTY_SEARCH_RESULTS_LITERAL =
 const HERO_TITLE_LITERAL = 'Marvel Characters';
 const HERO_PARAGRAPH_LITERAL =
   'Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!';
+
+const CLEAR_BUTTON_LITERAL = 'clear';
+const NEXT_BUTTON_LITERAL = 'next';
+const PREVIOUS_BUTTON_LITERAL = 'previous';
 
 const LOGO_DEFAULT_HEIGHT = '52px';
 
@@ -35,11 +43,18 @@ export {
   MAX_FETCH_CHARACTER_COMICS,
   MEDIA_BREAKPOINTS,
   HERO_BACKGROUND_URL,
+  CHARACTERS_LOADING_ERROR_LITERAL,
+  CHARACTERS_LOADING_LABEL_LITERAL,
+  CHARACTER_COMICS_LOADING_LABEL_LITERAL,
+  CHARACTER_DETAILS_LOADING_LABEL_LITERAL,
   SEARCH_PLACEHOLDER,
   SEARCH_TITLE,
   EMPTY_SEARCH_RESULTS_LITERAL,
   HERO_TITLE_LITERAL,
   HERO_PARAGRAPH_LITERAL,
+  CLEAR_BUTTON_LITERAL,
+  NEXT_BUTTON_LITERAL,
+  PREVIOUS_BUTTON_LITERAL,
   LOGO_DEFAULT_HEIGHT,
   TRANSITION_TIMING,
   DEBOUNCE_DELAY,

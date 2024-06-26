@@ -2,7 +2,8 @@ import { CharactersControlPanelInfoItem } from '@/components/atoms/CharactersCon
 import { useCharactersContext } from '@/components/pages/Characters/hooks';
 import { useControlPanelInputInfo } from './hooks';
 import { useMediaQuery } from '@/hooks';
-import { MEDIA_BREAKPOINTS } from '@/utils/constants';
+import { CLEAR_BUTTON_LITERAL, MEDIA_BREAKPOINTS } from '@/utils/constants';
+import { Button } from 'eldav1d-marvel-ui';
 
 /**
  * A component that handles and displays information in a control panel.
@@ -43,12 +44,9 @@ const CharactersControlPanelInfo = () => {
             </p>
           )}
 
-          <button
-            className='border border-white p-1 active-border focus-visible-border'
-            onClick={handleClear}
-          >
-            CLEAR
-          </button>
+          <Button variant='ghost' onClick={handleClear}>
+            {CLEAR_BUTTON_LITERAL}
+          </Button>
         </div>
       )}
     </>
