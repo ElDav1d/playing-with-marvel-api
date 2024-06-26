@@ -1,8 +1,12 @@
 import { useParams } from 'react-router-dom';
-import { Loader } from 'eldav1d-marvel-ui';
+import { Button, Loader } from 'eldav1d-marvel-ui';
 import { useCharacterDetails, useCharacterComics } from './hooks';
 import CharacterDetailHeroSection from '@/components/organisms/CharacterDetailHeroSection/CharacterDetailHeroSection';
-import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
+import {
+  MAX_FETCH_CHARACTER_COMICS,
+  NEXT_BUTTON_LITERAL,
+  PREVIOUS_BUTTON_LITERAL,
+} from '@/utils/constants';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { FetchingOrder, HumanizedOrder } from './interfaces/characterComics';
 import Header from '@/components/organisms/Header';
@@ -117,8 +121,8 @@ const CharacterDetail = () => {
               )}
               {comics?.length === 0 && <h3>{character.name} has no comics</h3>}
 
-              {!isFirstPage && <button onClick={handlePrevPage}>Previous Comics</button>}
-              {!isLastPage && <button onClick={handleNextPage}>Next Comics</button>}
+              {!isLastPage && <Button onClick={handlePrevPage}>{PREVIOUS_BUTTON_LITERAL}</Button>}
+              {!isFirstPage && <Button onClick={handleNextPage}>{NEXT_BUTTON_LITERAL}</Button>}
             </Container>
           </article>
         )}

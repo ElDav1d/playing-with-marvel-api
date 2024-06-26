@@ -20,6 +20,10 @@ const HERO_TITLE_LITERAL = 'Marvel Characters';
 const HERO_PARAGRAPH_LITERAL =
   'Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!';
 
+const CLEAR_BUTTON_LITERAL = 'clear';
+const NEXT_BUTTON_LITERAL = 'next';
+const PREVIOUS_BUTTON_LITERAL = 'previous';
+
 const LOGO_DEFAULT_HEIGHT = '52px';
 
 const TRANSITION_TIMING = new Map<string, string>();
@@ -40,6 +44,9 @@ export {
   EMPTY_SEARCH_RESULTS_LITERAL,
   HERO_TITLE_LITERAL,
   HERO_PARAGRAPH_LITERAL,
+  CLEAR_BUTTON_LITERAL,
+  NEXT_BUTTON_LITERAL,
+  PREVIOUS_BUTTON_LITERAL,
   LOGO_DEFAULT_HEIGHT,
   TRANSITION_TIMING,
   DEBOUNCE_DELAY,
