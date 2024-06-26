@@ -44,7 +44,9 @@ const CharactersControlPanelInfo = () => {
             </p>
           )}
 
-          <Button onClick={handleClear}>{CLEAR_BUTTON_LITERAL}</Button>
+          <Button variant='ghost' onClick={handleClear}>
+            {CLEAR_BUTTON_LITERAL}
+          </Button>
         </div>
       )}
     </>
