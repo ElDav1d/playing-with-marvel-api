@@ -174,7 +174,7 @@ exports[`renders the character detail page and matches snapshot 1`] = `
         <ul
           aria-label="List of comics for the character."
           aria-live="polite"
-          class="grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto"
+          class="grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto mb-4"
         >
           <li
             aria-label="Maestro: World War M (2022) #5"
