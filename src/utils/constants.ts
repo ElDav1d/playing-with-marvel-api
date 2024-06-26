@@ -11,6 +11,10 @@ const MEDIA_BREAKPOINTS: MediaBreakpoints = {
 
 const HERO_BACKGROUND_URL = 'https://cdn.marvel.com/content/1x/characters_art_mas_mob_01.jpg';
 
+const CHARACTERS_LOADING_ERROR_LITERAL = 'Oooops...unexpected error!! Try reloading again';
+const CHARACTERS_LOADING_LABEL_LITERAL = 'Characters List is loading';
+const CHARACTER_DETAILS_LOADING_LABEL_LITERAL = 'Character Details are loading';
+const CHARACTER_COMICS_LOADING_LABEL_LITERAL = 'Character Comics are loading';
 const SEARCH_PLACEHOLDER = 'type a character name';
 const SEARCH_TITLE = 'Search by name';
 const EMPTY_SEARCH_RESULTS_LITERAL =
@@ -39,6 +43,10 @@ export {
   MAX_FETCH_CHARACTER_COMICS,
   MEDIA_BREAKPOINTS,
   HERO_BACKGROUND_URL,
+  CHARACTERS_LOADING_ERROR_LITERAL,
+  CHARACTERS_LOADING_LABEL_LITERAL,
+  CHARACTER_COMICS_LOADING_LABEL_LITERAL,
+  CHARACTER_DETAILS_LOADING_LABEL_LITERAL,
   SEARCH_PLACEHOLDER,
   SEARCH_TITLE,
   EMPTY_SEARCH_RESULTS_LITERAL,

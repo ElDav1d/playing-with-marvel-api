@@ -1,15 +1,16 @@
 import { useCharacters, useFilteredCharacters } from './hooks';
 import { CharacterListItem } from '@/components/molecules/CharacterListItem';
 import { useCharactersContext } from '@/components/pages/Characters/hooks';
-import { EMPTY_SEARCH_RESULTS_LITERAL } from '@/utils/constants';
+import {
+  CHARACTERS_LOADING_ERROR_LITERAL,
+  CHARACTERS_LOADING_LABEL_LITERAL,
+  EMPTY_SEARCH_RESULTS_LITERAL,
+} from '@/utils/constants';
 import { Loader } from 'eldav1d-marvel-ui';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const CharactersList = () => {
-  const ERROR_MESSAGE = 'Oooops...unexpected error!! Try reloading again';
-  const LOADING_LABEL = 'Characters List is loading';
-
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
@@ -29,7 +30,7 @@ const CharactersList = () => {
 
   return (
     <>
-      {isError && <h2>{ERROR_MESSAGE}</h2>}
+      {isError && <h2>{CHARACTERS_LOADING_ERROR_LITERAL}</h2>}
 
       {!isError && !isLoading && filteredCharacters?.length === 0 && (
         <h3 className='text-center'>{EMPTY_SEARCH_RESULTS_LITERAL}</h3>
@@ -55,7 +56,7 @@ const CharactersList = () => {
 
       {(isLoading || hasNextPage) && (
         <div ref={ref}>
-          <Loader loadingLabel={LOADING_LABEL} />
+          <Loader loadingLabel={CHARACTERS_LOADING_LABEL_LITERAL} />
         </div>
       )}
     </>

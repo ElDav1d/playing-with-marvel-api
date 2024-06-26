@@ -3,6 +3,8 @@ import { Button, Loader } from 'eldav1d-marvel-ui';
 import { useCharacterDetails, useCharacterComics } from './hooks';
 import CharacterDetailHeroSection from '@/components/organisms/CharacterDetailHeroSection/CharacterDetailHeroSection';
 import {
+  CHARACTER_COMICS_LOADING_LABEL_LITERAL,
+  CHARACTER_DETAILS_LOADING_LABEL_LITERAL,
   MAX_FETCH_CHARACTER_COMICS,
   NEXT_BUTTON_LITERAL,
   PREVIOUS_BUTTON_LITERAL,
@@ -16,8 +18,6 @@ import { ComicsSelectGroup } from '@/components/molecules/ComicsSelectGroup';
 import { ComicsList } from '@/components/organisms/ComicsList';
 
 const CharacterDetail = () => {
-  const LOADING_LABEL_DETAILS = 'Character Details are loading';
-  const LOADING_LABEL_COMICS = 'Character COMICS are loading';
   const { id } = useParams();
   const [page, setPage] = useState<number>(0);
   const [order, setOrder] = useState<FetchingOrder>(FetchingOrder.TITLE_AZ);
@@ -81,7 +81,7 @@ const CharacterDetail = () => {
       <Container element={'main'} aria-label='character detail main content'>
         {isError && <h2>Ooops, try refreshing your browser</h2>}
 
-        {isLoadingCharacter && <Loader loadingLabel={LOADING_LABEL_DETAILS} />}
+        {isLoadingCharacter && <Loader loadingLabel={CHARACTER_DETAILS_LOADING_LABEL_LITERAL} />}
 
         {character && (
           <article aria-label='character detail article'>
@@ -107,7 +107,7 @@ const CharacterDetail = () => {
               )}
 
               {isFetchingComics ? (
-                <Loader loadingLabel={LOADING_LABEL_COMICS} />
+                <Loader loadingLabel={CHARACTER_COMICS_LOADING_LABEL_LITERAL} />
               ) : (
                 comics &&
                 comics.length > 0 && (
