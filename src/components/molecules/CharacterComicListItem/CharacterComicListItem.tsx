@@ -5,7 +5,7 @@ import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
  * Single comic item in the list.
  * @interface
  */
-export interface IComicsListItemProps {
+export interface ICharacterComicListItemProps {
   /**
    * The ID of the comic.
    * @type {number}
@@ -29,7 +29,12 @@ export interface IComicsListItemProps {
   description: string | null;
 }
 
-const ComicsListItem = ({ id, images, title, description }: IComicsListItemProps) => {
+const CharacterComicListItem = ({
+  id,
+  images,
+  title,
+  description,
+}: ICharacterComicListItemProps) => {
   return (
     <li
       aria-label={title}
@@ -62,4 +67,4 @@ const ComicsListItem = ({ id, images, title, description }: IComicsListItemProps
   );
 };
 
-export default ComicsListItem;
+export default CharacterComicListItem;
