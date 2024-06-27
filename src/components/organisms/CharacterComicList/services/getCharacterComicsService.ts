@@ -1,5 +1,5 @@
 import { BASE_URL } from '@/utils/constants';
-import { FetchingOrder } from '../interfaces/characterComics';
+import { FetchingOrder } from '../../../organisms/CharacterComicList/interfaces/characterComics';
 
 export interface getCharacterComicsServiceProps {
   page: number;

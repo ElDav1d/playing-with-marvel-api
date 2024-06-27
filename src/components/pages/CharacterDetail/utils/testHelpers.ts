@@ -1,7 +1,8 @@
 import mockCharacterDetail from '../mocks/mockCharacterDetail.json';
 import mockCharacterComics from '../mocks/mockCharacterComics.json';
-import { useCharacterComics, useCharacterDetails } from '../hooks';
+import { useCharacterDetails } from '../hooks';
 import userEvent from '@testing-library/user-event';
+import { useCharacterComics } from '@/components/organisms/CharacterComicList/hooks';
 
 const mockUseCharacterDetails = useCharacterDetails as jest.Mock;
 

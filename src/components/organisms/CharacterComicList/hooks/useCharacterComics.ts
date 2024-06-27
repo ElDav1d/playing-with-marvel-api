@@ -1,7 +1,7 @@
 import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getCharacterComicsService } from '../services';
-import { ICharacterComicDetails, FetchingOrder } from '../interfaces/characterComics';
+import { FetchingOrder, ICharacterComicDetails } from '../interfaces/characterComics';
 
 /**
  * Props for the useCharacterComics custom hook.
