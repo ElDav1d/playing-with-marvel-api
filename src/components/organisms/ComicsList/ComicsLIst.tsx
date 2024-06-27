@@ -1,4 +1,4 @@
-import { ComicsListItem } from '@/components/molecules/ComicsListItem';
+import { CharacterComicListItem } from '@/components/molecules/CharacterComicListItem';
 import { ICharacterComicDetails } from '@/components/pages/CharacterDetail/interfaces/characterComics';
 
 export interface IComicsListProps {
@@ -13,7 +13,13 @@ const ComicsList = ({ comics }: IComicsListProps) => {
       className='grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto mb-4'
     >
       {comics.map(({ id, images, title, description }) => (
-        <ComicsListItem key={id} id={id} images={images} title={title} description={description} />
+        <CharacterComicListItem
+          key={id}
+          id={id}
+          images={images}
+          title={title}
+          description={description}
+        />
       ))}
     </ul>
   );

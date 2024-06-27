@@ -7,7 +7,7 @@ import {
   SEARCH_PLACEHOLDER,
   SEARCH_TITLE,
 } from '@/utils/constants';
-import { useCharacters } from '@/components/organisms/CharactersList/hooks';
+import { useCharacters } from '@/components/organisms/CharacterList/hooks';
 
 /**
  * UI group for search input .

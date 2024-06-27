@@ -1,5 +1,5 @@
 import { render, screen, within } from '@testing-library/react';
-import CharactersList from '../CharactersList';
+import CharacterList from '../CharacterList';
 import { CharactersProvider } from '@/components/pages/Characters/context';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useCharacters, useFilteredCharacters } from '../hooks';
@@ -35,7 +35,7 @@ it('renders the loader when loading first list page', () => {
   render(
     <QueryClientProvider client={queryClient}>
       <CharactersProvider>
-        <CharactersList />
+        <CharacterList />
       </CharactersProvider>
     </QueryClientProvider>,
   );
@@ -54,7 +54,7 @@ it('renders the loader when loading next list page', () => {
   render(
     <QueryClientProvider client={queryClient}>
       <CharactersProvider>
-        <CharactersList />
+        <CharacterList />
       </CharactersProvider>
     </QueryClientProvider>,
   );
@@ -73,7 +73,7 @@ it('informs user from error', () => {
   render(
     <QueryClientProvider client={queryClient}>
       <CharactersProvider>
-        <CharactersList />
+        <CharacterList />
       </CharactersProvider>
     </QueryClientProvider>,
   );
@@ -94,7 +94,7 @@ it('informs user from empty results', () => {
   render(
     <QueryClientProvider client={queryClient}>
       <CharactersProvider>
-        <CharactersList />
+        <CharacterList />
       </CharactersProvider>
     </QueryClientProvider>,
   );
@@ -117,7 +117,7 @@ it('renders a list of characters with list items', () => {
     <QueryClientProvider client={queryClient}>
       <Router>
         <CharactersProvider>
-          <CharactersList />
+          <CharacterList />
         </CharactersProvider>
       </Router>
     </QueryClientProvider>,
@@ -146,7 +146,7 @@ it('renders the list of characters and matches  snapshot', () => {
     <QueryClientProvider client={queryClient}>
       <Router>
         <CharactersProvider>
-          <CharactersList />
+          <CharacterList />
         </CharactersProvider>
       </Router>
     </QueryClientProvider>,

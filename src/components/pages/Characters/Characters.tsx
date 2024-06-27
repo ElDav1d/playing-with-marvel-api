@@ -1,4 +1,3 @@
-import CharactersList from '@/components/organisms/CharactersList/CharactersList';
 import { MEDIA_BREAKPOINTS } from '@/utils/constants';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
@@ -9,6 +8,7 @@ import CharactersControlPanel from '@/components/organisms/CharactersControlPane
 import { CharactersHeroSection } from '@/components/organisms/CharactersHeroSection';
 import { useMediaQuery } from '@/hooks';
 import { CharactersProvider } from './context';
+import CharacterList from '@/components/organisms/CharacterList/CharacterList';
 
 const Characters = () => {
   const isDesktop = useMediaQuery(`(min-width: ${MEDIA_BREAKPOINTS.MD}px)`);
@@ -25,7 +25,7 @@ const Characters = () => {
       <Container element={'main'} aria-label='characters page main content'>
         <CharactersHeroSection />
         <Container>
-          <CharactersList />
+          <CharacterList />
         </Container>
       </Container>
       <Footer />

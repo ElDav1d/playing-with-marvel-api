@@ -10,7 +10,7 @@ import { Loader } from 'eldav1d-marvel-ui';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const CharactersList = () => {
+const CharacterList = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
@@ -63,4 +63,4 @@ const CharactersList = () => {
   );
 };
 
-export default CharactersList;
+export default CharacterList;
