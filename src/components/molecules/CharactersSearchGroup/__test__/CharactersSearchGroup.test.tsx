@@ -4,7 +4,7 @@ import CharactersSearchGroup from '../CharactersSearchGroup';
 import { CharactersProvider } from '@/components/pages/Characters/context';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useCharactersContext, useDebounce } from '@/components/pages/Characters/hooks';
-import { useCharacters } from '@/components/organisms/CharactersList/hooks';
+import { useCharacters } from '@/components/organisms/CharacterList/hooks';
 
 const queryClient = new QueryClient();
 
@@ -13,7 +13,7 @@ jest.mock('@/components/pages/Characters/hooks', () => ({
   useDebounce: jest.fn(),
 }));
 
-jest.mock('@/components/organisms/CharactersList/hooks', () => ({
+jest.mock('@/components/organisms/CharacterList/hooks', () => ({
   useCharacters: jest.fn(),
 }));
 

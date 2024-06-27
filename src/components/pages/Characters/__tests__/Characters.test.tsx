@@ -3,12 +3,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, screen, waitFor } from '@testing-library/react';
 import Characters from '../Characters';
-import mockCharactersAZ from '@/components/organisms/CharactersList/mocks/mockCharactersAZ.json';
+import mockCharactersAZ from '@/components/organisms/CharacterList/mocks/mockCharactersAZ.json';
 import { setUpMatchMedia } from '@/utils/testHelpers';
 import userEvent from '@testing-library/user-event';
-import { useCharacters, useFilteredCharacters } from '@/components/organisms/CharactersList/hooks';
+import { useCharacters, useFilteredCharacters } from '@/components/organisms/CharacterList/hooks';
 
-jest.mock('@/components/organisms/CharactersList/hooks', () => ({
+jest.mock('@/components/organisms/CharacterList/hooks', () => ({
   useCharacters: jest.fn(),
   useFilteredCharacters: jest.fn(),
 }));
