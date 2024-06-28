@@ -23,12 +23,12 @@ export interface IUseCharacterDetailsReturn {
    * Indicates if the character is loading.
    * @property {boolean}
    */
-  isLoadingCharacter: boolean;
+  isLoading: boolean;
   /**
    * Indicates if there is an error on the character.
    * @property {boolean}
    */
-  isErrorOnCharacter: boolean;
+  isError: boolean;
   /**
    * The character details.
    * @property {CharacterDetail | undefined}
@@ -52,8 +52,8 @@ const useCharacterDetails = ({
   });
 
   return {
-    isLoadingCharacter: isLoading,
-    isErrorOnCharacter: isError,
+    isLoading,
+    isError,
     character: data,
   };
 };

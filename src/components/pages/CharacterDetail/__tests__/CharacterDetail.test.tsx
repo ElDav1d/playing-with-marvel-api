@@ -35,8 +35,8 @@ it('renders the character detail page and matches snapshot', () => {
 it('renders the loader when fetching initial page', () => {
   // ARRANGE
   mockUseCharacterDetails.mockReturnValue({
-    isLoadingCharacter: true,
-    isErrorOnCharacter: false,
+    isLoading: true,
+    isError: false,
     character: undefined,
   });
 

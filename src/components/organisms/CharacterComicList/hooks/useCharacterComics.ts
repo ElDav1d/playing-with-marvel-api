@@ -68,12 +68,12 @@ export interface IUseCharacterComicsReturn {
    * Indicates if there is an error.
    * @property {boolean}
    */
-  isErrorOnComics: boolean;
+  isError: boolean;
   /**
    * Indicates if data is being fetched.
    * @property {boolean}
    */
-  isFetchingComics: boolean;
+  isFetching: boolean;
   /**
    * Indicates if it is the last page.
    * @property {boolean}
@@ -122,8 +122,8 @@ const useCharacterComics = ({
     totalComics,
     rangeInit: safeOffset + 1,
     rangeEnd: safeOffset + comics?.length,
-    isErrorOnComics: isError,
-    isFetchingComics: isFetching,
+    isError,
+    isFetching,
     isLastPage: safeOffset + MAX_FETCH_CHARACTER_COMICS >= totalComics,
     isFirstPage: safeOffset === 0,
     refetch,

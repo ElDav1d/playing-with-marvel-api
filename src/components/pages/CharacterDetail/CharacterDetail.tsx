@@ -12,7 +12,7 @@ import { CharacterComicList } from '@/components/organisms/CharacterComicList';
 const CharacterDetail = () => {
   const { id } = useParams();
 
-  const { isLoadingCharacter, isErrorOnCharacter, character } = useCharacterDetails({
+  const { isLoading, isError, character } = useCharacterDetails({
     characterId: id,
   });
 
@@ -20,9 +20,9 @@ const CharacterDetail = () => {
     <>
       <Header />
       <Container element={'main'} aria-label='character detail main content'>
-        {isErrorOnCharacter && <h2>Ooops, try refreshing your browser</h2>}
+        {isError && <h2>Ooops, try refreshing your browser</h2>}
 
-        {isLoadingCharacter && <Loader loadingLabel={CHARACTER_DETAILS_LOADING_LABEL_LITERAL} />}
+        {isLoading && <Loader loadingLabel={CHARACTER_DETAILS_LOADING_LABEL_LITERAL} />}
 
         {character && (
           <article aria-label='character detail article'>

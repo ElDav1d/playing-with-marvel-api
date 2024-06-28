@@ -35,8 +35,8 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
     totalComics,
     rangeInit,
     rangeEnd,
-    isErrorOnComics,
-    isFetchingComics,
+    isError,
+    isFetching,
     isFirstPage,
     isLastPage,
     refetch,
@@ -78,7 +78,7 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
 
   return (
     <>
-      {isErrorOnComics && <h2>Ooops, try refreshing your browser</h2>}
+      {isError && <h2>Ooops, try refreshing your browser</h2>}
 
       {comics && comics.length > 1 && (
         <ComicsSelectGroup
@@ -91,7 +91,7 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
         />
       )}
 
-      {isFetchingComics ? (
+      {isFetching ? (
         <Loader loadingLabel={CHARACTER_COMICS_LOADING_LABEL_LITERAL} />
       ) : (
         comics &&
