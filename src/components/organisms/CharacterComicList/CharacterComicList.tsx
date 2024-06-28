@@ -36,7 +36,7 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
     rangeInit,
     rangeEnd,
     isError,
-    isFetching,
+    isLoading,
     isFirstPage,
     isLastPage,
     refetch,
@@ -91,7 +91,7 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
         />
       )}
 
-      {isFetching ? (
+      {isLoading ? (
         <Loader loadingLabel={CHARACTER_COMICS_LOADING_LABEL_LITERAL} />
       ) : (
         comics &&
