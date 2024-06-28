@@ -1,19 +1,8 @@
-import mockCharacterDetail from '../mocks/mockCharacterDetail.json';
 import mockCharacterComics from '../mocks/mockCharacterComics.json';
-import { useCharacterComics, useCharacterDetails } from '../hooks';
 import userEvent from '@testing-library/user-event';
-
-const mockUseCharacterDetails = useCharacterDetails as jest.Mock;
+import { useCharacterComics } from '../hooks';
 
 const mockUseCharacterComics = useCharacterComics as jest.Mock;
-
-export const setUpCharacterDetails = () => {
-  mockUseCharacterDetails.mockReturnValue({
-    isLoadingCharacter: false,
-    isErrorOnCharacter: false,
-    character: mockCharacterDetail,
-  });
-};
 
 export const setUpCharacterComics = () => {
   mockUseCharacterComics.mockReturnValue({
@@ -29,12 +18,7 @@ export const setUpCharacterComics = () => {
   });
 };
 
-export const setUpHappyPath = () => {
-  setUpCharacterDetails();
-  setUpCharacterComics();
-};
-
 export const setUpHappyPathWithUser = () => {
-  setUpHappyPath();
+  setUpCharacterComics();
   return { user: userEvent.setup() };
 };

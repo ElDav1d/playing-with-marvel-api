@@ -1,7 +1,7 @@
 import { MAX_FETCH_CHARACTER_COMICS } from '@/utils/constants';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getCharacterComicsService } from '../services';
-import { ICharacterComicDetails, FetchingOrder } from '../interfaces/characterComics';
+import { FetchingOrder, ICharacterComicDetails } from '../interfaces/characterComics';
 
 /**
  * Props for the useCharacterComics custom hook.
@@ -68,12 +68,12 @@ export interface IUseCharacterComicsReturn {
    * Indicates if there is an error.
    * @property {boolean}
    */
-  isErrorOnComics: boolean;
+  isError: boolean;
   /**
    * Indicates if data is being fetched.
    * @property {boolean}
    */
-  isFetchingComics: boolean;
+  isLoading: boolean;
   /**
    * Indicates if it is the last page.
    * @property {boolean}
@@ -100,7 +100,7 @@ const useCharacterComics = ({
   order,
   onClearData,
 }: IUseCharacterComicsProps): IUseCharacterComicsReturn => {
-  const { isError, data, isFetching, refetch } = useQuery({
+  const { isError, data, isLoading, refetch } = useQuery({
     queryKey: ['characterComics', characterId],
     queryFn: () => getCharacterComicsService({ characterId, maxComics, page, order }),
     refetchOnWindowFocus: false,
@@ -122,8 +122,8 @@ const useCharacterComics = ({
     totalComics,
     rangeInit: safeOffset + 1,
     rangeEnd: safeOffset + comics?.length,
-    isErrorOnComics: isError,
-    isFetchingComics: isFetching,
+    isError,
+    isLoading,
     isLastPage: safeOffset + MAX_FETCH_CHARACTER_COMICS >= totalComics,
     isFirstPage: safeOffset === 0,
     refetch,
