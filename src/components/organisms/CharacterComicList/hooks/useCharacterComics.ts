@@ -65,6 +65,11 @@ export interface IUseCharacterComicsReturn {
    */
   rangeEnd: number | undefined;
   /**
+   * Indicates if it is fetching the next page.
+   * @property {boolean}
+   */
+  isFetching: boolean;
+  /**
    * Indicates if there is an error.
    * @property {boolean}
    */
@@ -100,7 +105,7 @@ const useCharacterComics = ({
   order,
   onClearData,
 }: IUseCharacterComicsProps): IUseCharacterComicsReturn => {
-  const { isError, data, isLoading, refetch } = useQuery({
+  const { isError, data, isFetching, isLoading, refetch } = useQuery({
     queryKey: ['characterComics', characterId],
     queryFn: () => getCharacterComicsService({ characterId, maxComics, page, order }),
     refetchOnWindowFocus: false,
@@ -124,6 +129,7 @@ const useCharacterComics = ({
     rangeEnd: safeOffset + comics?.length,
     isError,
     isLoading,
+    isFetching,
     isLastPage: safeOffset + MAX_FETCH_CHARACTER_COMICS >= totalComics,
     isFirstPage: safeOffset === 0,
     refetch,

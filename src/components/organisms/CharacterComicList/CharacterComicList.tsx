@@ -36,6 +36,7 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
     rangeInit,
     rangeEnd,
     isError,
+    isFetching,
     isLoading,
     isFirstPage,
     isLastPage,
@@ -117,8 +118,16 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
               ))}
             </ul>
 
-            {!isFirstPage && <Button onClick={handlePrevPage}>{PREVIOUS_BUTTON_LITERAL}</Button>}
-            {!isLastPage && <Button onClick={handleNextPage}>{NEXT_BUTTON_LITERAL}</Button>}
+            {!isFirstPage && (
+              <Button disabled={isFetching} onClick={handlePrevPage}>
+                {PREVIOUS_BUTTON_LITERAL}
+              </Button>
+            )}
+            {!isLastPage && (
+              <Button disabled={isFetching} onClick={handleNextPage}>
+                {NEXT_BUTTON_LITERAL}
+              </Button>
+            )}
           </>
         )
       )}
