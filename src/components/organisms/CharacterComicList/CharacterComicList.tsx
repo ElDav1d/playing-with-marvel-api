@@ -81,23 +81,21 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
     <>
       {isError && <h2>Ooops, try refreshing your browser</h2>}
 
-      {comics && comics.length > 1 && (
-        <ComicsSelectGroup
-          classNameSelect='w-1/4'
-          inputAriaLabel='Order comics by:'
-          title='Order comics by:'
-          onChange={(event) => orderHandler(event)}
-          options={Object.values(FetchingOrder)}
-          optionLiterals={orderLiterals}
-        />
-      )}
-
       {isLoading ? (
         <Loader loadingLabel={CHARACTER_COMICS_LOADING_LABEL_LITERAL} />
       ) : (
         comics &&
         comics.length > 0 && (
           <>
+            <ComicsSelectGroup
+              classNameSelect='w-1/4'
+              inputAriaLabel='Order comics by:'
+              title='Order comics by:'
+              onChange={(event) => orderHandler(event)}
+              options={Object.values(FetchingOrder)}
+              optionLiterals={orderLiterals}
+            />
+
             <h3 className='mb-2'>
               Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
             </h3>
