@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import Image, { PicVariantName } from '../Image';
+import Image from '../Image';
+import { PicVariantName } from '../interfaces/image';
 
 jest.mock('react-lazy-load-image-component', () => ({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
