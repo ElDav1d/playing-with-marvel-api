@@ -2,28 +2,7 @@ import { ResponsiveLazyImage } from 'eldav1d-marvel-ui';
 import { Thumbnail } from '@/components/pages/Characters/interfaces/characters';
 import { BreakpointStepName } from '@/types/globals';
 import { MEDIA_BREAKPOINTS } from '@/utils/constants';
-
-/**
- * @typedef
- * Type for picture size variants
- */
-export type PicVariantName =
-  | 'standard_small'
-  | 'standard_xlarge'
-  | 'standard_fantastic'
-  | 'landscape_amazing'
-  | 'landscape_incredible';
-
-/**
- * @typedef
- * Type for picture width size values
- * in pixels for each variant
- *  */
-export type PicVariantWidthValue = 65 | 200 | 250 | 464;
-
-export type PicVariantWidths = {
-  [key in PicVariantName]: PicVariantWidthValue;
-};
+import { PicVariantHeights, PicVariantName, PicVariantWidths } from './interfaces/image';
 
 /* eslint-disable camelcase */
 const PIC_VARIANT_WIDTHS: PicVariantWidths = {
@@ -32,6 +11,16 @@ const PIC_VARIANT_WIDTHS: PicVariantWidths = {
   standard_fantastic: 250,
   landscape_amazing: 250,
   landscape_incredible: 464,
+};
+/* eslint-enable camelcase */
+
+/* eslint-disable camelcase */
+const PIC_VARIANT_HEIGHTS: PicVariantHeights = {
+  standard_small: 45,
+  standard_xlarge: 200,
+  standard_fantastic: 250,
+  landscape_amazing: 156,
+  landscape_incredible: 261,
 };
 /* eslint-enable camelcase */
 
