@@ -1,4 +1,35 @@
-# Playing With Marvel API
+# Playing With Marvel API (UNDER MAINTENANCE)
+
+---
+
+### ⚠️ Project temporarily unavailable (Marvel API sunset)
+
+This project depended on the official **Marvel Developer API**, which was permanently shut down in November 2025.  
+As a result, the application currently returns **server errors** and is temporarily unavailable.
+
+## 🎯 For recruiters & hiring managers
+### ✅ UI Component Library unaffected
+
+The UI component library extracted from this project —  
+👉 **eldav1d-marvel-ui** — **is fully functional** and unaffected by the API shutdown.
+
+It is the part of the project that best represents my work as a **Design System / UI Engineer**.
+
+🔗 **NPM:** https://www.npmjs.com/package/eldav1d-marvel-ui  
+🔗 **GitHub repo:** https://github.com/ElDav1d/eldav1d-marvel-ui
+
+This library demonstrates my work in:
+
+- Design System architecture
+- Component API design
+- Accessibility-driven UI patterns
+- Reusable composition patterns
+- TypeScript + React component engineering
+- Scalable design tokens and theming
+
+---
+
+# PROJECT DESCRIPTION
 
 This project is a web application built with React and TypeScript that mimics the look and feel of the [Marvel Characters](https://www.marvel.com/characters) page.
 
