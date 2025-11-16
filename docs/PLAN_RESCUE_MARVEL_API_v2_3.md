@@ -111,7 +111,7 @@ The `generate-mock-characters-100.js` and `generate-mock-comics.js` scripts are 
 | **React Query Hook**     | `useInfiniteQuery`                                             | `useQuery`                                                              |
 | **Pagination type**      | Infinite scroll (automatic)                                    | Manual with Previous/Next buttons                                       |
 | **Page control**         | React Query manages cursor                                     | `page` state in component                                               |
-| **Response structure**   | `{ characters: ICharacterItem[], nextCursor: number \| null }` | `{ apiData: { results: IComicItem[], total: number }, offset: number }` |
+| **Response structure**   | `{ characters: ICharacterItem[], nextCursor: number \| null }` | `{ apiData: { results: ICharacterComicDetails[], total: number }, offset: number }` |
 | **Image field**          | `thumbnail: { path: string, extension: string }`               | `images: [{ path: string, extension: string }]`                         |
 | **Re-fetch**             | Automatic on scroll                                            | Manual on page/order change                                             |
 | **Sorting**              | In service before pagination                                   | In service before pagination                                            |
