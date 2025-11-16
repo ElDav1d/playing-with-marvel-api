@@ -855,7 +855,7 @@ describe("getCharacterDetailsService with dynamic lookup", () => {
 
 ```typescript
 import getCharacterComicsService from "../getCharacterComicsService";
-import { FetchingOrder } from "../../../interfaces/characterComics";
+import { FetchingOrder } from "../../interfaces/characterComics";
 
 /**
  * Tests for getCharacterComicsService - Manual comics pagination
