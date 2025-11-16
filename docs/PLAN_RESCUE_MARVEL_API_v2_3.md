@@ -1073,8 +1073,6 @@ describe("getCharacterComicsService with manual pagination", () => {
 ```bash
 cd playing-with-marvel-api
 npm test
-# or
-yarn test
 ```
 
 **Checklist:**
@@ -1123,8 +1121,8 @@ yarn test
 
 ```bash
 cd playing-with-marvel-api
-yarn install
-yarn build
+npm install
+npm run build
 ```
 
 - [ ] No TypeScript errors
@@ -1134,7 +1132,7 @@ yarn build
 ### Task 6.2: Run existing tests
 
 ```bash
-yarn test
+npm test
 ```
 
 - [ ] All tests pass
@@ -1143,7 +1141,7 @@ yarn test
 ### Task 6.3: Test in development (Directed Monkey Testing)
 
 ```bash
-yarn start
+npm start
 ```
 
 **Visual checklist - Characters (infinite scroll with 100 items):**
