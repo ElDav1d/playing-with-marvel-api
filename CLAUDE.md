@@ -613,6 +613,183 @@ describe('CharacterList', () => {
 });
 ```
 
+### Service Testing
+
+**File Location for Service Tests:**
+
+```
+services/
+├── getCharactersService.ts
+└── __tests__/
+    └── getCharactersService.test.ts
+```
+
+Service tests are **pure logic tests** that don't require React Testing Library. They test the Application Layer (business logic) in isolation.
+
+**Key Differences from Component Tests:**
+
+| Aspect | Component Tests | Service Tests |
+|--------|----------------|---------------|
+| **What to test** | UI rendering, user interactions | Business logic, data transformations |
+| **Imports** | `render, screen` from @testing-library/react | Only the service and types |
+| **Setup** | `render(<Component />)` | Direct function call `await service(params)` |
+| **Queries** | `screen.getByRole()`, `screen.getByText()` | None (no DOM) |
+| **Assertions** | `.toBeInTheDocument()` | `.toBeDefined()`, `.toHaveLength()`, `.toBe()` |
+| **Pattern** | Given-When-Then (implicit) | **ARRANGE-ACT-ASSERT** (explicit) |
+| **Async** | Optional | Always (services are async) |
+
+**Service Test Structure (ARRANGE-ACT-ASSERT pattern):**
+
+```typescript
+import getCharactersService from "../getCharactersService";
+import { FetchingOrder } from "@/components/pages/Characters/interfaces/characters";
+
+/**
+ * Tests for getCharactersService - Service with mocked characters
+ *
+ * These tests validate pagination, filtering, and sorting logic
+ * without requiring React or DOM.
+ */
+describe("getCharactersService with mocked data", () => {
+  describe("Pagination (infinite scroll)", () => {
+    it("returns first page of 50 characters", async () => {
+      // ARRANGE - Set up test data and parameters
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT - Execute the service function
+      const result = await getCharactersService(params);
+
+      // ASSERT - Verify the results
+      expect(result).toBeDefined();
+      expect(result!.characters).toHaveLength(50);
+      expect(result!.nextCursor).toBe(1); // There's a second page
+    });
+
+    it("returns null cursor on last page", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 1, // Second page with 50 items
+        maxCharacters: 50,
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.nextCursor).toBeNull(); // Last page (100 total)
+    });
+  });
+
+  describe("Search/Filtering", () => {
+    it("filters by search string (case insensitive)", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "Spider",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result).toBeDefined();
+      result!.characters.forEach((char) => {
+        expect(char.name.toLowerCase()).toContain("spider");
+      });
+    });
+
+    it("returns empty results for non-matching search", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "ZZZNONEXISTENT",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.characters).toHaveLength(0);
+      expect(result!.nextCursor).toBeNull();
+    });
+  });
+
+  describe("Sorting", () => {
+    it("sorts A-Z correctly", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 100, // All characters
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      const names = result!.characters.map((c) => c.name);
+      const sortedNames = [...names].sort((a, b) => a.localeCompare(b));
+      expect(names).toEqual(sortedNames);
+    });
+  });
+
+  describe("Edge Cases", () => {
+    it("handles search + pagination", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 5,
+        searchString: "man", // Several with "man"
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.characters).toHaveLength(5);
+      result!.characters.forEach((char) => {
+        expect(char.name.toLowerCase()).toContain("man");
+      });
+    });
+  });
+});
+```
+
+**When to Write Service Tests:**
+
+- ✅ **DO** write service tests for:
+  - Data fetching and transformation logic
+  - Pagination calculations
+  - Sorting and filtering algorithms
+  - Business rules and validations
+  - API response parsing
+
+- ❌ **DON'T** use service tests for:
+  - UI rendering (use component tests)
+  - User interactions (use component tests)
+  - Accessibility (use component tests with Testing Library)
+
+**Benefits of Service Tests:**
+
+1. **Fast execution** - No React rendering overhead
+2. **Isolated testing** - Pure logic, no dependencies
+3. **Early bug detection** - Catch issues before UI integration
+4. **Better debugging** - Pinpoint exact logic failures
+5. **TDD-friendly** - Write tests before implementation
+
 ### Testing Utilities
 
 **Setup File** (`src/setupTests.ts`):
