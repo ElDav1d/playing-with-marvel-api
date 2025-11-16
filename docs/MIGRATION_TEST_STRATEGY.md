@@ -1,95 +1,95 @@
-# 📋 ESTRATEGIA DE TESTING PARA MIGRACIÓN MARVEL API
+# 📋 TESTING STRATEGY FOR MARVEL API MIGRATION
 
-**Fecha:** 15 Noviembre 2025  
-**Contexto:** Migración de Marvel API a datos mockeados  
-**Decisión:** Opción B - Tests de servicios + Monkey testing dirigido
-
----
-
-## 🎯 PROBLEMA IDENTIFICADO
-
-### Estado actual de cobertura de tests:
-
-| Componente | Tests existentes | Modificación | Riesgo |
-|------------|------------------|--------------|---------|
-| **Servicios** | ❌ **NINGUNO** | ✅ **100%** | 🔴 **MUY ALTO** |
-| Hooks | ⚠️ Solo mocks | ⚠️ Indirecto | 🟡 MEDIO |
-| Componentes UI | ✅ Sí | ❌ No | 🟢 BAJO |
-| Lógica paginación | ❌ No | ✅ Sí | 🔴 ALTO |
-| Búsqueda/filtrado | ❌ No | ✅ Sí | 🔴 ALTO |
-
-### ⚠️ **CONCLUSIÓN: La cobertura NO es suficiente**
-
-Sin tests de servicios, estarías modificando al 100% código sin red de seguridad.
+**Date:** November 15, 2025
+**Context:** Migration from Marvel API to mocked data
+**Decision:** Option B - Service tests + Directed monkey testing
 
 ---
 
-## 🔍 ANÁLISIS DE OPCIONES
+## 🎯 IDENTIFIED PROBLEM
 
-### Opción A: Solo Monkey Testing (2-3 horas)
+### Current test coverage status:
 
-**Proceso:**
-- Testing manual exhaustivo
+| Component | Existing Tests | Modification | Risk |
+|------------|----------------|--------------|---------|
+| **Services** | ❌ **NONE** | ✅ **100%** | 🔴 **VERY HIGH** |
+| Hooks | ⚠️ Only mocks | ⚠️ Indirect | 🟡 MEDIUM |
+| UI Components | ✅ Yes | ❌ No | 🟢 LOW |
+| Pagination logic | ❌ No | ✅ Yes | 🔴 HIGH |
+| Search/filtering | ❌ No | ✅ Yes | 🔴 HIGH |
+
+### ⚠️ **CONCLUSION: Coverage is NOT sufficient**
+
+Without service tests, you would be modifying 100% of the code without a safety net.
+
+---
+
+## 🔍 OPTIONS ANALYSIS
+
+### Option A: Monkey Testing Only (2-3 hours)
+
+**Process:**
+- Exhaustive manual testing
 - Happy paths + edge cases
-- 3 browsers mínimo
-- Sin red de seguridad futura
+- Minimum 3 browsers
+- No future safety net
 
 **Pros:**
-- ✅ No requiere escribir código de tests
-- ✅ Valida directamente en browser
+- ✅ No need to write test code
+- ✅ Validates directly in browser
 
-**Contras:**
-- ❌ 2-3 horas de trabajo manual
-- ❌ Confianza ~60%
-- ❌ No quedan tests en el repo
-- ❌ Próxima modificación: mismo proceso manual
-- ❌ Difícil detectar regresiones
+**Cons:**
+- ❌ 2-3 hours of manual work
+- ❌ Confidence ~60%
+- ❌ No tests remain in repo
+- ❌ Next modification: same manual process
+- ❌ Difficult to detect regressions
 
-**Tiempo:** 2-3 horas
+**Time:** 2-3 hours
 
 ---
 
-### Opción B: Tests de Servicios + Monkey Testing Dirigido ✅ **SELECCIONADA**
+### Option B: Service Tests + Directed Monkey Testing ✅ **SELECTED**
 
-**Proceso:**
-1. Escribir tests unitarios de servicios (1h)
-2. Ejecutar tests automáticos
-3. Monkey testing dirigido solo en áreas críticas (1h)
+**Process:**
+1. Write service unit tests (1h)
+2. Run automated tests
+3. Directed monkey testing only in critical areas (1h)
 
 **Pros:**
-- ✅ Tests quedan en el repo (valor futuro)
-- ✅ Confianza ~80-85%
-- ✅ Detecta bugs ANTES del deploy
-- ✅ Red de seguridad para próximas modificaciones
-- ✅ Profesionalismo visible para recruiters
-- ✅ Siguiendo guidelines del proyecto (CLAUDE.md)
+- ✅ Tests remain in repo (future value)
+- ✅ Confidence ~80-85%
+- ✅ Detects bugs BEFORE deploy
+- ✅ Safety net for future modifications
+- ✅ Visible professionalism for recruiters
+- ✅ Following project guidelines (CLAUDE.md)
 
-**Contras:**
-- ⚠️ Requiere 1h adicional escribiendo tests
-- ⚠️ Necesita conocimiento de testing patterns
+**Cons:**
+- ⚠️ Requires 1h additional writing tests
+- ⚠️ Needs knowledge of testing patterns
 
-**Tiempo:** 2 horas (1h tests + 1h testing manual dirigido)
+**Time:** 2 hours (1h tests + 1h directed manual testing)
 
 ---
 
-## 📊 COMPARATIVA DETALLADA
+## 📊 DETAILED COMPARISON
 
-| Criterio | Opción A (Solo Manual) | **Opción B (Tests + Manual)** |
+| Criteria | Option A (Manual Only) | **Option B (Tests + Manual)** |
 |----------|------------------------|-------------------------------|
-| **Tiempo inicial** | 2-3h | 2h |
-| **Confianza** | 60% | 80-85% |
-| **Detecta bugs** | ⚠️ En runtime | ✅ Pre-deploy |
-| **Valor futuro** | ❌ Ninguno | ✅ Tests reutilizables |
-| **Para recruiter** | ⚠️ Neutro | ✅ Positivo |
-| **Próxima modificación** | 2-3h manual de nuevo | 10min ejecutar tests |
-| **Regresiones** | ❌ Difícil detectar | ✅ Automático |
-| **Guidelines** | ⚠️ No sigue CLAUDE.md | ✅ Sigue CLAUDE.md |
+| **Initial time** | 2-3h | 2h |
+| **Confidence** | 60% | 80-85% |
+| **Bug detection** | ⚠️ At runtime | ✅ Pre-deploy |
+| **Future value** | ❌ None | ✅ Reusable tests |
+| **For recruiter** | ⚠️ Neutral | ✅ Positive |
+| **Next modification** | 2-3h manual again | 10min run tests |
+| **Regressions** | ❌ Hard to detect | ✅ Automatic |
+| **Guidelines** | ⚠️ Doesn't follow CLAUDE.md | ✅ Follows CLAUDE.md |
 
 ---
 
-## 🎓 APLICANDO GUIDELINES DEL PROYECTO (CLAUDE.md)
+## 🎓 APPLYING PROJECT GUIDELINES (CLAUDE.md)
 
-### Filosofía de testing del proyecto:
+### Project testing philosophy:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -102,217 +102,217 @@ Sin tests de servicios, estarías modificando al 100% código sin red de segurid
 └──────────────────────────────────────────────────────────────┘
 ```
 
-### Por qué los servicios necesitan tests unitarios:
+### Why services need unit tests:
 
-1. **Son Application Layer:** Lógica de negocio pura
-2. **Independientes de React:** Se pueden testear sin renderizar
-3. **Alta complejidad:** Paginación, filtrado, ordenamiento
-4. **100% de cambio:** Todo el código se reescribe
-5. **Fast feedback:** Tests ejecutan en <1 segundo
+1. **They are Application Layer:** Pure business logic
+2. **Independent of React:** Can be tested without rendering
+3. **High complexity:** Pagination, filtering, sorting
+4. **100% change:** All code is rewritten
+5. **Fast feedback:** Tests run in <1 second
 
 ### Blackbox Principle (CLAUDE.md):
 
-**✅ LO QUE TESTEAREMOS (Nuestro código):**
-- Lógica de paginación (cursor calculation)
-- Lógica de filtrado (búsqueda case-insensitive)
-- Lógica de ordenamiento (localeCompare)
-- Búsqueda por ID (find + fallback)
-- Cálculo de offset (paginación manual)
+**✅ WHAT WE WILL TEST (Our code):**
+- Pagination logic (cursor calculation)
+- Filtering logic (case-insensitive search)
+- Sorting logic (localeCompare)
+- ID search (find + fallback)
+- Offset calculation (manual pagination)
 
-**❌ LO QUE NO TESTEAREMOS (Blackboxes):**
-- React Query hooks (librería externa)
+**❌ WHAT WE WON'T TEST (Blackboxes):**
+- React Query hooks (external library)
 - JSON.parse/JSON.stringify (browser API)
-- Array.prototype.sort (JavaScript nativo)
-- Estructura de componentes React
+- Array.prototype.sort (native JavaScript)
+- React component structure
 
 ---
 
-## 📝 TESTS A ESCRIBIR
+## 📝 TESTS TO WRITE
 
 ### 1. getCharactersService.test.ts
 
-**Cobertura:**
-- ✅ Paginación (pageParam → nextCursor)
-- ✅ Filtrado (searchString case-insensitive)
-- ✅ Ordenamiento (A-Z, Z-A)
-- ✅ Edge cases (búsqueda sin resultados, última página)
+**Coverage:**
+- ✅ Pagination (pageParam → nextCursor)
+- ✅ Filtering (searchString case-insensitive)
+- ✅ Sorting (A-Z, Z-A)
+- ✅ Edge cases (search with no results, last page)
 
-**Líneas de código:** ~150 líneas
-**Tiempo estimado:** 25 minutos
+**Lines of code:** ~150 lines
+**Estimated time:** 25 minutes
 
 ---
 
 ### 2. getCharacterDetailsService.test.ts
 
-**Cobertura:**
-- ✅ Búsqueda por ID (find en array)
-- ✅ Fallback para ID inexistente
-- ✅ Fallback para undefined
-- ✅ Estructura de respuesta
+**Coverage:**
+- ✅ ID search (find in array)
+- ✅ Fallback for non-existent ID
+- ✅ Fallback for undefined
+- ✅ Response structure
 
-**Líneas de código:** ~80 líneas
-**Tiempo estimado:** 15 minutos
+**Lines of code:** ~80 lines
+**Estimated time:** 15 minutes
 
 ---
 
 ### 3. getCharacterComicsService.test.ts
 
-**Cobertura:**
-- ✅ Paginación manual (offset calculation)
-- ✅ Ordenamiento (TITLE_AZ, TITLE_ZA)
-- ✅ Estructura de respuesta (apiData + offset)
-- ✅ Edge cases (múltiples páginas)
+**Coverage:**
+- ✅ Manual pagination (offset calculation)
+- ✅ Sorting (TITLE_AZ, TITLE_ZA)
+- ✅ Response structure (apiData + offset)
+- ✅ Edge cases (multiple pages)
 
-**Líneas de código:** ~120 líneas
-**Tiempo estimado:** 20 minutos
+**Lines of code:** ~120 lines
+**Estimated time:** 20 minutes
 
 ---
 
-## 🚀 PLAN DE EJECUCIÓN
+## 🚀 EXECUTION PLAN
 
-### Fase 1: Escribir tests (1 hora)
+### Phase 1: Write tests (1 hour)
 
 ```bash
-# Crear estructura
+# Create structure
 mkdir -p src/components/organisms/CharacterList/services/__tests__
 mkdir -p src/components/pages/CharacterDetail/services/__tests__
 mkdir -p src/components/organisms/CharacterComicList/services/__tests__
 
-# Escribir tests siguiendo plantillas del plan
-# (Ver FASE 5 del Plan de Rescate v2.3)
+# Write tests following plan templates
+# (See PHASE 5 of Rescue Plan v2.3)
 ```
 
-**Deliverable:** 3 archivos de test con ~350 líneas totales
+**Deliverable:** 3 test files with ~350 total lines
 
 ---
 
-### Fase 2: Implementar servicios con tests como guía (20 min)
+### Phase 2: Implement services with tests as guide (20 min)
 
 ```bash
-# Implementar servicios mockeados
-# Ejecutar tests en watch mode
+# Implement mocked services
+# Run tests in watch mode
 npm test -- --watch
 
-# Iterar hasta que todos pasen (verde)
+# Iterate until all pass (green)
 ```
 
-**Deliverable:** Servicios funcionando con tests en verde
+**Deliverable:** Working services with tests passing
 
 ---
 
-### Fase 3: Testing manual dirigido (1 hora)
+### Phase 3: Directed manual testing (1 hour)
 
-Con tests automáticos en verde, solo verificar:
+With automated tests passing, only verify:
 
-**Happy paths principales (30 min):**
-- [ ] Cargar página → 50 personajes visibles
-- [ ] Scroll infinito → Más personajes (hasta 100)
-- [ ] Buscar "Spider" → Filtrado correcto
-- [ ] Click personaje → Detalle correcto
-- [ ] Comics: Next → Página 2
-- [ ] Comics: Previous → Página 1
+**Main happy paths (30 min):**
+- [ ] Load page → 50 characters visible
+- [ ] Infinite scroll → More characters (up to 100)
+- [ ] Search "Spider" → Correct filtering
+- [ ] Click character → Correct detail
+- [ ] Comics: Next → Page 2
+- [ ] Comics: Previous → Page 1
 
-**Edge cases críticos (30 min):**
-- [ ] Buscar "zzzz" → No results
-- [ ] Scroll hasta el final → No más carga
+**Critical edge cases (30 min):**
+- [ ] Search "zzzz" → No results
+- [ ] Scroll to end → No more loading
 - [ ] URL /character/999999 → Fallback
-- [ ] Comics última página → Next disabled
+- [ ] Comics last page → Next disabled
 
-**Browsers:** Solo Chrome (tests cubren lógica)
+**Browsers:** Chrome only (tests cover logic)
 
 ---
 
-## 📈 MÉTRICAS DE CONFIANZA
+## 📈 CONFIDENCE METRICS
 
-### Con Opción B (Tests + Manual):
+### With Option B (Tests + Manual):
 
-**Cobertura de servicios:**
+**Service coverage:**
 - getCharactersService: ~90%
 - getCharacterDetailsService: ~95%
 - getCharacterComicsService: ~90%
 
-**Confianza total:**
-- Tests automáticos: 80%
-- Testing manual: +5%
-- **Total: 85% de confianza**
+**Total confidence:**
+- Automated tests: 80%
+- Manual testing: +5%
+- **Total: 85% confidence**
 
-**Tiempo vs Confianza:**
+**Time vs Confidence:**
 ```
-Opción A:  ████████████░░░░░░░░  60% confianza | 3h
-Opción B:  ████████████████░░░░  85% confianza | 2h ✅
+Option A:  ████████████░░░░░░░░  60% confidence | 3h
+Option B:  ████████████████░░░░  85% confidence | 2h ✅
 ```
 
 ---
 
-## 🎯 VALOR A LARGO PLAZO
+## 🎯 LONG-TERM VALUE
 
-### Próxima modificación del código:
+### Next code modification:
 
-**Sin tests (Opción A):**
+**Without tests (Option A):**
 ```
-Cambio pequeño → ¿Rompí algo? → 2h monkey testing
-```
-
-**Con tests (Opción B):**
-```
-Cambio pequeño → npm test → ✅ Verde en 5 segundos
+Small change → Did I break something? → 2h monkey testing
 ```
 
-### Para el recruiter:
+**With tests (Option B):**
+```
+Small change → npm test → ✅ Green in 5 seconds
+```
 
-**Sin tests:**
-- ⚠️ "Migré la API pero no hay tests"
-- ⚠️ Puede preguntar: "¿Cómo garantizas que funciona?"
+### For the recruiter:
 
-**Con tests:**
-- ✅ "Migré la API con cobertura de tests"
-- ✅ Demuestra profesionalismo y buenas prácticas
-- ✅ Alineado con guidelines del proyecto
+**Without tests:**
+- ⚠️ "I migrated the API but there are no tests"
+- ⚠️ May ask: "How do you guarantee it works?"
+
+**With tests:**
+- ✅ "I migrated the API with test coverage"
+- ✅ Demonstrates professionalism and best practices
+- ✅ Aligned with project guidelines
 
 ---
 
-## 📋 CHECKLIST DE DECISIÓN
+## 📋 DECISION CHECKLIST
 
-**¿Por qué Opción B es mejor?**
+**Why is Option B better?**
 
-- [x] Menor tiempo total (2h vs 3h)
-- [x] Mayor confianza (85% vs 60%)
-- [x] Valor futuro (tests reutilizables)
-- [x] Sigue guidelines del proyecto (CLAUDE.md)
-- [x] Detección temprana de bugs
-- [x] Profesionalismo visible
-- [x] Red de seguridad permanente
+- [x] Less total time (2h vs 3h)
+- [x] Higher confidence (85% vs 60%)
+- [x] Future value (reusable tests)
+- [x] Follows project guidelines (CLAUDE.md)
+- [x] Early bug detection
+- [x] Visible professionalism
+- [x] Permanent safety net
 
-**¿Cuándo elegir Opción A?**
+**When to choose Option A?**
 
-- [ ] Cambio trivial sin lógica
-- [ ] Proyecto desechable
-- [ ] Sin tiempo para tests
-- [ ] No hay guidelines de testing
+- [ ] Trivial change without logic
+- [ ] Disposable project
+- [ ] No time for tests
+- [ ] No testing guidelines
 
-**Ninguna aplica en este caso → Opción B es clara ganadora**
-
----
-
-## 🚀 CONCLUSIÓN
-
-**Decisión final:** Opción B - Tests de servicios + Monkey testing dirigido
-
-**Justificación:**
-1. **Rentabilidad:** 2h vs 3h con mayor confianza
-2. **Calidad:** Bugs detectados pre-deploy
-3. **Profesionalismo:** Tests visibles para recruiter
-4. **Guidelines:** Sigue convenciones del proyecto
-5. **Futuro:** Red de seguridad permanente
-
-**Próximo paso:** Ejecutar FASE 5 del Plan de Rescate v2.3
+**None apply in this case → Option B is clear winner**
 
 ---
 
-**Documento creado por:**  
-- Ricardo (Arquitectura y testing strategy)
-- Julián (Frontend expertise y análisis de riesgos)
-- David (Decisión final: Opción B)
+## 🚀 CONCLUSION
 
-**Fecha:** 15 Noviembre 2025  
-**Versión del plan:** v2.3
+**Final decision:** Option B - Service tests + Directed monkey testing
+
+**Justification:**
+1. **Cost-effectiveness:** 2h vs 3h with higher confidence
+2. **Quality:** Bugs detected pre-deploy
+3. **Professionalism:** Tests visible to recruiter
+4. **Guidelines:** Follows project conventions
+5. **Future:** Permanent safety net
+
+**Next step:** Execute PHASE 5 of Rescue Plan v2.3
+
+---
+
+**Document created by:**
+- Ricardo (Architecture and testing strategy)
+- Julián (Frontend expertise and risk analysis)
+- David (Final decision: Option B)
+
+**Date:** November 15, 2025
+**Plan version:** v2.3
