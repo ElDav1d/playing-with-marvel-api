@@ -366,7 +366,7 @@ Due to Marvel API discontinuation, **the 100 characters share the same 30 generi
 import { FetchingOrder } from "../interfaces/characterComics";
 import mockComics from "../mocks/mockCharacterComics.json";
 
-export interface getCharacterComicsServiceProps {
+export interface IGetCharacterComicsServiceProps {
   page: number;
   characterId: string | undefined;
   maxComics: number;
@@ -377,7 +377,7 @@ const getCharacterComicsService = async ({
   page,
   maxComics,
   order,
-}: getCharacterComicsServiceProps) => {
+}: IGetCharacterComicsServiceProps) => {
   // Simulate network delay to show DS loaders
   await new Promise((resolve) => setTimeout(resolve, 300));
 
