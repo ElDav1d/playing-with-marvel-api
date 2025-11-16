@@ -28,10 +28,23 @@ const getCharactersService = async ({
   await new Promise((resolve) => setTimeout(resolve, 500));
 
   try {
-    // MINIMUM implementation to pass test
+    let characters = mockCharacters as ICharacterItem[];
+
+    // Paginate
+    const offset = maxCharacters * pageParam;
+    const paginatedCharacters = characters.slice(offset, offset + maxCharacters);
+
+    // Calculate next cursor
+    const getNextCursor = () => {
+      const hasMoreResults = offset + maxCharacters < characters.length;
+      return hasMoreResults ? pageParam + 1 : null;
+    };
+
+    Bugfender.log(`Characters fetched: ${paginatedCharacters.length}`);
+
     return {
-      characters: [] as ICharacterItem[],
-      nextCursor: null,
+      characters: paginatedCharacters,
+      nextCursor: getNextCursor(),
     };
   } catch (error) {
     Bugfender.error(error);

@@ -39,4 +39,55 @@ describe("getCharactersService with mocked data", () => {
       expect(Array.isArray(result!.characters)).toBe(true);
     });
   });
+
+  describe("Pagination", () => {
+    it("returns first page of 50 characters", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result).toBeDefined();
+      expect(result!.characters).toHaveLength(50);
+    });
+
+    it("returns cursor = 1 when there are more pages", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.nextCursor).toBe(1); // 100 total, 50 fetched → page 2 exists
+    });
+
+    it("returns cursor = null on last page", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 1,
+        maxCharacters: 50,
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.nextCursor).toBeNull(); // 100 total, offset 50, no more pages
+    });
+  });
 });
