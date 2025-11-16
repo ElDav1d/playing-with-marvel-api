@@ -542,6 +542,34 @@ Use the custom UI library for consistent Marvel styling:
 - **Matchers**: @testing-library/jest-dom 6.4.2
 - **TypeScript**: ts-jest 29.1.3
 
+### Testing Philosophy
+
+**Test Pyramid - LAYER 2: Unit Tests (Foundation of TDD)**
+
+```
+┌────────────────────────────────────────────────────────────┐
+│  LAYER 2: Unit Tests (Foundation of TDD)                    │
+│  ──────────────────────────────────────────────────────────│
+│  - Application Layer (services, use cases)                  │
+│  - Test in isolation with mocks                             │
+│  - Fast execution                                            │
+│  - Focus: "Which specific logic broke?"                     │
+└────────────────────────────────────────────────────────────┘
+```
+
+**Why service unit tests:**
+
+- ✅ Services are Application Layer (business logic)
+- ✅ Independent of React framework
+- ✅ Can be tested in isolation
+- ✅ Detect bugs BEFORE deploy
+
+**Testing priorities:**
+
+1. **Services/Business Logic** - Unit tests that validate core functionality
+2. **Component Behavior** - Integration tests for user interactions
+3. **Accessibility** - Ensure components work with assistive technologies
+
 ### Test File Location
 
 ```
