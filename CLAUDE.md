@@ -870,6 +870,56 @@ npm test -- --coverage
 npm test -- -u
 ```
 
+### Coverage Requirements
+
+**Service Tests Coverage Target:**
+
+- **Minimum requirement**: > 80% coverage on service files
+- **Focus**: Business logic layer (pagination, filtering, sorting, data transformations)
+- **Priority**: Services are the Application Layer and contain core functionality
+
+**Coverage Focus Areas:**
+
+1. **Happy paths** - Normal usage flows
+   - First page, middle page, last page (pagination)
+   - Valid search terms
+   - Standard sorting orders
+
+2. **Edge cases** - Boundary conditions
+   - Empty results
+   - Last page detection
+   - Invalid or non-existent IDs
+   - Empty search strings
+
+3. **Business logic** - Core algorithms
+   - Sorting algorithms (A-Z, Z-A)
+   - Filtering logic (case insensitive search)
+   - Pagination calculations (offset, cursor, nextPage)
+   - Data transformations
+
+**Running Coverage Reports:**
+
+```bash
+# Generate coverage report
+npm test -- --coverage
+
+# Check coverage for specific file
+npm test -- --coverage --collectCoverageFrom="src/components/organisms/CharacterList/services/**/*.ts"
+```
+
+**Interpreting Results:**
+
+- ✅ **Good**: > 80% coverage with happy paths + edge cases
+- ⚠️ **Acceptable**: 70-80% coverage (identify gaps)
+- ❌ **Insufficient**: < 70% coverage (add more tests)
+
+**Why 80% for services:**
+
+- Services contain business logic that's critical to application functionality
+- Higher coverage = higher confidence in migrations and refactors
+- Prevents bugs from reaching UI layer
+- Faster debugging when issues occur
+
 ---
 
 ## Common Tasks
