@@ -283,7 +283,7 @@ export default getCharactersService;
  * to maintain functional navigation between character details.
  */
 import mockCharacters from "../../organisms/CharacterList/mocks/mockCharactersAZ.json";
-import { ICharacterItem } from "../interfaces/characterDetail";
+import { ICharacterItem } from "../../Characters/interfaces/characters";
 
 const getCharacterDetailsService = async (characterId: string | undefined) => {
   // Simulate network delay
@@ -525,7 +525,6 @@ mkdir -p src/components/organisms/CharacterComicList/services/__tests__
 - ✅ Edge cases tests
 
 ```typescript
-import { describe, it, expect, beforeEach } from "vitest";
 import getCharactersService from "../getCharactersService";
 import { FetchingOrder } from "@/components/pages/Characters/interfaces/characters";
 
@@ -754,7 +753,6 @@ describe("getCharactersService with mocked data", () => {
 **File:** `src/components/pages/CharacterDetail/services/__tests__/getCharacterDetailsService.test.ts`
 
 ```typescript
-import { describe, it, expect } from "vitest";
 import getCharacterDetailsService from "../getCharacterDetailsService";
 
 /**
@@ -856,7 +854,6 @@ describe("getCharacterDetailsService with dynamic lookup", () => {
 **File:** `src/components/organisms/CharacterComicList/services/__tests__/getCharacterComicsService.test.ts`
 
 ```typescript
-import { describe, it, expect } from "vitest";
 import getCharacterComicsService from "../getCharacterComicsService";
 import { FetchingOrder } from "../../../interfaces/characterComics";
 
