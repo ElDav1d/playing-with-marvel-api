@@ -1,184 +1,184 @@
-# 🚨 PLAN DE RESCATE: Playing With Marvel API v2.3
+# 🚨 RESCUE PLAN: Playing With Marvel API v2.3
 
-**Fecha actualización:** 15 Noviembre 2025
-**Situación:** Marvel API discontinuada, proyecto necesita funcionar para postulación Senior Design System Engineer
-**Objetivo:** Mockear servicios manteniendo Design System `eldav1d-marvel-ui` funcional
-**Solución adoptada:** Búsqueda dinámica por ID + comics genéricos con disclaimer honesto
-**Dataset:** 100 personajes + 30 comics
-
----
-
-## ⚠️ DECISIÓN CRÍTICA: TESTING STRATEGY
-
-**Contexto:** Los servicios actualmente NO tienen tests. Sin tests, cualquier cambio es "código a ciegas".
-
-**Estrategia adoptada:** Opción B - Tests de servicios + Monkey testing dirigido
-
-**Por qué invertir 1 hora en tests:**
-
-- 🔴 **ALTO RIESGO:** Servicios son el 100% del cambio (fetch → import + lógica)
-- ✅ **RED DE SEGURIDAD:** Tests detectan bugs ANTES del deploy
-- ✅ **CONFIANZA:** 80% de confianza vs 60% con solo monkey testing
-- ✅ **PROFESIONALISMO:** Recruiter puede ver tests en el repo
-- ✅ **VALOR FUTURO:** Tests quedan para próximos cambios
-- ✅ **TIEMPO NETO:** 2h total vs 3h solo monkey testing
-
-**Trade-off aceptado:**
-
-- Tiempo: 2h 35min total (1h tests + 1h35min resto)
-- Alternativa: 3h+ solo con monkey testing manual
-- Ganancia: Mejor calidad, menos riesgo, inversión a futuro
+**Update date:** November 15, 2025
+**Situation:** Marvel API discontinued, project needs to work for Senior Design System Engineer application
+**Objective:** Mock services while maintaining `eldav1d-marvel-ui` Design System functional
+**Adopted solution:** Dynamic ID search + generic comics with honest disclaimer
+**Dataset:** 100 characters + 30 comics
 
 ---
 
-## ⚠️ ACLARACIÓN CRÍTICA: SCRIPTS DE GENERACIÓN DE MOCKS
+## ⚠️ CRITICAL DECISION: TESTING STRATEGY
 
-### ¿Cuándo se ejecutan los scripts?
+**Context:** Services currently have NO tests. Without tests, any change is "coding blind".
 
-Los scripts `generate-mock-characters-100.js` y `generate-mock-comics.js` son **herramientas de desarrollo** que se ejecutan:
+**Adopted strategy:** Option B - Service tests + Directed monkey testing
 
-- ✅ **MANUALMENTE** por el desarrollador
-- ✅ **UNA SOLA VEZ** (o cuando necesites regenerar datos)
-- ❌ **NUNCA al arrancar la aplicación**
-- ❌ **NO están en el código de producción**
+**Why invest 1 hour in tests:**
 
-### Flujo de trabajo completo
+- 🔴 **HIGH RISK:** Services are 100% of the change (fetch → import + logic)
+- ✅ **SAFETY NET:** Tests detect bugs BEFORE deploy
+- ✅ **CONFIDENCE:** 80% confidence vs 60% with only monkey testing
+- ✅ **PROFESSIONALISM:** Recruiter can see tests in the repo
+- ✅ **FUTURE VALUE:** Tests remain for future changes
+- ✅ **NET TIME:** 2h total vs 3h with only monkey testing
+
+**Accepted trade-off:**
+
+- Time: 2h 35min total (1h tests + 1h35min rest)
+- Alternative: 3h+ with only manual monkey testing
+- Gain: Better quality, less risk, future investment
+
+---
+
+## ⚠️ CRITICAL CLARIFICATION: MOCK GENERATION SCRIPTS
+
+### When are the scripts executed?
+
+The `generate-mock-characters-100.js` and `generate-mock-comics.js` scripts are **development tools** that are executed:
+
+- ✅ **MANUALLY** by the developer
+- ✅ **ONCE** (or when you need to regenerate data)
+- ❌ **NEVER when starting the application**
+- ❌ **NOT in production code**
+
+### Complete workflow
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        FASE DE DESARROLLO                           │
+│                        DEVELOPMENT PHASE                            │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  1. Ejecutar scripts Node.js (MANUAL, UNA VEZ):                    │
+│  1. Run Node.js scripts (MANUAL, ONCE):                            │
 │     $ node generate-mock-characters-100.js                         │
 │     $ node generate-mock-comics.js                                 │
 │                                                                     │
-│  2. Resultado → Archivos JSON generados:                           │
-│     - mockCharacters100.json ✅ (YA GENERADO)                       │
-│     - mockComics30.json ✅ (YA GENERADO)                            │
+│  2. Result → Generated JSON files:                                 │
+│     - mockCharacters100.json ✅ (ALREADY GENERATED)                 │
+│     - mockComics30.json ✅ (ALREADY GENERATED)                      │
 │                                                                     │
-│  3. Copiar JSONs al proyecto:                                      │
+│  3. Copy JSONs to project:                                         │
 │     - src/components/.../mocks/mockCharactersAZ.json              │
 │     - src/components/.../mocks/mockCharacterComics.json           │
 │                                                                     │
-│  4. Commit archivos JSON a Git                                     │
+│  4. Commit JSON files to Git                                       │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    CÓDIGO DE LA APLICACIÓN                          │
+│                    APPLICATION CODE                                 │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  // En getCharactersService.ts                                     │
+│  // In getCharactersService.ts                                     │
 │  import mockCharacters from '../mocks/mockCharactersAZ.json';      │
 │                                                                     │
-│  // En getCharacterComicsService.ts                                │
+│  // In getCharacterComicsService.ts                                │
 │  import mockComics from '../mocks/mockCharacterComics.json';       │
 │                                                                     │
-│  ✅ Los JSON ya están generados                                     │
-│  ✅ Import estático (no se ejecuta nada en runtime)                 │
-│  ✅ Se incluyen en el bundle de Webpack                             │
+│  ✅ JSONs are already generated                                     │
+│  ✅ Static import (nothing executes at runtime)                     │
+│  ✅ Included in Webpack bundle                                      │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────────┐
-│                         EN PRODUCCIÓN                               │
+│                         IN PRODUCTION                               │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  ✅ Los JSON están dentro del bundle minificado                     │
-│  ✅ No hay scripts Node.js en runtime                               │
-│  ✅ No hay generación dinámica de datos                             │
-│  ✅ Todo funciona como import estático                              │
+│  ✅ JSONs are inside the minified bundle                            │
+│  ✅ No Node.js scripts at runtime                                   │
+│  ✅ No dynamic data generation                                      │
+│  ✅ Everything works as static import                               │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-### ¿Por qué este enfoque?
+### Why this approach?
 
-1. **Separación de concerns:** Generación de datos vs lógica de negocio
-2. **Performance:** No hay overhead en runtime
-3. **Reproducibilidad:** Mismo dataset en todos los entornos
-4. **Git-friendly:** Los JSON versionados garantizan consistencia
+1. **Separation of concerns:** Data generation vs business logic
+2. **Performance:** No runtime overhead
+3. **Reproducibility:** Same dataset in all environments
+4. **Git-friendly:** Versioned JSONs guarantee consistency
 
 ---
 
-## 📊 DIFERENCIAS CRÍTICAS: PERSONAJES VS COMICS
+## 📊 CRITICAL DIFFERENCES: CHARACTERS VS COMICS
 
-### Sistemas de paginación completamente diferentes
+### Completely different pagination systems
 
-| Aspecto                  | Personajes (CharacterList)                                     | Comics (CharacterComicList)                                             |
+| Aspect                   | Characters (CharacterList)                                     | Comics (CharacterComicList)                                             |
 | ------------------------ | -------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| **Hook React Query**     | `useInfiniteQuery`                                             | `useQuery`                                                              |
-| **Tipo de paginación**  | Infinite scroll (automático)                                  | Manual con botones Previous/Next                                        |
-| **Control de página**   | React Query gestiona cursor                                    | Estado `page` en componente                                             |
-| **Estructura respuesta** | `{ characters: ICharacterItem[], nextCursor: number \| null }` | `{ apiData: { results: IComicItem[], total: number }, offset: number }` |
-| **Campo de imagen**      | `thumbnail: { path: string, extension: string }`               | `images: [{ path: string, extension: string }]`                         |
-| **Re-fetch**             | Automático al hacer scroll                                    | Manual al cambiar page/order                                            |
-| **Ordenamiento**         | En servicio antes de paginar                                   | En servicio antes de paginar                                            |
-| **Dataset**              | **100 personajes únicos**                                     | **30 comics genéricos**                                                |
+| **React Query Hook**     | `useInfiniteQuery`                                             | `useQuery`                                                              |
+| **Pagination type**      | Infinite scroll (automatic)                                    | Manual with Previous/Next buttons                                       |
+| **Page control**         | React Query manages cursor                                     | `page` state in component                                               |
+| **Response structure**   | `{ characters: ICharacterItem[], nextCursor: number \| null }` | `{ apiData: { results: IComicItem[], total: number }, offset: number }` |
+| **Image field**          | `thumbnail: { path: string, extension: string }`               | `images: [{ path: string, extension: string }]`                         |
+| **Re-fetch**             | Automatic on scroll                                            | Manual on page/order change                                             |
+| **Sorting**              | In service before pagination                                   | In service before pagination                                            |
+| **Dataset**              | **100 unique characters**                                      | **30 generic comics**                                                   |
 
-### Implicaciones técnicas
+### Technical implications
 
-**Para personajes:**
+**For characters:**
 
-- El hook `useInfiniteQuery` espera un cursor para la siguiente página
-- Cuando el usuario hace scroll, React Query llama automáticamente a `fetchNextPage()`
-- El servicio debe devolver `nextCursor: pageParam + 1` o `null` si es la última página
-- **Con 100 personajes, el infinite scroll es claramente visible**
+- The `useInfiniteQuery` hook expects a cursor for the next page
+- When user scrolls, React Query automatically calls `fetchNextPage()`
+- Service must return `nextCursor: pageParam + 1` or `null` if last page
+- **With 100 characters, infinite scroll is clearly visible**
 
-**Para comics:**
+**For comics:**
 
-- El hook `useQuery` se llama con la página actual
-- Los botones Previous/Next incrementan/decrementan el estado `page`
-- Cada cambio de página hace un nuevo `refetch()` manual
-- El servicio calcula el `offset` basándose en `page * maxComics`
+- The `useQuery` hook is called with current page
+- Previous/Next buttons increment/decrement `page` state
+- Each page change makes a new manual `refetch()`
+- Service calculates `offset` based on `page * maxComics`
 
 ---
 
-## 📋 FASE 3: GENERACIÓN DE MOCKS (YA COMPLETADA ✅)
+## 📋 PHASE 3: MOCK GENERATION (ALREADY COMPLETED ✅)
 
-### Resultado final:
+### Final result:
 
-**Personajes:** ✅ 100 personajes generados
-**Comics:** ✅ 30 comics generados
-**URLs únicas (personajes):** 8 (rotadas entre los 100)
-**URLs únicas (comics):** 6 (rotadas entre los 30)
+**Characters:** ✅ 100 characters generated
+**Comics:** ✅ 30 comics generated
+**Unique URLs (characters):** 8 (rotated among the 100)
+**Unique URLs (comics):** 6 (rotated among the 30)
 
-### Archivos disponibles:
+### Available files:
 
-- `/mnt/project/mockCharacters100.json` ✅ (4501 líneas, 100 personajes)
-- `/mnt/project/mockComics30.json` ✅ (generado con script)
-- `/mnt/project/generate-mock-characters-100.js` (script generador)
-- `/mnt/project/generate-mock-comics.js` (script generador)
+- `/mnt/project/mockCharacters100.json` ✅ (4501 lines, 100 characters)
+- `/mnt/project/mockComics30.json` ✅ (generated with script)
+- `/mnt/project/generate-mock-characters-100.js` (generator script)
+- `/mnt/project/generate-mock-comics.js` (generator script)
 
-### Tarea 3.1: Copiar archivos al proyecto
+### Task 3.1: Copy files to project
 
 ```bash
-# Copiar personajes (100 items)
+# Copy characters (100 items)
 cp /mnt/project/mockCharacters100.json \
    playing-with-marvel-api/src/components/organisms/CharacterList/mocks/mockCharactersAZ.json
 
-# Copiar comics (30 items)
+# Copy comics (30 items)
 cp /mnt/project/mockComics30.json \
    playing-with-marvel-api/src/components/organisms/CharacterComicList/mocks/mockCharacterComics.json
 ```
 
 **Checklist:**
 
-- [ ] Copiar mockCharacters100.json al proyecto
-- [ ] Copiar mockComics30.json al proyecto
-- [ ] Verificar que los archivos están en las ubicaciones correctas
-- [ ] Commit de ambos archivos JSON
+- [ ] Copy mockCharacters100.json to project
+- [ ] Copy mockComics30.json to project
+- [ ] Verify files are in correct locations
+- [ ] Commit both JSON files
 
 ---
 
-## 📋 FASE 4: ACTUALIZAR SERVICIOS
+## 📋 PHASE 4: UPDATE SERVICES
 
-### Tarea 4.1: getCharactersService.ts ✅
+### Task 4.1: getCharactersService.ts ✅
 
-**Archivo:** `src/components/organisms/CharacterList/services/getCharactersService.ts`
+**File:** `src/components/organisms/CharacterList/services/getCharactersService.ts`
 
-**Sistema:** Infinite scroll con `useInfiniteQuery`
+**System:** Infinite scroll with `useInfiniteQuery`
 
 ```typescript
 /**
@@ -207,34 +207,34 @@ const getCharactersService = async ({
   searchString,
   order,
 }: IGetCharactersServiceProps) => {
-  // Simular delay de red para mostrar loaders del DS
+  // Simulate network delay to show DS loaders
   await new Promise((resolve) => setTimeout(resolve, 500));
 
   try {
     let characters = mockCharacters as ICharacterItem[];
 
-    // Filtrar por búsqueda
+    // Filter by search
     if (searchString) {
       characters = characters.filter((char) =>
         char.name.toLowerCase().includes(searchString.toLowerCase())
       );
     }
 
-    // Ordenar
+    // Sort
     if (order === FetchingOrder.NAME_AZ) {
       characters = [...characters].sort((a, b) => a.name.localeCompare(b.name));
     } else if (order === FetchingOrder.NAME_ZA) {
       characters = [...characters].sort((a, b) => b.name.localeCompare(a.name));
     }
 
-    // Paginar para infinite scroll
+    // Paginate for infinite scroll
     const offset = maxCharacters * pageParam;
     const paginatedCharacters = characters.slice(
       offset,
       offset + maxCharacters
     );
 
-    // CRÍTICO: useInfiniteQuery espera un cursor
+    // CRITICAL: useInfiniteQuery expects a cursor
     const getNextCursor = () => {
       const hasMoreResults = offset + maxCharacters < characters.length;
       return hasMoreResults ? pageParam + 1 : null;
@@ -257,24 +257,24 @@ export default getCharactersService;
 
 **Checklist:**
 
-- [ ] Actualizar archivo
-- [ ] Verificar que compila
-- [ ] Probar infinite scroll con 100 personajes
+- [ ] Update file
+- [ ] Verify it compiles
+- [ ] Test infinite scroll with 100 characters
 
 ---
 
-### Tarea 4.2: getCharacterDetailsService.ts ⚠️ BÚSQUEDA DINÁMICA
+### Task 4.2: getCharacterDetailsService.ts ⚠️ DYNAMIC SEARCH
 
-**Archivo:** `src/components/pages/CharacterDetail/services/getCharacterDetailsService.ts`
+**File:** `src/components/pages/CharacterDetail/services/getCharacterDetailsService.ts`
 
-**SOLUCIÓN ADOPTADA:** Búsqueda dinámica por ID en el array de 100 personajes.
+**ADOPTED SOLUTION:** Dynamic ID search in the 100 characters array.
 
-**Ventajas:**
+**Advantages:**
 
-- ✅ Cada uno de los 100 personajes tiene su propia página de detalle funcional
-- ✅ Navegación entre personajes funciona correctamente
-- ✅ Datos únicos por personaje (nombre, descripción, imagen)
-- ✅ Cero modificación de componentes existentes
+- ✅ Each of the 100 characters has its own functional detail page
+- ✅ Navigation between characters works correctly
+- ✅ Unique data per character (name, description, image)
+- ✅ Zero modification of existing components
 
 ```typescript
 /**
@@ -286,16 +286,16 @@ import mockCharacters from "../../organisms/CharacterList/mocks/mockCharactersAZ
 import { ICharacterItem } from "../interfaces/characterDetail";
 
 const getCharacterDetailsService = async (characterId: string | undefined) => {
-  // Simular delay de red
+  // Simulate network delay
   await new Promise((resolve) => setTimeout(resolve, 300));
 
   try {
-    // Buscar el personaje por ID en el array de 100 mocks
+    // Search character by ID in the 100 mocks array
     const character = mockCharacters.find(
       (char: ICharacterItem) => char.id === Number(characterId)
     );
 
-    // Si no existe, devolver el primero como fallback
+    // If doesn't exist, return first as fallback
     return character || mockCharacters[0];
   } catch (error) {
     console.log(error);
@@ -305,43 +305,43 @@ const getCharacterDetailsService = async (characterId: string | undefined) => {
 export default getCharacterDetailsService;
 ```
 
-**Nota:** No es necesario crear `mockCharacterDetail.json` - se busca dinámicamente entre los 100 personajes.
+**Note:** No need to create static `mockCharacterDetail.json` - dynamic search.
 
 **Checklist:**
 
-- [ ] Actualizar archivo
-- [ ] Verificar que compila
-- [ ] Probar navegación entre diferentes personajes
-- [ ] Verificar que cada personaje muestra datos únicos
+- [ ] Update file
+- [ ] Verify it compiles
+- [ ] Test navigation between different characters
+- [ ] Verify each character shows unique data
 
 ---
 
-### Tarea 4.3: getCharacterComicsService.ts ⚠️ IMPORTANTE
+### Task 4.3: getCharacterComicsService.ts ⚠️ IMPORTANT
 
-**Archivo:** `src/components/organisms/CharacterComicList/services/getCharacterComicsService.ts`
+**File:** `src/components/organisms/CharacterComicList/services/getCharacterComicsService.ts`
 
-**Sistema:** Paginación manual con `useQuery`
+**System:** Manual pagination with `useQuery`
 
-**⚠️ LIMITACIÓN CONOCIDA - RELACIÓN PERSONAJES-COMICS:**
+**⚠️ KNOWN LIMITATION - CHARACTERS-COMICS RELATIONSHIP:**
 
-Debido a la discontinuación de la API de Marvel, **los 100 personajes comparten los mismos 30 comics genéricos**. Esto es un compromiso aceptable para un proyecto showcase porque:
+Due to Marvel API discontinuation, **the 100 characters share the same 30 generic comics**. This is an acceptable compromise for a showcase project because:
 
-1. El foco es demostrar el **Design System**, no la lógica de negocio
-2. La funcionalidad de paginación y ordenamiento de comics **funciona perfectamente**
-3. Se añade un **disclaimer sutil y honesto** en la UI
-4. Un recruiter técnico **valora** la solución pragmática
+1. The focus is demonstrating the **Design System**, not business logic
+2. Comics pagination and sorting functionality **works perfectly**
+3. A **subtle and honest disclaimer** is added to the UI
+4. A technical recruiter **values** the pragmatic solution
 
-**Relación actual:**
+**Current relationship:**
 
 ```
-100 personajes únicos → 30 comics genéricos (compartidos)
+100 unique characters → 30 generic comics (shared)
 ```
 
-**Mitigación:**
+**Mitigation:**
 
-- ✅ Disclaimer discreto en `CharacterComicList.tsx`
-- ✅ Documentación clara en README
-- ✅ Funcionalidad completa del componente
+- ✅ Discrete disclaimer in `CharacterComicList.tsx`
+- ✅ Clear documentation in README
+- ✅ Full component functionality
 
 ```typescript
 /**
@@ -366,27 +366,27 @@ const getCharacterComicsService = async ({
   maxComics,
   order,
 }: getCharacterComicsServiceProps) => {
-  // Simular delay de red para mostrar loaders del DS
+  // Simulate network delay to show DS loaders
   await new Promise((resolve) => setTimeout(resolve, 300));
 
   try {
     let comics = [...mockComics];
 
-    // Ordenar según el criterio seleccionado
+    // Sort according to selected criteria
     if (order === FetchingOrder.TITLE_AZ) {
       comics = comics.sort((a, b) => a.title.localeCompare(b.title));
     } else if (order === FetchingOrder.TITLE_ZA) {
       comics = comics.sort((a, b) => b.title.localeCompare(a.title));
     }
-    // Añadir más opciones de ordenamiento si existen en FetchingOrder
+    // Add more sorting options if they exist in FetchingOrder
 
-    // Calcular el offset para paginación manual
+    // Calculate offset for manual pagination
     const offset = maxComics * page;
 
-    // Paginar los resultados (slice simula LIMIT y OFFSET de SQL)
+    // Paginate results (slice simulates SQL LIMIT and OFFSET)
     const paginatedComics = comics.slice(offset, offset + maxComics);
 
-    // CRÍTICO: useQuery espera esta estructura específica
+    // CRITICAL: useQuery expects this specific structure
     return {
       apiData: {
         results: paginatedComics,
@@ -402,27 +402,27 @@ const getCharacterComicsService = async ({
 export default getCharacterComicsService;
 ```
 
-**Checklist específica para comics:**
+**Specific checklist for comics:**
 
-- [ ] Actualizar archivo con ordenamiento incluido
-- [ ] Verificar que compila
-- [ ] Añadir disclaimer en CharacterComicList.tsx (ver Tarea 4.4)
-- [ ] Probar navegación Previous/Next
-- [ ] Probar cambio de orden en el select
-- [ ] Verificar que el contador "Displaying X to Y from Z" funciona
+- [ ] Update file with sorting included
+- [ ] Verify it compiles
+- [ ] Add disclaimer in CharacterComicList.tsx (see Task 4.4)
+- [ ] Test Previous/Next navigation
+- [ ] Test order change in select
+- [ ] Verify "Displaying X to Y from Z" counter works
 
 ---
 
-### Tarea 4.4: Añadir disclaimer sutil en CharacterComicList
+### Task 4.4: Add subtle disclaimer in CharacterComicList
 
-**Archivo:** `src/components/organisms/CharacterComicList/CharacterComicList.tsx`
+**File:** `src/components/organisms/CharacterComicList/CharacterComicList.tsx`
 
-**Objetivo:** Informar honestamente que los comics son genéricos sin romper la experiencia.
+**Objective:** Honestly inform that comics are generic without breaking the experience.
 
-**Ubicación:** Justo antes del título "Displaying X to Y from Z available comics"
+**Location:** Just before the "Displaying X to Y from Z available comics" title
 
 ```typescript
-// Dentro del bloque que renderiza los comics, añadir:
+// Inside the block that renders comics, add:
 
 {
   comics && comics.length > 0 && (
@@ -436,7 +436,7 @@ export default getCharacterComicsService;
         optionLiterals={orderLiterals}
       />
 
-      {/* 👇 AÑADIR ESTE DISCLAIMER */}
+      {/* 👇 ADD THIS DISCLAIMER */}
       <p className="text-sm text-gray-500 italic mb-3 mt-2">
         Note: Comics shown are for demonstration purposes due to Marvel API
         discontinuation
@@ -446,35 +446,35 @@ export default getCharacterComicsService;
         Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
       </h3>
 
-      {/* ... resto del código */}
+      {/* ... rest of code */}
     </>
   );
 }
 ```
 
-**Estilo del disclaimer:**
+**Disclaimer style:**
 
-- Discreto (texto pequeño, gris, cursiva)
-- Honesto pero no dramático
-- No rompe el flujo visual
-- Transmite profesionalidad y transparencia
+- Discrete (small text, gray, italic)
+- Honest but not dramatic
+- Doesn't break visual flow
+- Conveys professionalism and transparency
 
 **Checklist:**
 
-- [ ] Añadir disclaimer con el texto exacto
-- [ ] Verificar que se ve bien visualmente
-- [ ] Confirmar que no rompe el layout
-- [ ] Probar en diferentes tamaños de pantalla
+- [ ] Add disclaimer with exact text
+- [ ] Verify it looks good visually
+- [ ] Confirm it doesn't break layout
+- [ ] Test on different screen sizes
 
 ---
 
-## 📋 FASE 5: TESTING DE SERVICIOS (1 hora) ⚠️ CRÍTICO
+## 📋 PHASE 5: SERVICE TESTING (1 hour) ⚠️ CRITICAL
 
-**Contexto:** Los servicios NO tienen tests actualmente y son lo que vas a modificar al 100%. Sin tests, no hay red de seguridad.
+**Context:** Services have NO tests currently and are what you'll modify 100%. Without tests, there's no safety net.
 
-**Decisión:** Opción B - Tests mínimos de servicios + monkey testing dirigido
+**Decision:** Option B - Minimal service tests + directed monkey testing
 
-### Filosofía de testing (según CLAUDE.md):
+### Testing philosophy (according to CLAUDE.md):
 
 ```
 ┌────────────────────────────────────────────────────────────┐
@@ -487,18 +487,18 @@ export default getCharacterComicsService;
 └────────────────────────────────────────────────────────────┘
 ```
 
-**Por qué unit tests de servicios:**
+**Why service unit tests:**
 
-- ✅ Los servicios son Application Layer (lógica de negocio)
-- ✅ Son independientes del framework React
-- ✅ Se pueden testear en aislamiento
-- ✅ Detectan bugs ANTES del deploy
+- ✅ Services are Application Layer (business logic)
+- ✅ Independent of React framework
+- ✅ Can be tested in isolation
+- ✅ Detect bugs BEFORE deploy
 
 ---
 
-### Tarea 5.1: Crear estructura de tests para servicios
+### Task 5.1: Create test structure for services
 
-**Crear directorios de tests:**
+**Create test directories:**
 
 ```bash
 mkdir -p src/components/organisms/CharacterList/services/__tests__
@@ -508,21 +508,21 @@ mkdir -p src/components/organisms/CharacterComicList/services/__tests__
 
 **Checklist:**
 
-- [ ] Directorios creados
-- [ ] Siguiendo convención `__tests__/` junto al código fuente
+- [ ] Directories created
+- [ ] Following `__tests__/` convention next to source code
 
 ---
 
-### Tarea 5.2: Tests para getCharactersService.ts
+### Task 5.2: Tests for getCharactersService.ts
 
-**Archivo:** `src/components/organisms/CharacterList/services/__tests__/getCharactersService.test.ts`
+**File:** `src/components/organisms/CharacterList/services/__tests__/getCharactersService.test.ts`
 
-**Principios aplicados (CLAUDE.md):**
+**Applied principles (CLAUDE.md):**
 
-- ✅ Unit test de Application Layer (servicio)
-- ✅ No testea React (es lógica pura)
-- ✅ Mock de datos (no API real)
-- ✅ Tests de edge cases
+- ✅ Application Layer unit test (service)
+- ✅ Doesn't test React (pure logic)
+- ✅ Mock data (not real API)
+- ✅ Edge cases tests
 
 ```typescript
 import { describe, it, expect, beforeEach } from "vitest";
@@ -530,10 +530,10 @@ import getCharactersService from "../getCharactersService";
 import { FetchingOrder } from "@/components/pages/Characters/interfaces/characters";
 
 /**
- * Tests para getCharactersService - Servicio de personajes con mocks
+ * Tests for getCharactersService - Service with mocked characters
  *
- * Estos tests validan la lógica de paginación, filtrado y ordenamiento
- * que se implementará al migrar de API real a mocks.
+ * These tests validate pagination, filtering, and sorting logic
+ * to be implemented when migrating from real API to mocks.
  */
 describe("getCharactersService with mocked data", () => {
   describe("Pagination (infinite scroll)", () => {
@@ -552,7 +552,7 @@ describe("getCharactersService with mocked data", () => {
       // ASSERT
       expect(result).toBeDefined();
       expect(result!.characters).toHaveLength(50);
-      expect(result!.nextCursor).toBe(1); // Hay segunda página
+      expect(result!.nextCursor).toBe(1); // There's a second page
     });
 
     it("returns second page of characters", async () => {
@@ -570,13 +570,13 @@ describe("getCharactersService with mocked data", () => {
       // ASSERT
       expect(result).toBeDefined();
       expect(result!.characters).toHaveLength(50);
-      expect(result!.nextCursor).toBeNull(); // Es la última página (100 personajes total)
+      expect(result!.nextCursor).toBeNull(); // It's the last page (100 characters total)
     });
 
     it("returns null cursor on last page", async () => {
       // ARRANGE
       const params = {
-        pageParam: 1, // Segunda página con 50 items
+        pageParam: 1, // Second page with 50 items
         maxCharacters: 50,
         searchString: "",
         order: FetchingOrder.NAME_AZ,
@@ -603,7 +603,7 @@ describe("getCharactersService with mocked data", () => {
 
       // ASSERT
       expect(result!.characters).toHaveLength(20);
-      expect(result!.nextCursor).toBe(1); // Hay más páginas
+      expect(result!.nextCursor).toBe(1); // There are more pages
     });
   });
 
@@ -666,7 +666,7 @@ describe("getCharactersService with mocked data", () => {
       // ARRANGE
       const params = {
         pageParam: 0,
-        maxCharacters: 100, // Todos los personajes
+        maxCharacters: 100, // All characters
         searchString: "",
         order: FetchingOrder.NAME_AZ,
       };
@@ -705,7 +705,7 @@ describe("getCharactersService with mocked data", () => {
       const params = {
         pageParam: 0,
         maxCharacters: 5,
-        searchString: "man", // Hay varios con "man"
+        searchString: "man", // Several with "man"
         order: FetchingOrder.NAME_AZ,
       };
 
@@ -742,26 +742,26 @@ describe("getCharactersService with mocked data", () => {
 
 **Checklist:**
 
-- [ ] Archivo creado
-- [ ] Tests ejecutan sin errores
-- [ ] Cobertura de happy paths
-- [ ] Cobertura de edge cases
+- [ ] File created
+- [ ] Tests run without errors
+- [ ] Happy paths coverage
+- [ ] Edge cases coverage
 
 ---
 
-### Tarea 5.3: Tests para getCharacterDetailsService.ts
+### Task 5.3: Tests for getCharacterDetailsService.ts
 
-**Archivo:** `src/components/pages/CharacterDetail/services/__tests__/getCharacterDetailsService.test.ts`
+**File:** `src/components/pages/CharacterDetail/services/__tests__/getCharacterDetailsService.test.ts`
 
 ```typescript
 import { describe, it, expect } from "vitest";
 import getCharacterDetailsService from "../getCharacterDetailsService";
 
 /**
- * Tests para getCharacterDetailsService - Búsqueda dinámica por ID
+ * Tests for getCharacterDetailsService - Dynamic ID search
  *
- * Valida que cada personaje se puede encontrar por su ID y que existe
- * un fallback cuando el ID no existe.
+ * Validates that each character can be found by ID and that
+ * there's a fallback when ID doesn't exist.
  */
 describe("getCharacterDetailsService with dynamic lookup", () => {
   describe("Character lookup by ID", () => {
@@ -814,7 +814,7 @@ describe("getCharacterDetailsService with dynamic lookup", () => {
       const character = await getCharacterDetailsService(invalidId);
 
       // ASSERT
-      expect(character).toBeDefined(); // No debe crashear
+      expect(character).toBeDefined(); // Shouldn't crash
       expect(character).toHaveProperty("id");
       expect(character).toHaveProperty("name");
     });
@@ -844,16 +844,16 @@ describe("getCharacterDetailsService with dynamic lookup", () => {
 
 **Checklist:**
 
-- [ ] Archivo creado
-- [ ] Tests ejecutan sin errores
-- [ ] Valida búsqueda por ID
-- [ ] Valida fallback
+- [ ] File created
+- [ ] Tests run without errors
+- [ ] Validates ID search
+- [ ] Validates fallback
 
 ---
 
-### Tarea 5.4: Tests para getCharacterComicsService.ts
+### Task 5.4: Tests for getCharacterComicsService.ts
 
-**Archivo:** `src/components/organisms/CharacterComicList/services/__tests__/getCharacterComicsService.test.ts`
+**File:** `src/components/organisms/CharacterComicList/services/__tests__/getCharacterComicsService.test.ts`
 
 ```typescript
 import { describe, it, expect } from "vitest";
@@ -861,10 +861,10 @@ import getCharacterComicsService from "../getCharacterComicsService";
 import { FetchingOrder } from "../../../interfaces/characterComics";
 
 /**
- * Tests para getCharacterComicsService - Paginación manual de comics
+ * Tests for getCharacterComicsService - Manual comics pagination
  *
- * Valida la lógica de paginación manual (Previous/Next) y ordenamiento
- * de los 30 comics genéricos.
+ * Validates manual pagination logic (Previous/Next) and sorting
+ * of the 30 generic comics.
  */
 describe("getCharacterComicsService with manual pagination", () => {
   describe("Pagination", () => {
@@ -951,7 +951,7 @@ describe("getCharacterComicsService with manual pagination", () => {
       // ARRANGE
       const params = {
         page: 0,
-        maxComics: 30, // Todos los comics
+        maxComics: 30, // All comics
         order: FetchingOrder.TITLE_AZ,
         characterId: "1000000",
       };
@@ -1041,7 +1041,7 @@ describe("getCharacterComicsService with manual pagination", () => {
       // ASSERT
       expect(resultAZ!.offset).toBe(10);
       expect(resultAZ!.apiData.results).toHaveLength(10);
-      // Verificar que están ordenados
+      // Verify they're sorted
       const titles = resultAZ!.apiData.results.map((c) => c.title);
       const sortedTitles = [...titles].sort((a, b) => a.localeCompare(b));
       expect(titles).toEqual(sortedTitles);
@@ -1052,34 +1052,34 @@ describe("getCharacterComicsService with manual pagination", () => {
 
 **Checklist:**
 
-- [ ] Archivo creado
-- [ ] Tests ejecutan sin errores
-- [ ] Valida paginación manual
-- [ ] Valida ordenamiento
+- [ ] File created
+- [ ] Tests run without errors
+- [ ] Validates manual pagination
+- [ ] Validates sorting
 
 ---
 
-### Tarea 5.5: Ejecutar tests
+### Task 5.5: Run tests
 
 ```bash
 cd playing-with-marvel-api
 npm test
-# o
+# or
 yarn test
 ```
 
 **Checklist:**
 
-- [ ] Todos los tests pasan (verde)
-- [ ] Sin errores de TypeScript
-- [ ] Sin warnings críticos
-- [ ] Cobertura > 80% en servicios
+- [ ] All tests pass (green)
+- [ ] No TypeScript errors
+- [ ] No critical warnings
+- [ ] Coverage > 80% on services
 
 ---
 
-### Tarea 5.6: Documentar decisión de testing
+### Task 5.6: Document testing decision
 
-**Añadir comentario en cada test file:**
+**Add comment in each test file:**
 
 ```typescript
 /**
@@ -1101,16 +1101,16 @@ yarn test
 
 **Checklist:**
 
-- [ ] Comentario añadido en los 3 test files
-- [ ] README actualizado mencionando la nueva cobertura de tests
+- [ ] Comment added in the 3 test files
+- [ ] README updated mentioning new test coverage
 
 ---
 
-## 📋 FASE 6: TESTING MANUAL DIRIGIDO (1 hora)
+## 📋 PHASE 6: DIRECTED MANUAL TESTING (1 hour)
 
-**Con tests de servicios ya escritos, el testing manual es mucho más corto y dirigido.**
+**With service tests already written, manual testing is much shorter and more directed.**
 
-### Tarea 6.1: Verificar compilación
+### Task 6.1: Verify compilation
 
 ```bash
 cd playing-with-marvel-api
@@ -1118,61 +1118,61 @@ yarn install
 yarn build
 ```
 
-- [ ] Sin errores de TypeScript
-- [ ] Sin errores de build
-- [ ] Imports de JSON correctos
+- [ ] No TypeScript errors
+- [ ] No build errors
+- [ ] JSON imports correct
 
-### Tarea 6.2: Ejecutar tests existentes
+### Task 6.2: Run existing tests
 
 ```bash
 yarn test
 ```
 
-- [ ] Todos los tests pasan
-- [ ] Si hay fallos, ajustar mocks según expectativas
+- [ ] All tests pass
+- [ ] If failures, adjust mocks according to expectations
 
-### Tarea 6.3: Probar en desarrollo (Monkey Testing Dirigido)
+### Task 6.3: Test in development (Directed Monkey Testing)
 
 ```bash
 yarn start
 ```
 
-**Checklist visual - Personajes (infinite scroll con 100 items):**
+**Visual checklist - Characters (infinite scroll with 100 items):**
 
-- [ ] La página de personajes carga
-- [ ] Se muestran las cards con imágenes del CDN
-- [ ] El buscador funciona
-- [ ] Los filtros de ordenamiento funcionan
-- [ ] **Scroll infinito carga más personajes (se nota claramente con 100)**
-- [ ] Loaders del DS se muestran correctamente
+- [ ] Characters page loads
+- [ ] Cards show with CDN images
+- [ ] Search works
+- [ ] Sort filters work
+- [ ] **Infinite scroll loads more characters (clearly noticeable with 100)**
+- [ ] DS loaders display correctly
 
-**Checklist visual - Detalle de personaje (navegación dinámica entre 100):**
+**Visual checklist - Character detail (dynamic navigation among 100):**
 
-- [ ] Al hacer clic en una card de personaje, va al detalle
-- [ ] **CRÍTICO:** Cada personaje muestra SUS datos únicos (nombre, descripción, imagen)
-- [ ] **CRÍTICO:** Navegar entre diferentes personajes muestra datos diferentes
-- [ ] La URL incluye el ID correcto (`/character/:id/:name`)
-- [ ] No hay errores en consola
-- [ ] **Probar con al menos 5 personajes diferentes para confirmar**
+- [ ] Clicking a character card goes to detail
+- [ ] **CRITICAL:** Each character shows THEIR unique data (name, description, image)
+- [ ] **CRITICAL:** Navigating between different characters shows different data
+- [ ] URL includes correct ID (`/character/:id/:name`)
+- [ ] No console errors
+- [ ] **Test with at least 5 different characters to confirm**
 
-**Checklist visual - Comics (paginación manual):**
+**Visual checklist - Comics (manual pagination):**
 
-- [ ] La página de detalle muestra comics
-- [ ] **Se muestra el disclaimer discreto** sobre comics genéricos
-- [ ] Botón "Next" funciona y cambia de página
-- [ ] Botón "Previous" funciona y vuelve atrás
-- [ ] Selector de orden funciona (A-Z, Z-A)
-- [ ] El contador "Displaying 1 to 10 from 30" es correcto
-- [ ] Imágenes de comics cargan del CDN
-- [ ] No hay errores en consola
+- [ ] Detail page shows comics
+- [ ] **Discrete disclaimer is shown** about generic comics
+- [ ] "Next" button works and changes page
+- [ ] "Previous" button works and goes back
+- [ ] Order selector works (A-Z, Z-A)
+- [ ] Counter "Displaying 1 to 10 from 30" is correct
+- [ ] Comic images load from CDN
+- [ ] No console errors
 
 ---
 
-## 📝 FASE 7: DOCUMENTACIÓN (10 min)
+## 📝 PHASE 7: DOCUMENTATION (10 min)
 
-### Actualizar README.md
+### Update README.md
 
-Agregar sección:
+Add section:
 
 ```markdown
 ## ⚠️ Important Note: Mock Data
@@ -1221,104 +1221,104 @@ The mock data strategy maintains:
 
 ---
 
-## 🎯 MÉTRICAS DE ÉXITO
+## 🎯 SUCCESS METRICS
 
-### ✅ Requisitos mínimos
+### ✅ Minimum requirements
 
-- [ ] Proyecto compila sin errores
-- [ ] Tests pasan
-- [ ] Aplicación arranca en local
-- [ ] Personajes: infinite scroll funciona con 100 items
-- [ ] Comics: paginación manual funciona
-- [ ] Imágenes del CDN cargan correctamente
+- [ ] Project compiles without errors
+- [ ] Tests pass
+- [ ] Application starts locally
+- [ ] Characters: infinite scroll works with 100 items
+- [ ] Comics: manual pagination works
+- [ ] CDN images load correctly
 
-### 🌟 Objetivos estratégicos
+### 🌟 Strategic objectives
 
-- [ ] **El Design System brilla:** Todos los componentes visibles y funcionales
-- [ ] **Infinite scroll visible:** Con 100 personajes se nota claramente la funcionalidad
-- [ ] **Estados del DS visibles:** Loading, error, empty states funcionan
-- [ ] **Navegación fluida:** Sin enlaces rotos ni errores de consola
-- [ ] **README claro:** Se explica que usa mocks por discontinuación de API
-- [ ] **Código limpio:** Comentarios explican el cambio
+- [ ] **Design System shines:** All components visible and functional
+- [ ] **Infinite scroll visible:** With 100 characters functionality is clearly noticeable
+- [ ] **DS states visible:** Loading, error, empty states work
+- [ ] **Smooth navigation:** No broken links or console errors
+- [ ] **Clear README:** Explains using mocks due to API discontinuation
+- [ ] **Clean code:** Comments explain the change
 
 ---
 
-## 🚀 RESUMEN EJECUTIVO
+## 🚀 EXECUTIVE SUMMARY
 
-### Lo que se hizo
+### What was done
 
-1. ✅ Generados **100 personajes** + 30 comics con imágenes reales del CDN de Marvel
-2. ✅ Scripts Node.js ejecutados UNA VEZ para crear JSONs
-3. ✅ JSONs commiteados a Git como datos estáticos
-4. ✅ Servicios actualizados para importar JSONs en lugar de llamar a la API
-5. ✅ Paginación diferenciada: infinite scroll (personajes) vs manual (comics)
-6. ✅ **Búsqueda dinámica por ID** - cada uno de los 100 personajes tiene su página de detalle única
-7. ✅ **Disclaimer honesto** - comics genéricos con explicación sutil en UI
+1. ✅ Generated **100 characters** + 30 comics with real images from Marvel CDN
+2. ✅ Node.js scripts executed ONCE to create JSONs
+3. ✅ JSONs committed to Git as static data
+4. ✅ Services updated to import JSONs instead of calling API
+5. ✅ Differentiated pagination: infinite scroll (characters) vs manual (comics)
+6. ✅ **Dynamic ID search** - each of the 100 characters has its own unique detail page
+7. ✅ **Honest disclaimer** - generic comics with subtle UI explanation
 
-### Arquitectura de la solución
+### Solution architecture
 
-**Personajes:**
+**Characters:**
 
-- **100 personajes únicos** con datos diferenciados
-- Navegación completa entre todos los personajes
-- `getCharacterDetailsService` busca por ID dinámicamente
-- Cada personaje muestra nombre, descripción e imagen únicos
-- **Infinite scroll claramente visible** con 100 items
+- **100 unique characters** with differentiated data
+- Complete navigation between all characters
+- `getCharacterDetailsService` searches by ID dynamically
+- Each character shows unique name, description, and image
+- **Infinite scroll clearly visible** with 100 items
 
 **Comics:**
 
-- 30 comics genéricos compartidos por todos los 100 personajes
-- Limitación comunicada honestamente mediante disclaimer discreto
-- Funcionalidad completa de paginación y ordenamiento
-- Showcase completo del Design System
+- 30 generic comics shared by all 100 characters
+- Limitation communicated honestly via discrete disclaimer
+- Full pagination and sorting functionality
+- Complete Design System showcase
 
-### Lo que NO se hizo
+### What was NOT done
 
-- ❌ NO se ejecutan scripts en runtime
-- ❌ NO hay generación dinámica de datos
-- ❌ NO hay llamadas a APIs externas
-- ❌ NO se modificó el Design System
-- ❌ NO se creó archivo `mockCharacterDetail.json` estático (búsqueda dinámica)
+- ❌ NO scripts run at runtime
+- ❌ NO dynamic data generation
+- ❌ NO external API calls
+- ❌ NO Design System modifications
+- ❌ NO static `mockCharacterDetail.json` file created (dynamic search)
 
-### Compromiso técnico aceptado
+### Accepted technical compromise
 
-**Limitación:** Los 100 personajes comparten los mismos 30 comics
+**Limitation:** The 100 characters share the same 30 comics
 
-**Justificación:**
+**Justification:**
 
-- El proyecto es un showcase del Design System, no un producto real
-- Los componentes de comics funcionan perfectamente
-- Se informa honestamente al usuario mediante disclaimer
-- Un recruiter técnico valora la solución pragmática
+- The project is a Design System showcase, not a real product
+- Comics components work perfectly
+- User is informed honestly via disclaimer
+- A technical recruiter values the pragmatic solution
 
-**Mitigación:**
+**Mitigation:**
 
-- Disclaimer sutil en la UI
-- Documentación clara en README
-- Funcionalidad completa del componente
+- Subtle disclaimer in UI
+- Clear documentation in README
+- Full component functionality
 
-### Tiempo total estimado
+### Total estimated time
 
-- Generación de mocks: 10 min (ya hecho)
-- Actualización de servicios: 20 min
-- **Tests de servicios: 60 min** ← **NUEVA FASE**
-- Disclaimer en UI: 5 min
-- Testing manual dirigido: 60 min
-- **Total: ~2 horas 35 minutos**
+- Mock generation: 10 min (already done)
+- Service updates: 20 min
+- **Service tests: 60 min** ← **NEW PHASE**
+- UI disclaimer: 5 min
+- Directed manual testing: 60 min
+- **Total: ~2 hours 35 minutes**
 
-**Distribución del tiempo:**
+**Time distribution:**
 
-- Tests automáticos: 1h (inversión de calidad)
-- Testing manual: 1h (reducido gracias a tests)
-- Implementación: 35min
+- Automated tests: 1h (quality investment)
+- Manual testing: 1h (reduced thanks to tests)
+- Implementation: 35min
 
 ---
 
-**Documento actualizado:** 15 Noviembre 2025
-**Versión:** 2.3
-**Cambios principales:**
+**Document updated:** November 15, 2025
+**Version:** 2.3
+**Main changes:**
 
-- Ampliado dataset de 50 a 100 personajes
-- Infinite scroll más evidente y funcional
-- Búsqueda dinámica entre 100 personajes únicos
-- Documentación actualizada con nuevas métricas
+- Expanded dataset from 50 to 100 characters
+- More evident and functional infinite scroll
+- Dynamic search among 100 unique characters
+- Updated documentation with new metrics
