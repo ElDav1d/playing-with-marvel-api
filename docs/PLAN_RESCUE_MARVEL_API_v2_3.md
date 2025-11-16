@@ -137,6 +137,18 @@ The `generate-mock-characters-100.js` and `generate-mock-comics.js` scripts are 
 
 ## 📋 PHASE 3: MOCK GENERATION (ALREADY COMPLETED ✅)
 
+> ⚠️ **IMPORTANT NOTE ABOUT CHARACTER IDs IN TEST EXAMPLES:**
+>
+> The test examples throughout this document use placeholder IDs (e.g., 1000000, 1000001) and character names (e.g., "Spider-Man", "Iron Man"). These IDs and names are for illustration purposes only.
+>
+> **When new mocks are generated**, the actual character IDs and names will differ based on the data returned by the Marvel API at generation time. After generating new mocks:
+>
+> 1. Inspect `mockCharactersAZ.json` to find the actual first character ID and name
+> 2. Update test examples with the real IDs found in the generated mock files
+> 3. Adjust character name assertions to match the actual names in the mock data
+>
+> This applies to all test files in Phase 5 (Tasks 5.2, 5.3, 5.4).
+
 ### Final result:
 
 **Characters:** ✅ 100 characters generated
