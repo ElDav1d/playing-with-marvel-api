@@ -994,6 +994,37 @@ jest.mock('@/components/pages/Characters/hooks/useDebounce', () => ({
 
 ## Best Practices for AI Assistants
 
+### ⚠️ CRITICAL: Git Operations Policy
+
+**NEVER create commits or push to remote without explicit user permission.**
+
+This is a strict requirement. The AI assistant must:
+- ❌ **NEVER** run `git commit` without user explicitly requesting it
+- ❌ **NEVER** run `git push` without user explicitly requesting it
+- ❌ **NEVER** assume that completing a task means creating a commit
+- ✅ **ALWAYS** ask the user if they want to commit changes
+- ✅ **ALWAYS** ask the user if they want to push changes
+- ✅ **ONLY** perform git operations when the user explicitly says "commit" or "push"
+
+**Example of correct behavior:**
+```
+User: "Add a new feature X"
+Assistant: [implements feature]
+Assistant: "I've completed feature X. Would you like me to commit these changes?"
+User: "Yes, commit and push"
+Assistant: [creates commit and pushes]
+```
+
+**Example of incorrect behavior:**
+```
+User: "Add a new feature X"
+Assistant: [implements feature and commits without asking]  ❌ WRONG
+```
+
+This policy ensures the user maintains full control over git history and remote repository state.
+
+---
+
 ### Code Changes
 
 1. **Read Before Writing**
