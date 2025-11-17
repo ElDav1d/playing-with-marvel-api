@@ -23,7 +23,7 @@ it('renders a list of comics when the character has some', () => {
 
   // ASSERT
   expect(screen.getByRole('list', { name: /list of comics/i })).toBeInTheDocument();
-  expect(screen.getAllByRole('listitem')).toHaveLength(10);
+  expect(screen.getAllByRole('listitem')).toHaveLength(30);
 });
 
 it('renders an order select group for the comics list when the character has some', () => {

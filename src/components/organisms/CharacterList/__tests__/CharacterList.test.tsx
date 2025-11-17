@@ -124,8 +124,8 @@ it('renders a list of characters with list items', () => {
   );
 
   const charactersList = screen.getByRole('list', { name: /characters list/i });
-  const listTargetOne = within(charactersList).getByRole('listitem', { name: /animal/i });
-  const listTargetTwo = within(charactersList).getByRole('listitem', { name: /braineater/i });
+  const listTargetOne = within(charactersList).getByRole('listitem', { name: /spider-man/i });
+  const listTargetTwo = within(charactersList).getByRole('listitem', { name: /iron man/i });
 
   // ASSERT
   expect(listTargetOne).toBeInTheDocument();
