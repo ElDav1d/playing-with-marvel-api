@@ -7,9 +7,9 @@
 import {
   FetchingOrder,
   ICharacterItem,
-} from "@/components/pages/Characters/interfaces/characters";
-import { Bugfender } from "@bugfender/sdk";
-import mockCharacters from "../mocks/mockCharactersAZ.json";
+} from '@/components/pages/Characters/interfaces/characters';
+import { Bugfender } from '@bugfender/sdk';
+import mockCharacters from '../mocks/mockCharactersAZ.json';
 
 export interface IGetCharactersServiceProps {
   pageParam?: number;

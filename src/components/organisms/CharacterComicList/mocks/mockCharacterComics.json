@@ -43,10 +43,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000000/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000000/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 1,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176111428c8",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000000/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000000",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000001",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000000/events",
       "items": [],
       "returned": 0
     }
@@ -95,10 +131,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000001/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000001/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 2,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6ed5c5a89f",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000001/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000001",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000002",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000001/events",
       "items": [],
       "returned": 0
     }
@@ -147,10 +219,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000002/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000002/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 3,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/5853b6d399e96",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000002/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000002",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000003",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000002/events",
       "items": [],
       "returned": 0
     }
@@ -199,10 +307,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000003/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000003/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 4,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/40/5239604d7c647",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000003/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000003",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000004",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000003/events",
       "items": [],
       "returned": 0
     }
@@ -251,10 +395,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000004/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000004/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 5,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/58dd057d304d4",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000004/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000004",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000005",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000004/events",
       "items": [],
       "returned": 0
     }
@@ -303,10 +483,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000005/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000005/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 6,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000005/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000005",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000006",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000005/events",
       "items": [],
       "returned": 0
     }
@@ -355,10 +571,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000006/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000006/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 7,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176111428c8",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000006/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000006",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000007",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000006/events",
       "items": [],
       "returned": 0
     }
@@ -407,10 +659,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000007/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000007/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 8,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6ed5c5a89f",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000007/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000007",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000008",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000007/events",
       "items": [],
       "returned": 0
     }
@@ -459,10 +747,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000008/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000008/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 9,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/5853b6d399e96",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000008/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000008",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000009",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000008/events",
       "items": [],
       "returned": 0
     }
@@ -511,10 +835,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000009/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000009/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 10,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/40/5239604d7c647",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000009/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000009",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000010",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000009/events",
       "items": [],
       "returned": 0
     }
@@ -563,10 +923,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000010/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000010/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 11,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/58dd057d304d4",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000010/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000010",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000011",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000010/events",
       "items": [],
       "returned": 0
     }
@@ -615,10 +1011,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000011/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000011/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 12,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000011/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000011",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000012",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000011/events",
       "items": [],
       "returned": 0
     }
@@ -667,10 +1099,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000012/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000012/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 13,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176111428c8",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000012/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000012",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000013",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000012/events",
       "items": [],
       "returned": 0
     }
@@ -719,10 +1187,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000013/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000013/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 14,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6ed5c5a89f",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000013/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000013",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000014",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000013/events",
       "items": [],
       "returned": 0
     }
@@ -771,10 +1275,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000014/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000014/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 15,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/5853b6d399e96",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000014/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000014",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000015",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000014/events",
       "items": [],
       "returned": 0
     }
@@ -823,10 +1363,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000015/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000015/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 16,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/40/5239604d7c647",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000015/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000015",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000016",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000015/events",
       "items": [],
       "returned": 0
     }
@@ -875,10 +1451,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000016/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000016/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 17,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/58dd057d304d4",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000016/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000016",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000017",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000016/events",
       "items": [],
       "returned": 0
     }
@@ -927,10 +1539,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000017/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000017/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 18,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000017/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000017",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000018",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000017/events",
       "items": [],
       "returned": 0
     }
@@ -979,10 +1627,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000018/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000018/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 19,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176111428c8",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000018/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000018",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000019",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000018/events",
       "items": [],
       "returned": 0
     }
@@ -1031,10 +1715,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000019/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000019/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 20,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6ed5c5a89f",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000019/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000019",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000020",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000019/events",
       "items": [],
       "returned": 0
     }
@@ -1083,10 +1803,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000020/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000020/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 21,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/5853b6d399e96",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000020/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000020",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000021",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000020/events",
       "items": [],
       "returned": 0
     }
@@ -1135,10 +1891,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000021/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000021/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 22,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/40/5239604d7c647",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000021/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000021",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000022",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000021/events",
       "items": [],
       "returned": 0
     }
@@ -1187,10 +1979,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000022/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000022/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 23,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/58dd057d304d4",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000022/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000022",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000023",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000022/events",
       "items": [],
       "returned": 0
     }
@@ -1239,10 +2067,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000023/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000023/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 24,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000023/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000023",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000024",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000023/events",
       "items": [],
       "returned": 0
     }
@@ -1291,10 +2155,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000024/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000024/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 25,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176111428c8",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000024/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000024",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000025",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000024/events",
       "items": [],
       "returned": 0
     }
@@ -1343,10 +2243,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000025/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000025/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 26,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6ed5c5a89f",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000025/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000025",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000026",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000025/events",
       "items": [],
       "returned": 0
     }
@@ -1395,10 +2331,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000026/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000026/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 27,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/5853b6d399e96",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000026/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000026",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000027",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000026/events",
       "items": [],
       "returned": 0
     }
@@ -1447,10 +2419,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000027/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000027/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 28,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/40/5239604d7c647",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000027/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000027",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000028",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000027/events",
       "items": [],
       "returned": 0
     }
@@ -1499,10 +2507,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000028/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000028/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 29,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/58dd057d304d4",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000028/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000028",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000029",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000028/events",
       "items": [],
       "returned": 0
     }
@@ -1551,10 +2595,46 @@
     "creators": {
       "available": 2,
       "items": [],
-      "returned": 0
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000029/creators"
     },
     "characters": {
       "available": 3,
+      "items": [],
+      "returned": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000029/characters"
+    },
+    "digitalId": 0,
+    "issueNumber": 30,
+    "variantDescription": "",
+    "textObjects": [],
+    "variants": [],
+    "collections": [],
+    "collectedIssues": [],
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "stories": {
+      "available": 2,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000029/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000029",
+          "name": "Cover",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/3000030",
+          "name": "Interior story",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 2
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/2000029/events",
       "items": [],
       "returned": 0
     }

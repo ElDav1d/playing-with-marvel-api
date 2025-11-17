@@ -126,11 +126,11 @@ const useCharacterComics = ({
     comics,
     totalComics,
     rangeInit: safeOffset + 1,
-    rangeEnd: safeOffset + comics?.length,
+    rangeEnd: safeOffset + (comics?.length ?? 0),
     isError,
     isLoading,
     isFetching,
-    isLastPage: safeOffset + MAX_FETCH_CHARACTER_COMICS >= totalComics,
+    isLastPage: safeOffset + MAX_FETCH_CHARACTER_COMICS >= (totalComics ?? 0),
     isFirstPage: safeOffset === 0,
     refetch,
   };

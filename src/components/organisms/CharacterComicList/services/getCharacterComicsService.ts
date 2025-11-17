@@ -5,7 +5,7 @@
  * due to API discontinuation. This is acceptable for a Design System
  * showcase as it demonstrates component functionality.
  */
-import { FetchingOrder } from '../interfaces/characterComics';
+import { FetchingOrder, ICharacterComicDetails } from '../interfaces/characterComics';
 import mockComics from '../mocks/mockCharacterComics.json';
 
 export interface getCharacterComicsServiceProps {
@@ -19,12 +19,15 @@ const getCharacterComicsService = async ({
   page,
   maxComics,
   order,
-}: getCharacterComicsServiceProps) => {
+}: getCharacterComicsServiceProps): Promise<{
+  apiData: { results: ICharacterComicDetails[]; total: number };
+  offset: number;
+} | undefined> => {
   // Simulate network delay to show DS loaders
   await new Promise((resolve) => setTimeout(resolve, 300));
 
   try {
-    let comics = [...mockComics];
+    let comics = [...mockComics] as ICharacterComicDetails[];
 
     // Sort according to selected criteria
     if (order === FetchingOrder.TITLE_AZ) {
