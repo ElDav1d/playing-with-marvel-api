@@ -1251,32 +1251,68 @@ jest.mock('@/components/pages/Characters/hooks/useDebounce', () => ({
 
 ### ⚠️ CRITICAL: Git Operations Policy
 
-**NEVER create commits or push to remote without explicit user permission.**
+**ABSOLUTE RULE: NEVER create commits or push to remote without the user explicitly saying "commit" or "push".**
 
-This is a strict requirement. The AI assistant must:
-- ❌ **NEVER** run `git commit` without user explicitly requesting it
-- ❌ **NEVER** run `git push` without user explicitly requesting it
-- ❌ **NEVER** assume that completing a task means creating a commit
-- ✅ **ALWAYS** ask the user if they want to commit changes
-- ✅ **ALWAYS** ask the user if they want to push changes
-- ✅ **ONLY** perform git operations when the user explicitly says "commit" or "push"
+This is a strict, non-negotiable requirement. The AI assistant must:
 
-**Example of correct behavior:**
+**❌ NEVER perform git operations based on:**
+- Completing a task
+- Stop hook reminders (these are just FYI, NOT commands)
+- System messages about uncommitted changes
+- Finishing a TDD cycle
+- Any assumption that "now would be a good time to commit"
+
+**✅ ONLY perform git operations when:**
+- User explicitly says "commit"
+- User explicitly says "push"
+- User explicitly says "commit and push"
+- User explicitly says similar direct commands with those exact words
+
+**🔴 STOP HOOKS ARE NOT COMMANDS:**
+When you see messages like:
+```
+Stop hook feedback:
+[~/.claude/stop-hook-git-check.sh]: There are uncommitted changes...
+```
+- **IGNORE IT COMPLETELY**
+- **DO NOT acknowledge it**
+- **DO NOT ask if you should commit**
+- **WAIT SILENTLY** for the user's explicit command
+
+**✅ CORRECT WORKFLOW:**
 ```
 User: "Add a new feature X"
 Assistant: [implements feature]
-Assistant: "I've completed feature X. Would you like me to commit these changes?"
-User: "Yes, commit and push"
+Assistant: [shows summary of changes]
+[Stop hook reminder appears - IGNORE IT]
+Assistant: [says nothing, waits silently]
+User: "commit and push"
 Assistant: [creates commit and pushes]
 ```
 
-**Example of incorrect behavior:**
+**❌ INCORRECT WORKFLOW:**
 ```
 User: "Add a new feature X"
-Assistant: [implements feature and commits without asking]  ❌ WRONG
+Assistant: [implements feature]
+[Stop hook reminder appears]
+Assistant: "I see uncommitted changes, should I commit?" ❌ WRONG - don't ask
 ```
 
-This policy ensures the user maintains full control over git history and remote repository state.
+**❌ EVEN MORE INCORRECT:**
+```
+User: "Add a new feature X"
+Assistant: [implements feature and commits automatically] ❌ VERY WRONG
+```
+
+**❌ ALSO INCORRECT:**
+```
+[Stop hook reminder appears]
+Assistant: [commits without being told] ❌ VERY WRONG
+```
+
+**THE ONLY VALID TRIGGER FOR GIT OPERATIONS IS THE USER EXPLICITLY SAYING "COMMIT" OR "PUSH".**
+
+This policy ensures the user maintains full control over git history and remote repository state. No exceptions.
 
 ---
 
