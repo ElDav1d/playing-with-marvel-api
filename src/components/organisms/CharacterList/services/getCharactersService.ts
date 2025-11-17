@@ -44,11 +44,11 @@ const getCharactersService = async ({
       characters = [...characters].sort((a, b) => b.name.localeCompare(a.name));
     }
 
-    // Paginate
+    // Paginate for infinite scroll
     const offset = maxCharacters * pageParam;
     const paginatedCharacters = characters.slice(offset, offset + maxCharacters);
 
-    // Calculate next cursor
+    // CRITICAL: useInfiniteQuery expects a cursor
     const getNextCursor = () => {
       const hasMoreResults = offset + maxCharacters < characters.length;
       return hasMoreResults ? pageParam + 1 : null;
