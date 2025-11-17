@@ -1,19 +1,23 @@
-import { BASE_URL } from '@/utils/constants';
+/**
+ * MOCK SERVICE - Marvel API was discontinued
+ * Searches for character by ID in the mock characters array
+ * to maintain functional navigation between character details.
+ */
+import mockCharacters from '@/components/organisms/CharacterList/mocks/mockCharactersAZ.json';
+import { ICharacterItem } from '@/components/pages/Characters/interfaces/characters';
 
 const getCharacterDetailsService = async (characterId: string | undefined) => {
-  const KEY = process.env.REACT_APP_MARVEL_API_KEY;
-  const url = `${BASE_URL}/${characterId}?apikey=${KEY}`;
+  // Simulate network delay
+  await new Promise((resolve) => setTimeout(resolve, 300));
 
   try {
-    const response = await fetch(url);
+    // Search character by ID in the 100 mocks array
+    const character = mockCharacters.find(
+      (char: ICharacterItem) => char.id === Number(characterId)
+    );
 
-    if (!response.ok) {
-      throw new Error(`HTTP STATUS: ${response.status}`);
-    }
-
-    const res = await response.json();
-
-    return res.data.results[0];
+    // If doesn't exist, return first as fallback
+    return character || mockCharacters[0];
   } catch (error) {
     console.log(error);
   }
