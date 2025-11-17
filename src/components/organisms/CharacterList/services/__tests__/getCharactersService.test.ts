@@ -128,4 +128,42 @@ describe("getCharactersService with mocked data", () => {
       expect(result!.nextCursor).toBeNull();
     });
   });
+
+  describe("Sorting", () => {
+    it("sorts A-Z correctly", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 100, // All characters
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      const names = result!.characters.map((c) => c.name);
+      const sortedNames = [...names].sort((a, b) => a.localeCompare(b));
+      expect(names).toEqual(sortedNames);
+    });
+
+    it("sorts Z-A correctly", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 100,
+        searchString: "",
+        order: FetchingOrder.NAME_ZA,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      const names = result!.characters.map((c) => c.name);
+      const sortedNames = [...names].sort((a, b) => b.localeCompare(a));
+      expect(names).toEqual(sortedNames);
+    });
+  });
 });

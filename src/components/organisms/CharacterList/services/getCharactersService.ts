@@ -37,6 +37,13 @@ const getCharactersService = async ({
       );
     }
 
+    // Sort
+    if (order === FetchingOrder.NAME_AZ) {
+      characters = [...characters].sort((a, b) => a.name.localeCompare(b.name));
+    } else if (order === FetchingOrder.NAME_ZA) {
+      characters = [...characters].sort((a, b) => b.name.localeCompare(a.name));
+    }
+
     // Paginate
     const offset = maxCharacters * pageParam;
     const paginatedCharacters = characters.slice(offset, offset + maxCharacters);
