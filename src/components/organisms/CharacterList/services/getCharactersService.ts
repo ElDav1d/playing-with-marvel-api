@@ -30,6 +30,13 @@ const getCharactersService = async ({
   try {
     let characters = mockCharacters as ICharacterItem[];
 
+    // Filter by search
+    if (searchString) {
+      characters = characters.filter((char) =>
+        char.name.toLowerCase().includes(searchString.toLowerCase())
+      );
+    }
+
     // Paginate
     const offset = maxCharacters * pageParam;
     const paginatedCharacters = characters.slice(offset, offset + maxCharacters);

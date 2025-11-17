@@ -90,4 +90,42 @@ describe("getCharactersService with mocked data", () => {
       expect(result!.nextCursor).toBeNull(); // 100 total, offset 50, no more pages
     });
   });
+
+  describe("Search/Filtering", () => {
+    it("filters by search string (case insensitive)", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "Spider",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result).toBeDefined();
+      result!.characters.forEach((char) => {
+        expect(char.name.toLowerCase()).toContain("spider");
+      });
+    });
+
+    it("returns empty results for non-matching search", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "ZZZNONEXISTENT",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.characters).toHaveLength(0);
+      expect(result!.nextCursor).toBeNull();
+    });
+  });
 });
