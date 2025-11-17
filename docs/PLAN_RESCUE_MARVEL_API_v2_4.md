@@ -53,12 +53,14 @@ Each cycle is **iterative**. If a test fails unexpectedly during GREEN phase:
 6. **Only then** - Move to next cycle
 
 **Common iteration scenarios:**
+
 - Mock data structure doesn't match TypeScript interface → Adjust mock
 - Import path is wrong → Fix import
 - Expected value differs from actual → Adjust test expectation or implementation
 - **Never skip a failing test** - Fix it before moving forward
 
 **Time estimate:** 3-4 hours total
+
 - Setup: 15 min
 - Service 1 (getCharactersService): 90 min
 - Service 2 (getCharacterDetailsService): 45 min
@@ -73,6 +75,7 @@ Each cycle is **iterative**. If a test fails unexpectedly during GREEN phase:
 ### Task 0.1: Copy mock data files
 
 **Mock files already exist** (from v2.3):
+
 - `/mnt/project/mockCharacters100.json` (100 characters)
 - `/mnt/project/mockComics30.json` (30 comics)
 
@@ -101,6 +104,7 @@ head -20 src/components/organisms/CharacterComicList/mocks/mockCharacterComics.j
 ```
 
 **Checklist:**
+
 - [ ] mockCharactersAZ.json in place
 - [ ] mockCharacterComics.json in place
 - [ ] JSON imports are valid (no syntax errors)
@@ -118,6 +122,7 @@ mkdir -p src/components/organisms/CharacterComicList/services/__tests__
 ```
 
 **Checklist:**
+
 - [ ] CharacterList test directory created
 - [ ] CharacterDetail test directory created
 - [ ] CharacterComicList test directory created
@@ -135,6 +140,7 @@ npm start
 ```
 
 **Checklist:**
+
 - [ ] Dev server starts
 - [ ] Application loads (with errors)
 - [ ] Confirmed services need migration
@@ -147,6 +153,7 @@ npm start
 **Test file:** `src/components/organisms/CharacterList/services/__tests__/getCharactersService.test.ts`
 
 **Features to implement (in order):**
+
 1. Basic structure (return empty array)
 2. Load first page (50 characters)
 3. Pagination (infinite scroll with cursor)
@@ -165,8 +172,8 @@ Create test file:
 ```typescript
 // src/components/organisms/CharacterList/services/__tests__/getCharactersService.test.ts
 
-import getCharactersService from "../getCharactersService";
-import { FetchingOrder } from "@/components/pages/Characters/interfaces/characters";
+import getCharactersService from '../getCharactersService';
+import { FetchingOrder } from '@/components/pages/Characters/interfaces/characters';
 
 /**
  * MIGRATION SAFETY NET
@@ -183,14 +190,14 @@ import { FetchingOrder } from "@/components/pages/Characters/interfaces/characte
  * - Edge cases: Empty results, last page, invalid IDs
  * - Business logic: Sorting, filtering, pagination calculations
  */
-describe("getCharactersService with mocked data", () => {
-  describe("Basic structure", () => {
-    it("returns an object with characters array and nextCursor", async () => {
+describe('getCharactersService with mocked data', () => {
+  describe('Basic structure', () => {
+    it('returns an object with characters array and nextCursor', async () => {
       // ARRANGE
       const params = {
         pageParam: 0,
         maxCharacters: 50,
-        searchString: "",
+        searchString: '',
         order: FetchingOrder.NAME_AZ,
       };
 
@@ -199,8 +206,8 @@ describe("getCharactersService with mocked data", () => {
 
       // ASSERT
       expect(result).toBeDefined();
-      expect(result).toHaveProperty("characters");
-      expect(result).toHaveProperty("nextCursor");
+      expect(result).toHaveProperty('characters');
+      expect(result).toHaveProperty('nextCursor');
       expect(Array.isArray(result!.characters)).toBe(true);
     });
   });
@@ -208,6 +215,7 @@ describe("getCharactersService with mocked data", () => {
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -215,6 +223,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ❌ **Test FAILS** (service still calls Marvel API)
 
 **Checklist:**
+
 - [ ] Test file created
 - [ ] Test runs and **fails** (RED state)
 - [ ] Failure is clear: service doesn't return expected structure
@@ -236,12 +245,9 @@ Modify service to return mock data:
  * the eldav1d-marvel-ui Design System functionality.
  * Original API integration preserved in git history.
  */
-import {
-  FetchingOrder,
-  ICharacterItem,
-} from "@/components/pages/Characters/interfaces/characters";
-import { Bugfender } from "@bugfender/sdk";
-import mockCharacters from "../mocks/mockCharactersAZ.json";
+import { FetchingOrder, ICharacterItem } from '@/components/pages/Characters/interfaces/characters';
+import { Bugfender } from '@bugfender/sdk';
+import mockCharacters from '../mocks/mockCharactersAZ.json';
 
 export interface IGetCharactersServiceProps {
   pageParam?: number;
@@ -275,6 +281,7 @@ export default getCharactersService;
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -282,6 +289,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ✅ **Test PASSES** (basic structure works)
 
 **Checklist:**
+
 - [ ] Service modified
 - [ ] Test passes (GREEN state)
 - [ ] Commits ready: "RED: Add test for basic structure" + "GREEN: Implement basic structure"
@@ -295,6 +303,7 @@ npm test -- getCharactersService.test.ts
 No refactoring needed yet (code is minimal).
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -302,6 +311,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ✅ **Test still PASSES**
 
 **Checklist:**
+
 - [ ] No refactoring needed
 - [ ] Tests still green
 
@@ -314,13 +324,13 @@ npm test -- getCharactersService.test.ts
 Add test to existing file:
 
 ```typescript
-describe("Pagination", () => {
-  it("returns first page of 50 characters", async () => {
+describe('Pagination', () => {
+  it('returns first page of 50 characters', async () => {
     // ARRANGE
     const params = {
       pageParam: 0,
       maxCharacters: 50,
-      searchString: "",
+      searchString: '',
       order: FetchingOrder.NAME_AZ,
     };
 
@@ -335,6 +345,7 @@ describe("Pagination", () => {
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -342,6 +353,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ❌ **Test FAILS** (returns empty array, not 50 items)
 
 **Checklist:**
+
 - [ ] Test added
 - [ ] Test **fails** (RED state)
 
@@ -367,10 +379,7 @@ const getCharactersService = async ({
 
     // Paginate for infinite scroll
     const offset = maxCharacters * pageParam;
-    const paginatedCharacters = characters.slice(
-      offset,
-      offset + maxCharacters
-    );
+    const paginatedCharacters = characters.slice(offset, offset + maxCharacters);
 
     Bugfender.log(`Characters fetched: ${paginatedCharacters.length}`);
 
@@ -386,6 +395,7 @@ const getCharactersService = async ({
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -393,6 +403,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ✅ **Test PASSES** (returns 50 characters)
 
 **Checklist:**
+
 - [ ] Service modified
 - [ ] Test passes (GREEN state)
 
@@ -434,6 +445,7 @@ const getCharactersService = async ({
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -441,6 +453,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ✅ **Test still PASSES**
 
 **Checklist:**
+
 - [ ] Code cleaned (if needed)
 - [ ] Tests still green
 
@@ -453,12 +466,12 @@ npm test -- getCharactersService.test.ts
 Add tests:
 
 ```typescript
-it("returns cursor = 1 when there are more pages", async () => {
+it('returns cursor = 1 when there are more pages', async () => {
   // ARRANGE
   const params = {
     pageParam: 0,
     maxCharacters: 50,
-    searchString: "",
+    searchString: '',
     order: FetchingOrder.NAME_AZ,
   };
 
@@ -469,12 +482,12 @@ it("returns cursor = 1 when there are more pages", async () => {
   expect(result!.nextCursor).toBe(1); // 100 total, 50 fetched → page 2 exists
 });
 
-it("returns cursor = null on last page", async () => {
+it('returns cursor = null on last page', async () => {
   // ARRANGE
   const params = {
     pageParam: 1,
     maxCharacters: 50,
-    searchString: "",
+    searchString: '',
     order: FetchingOrder.NAME_AZ,
   };
 
@@ -487,6 +500,7 @@ it("returns cursor = null on last page", async () => {
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -494,6 +508,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ❌ **Test FAILS** (nextCursor is always null)
 
 **Checklist:**
+
 - [ ] Tests added
 - [ ] Tests **fail** (RED state)
 
@@ -541,6 +556,7 @@ const getCharactersService = async ({
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -548,6 +564,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ✅ **Test PASSES** (cursor calculated correctly)
 
 **Checklist:**
+
 - [ ] Service modified
 - [ ] Tests pass (GREEN state)
 
@@ -560,13 +577,13 @@ npm test -- getCharactersService.test.ts
 Add tests:
 
 ```typescript
-describe("Search/Filtering", () => {
-  it("filters by search string (case insensitive)", async () => {
+describe('Search/Filtering', () => {
+  it('filters by search string (case insensitive)', async () => {
     // ARRANGE
     const params = {
       pageParam: 0,
       maxCharacters: 50,
-      searchString: "Spider",
+      searchString: 'Spider',
       order: FetchingOrder.NAME_AZ,
     };
 
@@ -576,16 +593,16 @@ describe("Search/Filtering", () => {
     // ASSERT
     expect(result).toBeDefined();
     result!.characters.forEach((char) => {
-      expect(char.name.toLowerCase()).toContain("spider");
+      expect(char.name.toLowerCase()).toContain('spider');
     });
   });
 
-  it("returns empty results for non-matching search", async () => {
+  it('returns empty results for non-matching search', async () => {
     // ARRANGE
     const params = {
       pageParam: 0,
       maxCharacters: 50,
-      searchString: "ZZZNONEXISTENT",
+      searchString: 'ZZZNONEXISTENT',
       order: FetchingOrder.NAME_AZ,
     };
 
@@ -600,6 +617,7 @@ describe("Search/Filtering", () => {
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -607,6 +625,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ❌ **Test FAILS** (no filtering implemented)
 
 **Checklist:**
+
 - [ ] Tests added
 - [ ] Tests **fail** (RED state)
 
@@ -633,7 +652,7 @@ const getCharactersService = async ({
     // Filter by search
     if (searchString) {
       characters = characters.filter((char) =>
-        char.name.toLowerCase().includes(searchString.toLowerCase())
+        char.name.toLowerCase().includes(searchString.toLowerCase()),
       );
     }
 
@@ -661,6 +680,7 @@ const getCharactersService = async ({
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -668,6 +688,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ✅ **Test PASSES** (filtering works)
 
 **Checklist:**
+
 - [ ] Service modified
 - [ ] Tests pass (GREEN state)
 
@@ -680,13 +701,13 @@ npm test -- getCharactersService.test.ts
 Add tests:
 
 ```typescript
-describe("Sorting", () => {
-  it("sorts A-Z correctly", async () => {
+describe('Sorting', () => {
+  it('sorts A-Z correctly', async () => {
     // ARRANGE
     const params = {
       pageParam: 0,
       maxCharacters: 100, // All characters
-      searchString: "",
+      searchString: '',
       order: FetchingOrder.NAME_AZ,
     };
 
@@ -699,12 +720,12 @@ describe("Sorting", () => {
     expect(names).toEqual(sortedNames);
   });
 
-  it("sorts Z-A correctly", async () => {
+  it('sorts Z-A correctly', async () => {
     // ARRANGE
     const params = {
       pageParam: 0,
       maxCharacters: 100,
-      searchString: "",
+      searchString: '',
       order: FetchingOrder.NAME_ZA,
     };
 
@@ -720,6 +741,7 @@ describe("Sorting", () => {
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -727,6 +749,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ❌ **Test FAILS** (no sorting implemented)
 
 **Checklist:**
+
 - [ ] Tests added
 - [ ] Tests **fail** (RED state)
 
@@ -753,7 +776,7 @@ const getCharactersService = async ({
     // Filter by search
     if (searchString) {
       characters = characters.filter((char) =>
-        char.name.toLowerCase().includes(searchString.toLowerCase())
+        char.name.toLowerCase().includes(searchString.toLowerCase()),
       );
     }
 
@@ -788,6 +811,7 @@ const getCharactersService = async ({
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -795,6 +819,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ✅ **Test PASSES** (sorting works)
 
 **Checklist:**
+
 - [ ] Service modified
 - [ ] Tests pass (GREEN state)
 
@@ -822,7 +847,7 @@ const getCharactersService = async ({
     // Filter by search
     if (searchString) {
       characters = characters.filter((char) =>
-        char.name.toLowerCase().includes(searchString.toLowerCase())
+        char.name.toLowerCase().includes(searchString.toLowerCase()),
       );
     }
 
@@ -857,6 +882,7 @@ const getCharactersService = async ({
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharactersService.test.ts
 ```
@@ -864,6 +890,7 @@ npm test -- getCharactersService.test.ts
 **Expected:** ✅ **Test still PASSES**
 
 **Checklist:**
+
 - [ ] Code cleaned
 - [ ] Comments added
 - [ ] Tests still green
@@ -881,6 +908,7 @@ npm test -- --coverage --collectCoverageFrom="src/components/organisms/Character
 **Expected:** > 80% coverage
 
 **Checklist:**
+
 - [ ] Coverage > 80%
 - [ ] All paths covered (happy + edge cases)
 
@@ -892,6 +920,7 @@ npm test -- --coverage --collectCoverageFrom="src/components/organisms/Character
 **Test file:** `src/components/pages/CharacterDetail/services/__tests__/getCharacterDetailsService.test.ts`
 
 **Features to implement:**
+
 1. Find character by ID
 2. Fallback to first character if ID not found
 3. Handle undefined ID
@@ -907,7 +936,7 @@ Create test file:
 ```typescript
 // src/components/pages/CharacterDetail/services/__tests__/getCharacterDetailsService.test.ts
 
-import getCharacterDetailsService from "../getCharacterDetailsService";
+import getCharacterDetailsService from '../getCharacterDetailsService';
 
 /**
  * MIGRATION SAFETY NET
@@ -924,12 +953,12 @@ import getCharacterDetailsService from "../getCharacterDetailsService";
  * - Edge cases: Invalid IDs, undefined IDs
  * - Business logic: Fallback to first character when ID not found
  */
-describe("getCharacterDetailsService with dynamic lookup", () => {
-  describe("Character lookup by ID", () => {
-    it("finds character by valid ID", async () => {
+describe('getCharacterDetailsService with dynamic lookup', () => {
+  describe('Character lookup by ID', () => {
+    it('finds character by valid ID', async () => {
       // ARRANGE
       // NOTE: Use actual ID from mockCharactersAZ.json after inspection
-      const characterId = "1011176"; // First character in mock (adjust as needed)
+      const characterId = '1011176'; // First character in mock (adjust as needed)
 
       // ACT
       const character = await getCharacterDetailsService(characterId);
@@ -939,26 +968,27 @@ describe("getCharacterDetailsService with dynamic lookup", () => {
       expect(character!.id).toBe(1011176);
     });
 
-    it("returns character with correct structure", async () => {
+    it('returns character with correct structure', async () => {
       // ARRANGE
-      const characterId = "1011176";
+      const characterId = '1011176';
 
       // ACT
       const character = await getCharacterDetailsService(characterId);
 
       // ASSERT
-      expect(character).toHaveProperty("id");
-      expect(character).toHaveProperty("name");
-      expect(character).toHaveProperty("description");
-      expect(character).toHaveProperty("thumbnail");
-      expect(character!.thumbnail).toHaveProperty("path");
-      expect(character!.thumbnail).toHaveProperty("extension");
+      expect(character).toHaveProperty('id');
+      expect(character).toHaveProperty('name');
+      expect(character).toHaveProperty('description');
+      expect(character).toHaveProperty('thumbnail');
+      expect(character!.thumbnail).toHaveProperty('path');
+      expect(character!.thumbnail).toHaveProperty('extension');
     });
   });
 });
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharacterDetailsService.test.ts
 ```
@@ -966,6 +996,7 @@ npm test -- getCharacterDetailsService.test.ts
 **Expected:** ❌ **Test FAILS** (service still calls Marvel API)
 
 **Checklist:**
+
 - [ ] Test file created
 - [ ] Test **fails** (RED state)
 
@@ -985,8 +1016,8 @@ Update service:
  * Searches for character by ID in the mock characters array
  * to maintain functional navigation between character details.
  */
-import mockCharacters from "../../organisms/CharacterList/mocks/mockCharactersAZ.json";
-import { ICharacterItem } from "../../Characters/interfaces/characters";
+import mockCharacters from '../../organisms/CharacterList/mocks/mockCharactersAZ.json';
+import { ICharacterItem } from '../../Characters/interfaces/characters';
 
 const getCharacterDetailsService = async (characterId: string | undefined) => {
   // Simulate network delay
@@ -995,7 +1026,7 @@ const getCharacterDetailsService = async (characterId: string | undefined) => {
   try {
     // Search character by ID in the 100 mocks array
     const character = mockCharacters.find(
-      (char: ICharacterItem) => char.id === Number(characterId)
+      (char: ICharacterItem) => char.id === Number(characterId),
     );
 
     // If doesn't exist, return first as fallback
@@ -1009,6 +1040,7 @@ export default getCharacterDetailsService;
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharacterDetailsService.test.ts
 ```
@@ -1016,6 +1048,7 @@ npm test -- getCharacterDetailsService.test.ts
 **Expected:** ✅ **Test PASSES** (finds character by ID)
 
 **Checklist:**
+
 - [ ] Service modified
 - [ ] Test passes (GREEN state)
 
@@ -1028,21 +1061,21 @@ npm test -- getCharacterDetailsService.test.ts
 Add tests:
 
 ```typescript
-describe("Fallback behavior", () => {
-  it("returns fallback for non-existent ID", async () => {
+describe('Fallback behavior', () => {
+  it('returns fallback for non-existent ID', async () => {
     // ARRANGE
-    const invalidId = "999999";
+    const invalidId = '999999';
 
     // ACT
     const character = await getCharacterDetailsService(invalidId);
 
     // ASSERT
     expect(character).toBeDefined();
-    expect(character).toHaveProperty("id");
-    expect(character).toHaveProperty("name");
+    expect(character).toHaveProperty('id');
+    expect(character).toHaveProperty('name');
   });
 
-  it("returns fallback for undefined ID", async () => {
+  it('returns fallback for undefined ID', async () => {
     // ARRANGE
     const undefinedId = undefined;
 
@@ -1053,10 +1086,10 @@ describe("Fallback behavior", () => {
     expect(character).toBeDefined();
   });
 
-  it("fallback returns first character from list", async () => {
+  it('fallback returns first character from list', async () => {
     // ARRANGE
-    const firstCharacter = await getCharacterDetailsService("1011176");
-    const fallback = await getCharacterDetailsService("999999");
+    const firstCharacter = await getCharacterDetailsService('1011176');
+    const fallback = await getCharacterDetailsService('999999');
 
     // ACT & ASSERT
     expect(fallback!.id).toBe(firstCharacter!.id);
@@ -1065,6 +1098,7 @@ describe("Fallback behavior", () => {
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharacterDetailsService.test.ts
 ```
@@ -1072,6 +1106,7 @@ npm test -- getCharacterDetailsService.test.ts
 **Expected:** ✅ **Test PASSES** (fallback already implemented)
 
 **Checklist:**
+
 - [ ] Tests added
 - [ ] Tests pass (GREEN state)
 
@@ -1088,6 +1123,7 @@ npm test -- --coverage --collectCoverageFrom="src/components/pages/CharacterDeta
 **Expected:** > 80% coverage
 
 **Checklist:**
+
 - [ ] Coverage > 80%
 - [ ] All paths covered
 
@@ -1099,6 +1135,7 @@ npm test -- --coverage --collectCoverageFrom="src/components/pages/CharacterDeta
 **Test file:** `src/components/organisms/CharacterComicList/services/__tests__/getCharacterComicsService.test.ts`
 
 **Features to implement:**
+
 1. Manual pagination (page-based, not cursor)
 2. Offset calculation
 3. Sorting (A-Z, Z-A)
@@ -1115,8 +1152,8 @@ Create test file:
 ```typescript
 // src/components/organisms/CharacterComicList/services/__tests__/getCharacterComicsService.test.ts
 
-import getCharacterComicsService from "../getCharacterComicsService";
-import { FetchingOrder } from "../../interfaces/characterComics";
+import getCharacterComicsService from '../getCharacterComicsService';
+import { FetchingOrder } from '../../interfaces/characterComics';
 
 /**
  * MIGRATION SAFETY NET
@@ -1133,31 +1170,32 @@ import { FetchingOrder } from "../../interfaces/characterComics";
  * - Edge cases: First page, last page, offset calculations
  * - Business logic: Sorting, manual pagination, data structure
  */
-describe("getCharacterComicsService with manual pagination", () => {
-  describe("Data structure", () => {
-    it("returns correct API response structure", async () => {
+describe('getCharacterComicsService with manual pagination', () => {
+  describe('Data structure', () => {
+    it('returns correct API response structure', async () => {
       // ARRANGE
       const params = {
         page: 0,
         maxComics: 10,
         order: FetchingOrder.TITLE_AZ,
-        characterId: "1011176",
+        characterId: '1011176',
       };
 
       // ACT
       const result = await getCharacterComicsService(params);
 
       // ASSERT
-      expect(result).toHaveProperty("apiData");
-      expect(result).toHaveProperty("offset");
-      expect(result!.apiData).toHaveProperty("results");
-      expect(result!.apiData).toHaveProperty("total");
+      expect(result).toHaveProperty('apiData');
+      expect(result).toHaveProperty('offset');
+      expect(result!.apiData).toHaveProperty('results');
+      expect(result!.apiData).toHaveProperty('total');
     });
   });
 });
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharacterComicsService.test.ts
 ```
@@ -1165,6 +1203,7 @@ npm test -- getCharacterComicsService.test.ts
 **Expected:** ❌ **Test FAILS** (service still calls Marvel API)
 
 **Checklist:**
+
 - [ ] Test file created
 - [ ] Test **fails** (RED state)
 
@@ -1186,8 +1225,8 @@ Update service:
  * due to API discontinuation. This is acceptable for a Design System
  * showcase as it demonstrates component functionality.
  */
-import { FetchingOrder } from "../interfaces/characterComics";
-import mockComics from "../mocks/mockCharacterComics.json";
+import { FetchingOrder } from '../interfaces/characterComics';
+import mockComics from '../mocks/mockCharacterComics.json';
 
 export interface IGetCharacterComicsServiceProps {
   page: number;
@@ -1230,6 +1269,7 @@ export default getCharacterComicsService;
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharacterComicsService.test.ts
 ```
@@ -1237,6 +1277,7 @@ npm test -- getCharacterComicsService.test.ts
 **Expected:** ✅ **Test PASSES** (basic structure works)
 
 **Checklist:**
+
 - [ ] Service modified
 - [ ] Test passes (GREEN state)
 
@@ -1249,14 +1290,14 @@ npm test -- getCharacterComicsService.test.ts
 Add tests:
 
 ```typescript
-describe("Pagination", () => {
-  it("returns first page of 10 comics", async () => {
+describe('Pagination', () => {
+  it('returns first page of 10 comics', async () => {
     // ARRANGE
     const params = {
       page: 0,
       maxComics: 10,
       order: FetchingOrder.TITLE_AZ,
-      characterId: "1011176",
+      characterId: '1011176',
     };
 
     // ACT
@@ -1267,13 +1308,13 @@ describe("Pagination", () => {
     expect(result!.offset).toBe(0);
   });
 
-  it("returns second page of 10 comics", async () => {
+  it('returns second page of 10 comics', async () => {
     // ARRANGE
     const params = {
       page: 1,
       maxComics: 10,
       order: FetchingOrder.TITLE_AZ,
-      characterId: "1011176",
+      characterId: '1011176',
     };
 
     // ACT
@@ -1284,7 +1325,7 @@ describe("Pagination", () => {
     expect(result!.offset).toBe(10); // maxComics * page
   });
 
-  it("calculates offset correctly", async () => {
+  it('calculates offset correctly', async () => {
     // ARRANGE
     const testCases = [
       { page: 0, maxComics: 10, expectedOffset: 0 },
@@ -1298,7 +1339,7 @@ describe("Pagination", () => {
         page: testCase.page,
         maxComics: testCase.maxComics,
         order: FetchingOrder.TITLE_AZ,
-        characterId: "1011176",
+        characterId: '1011176',
       });
 
       // ASSERT
@@ -1309,6 +1350,7 @@ describe("Pagination", () => {
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharacterComicsService.test.ts
 ```
@@ -1316,6 +1358,7 @@ npm test -- getCharacterComicsService.test.ts
 **Expected:** ✅ **Test PASSES** (pagination already works from basic implementation)
 
 **Checklist:**
+
 - [ ] Tests added
 - [ ] Tests pass (GREEN state)
 
@@ -1328,14 +1371,14 @@ npm test -- getCharacterComicsService.test.ts
 Add tests:
 
 ```typescript
-describe("Sorting", () => {
-  it("sorts by title A-Z", async () => {
+describe('Sorting', () => {
+  it('sorts by title A-Z', async () => {
     // ARRANGE
     const params = {
       page: 0,
       maxComics: 30, // All comics
       order: FetchingOrder.TITLE_AZ,
-      characterId: "1011176",
+      characterId: '1011176',
     };
 
     // ACT
@@ -1347,13 +1390,13 @@ describe("Sorting", () => {
     expect(titles).toEqual(sortedTitles);
   });
 
-  it("sorts by title Z-A", async () => {
+  it('sorts by title Z-A', async () => {
     // ARRANGE
     const params = {
       page: 0,
       maxComics: 30,
       order: FetchingOrder.TITLE_ZA,
-      characterId: "1011176",
+      characterId: '1011176',
     };
 
     // ACT
@@ -1368,6 +1411,7 @@ describe("Sorting", () => {
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharacterComicsService.test.ts
 ```
@@ -1375,6 +1419,7 @@ npm test -- getCharacterComicsService.test.ts
 **Expected:** ❌ **Test FAILS** (no sorting implemented)
 
 **Checklist:**
+
 - [ ] Tests added
 - [ ] Tests **fail** (RED state)
 
@@ -1425,6 +1470,7 @@ const getCharacterComicsService = async ({
 ```
 
 **Run test:**
+
 ```bash
 npm test -- getCharacterComicsService.test.ts
 ```
@@ -1432,6 +1478,7 @@ npm test -- getCharacterComicsService.test.ts
 **Expected:** ✅ **Test PASSES** (sorting works)
 
 **Checklist:**
+
 - [ ] Service modified
 - [ ] Tests pass (GREEN state)
 
@@ -1448,6 +1495,7 @@ npm test -- --coverage --collectCoverageFrom="src/components/organisms/Character
 **Expected:** > 80% coverage
 
 **Checklist:**
+
 - [ ] Coverage > 80%
 - [ ] All paths covered
 
@@ -1462,6 +1510,7 @@ npm test
 ```
 
 **Checklist:**
+
 - [ ] All tests pass (green)
 - [ ] No TypeScript errors
 - [ ] No build errors
@@ -1470,6 +1519,7 @@ npm test
 - [ ] No critical warnings
 
 **⚠️ If tests fail:**
+
 - Review the specific failing test
 - Check if mock data structure matches expected interfaces
 - Adjust mock data if needed (regenerate or manually fix)
@@ -1485,32 +1535,35 @@ npm start
 ```
 
 **Visual checklist - Characters (infinite scroll with 100 items):**
-- [ ] Characters page loads
-- [ ] Cards show with CDN images
-- [ ] Shows 100 characters (infinite scroll)
-- [ ] Search works
-- [ ] Sort filters work (A-Z, Z-A)
-- [ ] **Infinite scroll loads more characters (clearly noticeable with 100)**
-- [ ] DS loaders display correctly
+
+- [v] Characters page loads
+- [v] Cards show with CDN images
+- [v] Shows 100 characters (infinite scroll)
+- [x] Search works
+- [v] Sort filters work (A-Z, Z-A)
+- [v] **Infinite scroll loads more characters (clearly noticeable with 100)**
+- [v] DS loaders display correctly
 
 **Visual checklist - Character detail (dynamic navigation among 100):**
-- [ ] Click character → detail page loads
-- [ ] **CRITICAL:** Each character shows THEIR unique data (name, description, image)
-- [ ] **CRITICAL:** Navigating between different characters shows different data
-- [ ] Navigate between different characters
-- [ ] URL includes correct ID (`/character/:id/:name`)
-- [ ] No console errors
-- [ ] **Test with at least 5 different characters to confirm**
+
+- [v] Click character → detail page loads
+- [v] **CRITICAL:** Each character shows THEIR unique data (name, description, image)
+- [v] **CRITICAL:** Navigating between different characters shows different data
+- [v] Navigate between different characters
+- [v] URL includes correct ID (`/character/:id/:name`)
+- [v] No console errors
+- [v] **Test with at least 5 different characters to confirm**
 
 **Visual checklist - Comics (manual pagination):**
-- [ ] Detail page shows comics
+
+- [v] Detail page shows comics
 - [ ] **Discrete disclaimer is shown** about generic comics
-- [ ] "Next" button works and changes page
-- [ ] "Previous" button works and goes back
-- [ ] Order selector works (A-Z, Z-A)
-- [ ] Counter "Displaying 1 to 10 from 30" is correct
-- [ ] Comic images load from CDN
-- [ ] No console errors
+- [v] "Next" button works and changes page
+- [v] "Previous" button works and goes back
+- [v] Order selector works (A-Z, Z-A)
+- [v] Counter "Displaying 1 to 10 from 30" is correct
+- [v] Comic images load from CDN
+- [v] No console errors
 
 ---
 
@@ -1523,13 +1576,13 @@ npm start
 Add before "Displaying X to Y from Z":
 
 ```tsx
-<p className="text-sm text-gray-500 italic mb-3 mt-2">
-  Note: Comics shown are for demonstration purposes due to Marvel API
-  discontinuation
+<p className='text-sm text-gray-500 italic mb-3 mt-2'>
+  Note: Comics shown are for demonstration purposes due to Marvel API discontinuation
 </p>
 ```
 
 **Checklist:**
+
 - [ ] Disclaimer added
 - [ ] Visually verified
 
@@ -1585,6 +1638,7 @@ The mock data strategy maintains:
 ```
 
 **Checklist:**
+
 - [ ] README updated with complete mock data documentation
 - [ ] Explains mock data strategy clearly
 - [ ] Documents technical implementation details
@@ -1595,6 +1649,7 @@ The mock data strategy maintains:
 ## 🎯 SUCCESS METRICS
 
 ### ✅ Minimum requirements
+
 - [ ] Project compiles without errors
 - [ ] All tests pass (green)
 - [ ] Application starts locally
@@ -1604,6 +1659,7 @@ The mock data strategy maintains:
 - [ ] Coverage > 80% on all services
 
 ### ✅ Application works
+
 - [ ] No TypeScript errors
 - [ ] No build errors
 - [ ] No console errors in browser
@@ -1612,6 +1668,7 @@ The mock data strategy maintains:
 - [ ] Comics pagination functional
 
 ### 🌟 Strategic objectives
+
 - [ ] **Design System shines:** All components visible and functional
 - [ ] **Infinite scroll visible:** With 100 characters functionality is clearly noticeable
 - [ ] **DS states visible:** Loading, error, empty states work
@@ -1620,6 +1677,7 @@ The mock data strategy maintains:
 - [ ] **Clean code:** Comments explain the change
 
 ### ✅ TDD process followed
+
 - [ ] Each feature had RED-GREEN-REFACTOR cycle
 - [ ] Tests written BEFORE implementation
 - [ ] No implementation without tests
@@ -1633,11 +1691,13 @@ The mock data strategy maintains:
 **Follow TDD commit pattern:**
 
 For each cycle:
+
 1. `RED: Add test for [feature]`
 2. `GREEN: Implement [feature]`
 3. `REFACTOR: Clean up [feature]` (if applicable)
 
 Example:
+
 ```bash
 git add .
 git commit -m "RED: Add test for character search filtering"
@@ -1650,6 +1710,7 @@ git commit -m "REFACTOR: Extract filtering logic to separate function"
 ```
 
 **Final commits:**
+
 ```bash
 git add .
 git commit -m "Complete TDD migration of getCharactersService (100% coverage)"
@@ -1671,17 +1732,18 @@ git commit -m "Update README with mock data documentation"
 
 ## 🚀 ESTIMATED TIME BREAKDOWN
 
-| Phase | Task | Time |
-|-------|------|------|
-| **Phase 0** | Setup & preparation | 15 min |
-| **Phase 1** | getCharactersService (14 cycles) | 90 min |
-| **Phase 2** | getCharacterDetailsService (4 cycles) | 45 min |
-| **Phase 3** | getCharacterComicsService (6 cycles) | 60 min |
-| **Phase 4** | Manual testing | 30 min |
-| **Phase 5** | Documentation | 10 min |
-| **TOTAL** | | **3h 50min** |
+| Phase       | Task                                  | Time         |
+| ----------- | ------------------------------------- | ------------ |
+| **Phase 0** | Setup & preparation                   | 15 min       |
+| **Phase 1** | getCharactersService (14 cycles)      | 90 min       |
+| **Phase 2** | getCharacterDetailsService (4 cycles) | 45 min       |
+| **Phase 3** | getCharacterComicsService (6 cycles)  | 60 min       |
+| **Phase 4** | Manual testing                        | 30 min       |
+| **Phase 5** | Documentation                         | 10 min       |
+| **TOTAL**   |                                       | **3h 50min** |
 
 **Why TDD takes longer than v2.3 (2h 35min):**
+
 - ✅ More robust tests (written first)
 - ✅ Better code quality (refactor step)
 - ✅ Living documentation (tests explain behavior)
@@ -1689,6 +1751,7 @@ git commit -m "Update README with mock data documentation"
 - ✅ Future confidence (easy to refactor later)
 
 **Investment pays off:**
+
 - Future changes are safer
 - New developers understand code faster
 - Refactoring is fearless
