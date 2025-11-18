@@ -1577,7 +1577,7 @@ Add before "Displaying X to Y from Z":
 
 ```tsx
 <p className='text-sm text-gray-500 italic mb-3 mt-2'>
-  Note: Comics shown are for demonstration purposes due to Marvel API discontinuation
+  Note: Due to Marvel API discontinuation, comics are generic and images are reused from characters for demonstration purposes
 </p>
 ```
 
@@ -1605,6 +1605,9 @@ the application now uses statically mocked data.
 
 - Real Marvel characters with unique names, descriptions, and images
 - Images from Marvel's CDN (`i.annihil.us`) which remains accessible
+- **Tradeoff:** With 100 characters but limited unique CDN images, some images repeat in the list
+  - 88 characters have working images (cycling through available valid URLs)
+  - 12 characters use `image_not_available` placeholder
 - Full navigation support - each character has its own detail page
 - Search, filtering, and ordering fully functional
 - **Infinite scroll clearly visible with 100 characters**
@@ -1612,6 +1615,10 @@ the application now uses statically mocked data.
 **Comics (30 generic):**
 
 - ⚠️ **Limitation:** All characters share the same 30 generic Marvel comics
+- ⚠️ **Image Solution:** Comic CDN URLs were invalid (404 errors), so we reused character image URLs
+  - 20 comics use working character images (cycling through 10 verified URLs)
+  - 10 comics intentionally use `image_not_available` placeholder
+  - **Tradeoff:** Comic images repeat across the comics list
 - This is an acceptable compromise for a Design System showcase
 - Comics pagination, ordering, and all UI components work perfectly
 - A subtle disclaimer is shown in the UI to maintain transparency
@@ -1635,6 +1642,15 @@ The mock data strategy maintains:
 - ✅ Proper TypeScript interfaces and data structures
 - ✅ Honest communication about limitations
 - ✅ 100 unique character pages for thorough navigation testing
+
+**Image CDN Challenges:**
+
+During migration, we discovered Marvel's CDN (`i.annihil.us`) has mixed availability:
+- ✅ Many character images remain accessible
+- ❌ Most comic-specific image URLs return 404 errors
+- **Solution:** Comics reuse working character image URLs
+- **Result:** Images repeat in both character and comic lists, but all UI components function correctly
+- This tradeoff prioritizes functionality and Design System showcase over unique imagery
 ```
 
 **Checklist:**
