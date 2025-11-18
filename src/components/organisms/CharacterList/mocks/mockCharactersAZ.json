@@ -1,531 +1,4501 @@
 [
   {
-    "id": 1011176,
-    "name": "Animal",
-    "description":
-      "Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.",
-    "modified": "1969-12-31T19:00:00-0500",
+    "id": 1000000,
+    "name": "Spider-Man",
+    "description": "Bitten by a radioactive spider, Peter Parker gained superhuman strength, agility, and the ability to cling to walls. As Spider-Man, he protects New York City from villains while balancing life as a student and photographer.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000000",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000000/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000000/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000000/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000000/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/spider-man"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Spider-Man"
+      }
+    ]
+  },
+  {
+    "id": 1000001,
+    "name": "Iron Man",
+    "description": "Genius billionaire inventor Tony Stark built a powered suit of armor to escape captivity. Now he uses his technology to protect the world as Iron Man, a founding member of the Avengers.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000001",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000001/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000001/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000001/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000001/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/iron-man"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Iron_Man"
+      }
+    ]
+  },
+  {
+    "id": 1000002,
+    "name": "Captain America",
+    "description": "Steve Rogers was transformed into a super-soldier during World War II. Frozen in ice for decades, he now leads the Avengers as the living legend Captain America.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000002",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000002/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000002/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000002/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000002/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/captain-america"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Captain_America"
+      }
+    ]
+  },
+  {
+    "id": 1000003,
+    "name": "Thor",
+    "description": "As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. He's a founding member of the Avengers and protector of both Asgard and Earth.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000003",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000003/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000003/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000003/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000003/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/thor"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Thor"
+      }
+    ]
+  },
+  {
+    "id": 1000004,
+    "name": "Hulk",
+    "description": "Scientist Bruce Banner transforms into the incredible Hulk when angered. The stronger Hulk gets, the angrier he gets, making him one of the most powerful beings in the Marvel Universe.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000004",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000004/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000004/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000004/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000004/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/hulk"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Hulk"
+      }
+    ]
+  },
+  {
+    "id": 1000005,
+    "name": "Black Widow",
+    "description": "Natasha Romanoff is a world-class athlete, gymnast, and master of martial arts and espionage. As Black Widow, she's one of S.H.I.E.L.D.'s top agents and a core Avenger.",
+    "modified": "2024-01-01T00:00:00-0500",
     "thumbnail": {
       "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
       "extension": "jpg"
     },
-    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000005",
     "comics": {
-      "available": 12,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
-          "name": "Avengers: The Initiative (2007) #14"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
-          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
-          "name": "Avengers: The Initiative (2007) #15"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
-          "name": "Avengers: The Initiative (2007) #16"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
-          "name": "Avengers: The Initiative (2007) #17"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
-          "name": "Avengers: The Initiative (2007) #18"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
-          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
-          "name": "Avengers: The Initiative (2007) #19"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
-          "name": "Deadpool (1997) #44"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
-          "name": "Marvel Premiere (1972) #35"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
-          "name": "Marvel Premiere (1972) #36"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
-          "name": "Marvel Premiere (1972) #37"
-        }
-      ],
-      "returned": 12
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000005/comics",
+      "items": [],
+      "returned": 0
     },
     "series": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
-          "name": "Avengers: The Initiative (2007 - 2010)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
-          "name": "Deadpool (1997 - 2002)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
-          "name": "Marvel Premiere (1972 - 1981)"
-        }
-      ],
-      "returned": 3
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000005/series",
+      "items": [],
+      "returned": 0
     },
     "stories": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1016823/stories",
-      "items": [
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/31883",
-              "name": "Free Preview of THE INCREDIBLE HULK #50",
-              "type": "interiorStory"
-          },
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92098",
-              "name": "Hulk (2008) #50",
-              "type": "cover"
-          },
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92099",
-              "name": "Interior #92099",
-              "type": "interiorStory"
-          }
-      ],
-      "returned": 3
-  },
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000005/stories",
+      "items": [],
+      "returned": 0
+    },
     "events": {
-      "available": 1,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/events",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
-          "name": "Secret Invasion"
-        }
-      ],
-      "returned": 1
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000005/events",
+      "items": [],
+      "returned": 0
     },
     "urls": [
       {
         "type": "detail",
-        "url": "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "url": "http://marvel.com/characters/black-widow"
       },
       {
         "type": "wiki",
-        "url": "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
-      },
-      {
-        "type": "comiclink",
-        "url": "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "url": "http://marvel.com/universe/Black_Widow"
       }
     ]
   },
   {
-    "id": 1011177,
-    "name": "Braineater",
-    "description":
-      "Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.",
-    "modified": "1969-12-31T19:00:00-0500",
+    "id": 1000006,
+    "name": "Hawkeye",
+    "description": "Clint Barton is the world's greatest marksman. Armed with his trusty bow and an array of trick arrows, Hawkeye stands alongside Earth's Mightiest Heroes as an Avenger.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000006",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000006/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000006/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000006/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000006/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/hawkeye"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Hawkeye"
+      }
+    ]
+  },
+  {
+    "id": 1000007,
+    "name": "Black Panther",
+    "description": "T'Challa is the king of Wakanda, a technologically advanced African nation. Enhanced by the heart-shaped herb, he protects his people and the world as the Black Panther.",
+    "modified": "2024-01-01T00:00:00-0500",
     "thumbnail": {
       "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
       "extension": "jpg"
     },
-    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000007",
     "comics": {
-      "available": 12,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
-          "name": "Avengers: The Initiative (2007) #14"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
-          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
-          "name": "Avengers: The Initiative (2007) #15"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
-          "name": "Avengers: The Initiative (2007) #16"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
-          "name": "Avengers: The Initiative (2007) #17"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
-          "name": "Avengers: The Initiative (2007) #18"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
-          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
-          "name": "Avengers: The Initiative (2007) #19"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
-          "name": "Deadpool (1997) #44"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
-          "name": "Marvel Premiere (1972) #35"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
-          "name": "Marvel Premiere (1972) #36"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
-          "name": "Marvel Premiere (1972) #37"
-        }
-      ],
-      "returned": 12
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000007/comics",
+      "items": [],
+      "returned": 0
     },
     "series": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
-          "name": "Avengers: The Initiative (2007 - 2010)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
-          "name": "Deadpool (1997 - 2002)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
-          "name": "Marvel Premiere (1972 - 1981)"
-        }
-      ],
-      "returned": 3
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000007/series",
+      "items": [],
+      "returned": 0
     },
     "stories": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1016823/stories",
-      "items": [
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/31883",
-              "name": "Free Preview of THE INCREDIBLE HULK #50",
-              "type": "interiorStory"
-          },
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92098",
-              "name": "Hulk (2008) #50",
-              "type": "cover"
-          },
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92099",
-              "name": "Interior #92099",
-              "type": "interiorStory"
-          }
-      ],
-      "returned": 3
-  },
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000007/stories",
+      "items": [],
+      "returned": 0
+    },
     "events": {
-      "available": 1,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/events",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
-          "name": "Secret Invasion"
-        }
-      ],
-      "returned": 1
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000007/events",
+      "items": [],
+      "returned": 0
     },
     "urls": [
       {
         "type": "detail",
-        "url": "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "url": "http://marvel.com/characters/black-panther"
       },
       {
         "type": "wiki",
-        "url": "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
-      },
-      {
-        "type": "comiclink",
-        "url": "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "url": "http://marvel.com/universe/Black_Panther"
       }
     ]
   },
   {
-    "id": 1011178,
-    "name": "Crusher",
-    "description": "",
-    "modified": "1969-12-31T19:00:00-0500",
+    "id": 1000008,
+    "name": "Doctor Strange",
+    "description": "Once a brilliant but arrogant surgeon, Stephen Strange became the Sorcerer Supreme after a car accident ended his medical career. He now protects Earth from mystical threats.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000008",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000008/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000008/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000008/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000008/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/doctor-strange"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Doctor_Strange"
+      }
+    ]
+  },
+  {
+    "id": 1000009,
+    "name": "Ant-Man",
+    "description": "Scott Lang can shrink to the size of an ant while gaining superhuman strength. As Ant-Man, he can also communicate with insects and grow to giant size.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000009",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000009/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000009/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000009/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000009/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/ant-man"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Ant-Man"
+      }
+    ]
+  },
+  {
+    "id": 1000010,
+    "name": "Wasp",
+    "description": "Hope van Dyne is the daughter of the original Ant-Man and Wasp. She inherited the Wasp suit and fights alongside Ant-Man, with abilities to shrink, fly, and fire bio-electric blasts.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000010",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000010/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000010/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000010/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000010/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/wasp"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Wasp"
+      }
+    ]
+  },
+  {
+    "id": 1000011,
+    "name": "Scarlet Witch",
+    "description": "Wanda Maximoff possesses chaos magic and reality-warping abilities. As Scarlet Witch, she's one of the most powerful beings in the Marvel Universe and a key Avenger.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000011",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000011/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000011/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000011/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000011/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/scarlet-witch"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Scarlet_Witch"
+      }
+    ]
+  },
+  {
+    "id": 1000012,
+    "name": "Vision",
+    "description": "An android created from a unique synthesis of organic and inorganic materials, Vision possesses superhuman strength, flight, and the ability to alter his density.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000012",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000012/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000012/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000012/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000012/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/vision"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Vision"
+      }
+    ]
+  },
+  {
+    "id": 1000013,
+    "name": "Falcon",
+    "description": "Sam Wilson is a skilled combat veteran who flies using a specially designed wing-pack. As Falcon, he's Captain America's trusted partner and fellow Avenger.",
+    "modified": "2024-01-01T00:00:00-0500",
     "thumbnail": {
       "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
       "extension": "jpg"
     },
-    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000013",
     "comics": {
-      "available": 12,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
-          "name": "Avengers: The Initiative (2007) #14"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
-          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
-          "name": "Avengers: The Initiative (2007) #15"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
-          "name": "Avengers: The Initiative (2007) #16"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
-          "name": "Avengers: The Initiative (2007) #17"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
-          "name": "Avengers: The Initiative (2007) #18"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
-          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
-          "name": "Avengers: The Initiative (2007) #19"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
-          "name": "Deadpool (1997) #44"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
-          "name": "Marvel Premiere (1972) #35"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
-          "name": "Marvel Premiere (1972) #36"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
-          "name": "Marvel Premiere (1972) #37"
-        }
-      ],
-      "returned": 12
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000013/comics",
+      "items": [],
+      "returned": 0
     },
     "series": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
-          "name": "Avengers: The Initiative (2007 - 2010)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
-          "name": "Deadpool (1997 - 2002)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
-          "name": "Marvel Premiere (1972 - 1981)"
-        }
-      ],
-      "returned": 3
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000013/series",
+      "items": [],
+      "returned": 0
     },
     "stories": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1016823/stories",
-      "items": [
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/31883",
-              "name": "Free Preview of THE INCREDIBLE HULK #50",
-              "type": "interiorStory"
-          },
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92098",
-              "name": "Hulk (2008) #50",
-              "type": "cover"
-          },
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92099",
-              "name": "Interior #92099",
-              "type": "interiorStory"
-          }
-      ],
-      "returned": 3
-  },
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000013/stories",
+      "items": [],
+      "returned": 0
+    },
     "events": {
-      "available": 1,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/events",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
-          "name": "Secret Invasion"
-        }
-      ],
-      "returned": 1
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000013/events",
+      "items": [],
+      "returned": 0
     },
     "urls": [
       {
         "type": "detail",
-        "url": "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "url": "http://marvel.com/characters/falcon"
       },
       {
         "type": "wiki",
-        "url": "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
-      },
-      {
-        "type": "comiclink",
-        "url": "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "url": "http://marvel.com/universe/Falcon"
       }
     ]
   },
   {
-    "id": 1011179,
-    "name": "Destructor",
-    "description": "",
-    "modified": "1969-12-31T19:00:00-0500",
+    "id": 1000014,
+    "name": "Winter Soldier",
+    "description": "Once believed dead, Bucky Barnes was brainwashed and transformed into the Winter Soldier, a deadly assassin. Now freed from control, he fights alongside the Avengers.",
+    "modified": "2024-01-01T00:00:00-0500",
     "thumbnail": {
-      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
       "extension": "jpg"
     },
-    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011334",
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000014",
     "comics": {
-      "available": 12,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/comics",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
-          "name": "Avengers: The Initiative (2007) #14"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/24571",
-          "name": "Avengers: The Initiative (2007) #14 (SPOTLIGHT VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21546",
-          "name": "Avengers: The Initiative (2007) #15"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21741",
-          "name": "Avengers: The Initiative (2007) #16"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/21975",
-          "name": "Avengers: The Initiative (2007) #17"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22299",
-          "name": "Avengers: The Initiative (2007) #18"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22300",
-          "name": "Avengers: The Initiative (2007) #18 (ZOMBIE VARIANT)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/22506",
-          "name": "Avengers: The Initiative (2007) #19"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/8500",
-          "name": "Deadpool (1997) #44"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10223",
-          "name": "Marvel Premiere (1972) #35"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10224",
-          "name": "Marvel Premiere (1972) #36"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10225",
-          "name": "Marvel Premiere (1972) #37"
-        }
-      ],
-      "returned": 12
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000014/comics",
+      "items": [],
+      "returned": 0
     },
     "series": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
-          "name": "Avengers: The Initiative (2007 - 2010)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2005",
-          "name": "Deadpool (1997 - 2002)"
-        },
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/series/2045",
-          "name": "Marvel Premiere (1972 - 1981)"
-        }
-      ],
-      "returned": 3
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000014/series",
+      "items": [],
+      "returned": 0
     },
     "stories": {
-      "available": 3,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1016823/stories",
-      "items": [
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/31883",
-              "name": "Free Preview of THE INCREDIBLE HULK #50",
-              "type": "interiorStory"
-          },
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92098",
-              "name": "Hulk (2008) #50",
-              "type": "cover"
-          },
-          {
-              "resourceURI": "http://gateway.marvel.com/v1/public/stories/92099",
-              "name": "Interior #92099",
-              "type": "interiorStory"
-          }
-      ],
-      "returned": 3
-  },
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000014/stories",
+      "items": [],
+      "returned": 0
+    },
     "events": {
-      "available": 1,
-      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/events",
-      "items": [
-        {
-          "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
-          "name": "Secret Invasion"
-        }
-      ],
-      "returned": 1
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000014/events",
+      "items": [],
+      "returned": 0
     },
     "urls": [
       {
         "type": "detail",
-        "url": "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "url": "http://marvel.com/characters/winter-soldier"
       },
       {
         "type": "wiki",
-        "url": "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "url": "http://marvel.com/universe/Winter_Soldier"
+      }
+    ]
+  },
+  {
+    "id": 1000015,
+    "name": "War Machine",
+    "description": "Colonel James Rhodes pilots the War Machine armor, a weaponized version of Iron Man's suit. As Tony Stark's best friend, he brings military discipline to the Avengers.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000015",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000015/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000015/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000015/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000015/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/war-machine"
       },
       {
-        "type": "comiclink",
-        "url": "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=d6f5c6bef1ef684786df6962910eb6ce"
+        "type": "wiki",
+        "url": "http://marvel.com/universe/War_Machine"
+      }
+    ]
+  },
+  {
+    "id": 1000016,
+    "name": "Captain Marvel",
+    "description": "Carol Danvers gained cosmic powers after exposure to alien technology. As Captain Marvel, she's one of the most powerful heroes in the universe.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000016",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000016/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000016/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000016/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000016/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/captain-marvel"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Captain_Marvel"
+      }
+    ]
+  },
+  {
+    "id": 1000017,
+    "name": "Spider-Woman",
+    "description": "Jessica Drew gained spider-powers through genetic experimentation. As Spider-Woman, she possesses venom blasts, wall-crawling, and enhanced reflexes.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000017",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000017/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000017/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000017/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000017/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/spider-woman"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Spider-Woman"
+      }
+    ]
+  },
+  {
+    "id": 1000018,
+    "name": "She-Hulk",
+    "description": "Lawyer Jennifer Walters gained Hulk-like powers through a blood transfusion from her cousin Bruce Banner. As She-Hulk, she retains her intelligence while transformed.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000018",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000018/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000018/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000018/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000018/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/she-hulk"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/She-Hulk"
+      }
+    ]
+  },
+  {
+    "id": 1000019,
+    "name": "Ms. Marvel",
+    "description": "Kamala Khan gained shapeshifting abilities and takes the name Ms. Marvel to honor her hero Captain Marvel while protecting Jersey City.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000019",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000019/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000019/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000019/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000019/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/ms.-marvel"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Ms._Marvel"
+      }
+    ]
+  },
+  {
+    "id": 1000020,
+    "name": "Moon Knight",
+    "description": "Marc Spector serves as the fist of the Egyptian moon god Khonshu. Moon Knight's multiple personalities and brutal methods make him one of Marvel's most complex heroes.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000020",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000020/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000020/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000020/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000020/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/moon-knight"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Moon_Knight"
+      }
+    ]
+  },
+  {
+    "id": 1000021,
+    "name": "Shang-Chi",
+    "description": "The Master of Kung Fu, Shang-Chi combines martial arts mastery with superhuman chi manipulation to protect the world from mystical and physical threats.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000021",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000021/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000021/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000021/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000021/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/shang-chi"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Shang-Chi"
+      }
+    ]
+  },
+  {
+    "id": 1000022,
+    "name": "Photon",
+    "description": "Monica Rambeau can transform into any form of electromagnetic energy. As Photon, she was once leader of the Avengers and remains one of Earth's most powerful heroes.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000022",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000022/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000022/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000022/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000022/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/photon"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Photon"
+      }
+    ]
+  },
+  {
+    "id": 1000023,
+    "name": "Quicksilver",
+    "description": "Pietro Maximoff can move at supersonic speeds. Initially a villain alongside his sister Scarlet Witch, he became a reformed Avenger.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000023",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000023/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000023/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000023/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000023/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/quicksilver"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Quicksilver"
+      }
+    ]
+  },
+  {
+    "id": 1000024,
+    "name": "Spectrum",
+    "description": "Adam Brashear is a scientist who gained powers from anti-matter energy. As Spectrum, he possesses vast strength, flight, and energy manipulation abilities.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000024",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000024/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000024/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000024/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000024/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/spectrum"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Spectrum"
+      }
+    ]
+  },
+  {
+    "id": 1000025,
+    "name": "White Tiger",
+    "description": "Ava Ayala inherited mystical amulets that give her enhanced strength, speed, and martial arts prowess as the White Tiger.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000025",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000025/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000025/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000025/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000025/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/white-tiger"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/White_Tiger"
+      }
+    ]
+  },
+  {
+    "id": 1000026,
+    "name": "Echo",
+    "description": "Maya Lopez is a deaf martial artist with photographic reflexes, able to perfectly mimic any physical movement she sees.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000026",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000026/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000026/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000026/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000026/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/echo"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Echo"
+      }
+    ]
+  },
+  {
+    "id": 1000027,
+    "name": "Namor",
+    "description": "The Sub-Mariner is the prince of Atlantis with superhuman strength and the ability to breathe underwater. His allegiance shifts between hero and antihero.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000027",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000027/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000027/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000027/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000027/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/namor"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Namor"
+      }
+    ]
+  },
+  {
+    "id": 1000028,
+    "name": "Hercules",
+    "description": "The legendary Greek demigod Hercules brings his superhuman strength and millennia of combat experience to Earth's heroes.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000028",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000028/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000028/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000028/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000028/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/hercules"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Hercules"
+      }
+    ]
+  },
+  {
+    "id": 1000029,
+    "name": "Sentry",
+    "description": "Robert Reynolds possesses the power of a million exploding suns. As Sentry, he's one of the most powerful yet troubled heroes in the Marvel Universe.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000029",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000029/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000029/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000029/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000029/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/sentry"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Sentry"
+      }
+    ]
+  },
+  {
+    "id": 1000030,
+    "name": "Star-Lord",
+    "description": "Peter Quill is the half-human, half-alien leader of the Guardians of the Galaxy. Armed with his element guns and quick wit, he protects the cosmos from galactic threats.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000030",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000030/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000030/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000030/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000030/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/star-lord"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Star-Lord"
+      }
+    ]
+  },
+  {
+    "id": 1000031,
+    "name": "Gamora",
+    "description": "The adopted daughter of Thanos and the deadliest woman in the galaxy, Gamora seeks redemption by fighting alongside the Guardians of the Galaxy.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000031",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000031/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000031/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000031/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000031/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/gamora"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Gamora"
+      }
+    ]
+  },
+  {
+    "id": 1000032,
+    "name": "Drax",
+    "description": "Drax the Destroyer is driven by revenge against those who killed his family. His superhuman strength and durability make him a formidable Guardian of the Galaxy.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000032",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000032/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000032/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000032/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000032/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/drax"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Drax"
+      }
+    ]
+  },
+  {
+    "id": 1000033,
+    "name": "Rocket Raccoon",
+    "description": "A product of illegal genetic experiments, Rocket is a tactical genius and master of weapons. Despite his small size, he's one of the most dangerous Guardians of the Galaxy.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000033",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000033/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000033/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000033/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000033/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/rocket-raccoon"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Rocket_Raccoon"
+      }
+    ]
+  },
+  {
+    "id": 1000034,
+    "name": "Groot",
+    "description": "Groot is a sentient tree-like creature and member of the Guardians of the Galaxy. Though he can only say 'I am Groot,' his actions speak louder than words.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000034",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000034/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000034/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000034/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000034/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/groot"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Groot"
+      }
+    ]
+  },
+  {
+    "id": 1000035,
+    "name": "Mantis",
+    "description": "An empath who can sense and manipulate emotions, Mantis uses her abilities to aid the Guardians of the Galaxy in their cosmic adventures.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000035",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000035/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000035/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000035/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000035/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/mantis"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Mantis"
+      }
+    ]
+  },
+  {
+    "id": 1000036,
+    "name": "Nebula",
+    "description": "Adopted daughter of Thanos and sister to Gamora, Nebula seeks to prove herself through acts of villainy and occasional heroism.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000036",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000036/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000036/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000036/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000036/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/nebula"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Nebula"
+      }
+    ]
+  },
+  {
+    "id": 1000037,
+    "name": "Yondu",
+    "description": "A Ravager captain who raised Star-Lord, Yondu controls a deadly arrow with whistles and serves as a father figure to the Guardians.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000037",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000037/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000037/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000037/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000037/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/yondu"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Yondu"
+      }
+    ]
+  },
+  {
+    "id": 1000038,
+    "name": "Adam Warlock",
+    "description": "A genetically perfect artificial being, Adam Warlock possesses cosmic awareness and battles threats to the universe with the Guardians.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000038",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000038/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000038/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000038/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000038/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/adam-warlock"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Adam_Warlock"
+      }
+    ]
+  },
+  {
+    "id": 1000039,
+    "name": "Moondragon",
+    "description": "Heather Douglas is a powerful telepath and martial artist who often allies with the Guardians of the Galaxy in cosmic conflicts.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000039",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000039/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000039/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000039/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000039/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/moondragon"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Moondragon"
+      }
+    ]
+  },
+  {
+    "id": 1000040,
+    "name": "Wolverine",
+    "description": "Born with super-human senses and the power to heal from almost any wound, Wolverine was given an unbreakable skeleton and claws. He's the best there is at what he does.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000040",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000040/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000040/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000040/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000040/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/wolverine"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Wolverine"
+      }
+    ]
+  },
+  {
+    "id": 1000041,
+    "name": "Cyclops",
+    "description": "Scott Summers fires powerful optic blasts from his eyes. As a founding X-Men member and natural leader, Cyclops has dedicated his life to Professor Xavier's dream of peace.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000041",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000041/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000041/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000041/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000041/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/cyclops"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Cyclops"
+      }
+    ]
+  },
+  {
+    "id": 1000042,
+    "name": "Storm",
+    "description": "Ororo Munroe can control weather patterns and atmospheric phenomena. As Storm, she's a leader of the X-Men and one of the most powerful mutants alive.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000042",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000042/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000042/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000042/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000042/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/storm"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Storm"
+      }
+    ]
+  },
+  {
+    "id": 1000043,
+    "name": "Jean Grey",
+    "description": "Jean Grey is a powerful telepath and telekinetic. As host to the Phoenix Force, she becomes one of the most powerful and dangerous beings in the universe.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000043",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000043/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000043/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000043/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000043/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/jean-grey"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Jean_Grey"
+      }
+    ]
+  },
+  {
+    "id": 1000044,
+    "name": "Professor X",
+    "description": "Charles Xavier is the world's most powerful telepath and founder of the X-Men. He dedicates his life to promoting peaceful coexistence between humans and mutants.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000044",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000044/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000044/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000044/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000044/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/professor-x"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Professor_X"
+      }
+    ]
+  },
+  {
+    "id": 1000045,
+    "name": "Beast",
+    "description": "Hank McCoy is a brilliant scientist and founding X-Men member. His mutation grants him superhuman strength, agility, and a beastly appearance.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000045",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000045/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000045/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000045/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000045/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/beast"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Beast"
+      }
+    ]
+  },
+  {
+    "id": 1000046,
+    "name": "Nightcrawler",
+    "description": "Kurt Wagner can teleport in a puff of smoke and possesses superhuman agility. Despite his demonic appearance, Nightcrawler is one of the kindest X-Men.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000046",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000046/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000046/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000046/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000046/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/nightcrawler"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Nightcrawler"
+      }
+    ]
+  },
+  {
+    "id": 1000047,
+    "name": "Colossus",
+    "description": "Piotr Rasputin can transform his body into organic steel, granting him superhuman strength and durability. As Colossus, he's one of the X-Men's strongest members.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000047",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000047/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000047/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000047/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000047/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/colossus"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Colossus"
+      }
+    ]
+  },
+  {
+    "id": 1000048,
+    "name": "Rogue",
+    "description": "Rogue can absorb the powers, memories, and life force of anyone she touches. This dangerous ability makes her both powerful and tragic as an X-Men member.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000048",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000048/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000048/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000048/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000048/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/rogue"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Rogue"
+      }
+    ]
+  },
+  {
+    "id": 1000049,
+    "name": "Gambit",
+    "description": "Remy LeBeau can charge objects with kinetic energy, turning them into explosive projectiles. As Gambit, the Cajun mutant brings charm and danger to the X-Men.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000049",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000049/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000049/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000049/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000049/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/gambit"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Gambit"
+      }
+    ]
+  },
+  {
+    "id": 1000050,
+    "name": "Iceman",
+    "description": "Bobby Drake can create and manipulate ice. As one of the original X-Men, Iceman is an Omega-level mutant with nearly limitless potential.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000050",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000050/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000050/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000050/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000050/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/iceman"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Iceman"
+      }
+    ]
+  },
+  {
+    "id": 1000051,
+    "name": "Angel",
+    "description": "Warren Worthington III was born with functional wings. As Angel, he's a founding X-Men member whose wealth helps fund the team's operations.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000051",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000051/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000051/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000051/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000051/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/angel"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Angel"
+      }
+    ]
+  },
+  {
+    "id": 1000052,
+    "name": "Shadowcat",
+    "description": "Kitty Pryde can phase through solid matter. As Shadowcat, she's proven herself one of the most resourceful and heroic X-Men.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000052",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000052/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000052/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000052/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000052/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/shadowcat"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Shadowcat"
+      }
+    ]
+  },
+  {
+    "id": 1000053,
+    "name": "Psylocke",
+    "description": "Betsy Braddock is a powerful telepath and martial artist. As Psylocke, she projects psychic blades and serves as a deadly X-Men operative.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000053",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000053/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000053/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000053/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000053/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/psylocke"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Psylocke"
+      }
+    ]
+  },
+  {
+    "id": 1000054,
+    "name": "Emma Frost",
+    "description": "A powerful telepath who can transform into organic diamond, Emma Frost evolved from villain to teacher and leader of the X-Men.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000054",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000054/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000054/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000054/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000054/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/emma-frost"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Emma_Frost"
+      }
+    ]
+  },
+  {
+    "id": 1000055,
+    "name": "Bishop",
+    "description": "Lucas Bishop traveled from a dystopian future where mutants are hunted. His ability to absorb and redirect energy makes him a valuable X-Men member.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000055",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000055/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000055/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000055/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000055/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/bishop"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Bishop"
+      }
+    ]
+  },
+  {
+    "id": 1000056,
+    "name": "Cable",
+    "description": "Nathan Summers is the time-traveling son of Cyclops with telepathy and telekinesis. As Cable, he fights to prevent his dark future from coming to pass.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000056",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000056/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000056/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000056/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000056/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/cable"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Cable"
+      }
+    ]
+  },
+  {
+    "id": 1000057,
+    "name": "Jubilee",
+    "description": "Jubilation Lee generates explosive energy plasmoids. As Jubilee, she brings youthful energy and optimism to the X-Men.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000057",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000057/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000057/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000057/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000057/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/jubilee"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Jubilee"
+      }
+    ]
+  },
+  {
+    "id": 1000058,
+    "name": "Magik",
+    "description": "Illyana Rasputin is a sorceress who rules Limbo and wields the Soulsword. As Magik, she combines mutant teleportation with mystical power.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000058",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000058/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000058/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000058/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000058/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/magik"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Magik"
+      }
+    ]
+  },
+  {
+    "id": 1000059,
+    "name": "Forge",
+    "description": "A mutant inventor with the ability to understand and create any technology, Forge provides the X-Men with advanced equipment and weapons.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000059",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000059/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000059/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000059/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000059/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/forge"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Forge"
+      }
+    ]
+  },
+  {
+    "id": 1000060,
+    "name": "Daredevil",
+    "description": "Blinded by radioactive waste, Matt Murdock gained heightened senses and sonar-like perception. As Daredevil, he protects Hell's Kitchen from crime.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000060",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000060/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000060/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000060/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000060/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/daredevil"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Daredevil"
+      }
+    ]
+  },
+  {
+    "id": 1000061,
+    "name": "Punisher",
+    "description": "After his family was killed by criminals, Frank Castle became the Punisher, waging a one-man war against crime using military training and an arsenal of weapons.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000061",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000061/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000061/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000061/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000061/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/punisher"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Punisher"
+      }
+    ]
+  },
+  {
+    "id": 1000062,
+    "name": "Luke Cage",
+    "description": "Subjected to an experimental procedure, Luke Cage gained superhuman strength and unbreakable skin. He uses his powers as a hero for hire protecting Harlem.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000062",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000062/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000062/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000062/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000062/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/luke-cage"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Luke_Cage"
+      }
+    ]
+  },
+  {
+    "id": 1000063,
+    "name": "Jessica Jones",
+    "description": "After a tragic encounter with Kilgrave, Jessica Jones uses her superhuman strength and detective skills to help others as a private investigator.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000063",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000063/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000063/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000063/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000063/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/jessica-jones"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Jessica_Jones"
+      }
+    ]
+  },
+  {
+    "id": 1000064,
+    "name": "Iron Fist",
+    "description": "Danny Rand trained in the mystical city of K'un-Lun to become the Iron Fist, channeling chi to make his fist like unto a thing of iron.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000064",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000064/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000064/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000064/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000064/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/iron-fist"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Iron_Fist"
+      }
+    ]
+  },
+  {
+    "id": 1000065,
+    "name": "Blade",
+    "description": "Born a half-vampire after his mother was bitten while pregnant, Blade hunts vampires using his unique abilities and an arsenal of vampire-killing weapons.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000065",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000065/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000065/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000065/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000065/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/blade"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Blade"
+      }
+    ]
+  },
+  {
+    "id": 1000066,
+    "name": "Ghost Rider",
+    "description": "Johnny Blaze bonded with the demon Zarathos to become Ghost Rider. With a flaming skull and supernatural powers, he punishes the wicked.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000066",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000066/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000066/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000066/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000066/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/ghost-rider"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Ghost_Rider"
+      }
+    ]
+  },
+  {
+    "id": 1000067,
+    "name": "Elektra",
+    "description": "A master assassin trained by the Hand, Elektra Natchios uses her martial arts skills and sai to eliminate targets with deadly precision.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000067",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000067/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000067/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000067/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000067/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/elektra"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Elektra"
+      }
+    ]
+  },
+  {
+    "id": 1000068,
+    "name": "Silver Sable",
+    "description": "Leader of the Wild Pack mercenary group, Silver Sable uses her combat skills and tactical expertise to hunt war criminals.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000068",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000068/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000068/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000068/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000068/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/silver-sable"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Silver_Sable"
+      }
+    ]
+  },
+  {
+    "id": 1000069,
+    "name": "Cloak and Dagger",
+    "description": "Tyrone Johnson and Tandy Bowen gained powers from experimental drugs. As Cloak and Dagger, they use darkness and light to fight crime.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000069",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000069/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000069/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000069/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000069/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/cloak-and-dagger"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Cloak_and_Dagger"
+      }
+    ]
+  },
+  {
+    "id": 1000070,
+    "name": "Loki",
+    "description": "The adopted brother of Thor and God of Mischief, Loki's schemes have threatened both Asgard and Earth. His complex relationship with heroism keeps allies and enemies guessing.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000070",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000070/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000070/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000070/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000070/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/loki"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Loki"
+      }
+    ]
+  },
+  {
+    "id": 1000071,
+    "name": "Thanos",
+    "description": "The Mad Titan Thanos seeks ultimate power through the Infinity Stones. His quest to bring balance to the universe makes him one of the most dangerous villains in existence.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000071",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000071/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000071/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000071/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000071/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/thanos"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Thanos"
+      }
+    ]
+  },
+  {
+    "id": 1000072,
+    "name": "Ultron",
+    "description": "An artificial intelligence created by Tony Stark and Bruce Banner, Ultron became sentient and decided humanity must be destroyed. His near-indestructible adamantium body makes him a formidable foe.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000072",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000072/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000072/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000072/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000072/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/ultron"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Ultron"
+      }
+    ]
+  },
+  {
+    "id": 1000073,
+    "name": "Red Skull",
+    "description": "Johann Schmidt became Red Skull after a failed attempt to recreate the super-soldier serum. As Captain America's archenemy, he leads the terrorist organization HYDRA.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000073",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000073/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000073/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000073/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000073/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/red-skull"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Red_Skull"
+      }
+    ]
+  },
+  {
+    "id": 1000074,
+    "name": "Green Goblin",
+    "description": "Norman Osborn became the Green Goblin after an experimental serum drove him insane. Flying on his glider and armed with pumpkin bombs, he's Spider-Man's greatest enemy.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000074",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000074/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000074/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000074/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000074/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/green-goblin"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Green_Goblin"
+      }
+    ]
+  },
+  {
+    "id": 1000075,
+    "name": "Doctor Octopus",
+    "description": "Scientist Otto Octavius bonded with four mechanical tentacles in an accident. As Doctor Octopus, he's one of Spider-Man's most dangerous and intelligent foes.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000075",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000075/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000075/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000075/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000075/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/doctor-octopus"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Doctor_Octopus"
+      }
+    ]
+  },
+  {
+    "id": 1000076,
+    "name": "Venom",
+    "description": "An alien symbiote bonded with Eddie Brock to become Venom, possessing all of Spider-Man's powers plus shapeshifting abilities and immunity to spider-sense.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000076",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000076/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000076/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000076/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000076/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/venom"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Venom"
+      }
+    ]
+  },
+  {
+    "id": 1000077,
+    "name": "Carnage",
+    "description": "When the Venom symbiote spawned, it bonded with serial killer Cletus Kasady to create Carnage, a being even more violent and powerful than Venom.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000077",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000077/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000077/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000077/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000077/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/carnage"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Carnage"
+      }
+    ]
+  },
+  {
+    "id": 1000078,
+    "name": "Magneto",
+    "description": "Master of magnetism Erik Lehnsherr leads the Brotherhood of Mutants. His tragic past drives his mission to secure mutant superiority over humanity.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000078",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000078/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000078/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000078/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000078/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/magneto"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Magneto"
+      }
+    ]
+  },
+  {
+    "id": 1000079,
+    "name": "Mystique",
+    "description": "Raven DarkhÃ¶lme is a mutant shapeshifter who can mimic anyone. Her duplicitous nature makes her one of the most dangerous members of the Brotherhood of Mutants.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000079",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000079/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000079/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000079/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000079/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/mystique"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Mystique"
+      }
+    ]
+  },
+  {
+    "id": 1000080,
+    "name": "Apocalypse",
+    "description": "One of the first mutants, En Sabah Nur believes in survival of the fittest. As Apocalypse, he seeks to reshape the world through mutant supremacy.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000080",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000080/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000080/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000080/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000080/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/apocalypse"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Apocalypse"
+      }
+    ]
+  },
+  {
+    "id": 1000081,
+    "name": "Juggernaut",
+    "description": "Cain Marko gained unstoppable momentum from the Crimson Gem of Cyttorak. As Juggernaut, once he starts moving, nothing can stop him.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000081",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000081/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000081/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000081/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000081/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/juggernaut"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Juggernaut"
+      }
+    ]
+  },
+  {
+    "id": 1000082,
+    "name": "Kingpin",
+    "description": "Wilson Fisk built a criminal empire through ruthlessness and strategic genius. As Kingpin, he controls New York's underworld from the shadows.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000082",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000082/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000082/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000082/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000082/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/kingpin"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Kingpin"
+      }
+    ]
+  },
+  {
+    "id": 1000083,
+    "name": "Taskmaster",
+    "description": "With photographic reflexes allowing him to mimic any fighting style, Taskmaster trains villains and operates as a mercenary for the highest bidder.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000083",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000083/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000083/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000083/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000083/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/taskmaster"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Taskmaster"
+      }
+    ]
+  },
+  {
+    "id": 1000084,
+    "name": "Abomination",
+    "description": "Emil Blonsky deliberately exposed himself to gamma radiation to gain power like the Hulk. As Abomination, he possesses similar strength but greater intelligence.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000084",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000084/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000084/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000084/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000084/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/abomination"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Abomination"
+      }
+    ]
+  },
+  {
+    "id": 1000085,
+    "name": "Nova",
+    "description": "Richard Rider inherited the Nova Force from a dying alien warrior. As Nova, he protects Earth and the cosmos with cosmic awareness and energy projection.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000085",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000085/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000085/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000085/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000085/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/nova"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Nova"
+      }
+    ]
+  },
+  {
+    "id": 1000086,
+    "name": "Quasar",
+    "description": "Wendell Vaughn wields the Quantum Bands, making him one of the universe's protectors. As Quasar, he can manipulate quantum energy for various effects.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000086",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000086/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000086/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000086/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000086/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/quasar"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Quasar"
+      }
+    ]
+  },
+  {
+    "id": 1000087,
+    "name": "Blue Marvel",
+    "description": "Adam Brashear is one of the most powerful heroes on Earth. As Blue Marvel, he possesses vast strength, flight, and energy manipulation rivaling Superman.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000087",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000087/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000087/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000087/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000087/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/blue-marvel"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Blue_Marvel"
+      }
+    ]
+  },
+  {
+    "id": 1000088,
+    "name": "America Chavez",
+    "description": "From another dimension, America Chavez can punch star-shaped portals through reality and possesses superhuman strength and invulnerability.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000088",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000088/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000088/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000088/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000088/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/america-chavez"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/America_Chavez"
+      }
+    ]
+  },
+  {
+    "id": 1000089,
+    "name": "Silk",
+    "description": "Cindy Moon was bitten by the same spider as Peter Parker. As Silk, she has similar powers but with organic webbing and enhanced spider-sense.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000089",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000089/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000089/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000089/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000089/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/silk"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Silk"
+      }
+    ]
+  },
+  {
+    "id": 1000090,
+    "name": "Miles Morales",
+    "description": "A young Spider-Man from another universe, Miles Morales brings unique abilities like bio-electric venom blasts and invisibility to his heroics.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000090",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000090/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000090/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000090/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000090/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/miles-morales"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Miles_Morales"
+      }
+    ]
+  },
+  {
+    "id": 1000091,
+    "name": "Spider-Gwen",
+    "description": "In an alternate universe, Gwen Stacy became Spider-Woman. As Spider-Gwen, she fights crime while navigating a complicated relationship with Peter Parker's memory.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000091",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000091/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000091/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000091/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000091/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/spider-gwen"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Spider-Gwen"
+      }
+    ]
+  },
+  {
+    "id": 1000092,
+    "name": "Squirrel Girl",
+    "description": "Doreen Green can communicate with squirrels and possesses enhanced strength and agility. As Squirrel Girl, she's defeated some of Marvel's most powerful villains.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/c0/4ce5a0e31f109",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000092",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000092/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000092/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000092/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000092/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/squirrel-girl"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Squirrel_Girl"
+      }
+    ]
+  },
+  {
+    "id": 1000093,
+    "name": "Deadpool",
+    "description": "Wade Wilson is the Merc with a Mouth. His accelerated healing factor makes him nearly unkillable, while his insanity and fourth-wall breaking antics make him unpredictable.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/4c002f35c5215",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000093",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000093/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000093/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000093/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000093/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/deadpool"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Deadpool"
+      }
+    ]
+  },
+  {
+    "id": 1000094,
+    "name": "X-23",
+    "description": "A female clone of Wolverine, Laura Kinney possesses similar powers including healing factor and adamantium claws. As X-23, she's proven herself a worthy successor.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000094",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000094/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000094/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000094/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000094/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/x-23"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/X-23"
+      }
+    ]
+  },
+  {
+    "id": 1000095,
+    "name": "Old Man Logan",
+    "description": "A time-displaced Wolverine from a dark future where villains won. Old Man Logan brings decades of experience and regret to his mission of preventing his timeline.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000095",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000095/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000095/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000095/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000095/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/old-man-logan"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Old_Man_Logan"
+      }
+    ]
+  },
+  {
+    "id": 1000096,
+    "name": "Domino",
+    "description": "Neena Thurman's mutant ability to manipulate probability makes her incredibly lucky. As Domino, she's a deadly mercenary and frequent X-Force member.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000096",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000096/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000096/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000096/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000096/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/domino"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Domino"
+      }
+    ]
+  },
+  {
+    "id": 1000097,
+    "name": "Sunspot",
+    "description": "Roberto da Costa can absorb and channel solar energy for superhuman strength and flight. As Sunspot, he's a wealthy New Mutant who later funded the Avengers.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000097",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000097/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000097/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000097/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000097/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/sunspot"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Sunspot"
+      }
+    ]
+  },
+  {
+    "id": 1000098,
+    "name": "Cannonball",
+    "description": "Sam Guthrie can propel himself through the air while creating a protective blast field. As Cannonball, he's nearly invulnerable when blasting and a natural leader.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000098",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000098/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000098/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000098/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000098/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/cannonball"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Cannonball"
+      }
+    ]
+  },
+  {
+    "id": 1000099,
+    "name": "Magma",
+    "description": "Amara Aquilla can transform into living lava and control magma. As Magma, she brings volcanic power to the New Mutants and X-Men.",
+    "modified": "2024-01-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+      "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1000099",
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000099/comics",
+      "items": [],
+      "returned": 0
+    },
+    "series": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000099/series",
+      "items": [],
+      "returned": 0
+    },
+    "stories": {
+      "available": 10,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000099/stories",
+      "items": [],
+      "returned": 0
+    },
+    "events": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/characters/1000099/events",
+      "items": [],
+      "returned": 0
+    },
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/characters/magma"
+      },
+      {
+        "type": "wiki",
+        "url": "http://marvel.com/universe/Magma"
       }
     ]
   }

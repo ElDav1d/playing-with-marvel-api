@@ -96,6 +96,11 @@ const CharacterComicList = ({ characterId, characterName }: ICharacterComicListP
               optionLiterals={orderLiterals}
             />
 
+            <p className='text-sm text-gray-500 italic mb-3 mt-2'>
+              Note: Due to Marvel API discontinuation, comics are generic and images are reused
+              from characters for demonstration purposes
+            </p>
+
             <h3 className='mb-2'>
               Displaying {rangeInit} to {rangeEnd} from {totalComics} available comics
             </h3>

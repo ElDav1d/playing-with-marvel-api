@@ -1,6 +1,15 @@
-import { FetchingOrder, ICharacterItem } from '@/components/pages/Characters/interfaces/characters';
-import { BASE_URL } from '@/utils/constants';
+/**
+ * MOCK SERVICE - Marvel API was discontinued
+ * This service now returns statically mocked data to showcase
+ * the eldav1d-marvel-ui Design System functionality.
+ * Original API integration preserved in git history.
+ */
+import {
+  FetchingOrder,
+  ICharacterItem,
+} from '@/components/pages/Characters/interfaces/characters';
 import { Bugfender } from '@bugfender/sdk';
+import mockCharacters from '../mocks/mockCharactersAZ.json';
 
 export interface IGetCharactersServiceProps {
   pageParam?: number;
@@ -15,37 +24,42 @@ const getCharactersService = async ({
   searchString,
   order,
 }: IGetCharactersServiceProps) => {
-  const searchQuery = searchString ? `?nameStartsWith=${searchString}&` : '?';
-  const fetchingOrder = order;
-  const offset = maxCharacters * pageParam;
-  const KEY = process.env.REACT_APP_MARVEL_API_KEY;
-  const url = `${BASE_URL}${searchQuery}orderBy=${fetchingOrder}&limit=${maxCharacters}&offset=${offset}&apikey=${KEY}`;
+  // Simulate network delay to show DS loaders
+  await new Promise((resolve) => setTimeout(resolve, 500));
 
   try {
-    const response = await fetch(url);
+    let characters = mockCharacters as ICharacterItem[];
 
-    if (!response.ok) {
-      Bugfender.error(`HTTP STATUS: ${response.status}`);
-      throw new Error(`HTTP STATUS: ${response.status}`);
+    // Filter by search
+    if (searchString) {
+      characters = characters.filter((char) =>
+        char.name.toLowerCase().includes(searchString.toLowerCase())
+      );
     }
 
-    const res = await response.json();
+    // Sort
+    if (order === FetchingOrder.NAME_AZ) {
+      characters = [...characters].sort((a, b) => a.name.localeCompare(b.name));
+    } else if (order === FetchingOrder.NAME_ZA) {
+      characters = [...characters].sort((a, b) => b.name.localeCompare(a.name));
+    }
 
-    const characters = res.data.results.filter(
-      (character: ICharacterItem) => character !== undefined,
-    );
+    // Paginate for infinite scroll
+    const offset = maxCharacters * pageParam;
+    const paginatedCharacters = characters.slice(offset, offset + maxCharacters);
 
+    // CRITICAL: useInfiniteQuery expects a cursor
     const getNextCursor = () => {
-      const hasMoreResults = maxCharacters * (pageParam + 1) < res.data.total;
-
-      Bugfender.log(`ON NEXT CURSOR Characters fetched: ${characters.length}`);
-
+      const hasMoreResults = offset + maxCharacters < characters.length;
       return hasMoreResults ? pageParam + 1 : null;
     };
 
-    Bugfender.log(`Characters fetched: ${characters.length}`);
+    Bugfender.log(`Characters fetched: ${paginatedCharacters.length}`);
 
-    return { characters, nextCursor: getNextCursor() };
+    return {
+      characters: paginatedCharacters,
+      nextCursor: getNextCursor(),
+    };
   } catch (error) {
     Bugfender.error(error);
     console.log(error);

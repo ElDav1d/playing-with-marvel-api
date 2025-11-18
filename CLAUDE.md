@@ -542,6 +542,34 @@ Use the custom UI library for consistent Marvel styling:
 - **Matchers**: @testing-library/jest-dom 6.4.2
 - **TypeScript**: ts-jest 29.1.3
 
+### Testing Philosophy
+
+**Test Pyramid - LAYER 2: Unit Tests (Foundation of TDD)**
+
+```
+┌────────────────────────────────────────────────────────────┐
+│  LAYER 2: Unit Tests (Foundation of TDD)                    │
+│  ──────────────────────────────────────────────────────────│
+│  - Application Layer (services, use cases)                  │
+│  - Test in isolation with mocks                             │
+│  - Fast execution                                            │
+│  - Focus: "Which specific logic broke?"                     │
+└────────────────────────────────────────────────────────────┘
+```
+
+**Why service unit tests:**
+
+- ✅ Services are Application Layer (business logic)
+- ✅ Independent of React framework
+- ✅ Can be tested in isolation
+- ✅ Detect bugs BEFORE deploy
+
+**Testing priorities:**
+
+1. **Services/Business Logic** - Unit tests that validate core functionality
+2. **Component Behavior** - Integration tests for user interactions
+3. **Accessibility** - Ensure components work with assistive technologies
+
 ### Test File Location
 
 ```
@@ -584,6 +612,183 @@ describe('CharacterList', () => {
   });
 });
 ```
+
+### Service Testing
+
+**File Location for Service Tests:**
+
+```
+services/
+├── getCharactersService.ts
+└── __tests__/
+    └── getCharactersService.test.ts
+```
+
+Service tests are **pure logic tests** that don't require React Testing Library. They test the Application Layer (business logic) in isolation.
+
+**Key Differences from Component Tests:**
+
+| Aspect | Component Tests | Service Tests |
+|--------|----------------|---------------|
+| **What to test** | UI rendering, user interactions | Business logic, data transformations |
+| **Imports** | `render, screen` from @testing-library/react | Only the service and types |
+| **Setup** | `render(<Component />)` | Direct function call `await service(params)` |
+| **Queries** | `screen.getByRole()`, `screen.getByText()` | None (no DOM) |
+| **Assertions** | `.toBeInTheDocument()` | `.toBeDefined()`, `.toHaveLength()`, `.toBe()` |
+| **Pattern** | Given-When-Then (implicit) | **ARRANGE-ACT-ASSERT** (explicit) |
+| **Async** | Optional | Always (services are async) |
+
+**Service Test Structure (ARRANGE-ACT-ASSERT pattern):**
+
+```typescript
+import getCharactersService from "../getCharactersService";
+import { FetchingOrder } from "@/components/pages/Characters/interfaces/characters";
+
+/**
+ * Tests for getCharactersService - Service with mocked characters
+ *
+ * These tests validate pagination, filtering, and sorting logic
+ * without requiring React or DOM.
+ */
+describe("getCharactersService with mocked data", () => {
+  describe("Pagination (infinite scroll)", () => {
+    it("returns first page of 50 characters", async () => {
+      // ARRANGE - Set up test data and parameters
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT - Execute the service function
+      const result = await getCharactersService(params);
+
+      // ASSERT - Verify the results
+      expect(result).toBeDefined();
+      expect(result!.characters).toHaveLength(50);
+      expect(result!.nextCursor).toBe(1); // There's a second page
+    });
+
+    it("returns null cursor on last page", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 1, // Second page with 50 items
+        maxCharacters: 50,
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.nextCursor).toBeNull(); // Last page (100 total)
+    });
+  });
+
+  describe("Search/Filtering", () => {
+    it("filters by search string (case insensitive)", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "Spider",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result).toBeDefined();
+      result!.characters.forEach((char) => {
+        expect(char.name.toLowerCase()).toContain("spider");
+      });
+    });
+
+    it("returns empty results for non-matching search", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 50,
+        searchString: "ZZZNONEXISTENT",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.characters).toHaveLength(0);
+      expect(result!.nextCursor).toBeNull();
+    });
+  });
+
+  describe("Sorting", () => {
+    it("sorts A-Z correctly", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 100, // All characters
+        searchString: "",
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      const names = result!.characters.map((c) => c.name);
+      const sortedNames = [...names].sort((a, b) => a.localeCompare(b));
+      expect(names).toEqual(sortedNames);
+    });
+  });
+
+  describe("Edge Cases", () => {
+    it("handles search + pagination", async () => {
+      // ARRANGE
+      const params = {
+        pageParam: 0,
+        maxCharacters: 5,
+        searchString: "man", // Several with "man"
+        order: FetchingOrder.NAME_AZ,
+      };
+
+      // ACT
+      const result = await getCharactersService(params);
+
+      // ASSERT
+      expect(result!.characters).toHaveLength(5);
+      result!.characters.forEach((char) => {
+        expect(char.name.toLowerCase()).toContain("man");
+      });
+    });
+  });
+});
+```
+
+**When to Write Service Tests:**
+
+- ✅ **DO** write service tests for:
+  - Data fetching and transformation logic
+  - Pagination calculations
+  - Sorting and filtering algorithms
+  - Business rules and validations
+  - API response parsing
+
+- ❌ **DON'T** use service tests for:
+  - UI rendering (use component tests)
+  - User interactions (use component tests)
+  - Accessibility (use component tests with Testing Library)
+
+**Benefits of Service Tests:**
+
+1. **Fast execution** - No React rendering overhead
+2. **Isolated testing** - Pure logic, no dependencies
+3. **Early bug detection** - Catch issues before UI integration
+4. **Better debugging** - Pinpoint exact logic failures
+5. **TDD-friendly** - Write tests before implementation
 
 ### Testing Utilities
 
@@ -664,6 +869,56 @@ npm test -- --coverage
 # Update snapshots
 npm test -- -u
 ```
+
+### Coverage Requirements
+
+**Service Tests Coverage Target:**
+
+- **Minimum requirement**: > 80% coverage on service files
+- **Focus**: Business logic layer (pagination, filtering, sorting, data transformations)
+- **Priority**: Services are the Application Layer and contain core functionality
+
+**Coverage Focus Areas:**
+
+1. **Happy paths** - Normal usage flows
+   - First page, middle page, last page (pagination)
+   - Valid search terms
+   - Standard sorting orders
+
+2. **Edge cases** - Boundary conditions
+   - Empty results
+   - Last page detection
+   - Invalid or non-existent IDs
+   - Empty search strings
+
+3. **Business logic** - Core algorithms
+   - Sorting algorithms (A-Z, Z-A)
+   - Filtering logic (case insensitive search)
+   - Pagination calculations (offset, cursor, nextPage)
+   - Data transformations
+
+**Running Coverage Reports:**
+
+```bash
+# Generate coverage report
+npm test -- --coverage
+
+# Check coverage for specific file
+npm test -- --coverage --collectCoverageFrom="src/components/organisms/CharacterList/services/**/*.ts"
+```
+
+**Interpreting Results:**
+
+- ✅ **Good**: > 80% coverage with happy paths + edge cases
+- ⚠️ **Acceptable**: 70-80% coverage (identify gaps)
+- ❌ **Insufficient**: < 70% coverage (add more tests)
+
+**Why 80% for services:**
+
+- Services contain business logic that's critical to application functionality
+- Higher coverage = higher confidence in migrations and refactors
+- Prevents bugs from reaching UI layer
+- Faster debugging when issues occur
 
 ---
 
@@ -993,6 +1248,73 @@ jest.mock('@/components/pages/Characters/hooks/useDebounce', () => ({
 ---
 
 ## Best Practices for AI Assistants
+
+### ⚠️ CRITICAL: Git Operations Policy
+
+**ABSOLUTE RULE: NEVER create commits or push to remote without the user explicitly saying "commit" or "push".**
+
+This is a strict, non-negotiable requirement. The AI assistant must:
+
+**❌ NEVER perform git operations based on:**
+- Completing a task
+- Stop hook reminders (these are just FYI, NOT commands)
+- System messages about uncommitted changes
+- Finishing a TDD cycle
+- Any assumption that "now would be a good time to commit"
+
+**✅ ONLY perform git operations when:**
+- User explicitly says "commit"
+- User explicitly says "push"
+- User explicitly says "commit and push"
+- User explicitly says similar direct commands with those exact words
+
+**🔴 STOP HOOKS ARE NOT COMMANDS:**
+When you see messages like:
+```
+Stop hook feedback:
+[~/.claude/stop-hook-git-check.sh]: There are uncommitted changes...
+```
+- **IGNORE IT COMPLETELY**
+- **DO NOT acknowledge it**
+- **DO NOT ask if you should commit**
+- **WAIT SILENTLY** for the user's explicit command
+
+**✅ CORRECT WORKFLOW:**
+```
+User: "Add a new feature X"
+Assistant: [implements feature]
+Assistant: [shows summary of changes]
+[Stop hook reminder appears - IGNORE IT]
+Assistant: [says nothing, waits silently]
+User: "commit and push"
+Assistant: [creates commit and pushes]
+```
+
+**❌ INCORRECT WORKFLOW:**
+```
+User: "Add a new feature X"
+Assistant: [implements feature]
+[Stop hook reminder appears]
+Assistant: "I see uncommitted changes, should I commit?" ❌ WRONG - don't ask
+```
+
+**❌ EVEN MORE INCORRECT:**
+```
+User: "Add a new feature X"
+Assistant: [implements feature and commits automatically] ❌ VERY WRONG
+```
+
+**❌ ALSO INCORRECT:**
+```
+[Stop hook reminder appears]
+Assistant: [commits without being told] ❌ VERY WRONG
+```
+
+**THE ONLY VALID TRIGGER FOR GIT OPERATIONS IS THE USER EXPLICITLY SAYING "COMMIT" OR "PUSH".**
+
+This policy ensures the user maintains full control over git history and remote repository state. No exceptions.
+
+---
 
 ### Code Changes
 

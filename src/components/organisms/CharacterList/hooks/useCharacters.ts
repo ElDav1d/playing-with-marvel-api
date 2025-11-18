@@ -77,7 +77,7 @@ export const useCharacters = (): IUseCharactersReturn => {
   return {
     isLoading,
     isError,
-    characters: data?.pages.flatMap((page) => page?.characters) ?? [],
+    characters: data?.pages.flatMap((page) => page?.characters ?? []) ?? [],
     fetchNextPage,
     hasNextPage,
     isFetching,

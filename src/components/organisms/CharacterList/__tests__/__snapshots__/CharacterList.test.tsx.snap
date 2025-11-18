@@ -8,16 +8,16 @@ exports[`renders the list of characters and matches  snapshot 1`] = `
     class="grid gap-3 grid-flow-row grid-cols-auto-min-max-120-auto md:grid-cols-auto-min-max-185-auto"
   >
     <li
-      aria-label="Animal"
+      aria-label="Spider-Man"
       class="bg-black text-white overflow-hidden relative z-0
       after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
       
     "
     >
       <a
-        aria-labelledby="1011176"
+        aria-labelledby="1000000"
         class="block group"
-        href="/character/1011176/animal"
+        href="/character/1000000/spider-man"
       >
         <picture
           class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
@@ -28,27 +28,27 @@ exports[`renders the list of characters and matches  snapshot 1`] = `
           <h3
             class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
           >
-            Animal
+            Spider-Man
           </h3>
           <p
             class="text-xs leading-5 line-clamp-4"
           >
-            Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.
+            Bitten by a radioactive spider, Peter Parker gained superhuman strength, agility, and the ability to cling to walls. As Spider-Man, he protects New York City from villains while balancing life as a student and photographer.
           </p>
         </div>
       </a>
     </li>
     <li
-      aria-label="Braineater"
+      aria-label="Iron Man"
       class="bg-black text-white overflow-hidden relative z-0
       after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
       
     "
     >
       <a
-        aria-labelledby="1011177"
+        aria-labelledby="1000001"
         class="block group"
-        href="/character/1011177/braineater"
+        href="/character/1000001/iron-man"
       >
         <picture
           class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
@@ -59,27 +59,27 @@ exports[`renders the list of characters and matches  snapshot 1`] = `
           <h3
             class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
           >
-            Braineater
+            Iron Man
           </h3>
           <p
             class="text-xs leading-5 line-clamp-4"
           >
-            Xorn, whose mutation manifested as a tiny, powerful star inside his head, was brainwashed into believing he was the reincarnation of Magneto.
+            Genius billionaire inventor Tony Stark built a powered suit of armor to escape captivity. Now he uses his technology to protect the world as Iron Man, a founding member of the Avengers.
           </p>
         </div>
       </a>
     </li>
     <li
-      aria-label="Crusher"
+      aria-label="Captain America"
       class="bg-black text-white overflow-hidden relative z-0
       after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
       
     "
     >
       <a
-        aria-labelledby="1011178"
+        aria-labelledby="1000002"
         class="block group"
-        href="/character/1011178/crusher"
+        href="/character/1000002/captain-america"
       >
         <picture
           class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
@@ -90,22 +90,27 @@ exports[`renders the list of characters and matches  snapshot 1`] = `
           <h3
             class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
           >
-            Crusher
+            Captain America
           </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Steve Rogers was transformed into a super-soldier during World War II. Frozen in ice for decades, he now leads the Avengers as the living legend Captain America.
+          </p>
         </div>
       </a>
     </li>
     <li
-      aria-label="Destructor"
+      aria-label="Thor"
       class="bg-black text-white overflow-hidden relative z-0
       after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
       
     "
     >
       <a
-        aria-labelledby="1011179"
+        aria-labelledby="1000003"
         class="block group"
-        href="/character/1011179/destructor"
+        href="/character/1000003/thor"
       >
         <picture
           class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
@@ -116,8 +121,2989 @@ exports[`renders the list of characters and matches  snapshot 1`] = `
           <h3
             class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
           >
-            Destructor
+            Thor
           </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. He's a founding member of the Avengers and protector of both Asgard and Earth.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Hulk"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000004"
+        class="block group"
+        href="/character/1000004/hulk"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Hulk
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Scientist Bruce Banner transforms into the incredible Hulk when angered. The stronger Hulk gets, the angrier he gets, making him one of the most powerful beings in the Marvel Universe.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Black Widow"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000005"
+        class="block group"
+        href="/character/1000005/black-widow"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Black Widow
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Natasha Romanoff is a world-class athlete, gymnast, and master of martial arts and espionage. As Black Widow, she's one of S.H.I.E.L.D.'s top agents and a core Avenger.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Hawkeye"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000006"
+        class="block group"
+        href="/character/1000006/hawkeye"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Hawkeye
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Clint Barton is the world's greatest marksman. Armed with his trusty bow and an array of trick arrows, Hawkeye stands alongside Earth's Mightiest Heroes as an Avenger.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Black Panther"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000007"
+        class="block group"
+        href="/character/1000007/black-panther"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Black Panther
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            T'Challa is the king of Wakanda, a technologically advanced African nation. Enhanced by the heart-shaped herb, he protects his people and the world as the Black Panther.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Doctor Strange"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000008"
+        class="block group"
+        href="/character/1000008/doctor-strange"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Doctor Strange
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Once a brilliant but arrogant surgeon, Stephen Strange became the Sorcerer Supreme after a car accident ended his medical career. He now protects Earth from mystical threats.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Ant-Man"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000009"
+        class="block group"
+        href="/character/1000009/ant-man"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Ant-Man
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Scott Lang can shrink to the size of an ant while gaining superhuman strength. As Ant-Man, he can also communicate with insects and grow to giant size.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Wasp"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000010"
+        class="block group"
+        href="/character/1000010/wasp"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Wasp
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Hope van Dyne is the daughter of the original Ant-Man and Wasp. She inherited the Wasp suit and fights alongside Ant-Man, with abilities to shrink, fly, and fire bio-electric blasts.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Scarlet Witch"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000011"
+        class="block group"
+        href="/character/1000011/scarlet-witch"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Scarlet Witch
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Wanda Maximoff possesses chaos magic and reality-warping abilities. As Scarlet Witch, she's one of the most powerful beings in the Marvel Universe and a key Avenger.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Vision"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000012"
+        class="block group"
+        href="/character/1000012/vision"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Vision
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            An android created from a unique synthesis of organic and inorganic materials, Vision possesses superhuman strength, flight, and the ability to alter his density.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Falcon"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000013"
+        class="block group"
+        href="/character/1000013/falcon"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Falcon
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Sam Wilson is a skilled combat veteran who flies using a specially designed wing-pack. As Falcon, he's Captain America's trusted partner and fellow Avenger.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Winter Soldier"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000014"
+        class="block group"
+        href="/character/1000014/winter-soldier"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Winter Soldier
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Once believed dead, Bucky Barnes was brainwashed and transformed into the Winter Soldier, a deadly assassin. Now freed from control, he fights alongside the Avengers.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="War Machine"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000015"
+        class="block group"
+        href="/character/1000015/war-machine"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            War Machine
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Colonel James Rhodes pilots the War Machine armor, a weaponized version of Iron Man's suit. As Tony Stark's best friend, he brings military discipline to the Avengers.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Captain Marvel"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000016"
+        class="block group"
+        href="/character/1000016/captain-marvel"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Captain Marvel
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Carol Danvers gained cosmic powers after exposure to alien technology. As Captain Marvel, she's one of the most powerful heroes in the universe.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Spider-Woman"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000017"
+        class="block group"
+        href="/character/1000017/spider-woman"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Spider-Woman
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Jessica Drew gained spider-powers through genetic experimentation. As Spider-Woman, she possesses venom blasts, wall-crawling, and enhanced reflexes.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="She-Hulk"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000018"
+        class="block group"
+        href="/character/1000018/she-hulk"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            She-Hulk
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Lawyer Jennifer Walters gained Hulk-like powers through a blood transfusion from her cousin Bruce Banner. As She-Hulk, she retains her intelligence while transformed.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Ms. Marvel"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000019"
+        class="block group"
+        href="/character/1000019/ms.-marvel"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Ms. Marvel
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Kamala Khan gained shapeshifting abilities and takes the name Ms. Marvel to honor her hero Captain Marvel while protecting Jersey City.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Moon Knight"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000020"
+        class="block group"
+        href="/character/1000020/moon-knight"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Moon Knight
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Marc Spector serves as the fist of the Egyptian moon god Khonshu. Moon Knight's multiple personalities and brutal methods make him one of Marvel's most complex heroes.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Shang-Chi"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000021"
+        class="block group"
+        href="/character/1000021/shang-chi"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Shang-Chi
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            The Master of Kung Fu, Shang-Chi combines martial arts mastery with superhuman chi manipulation to protect the world from mystical and physical threats.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Photon"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000022"
+        class="block group"
+        href="/character/1000022/photon"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Photon
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Monica Rambeau can transform into any form of electromagnetic energy. As Photon, she was once leader of the Avengers and remains one of Earth's most powerful heroes.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Quicksilver"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000023"
+        class="block group"
+        href="/character/1000023/quicksilver"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Quicksilver
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Pietro Maximoff can move at supersonic speeds. Initially a villain alongside his sister Scarlet Witch, he became a reformed Avenger.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Spectrum"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000024"
+        class="block group"
+        href="/character/1000024/spectrum"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Spectrum
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Adam Brashear is a scientist who gained powers from anti-matter energy. As Spectrum, he possesses vast strength, flight, and energy manipulation abilities.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="White Tiger"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000025"
+        class="block group"
+        href="/character/1000025/white-tiger"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            White Tiger
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Ava Ayala inherited mystical amulets that give her enhanced strength, speed, and martial arts prowess as the White Tiger.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Echo"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000026"
+        class="block group"
+        href="/character/1000026/echo"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Echo
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Maya Lopez is a deaf martial artist with photographic reflexes, able to perfectly mimic any physical movement she sees.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Namor"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000027"
+        class="block group"
+        href="/character/1000027/namor"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Namor
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            The Sub-Mariner is the prince of Atlantis with superhuman strength and the ability to breathe underwater. His allegiance shifts between hero and antihero.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Hercules"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000028"
+        class="block group"
+        href="/character/1000028/hercules"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Hercules
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            The legendary Greek demigod Hercules brings his superhuman strength and millennia of combat experience to Earth's heroes.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Sentry"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000029"
+        class="block group"
+        href="/character/1000029/sentry"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Sentry
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Robert Reynolds possesses the power of a million exploding suns. As Sentry, he's one of the most powerful yet troubled heroes in the Marvel Universe.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Star-Lord"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000030"
+        class="block group"
+        href="/character/1000030/star-lord"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Star-Lord
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Peter Quill is the half-human, half-alien leader of the Guardians of the Galaxy. Armed with his element guns and quick wit, he protects the cosmos from galactic threats.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Gamora"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000031"
+        class="block group"
+        href="/character/1000031/gamora"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Gamora
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            The adopted daughter of Thanos and the deadliest woman in the galaxy, Gamora seeks redemption by fighting alongside the Guardians of the Galaxy.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Drax"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000032"
+        class="block group"
+        href="/character/1000032/drax"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Drax
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Drax the Destroyer is driven by revenge against those who killed his family. His superhuman strength and durability make him a formidable Guardian of the Galaxy.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Rocket Raccoon"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000033"
+        class="block group"
+        href="/character/1000033/rocket-raccoon"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Rocket Raccoon
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A product of illegal genetic experiments, Rocket is a tactical genius and master of weapons. Despite his small size, he's one of the most dangerous Guardians of the Galaxy.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Groot"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000034"
+        class="block group"
+        href="/character/1000034/groot"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Groot
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Groot is a sentient tree-like creature and member of the Guardians of the Galaxy. Though he can only say 'I am Groot,' his actions speak louder than words.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Mantis"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000035"
+        class="block group"
+        href="/character/1000035/mantis"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Mantis
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            An empath who can sense and manipulate emotions, Mantis uses her abilities to aid the Guardians of the Galaxy in their cosmic adventures.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Nebula"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000036"
+        class="block group"
+        href="/character/1000036/nebula"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Nebula
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Adopted daughter of Thanos and sister to Gamora, Nebula seeks to prove herself through acts of villainy and occasional heroism.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Yondu"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000037"
+        class="block group"
+        href="/character/1000037/yondu"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Yondu
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A Ravager captain who raised Star-Lord, Yondu controls a deadly arrow with whistles and serves as a father figure to the Guardians.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Adam Warlock"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000038"
+        class="block group"
+        href="/character/1000038/adam-warlock"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Adam Warlock
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A genetically perfect artificial being, Adam Warlock possesses cosmic awareness and battles threats to the universe with the Guardians.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Moondragon"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000039"
+        class="block group"
+        href="/character/1000039/moondragon"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Moondragon
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Heather Douglas is a powerful telepath and martial artist who often allies with the Guardians of the Galaxy in cosmic conflicts.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Wolverine"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000040"
+        class="block group"
+        href="/character/1000040/wolverine"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Wolverine
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Born with super-human senses and the power to heal from almost any wound, Wolverine was given an unbreakable skeleton and claws. He's the best there is at what he does.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Cyclops"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000041"
+        class="block group"
+        href="/character/1000041/cyclops"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Cyclops
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Scott Summers fires powerful optic blasts from his eyes. As a founding X-Men member and natural leader, Cyclops has dedicated his life to Professor Xavier's dream of peace.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Storm"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000042"
+        class="block group"
+        href="/character/1000042/storm"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Storm
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Ororo Munroe can control weather patterns and atmospheric phenomena. As Storm, she's a leader of the X-Men and one of the most powerful mutants alive.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Jean Grey"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000043"
+        class="block group"
+        href="/character/1000043/jean-grey"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Jean Grey
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Jean Grey is a powerful telepath and telekinetic. As host to the Phoenix Force, she becomes one of the most powerful and dangerous beings in the universe.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Professor X"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000044"
+        class="block group"
+        href="/character/1000044/professor-x"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Professor X
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Charles Xavier is the world's most powerful telepath and founder of the X-Men. He dedicates his life to promoting peaceful coexistence between humans and mutants.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Beast"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000045"
+        class="block group"
+        href="/character/1000045/beast"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Beast
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Hank McCoy is a brilliant scientist and founding X-Men member. His mutation grants him superhuman strength, agility, and a beastly appearance.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Nightcrawler"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000046"
+        class="block group"
+        href="/character/1000046/nightcrawler"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Nightcrawler
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Kurt Wagner can teleport in a puff of smoke and possesses superhuman agility. Despite his demonic appearance, Nightcrawler is one of the kindest X-Men.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Colossus"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000047"
+        class="block group"
+        href="/character/1000047/colossus"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Colossus
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Piotr Rasputin can transform his body into organic steel, granting him superhuman strength and durability. As Colossus, he's one of the X-Men's strongest members.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Rogue"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000048"
+        class="block group"
+        href="/character/1000048/rogue"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Rogue
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Rogue can absorb the powers, memories, and life force of anyone she touches. This dangerous ability makes her both powerful and tragic as an X-Men member.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Gambit"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000049"
+        class="block group"
+        href="/character/1000049/gambit"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Gambit
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Remy LeBeau can charge objects with kinetic energy, turning them into explosive projectiles. As Gambit, the Cajun mutant brings charm and danger to the X-Men.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Iceman"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000050"
+        class="block group"
+        href="/character/1000050/iceman"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Iceman
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Bobby Drake can create and manipulate ice. As one of the original X-Men, Iceman is an Omega-level mutant with nearly limitless potential.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Angel"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000051"
+        class="block group"
+        href="/character/1000051/angel"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Angel
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Warren Worthington III was born with functional wings. As Angel, he's a founding X-Men member whose wealth helps fund the team's operations.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Shadowcat"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000052"
+        class="block group"
+        href="/character/1000052/shadowcat"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Shadowcat
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Kitty Pryde can phase through solid matter. As Shadowcat, she's proven herself one of the most resourceful and heroic X-Men.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Psylocke"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000053"
+        class="block group"
+        href="/character/1000053/psylocke"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Psylocke
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Betsy Braddock is a powerful telepath and martial artist. As Psylocke, she projects psychic blades and serves as a deadly X-Men operative.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Emma Frost"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000054"
+        class="block group"
+        href="/character/1000054/emma-frost"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Emma Frost
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A powerful telepath who can transform into organic diamond, Emma Frost evolved from villain to teacher and leader of the X-Men.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Bishop"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000055"
+        class="block group"
+        href="/character/1000055/bishop"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Bishop
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Lucas Bishop traveled from a dystopian future where mutants are hunted. His ability to absorb and redirect energy makes him a valuable X-Men member.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Cable"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000056"
+        class="block group"
+        href="/character/1000056/cable"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Cable
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Nathan Summers is the time-traveling son of Cyclops with telepathy and telekinesis. As Cable, he fights to prevent his dark future from coming to pass.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Jubilee"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000057"
+        class="block group"
+        href="/character/1000057/jubilee"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Jubilee
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Jubilation Lee generates explosive energy plasmoids. As Jubilee, she brings youthful energy and optimism to the X-Men.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Magik"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000058"
+        class="block group"
+        href="/character/1000058/magik"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Magik
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Illyana Rasputin is a sorceress who rules Limbo and wields the Soulsword. As Magik, she combines mutant teleportation with mystical power.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Forge"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000059"
+        class="block group"
+        href="/character/1000059/forge"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Forge
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A mutant inventor with the ability to understand and create any technology, Forge provides the X-Men with advanced equipment and weapons.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Daredevil"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000060"
+        class="block group"
+        href="/character/1000060/daredevil"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Daredevil
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Blinded by radioactive waste, Matt Murdock gained heightened senses and sonar-like perception. As Daredevil, he protects Hell's Kitchen from crime.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Punisher"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000061"
+        class="block group"
+        href="/character/1000061/punisher"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Punisher
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            After his family was killed by criminals, Frank Castle became the Punisher, waging a one-man war against crime using military training and an arsenal of weapons.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Luke Cage"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000062"
+        class="block group"
+        href="/character/1000062/luke-cage"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Luke Cage
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Subjected to an experimental procedure, Luke Cage gained superhuman strength and unbreakable skin. He uses his powers as a hero for hire protecting Harlem.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Jessica Jones"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000063"
+        class="block group"
+        href="/character/1000063/jessica-jones"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Jessica Jones
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            After a tragic encounter with Kilgrave, Jessica Jones uses her superhuman strength and detective skills to help others as a private investigator.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Iron Fist"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000064"
+        class="block group"
+        href="/character/1000064/iron-fist"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Iron Fist
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Danny Rand trained in the mystical city of K'un-Lun to become the Iron Fist, channeling chi to make his fist like unto a thing of iron.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Blade"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000065"
+        class="block group"
+        href="/character/1000065/blade"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Blade
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Born a half-vampire after his mother was bitten while pregnant, Blade hunts vampires using his unique abilities and an arsenal of vampire-killing weapons.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Ghost Rider"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000066"
+        class="block group"
+        href="/character/1000066/ghost-rider"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Ghost Rider
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Johnny Blaze bonded with the demon Zarathos to become Ghost Rider. With a flaming skull and supernatural powers, he punishes the wicked.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Elektra"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000067"
+        class="block group"
+        href="/character/1000067/elektra"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Elektra
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A master assassin trained by the Hand, Elektra Natchios uses her martial arts skills and sai to eliminate targets with deadly precision.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Silver Sable"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000068"
+        class="block group"
+        href="/character/1000068/silver-sable"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Silver Sable
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Leader of the Wild Pack mercenary group, Silver Sable uses her combat skills and tactical expertise to hunt war criminals.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Cloak and Dagger"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000069"
+        class="block group"
+        href="/character/1000069/cloak-and-dagger"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Cloak and Dagger
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Tyrone Johnson and Tandy Bowen gained powers from experimental drugs. As Cloak and Dagger, they use darkness and light to fight crime.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Loki"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000070"
+        class="block group"
+        href="/character/1000070/loki"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Loki
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            The adopted brother of Thor and God of Mischief, Loki's schemes have threatened both Asgard and Earth. His complex relationship with heroism keeps allies and enemies guessing.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Thanos"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000071"
+        class="block group"
+        href="/character/1000071/thanos"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Thanos
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            The Mad Titan Thanos seeks ultimate power through the Infinity Stones. His quest to bring balance to the universe makes him one of the most dangerous villains in existence.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Ultron"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000072"
+        class="block group"
+        href="/character/1000072/ultron"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Ultron
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            An artificial intelligence created by Tony Stark and Bruce Banner, Ultron became sentient and decided humanity must be destroyed. His near-indestructible adamantium body makes him a formidable foe.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Red Skull"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000073"
+        class="block group"
+        href="/character/1000073/red-skull"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Red Skull
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Johann Schmidt became Red Skull after a failed attempt to recreate the super-soldier serum. As Captain America's archenemy, he leads the terrorist organization HYDRA.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Green Goblin"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000074"
+        class="block group"
+        href="/character/1000074/green-goblin"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Green Goblin
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Norman Osborn became the Green Goblin after an experimental serum drove him insane. Flying on his glider and armed with pumpkin bombs, he's Spider-Man's greatest enemy.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Doctor Octopus"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000075"
+        class="block group"
+        href="/character/1000075/doctor-octopus"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Doctor Octopus
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Scientist Otto Octavius bonded with four mechanical tentacles in an accident. As Doctor Octopus, he's one of Spider-Man's most dangerous and intelligent foes.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Venom"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000076"
+        class="block group"
+        href="/character/1000076/venom"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Venom
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            An alien symbiote bonded with Eddie Brock to become Venom, possessing all of Spider-Man's powers plus shapeshifting abilities and immunity to spider-sense.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Carnage"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000077"
+        class="block group"
+        href="/character/1000077/carnage"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Carnage
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            When the Venom symbiote spawned, it bonded with serial killer Cletus Kasady to create Carnage, a being even more violent and powerful than Venom.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Magneto"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000078"
+        class="block group"
+        href="/character/1000078/magneto"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Magneto
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Master of magnetism Erik Lehnsherr leads the Brotherhood of Mutants. His tragic past drives his mission to secure mutant superiority over humanity.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Mystique"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000079"
+        class="block group"
+        href="/character/1000079/mystique"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Mystique
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Raven DarkhÃ¶lme is a mutant shapeshifter who can mimic anyone. Her duplicitous nature makes her one of the most dangerous members of the Brotherhood of Mutants.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Apocalypse"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000080"
+        class="block group"
+        href="/character/1000080/apocalypse"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Apocalypse
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            One of the first mutants, En Sabah Nur believes in survival of the fittest. As Apocalypse, he seeks to reshape the world through mutant supremacy.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Juggernaut"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000081"
+        class="block group"
+        href="/character/1000081/juggernaut"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Juggernaut
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Cain Marko gained unstoppable momentum from the Crimson Gem of Cyttorak. As Juggernaut, once he starts moving, nothing can stop him.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Kingpin"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000082"
+        class="block group"
+        href="/character/1000082/kingpin"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Kingpin
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Wilson Fisk built a criminal empire through ruthlessness and strategic genius. As Kingpin, he controls New York's underworld from the shadows.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Taskmaster"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000083"
+        class="block group"
+        href="/character/1000083/taskmaster"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Taskmaster
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            With photographic reflexes allowing him to mimic any fighting style, Taskmaster trains villains and operates as a mercenary for the highest bidder.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Abomination"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000084"
+        class="block group"
+        href="/character/1000084/abomination"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Abomination
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Emil Blonsky deliberately exposed himself to gamma radiation to gain power like the Hulk. As Abomination, he possesses similar strength but greater intelligence.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Nova"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000085"
+        class="block group"
+        href="/character/1000085/nova"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Nova
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Richard Rider inherited the Nova Force from a dying alien warrior. As Nova, he protects Earth and the cosmos with cosmic awareness and energy projection.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Quasar"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000086"
+        class="block group"
+        href="/character/1000086/quasar"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Quasar
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Wendell Vaughn wields the Quantum Bands, making him one of the universe's protectors. As Quasar, he can manipulate quantum energy for various effects.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Blue Marvel"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000087"
+        class="block group"
+        href="/character/1000087/blue-marvel"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Blue Marvel
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Adam Brashear is one of the most powerful heroes on Earth. As Blue Marvel, he possesses vast strength, flight, and energy manipulation rivaling Superman.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="America Chavez"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000088"
+        class="block group"
+        href="/character/1000088/america-chavez"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            America Chavez
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            From another dimension, America Chavez can punch star-shaped portals through reality and possesses superhuman strength and invulnerability.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Silk"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000089"
+        class="block group"
+        href="/character/1000089/silk"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Silk
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Cindy Moon was bitten by the same spider as Peter Parker. As Silk, she has similar powers but with organic webbing and enhanced spider-sense.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Miles Morales"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000090"
+        class="block group"
+        href="/character/1000090/miles-morales"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Miles Morales
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A young Spider-Man from another universe, Miles Morales brings unique abilities like bio-electric venom blasts and invisibility to his heroics.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Spider-Gwen"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000091"
+        class="block group"
+        href="/character/1000091/spider-gwen"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Spider-Gwen
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            In an alternate universe, Gwen Stacy became Spider-Woman. As Spider-Gwen, she fights crime while navigating a complicated relationship with Peter Parker's memory.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Squirrel Girl"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000092"
+        class="block group"
+        href="/character/1000092/squirrel-girl"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Squirrel Girl
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Doreen Green can communicate with squirrels and possesses enhanced strength and agility. As Squirrel Girl, she's defeated some of Marvel's most powerful villains.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Deadpool"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000093"
+        class="block group"
+        href="/character/1000093/deadpool"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Deadpool
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Wade Wilson is the Merc with a Mouth. His accelerated healing factor makes him nearly unkillable, while his insanity and fourth-wall breaking antics make him unpredictable.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="X-23"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000094"
+        class="block group"
+        href="/character/1000094/x-23"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            X-23
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A female clone of Wolverine, Laura Kinney possesses similar powers including healing factor and adamantium claws. As X-23, she's proven herself a worthy successor.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Old Man Logan"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000095"
+        class="block group"
+        href="/character/1000095/old-man-logan"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Old Man Logan
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            A time-displaced Wolverine from a dark future where villains won. Old Man Logan brings decades of experience and regret to his mission of preventing his timeline.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Domino"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000096"
+        class="block group"
+        href="/character/1000096/domino"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Domino
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Neena Thurman's mutant ability to manipulate probability makes her incredibly lucky. As Domino, she's a deadly mercenary and frequent X-Force member.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Sunspot"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000097"
+        class="block group"
+        href="/character/1000097/sunspot"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Sunspot
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Roberto da Costa can absorb and channel solar energy for superhuman strength and flight. As Sunspot, he's a wealthy New Mutant who later funded the Avengers.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Cannonball"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000098"
+        class="block group"
+        href="/character/1000098/cannonball"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Cannonball
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Sam Guthrie can propel himself through the air while creating a protective blast field. As Cannonball, he's nearly invulnerable when blasting and a natural leader.
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      aria-label="Magma"
+      class="bg-black text-white overflow-hidden relative z-0
+      after:absolute after:content[\\"\\"] after:z-1 after:bottom-0 after:right-0 after:border-8 after:border-t-transparent after:border-r-white after:border-b-white after:border-l-transparent
+      
+    "
+    >
+      <a
+        aria-labelledby="1000099"
+        class="block group"
+        href="/character/1000099/magma"
+      >
+        <picture
+          class="relative after:absolute after:content[\\"\\"] after:bg-red after:h-1 after:w-full after:left-0 after:-bottom-0.5"
+        />
+        <div
+          class="relative z-0 h-40 p-3 before:absolute before:transition-[max-height] before:ease-in-out before:delay-s before:duration-l before:content[\\"\\"] before:h-[105%] before:max-h-[0px] before:bg-red before:w-full before:left-0 before:-top-0.5 before:z-[-1] group-hover:before:max-h-[300px]"
+        >
+          <h3
+            class="mb-2 font-semibold uppercase text-sm leading-5 line-clamp-2"
+          >
+            Magma
+          </h3>
+          <p
+            class="text-xs leading-5 line-clamp-4"
+          >
+            Amara Aquilla can transform into living lava and control magma. As Magma, she brings volcanic power to the New Mutants and X-Men.
+          </p>
         </div>
       </a>
     </li>
