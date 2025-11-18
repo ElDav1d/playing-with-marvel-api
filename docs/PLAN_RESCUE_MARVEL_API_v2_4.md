@@ -1581,10 +1581,34 @@ Add before "Displaying X to Y from Z":
 </p>
 ```
 
+**Testing:**
+
+The disclaimer element presence must be tested at the **page level**, not at the organism level.
+
+**Test file:** `src/components/pages/CharacterDetail/__tests__/CharacterDetail.test.tsx`
+
+Add test case:
+
+```typescript
+it('renders disclaimer about generic comics and reused images', () => {
+  render(<CharacterDetail />);
+
+  const disclaimer = screen.getByText(
+    /Due to Marvel API discontinuation, comics are generic and images are reused from characters/i
+  );
+
+  expect(disclaimer).toBeInTheDocument();
+});
+```
+
+**Rationale:** Page-level tests validate the complete user experience, including disclaimers that communicate important context about data limitations.
+
 **Checklist:**
 
-- [ ] Disclaimer added
-- [ ] Visually verified
+- [ ] Disclaimer added to CharacterComicList component
+- [ ] Test added to CharacterDetail page test suite
+- [ ] Test passes (disclaimer renders correctly)
+- [ ] Visually verified in browser
 
 ---
 
